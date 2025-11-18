@@ -1,0 +1,2620 @@
+[
+  {
+    "term": "spoon",
+    "translation": "cuchara",
+    "definition": "A utensil used for eating or serving food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "fork",
+    "translation": "tenedor",
+    "definition": "A utensil with prongs used for eating.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "knife",
+    "translation": "cuchillo",
+    "definition": "A tool with a sharp blade used for cutting food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "fridge",
+    "translation": "nevera",
+    "definition": "An appliance used to keep food and drinks cold.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "oven",
+    "translation": "horno",
+    "definition": "An appliance used for baking or roasting food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "sink",
+    "translation": "fregadero",
+    "definition": "A basin for washing dishes or hands.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "stove",
+    "translation": "estufa",
+    "definition": "An appliance used for cooking food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "bowl",
+    "translation": "cuenco",
+    "definition": "A round dish used for food such as soup or cereal.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "dishwasher",
+    "translation": "lavavajillas",
+    "definition": "A machine that washes dishes automatically.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "plate",
+    "translation": "plato",
+    "definition": "A flat dish used to serve food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "pot",
+    "translation": "olla",
+    "definition": "A deep round container used for cooking food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "pan",
+    "translation": "sartén",
+    "definition": "A shallow container used for frying food.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "microwave",
+    "translation": "microondas",
+    "definition": "A device used to heat food quickly.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "mug",
+    "translation": "taza",
+    "definition": "A large cup used for hot drinks.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "tap",
+    "translation": "grifo",
+    "definition": "A device that controls the flow of water.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "plug",
+    "translation": "enchufe",
+    "definition": "A device for connecting electrical equipment.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "curtain",
+    "translation": "cortina",
+    "definition": "A piece of fabric that covers a window.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "heater",
+    "translation": "calefactor",
+    "definition": "A device that produces heat.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "carpet",
+    "translation": "alfombra",
+    "definition": "A thick fabric covering the floor.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "stairs",
+    "translation": "escaleras",
+    "definition": "Steps used for going up or down levels.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "clothes rack",
+    "translation": "tendedero / perchero",
+    "definition": "A frame used for hanging or drying clothes.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "wardrobe",
+    "translation": "armario",
+    "definition": "A piece of furniture used for storing clothes.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "balcony",
+    "translation": "balcón",
+    "definition": "A platform outside a building, with a railing.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "bathtub",
+    "translation": "bañera",
+    "definition": "A large container for bathing.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "soap",
+    "translation": "jabón",
+    "definition": "A substance used for washing.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "toothbrush",
+    "translation": "cepillo de dientes",
+    "definition": "A small brush used to clean teeth.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "toothpaste",
+    "translation": "pasta de dientes",
+    "definition": "A substance used with a toothbrush to clean teeth.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "towel",
+    "translation": "toalla",
+    "definition": "A piece of fabric used to dry the body or hands.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "bed",
+    "translation": "cama",
+    "definition": "A piece of furniture used for sleeping.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "pillow",
+    "translation": "almohada",
+    "definition": "A soft cushion for the head.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "blanket",
+    "translation": "manta",
+    "definition": "A warm cover used on a bed.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "chair",
+    "translation": "silla",
+    "definition": "A seat for one person.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "table",
+    "translation": "mesa",
+    "definition": "A piece of furniture with a flat top.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "sofa",
+    "translation": "sofá",
+    "definition": "A long, comfortable seat for several people.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "lamp",
+    "translation": "lámpara",
+    "definition": "A device that gives light.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "shelf",
+    "translation": "estante",
+    "definition": "A flat board for storing things.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "trash can",
+    "translation": "papelera / cubo de basura",
+    "definition": "A container for waste.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "mirror",
+    "translation": "espejo",
+    "definition": "A glass surface that reflects images.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "door",
+    "translation": "puerta",
+    "definition": "A panel used to open and close an entrance.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "window",
+    "translation": "ventana",
+    "definition": "An opening in a wall to let in light and air.",
+    "level": "A1",
+    "category": "casa"
+  },
+  {
+    "term": "ear",
+    "translation": "oreja",
+    "definition": "The part of the body used for hearing.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "eye",
+    "translation": "ojo",
+    "definition": "The organ used to see.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "nose",
+    "translation": "nariz",
+    "definition": "The part used for smelling and breathing.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "mouth",
+    "translation": "boca",
+    "definition": "The opening used for eating and speaking.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "teeth",
+    "translation": "dientes",
+    "definition": "Hard parts in the mouth used for chewing.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "tongue",
+    "translation": "lengua",
+    "definition": "The soft part in the mouth used for tasting and speaking.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "hair",
+    "translation": "cabello",
+    "definition": "The strands that grow on the head.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "head",
+    "translation": "cabeza",
+    "definition": "The top part of the body containing the brain.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "neck",
+    "translation": "cuello",
+    "definition": "Connects the head to the body.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "shoulder",
+    "translation": "hombro",
+    "definition": "The joint connecting the arm to the body.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "arm",
+    "translation": "brazo",
+    "definition": "The upper limb of the body.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "elbow",
+    "translation": "codo",
+    "definition": "The joint in the middle of the arm.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "hand",
+    "translation": "mano",
+    "definition": "The end part of the arm with fingers.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "finger",
+    "translation": "dedo",
+    "definition": "One of the five parts at the end of the hand.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "chest",
+    "translation": "pecho",
+    "definition": "The front part of the body between neck and stomach.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "stomach",
+    "translation": "estómago",
+    "definition": "The organ where food is digested.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "waist",
+    "translation": "cintura",
+    "definition": "The part between ribs and hips.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "back",
+    "translation": "espalda",
+    "definition": "The rear surface of the body.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "hip",
+    "translation": "cadera",
+    "definition": "The sides of the body below the waist.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "leg",
+    "translation": "pierna",
+    "definition": "The lower limb used for walking.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "knee",
+    "translation": "rodilla",
+    "definition": "The joint in the middle of the leg.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "foot",
+    "translation": "pie",
+    "definition": "The lower part of the leg to stand on.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "toe",
+    "translation": "dedo del pie",
+    "definition": "A digit of the foot.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "skin",
+    "translation": "piel",
+    "definition": "The outer covering of the body.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "eyebrow",
+    "translation": "ceja",
+    "definition": "The line of hair above the eye.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "beard",
+    "translation": "barba",
+    "definition": "Hair that grows on a man’s face.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "throat",
+    "translation": "garganta",
+    "definition": "The passage inside the neck.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "nail",
+    "translation": "uña",
+    "definition": "The hard covering on fingers and toes.",
+    "level": "A1",
+    "category": "cuerpo"
+  },
+  {
+    "term": "can",
+    "translation": "poder",
+    "definition": "To express ability, permission or possibility.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "could",
+    "translation": "podía / podría",
+    "definition": "Past ability or polite possibility.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "may",
+    "translation": "puede que / permiso",
+    "definition": "To express possibility or permission.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "might",
+    "translation": "podría / tal vez",
+    "definition": "Expresses weak possibility.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "must",
+    "translation": "deber / tener que",
+    "definition": "Obligation or strong certainty.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "should",
+    "translation": "debería",
+    "definition": "To give advice or express expectation.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "have to",
+    "translation": "tener que",
+    "definition": "External obligation or necessity.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "would",
+    "translation": "haría",
+    "definition": "Polite requests or hypothetical situations.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "will",
+    "translation": "hará / voy a",
+    "definition": "Future decisions or predictions.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "shall",
+    "translation": "deber / (futuro formal)",
+    "definition": "Formal future or suggestions (mainly BrE).",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "used to",
+    "translation": "solía",
+    "definition": "Past habits or states no longer true.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "get used to",
+    "translation": "acostumbrarse a",
+    "definition": "To become familiar with something new.",
+    "level": "A1",
+    "category": "modales"
+  },
+  {
+    "term": "always",
+    "translation": "siempre",
+    "definition": "Happening all the time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "usually",
+    "translation": "normalmente",
+    "definition": "Happening most of the time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "often",
+    "translation": "a menudo",
+    "definition": "Happening many times.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "sometimes",
+    "translation": "a veces",
+    "definition": "At certain times but not always.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "rarely",
+    "translation": "rara vez",
+    "definition": "Not happening often.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "never",
+    "translation": "nunca",
+    "definition": "Not at any time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "now",
+    "translation": "ahora",
+    "definition": "At the present time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "today",
+    "translation": "hoy",
+    "definition": "On this day.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "yesterday",
+    "translation": "ayer",
+    "definition": "The day before today.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "tomorrow",
+    "translation": "mañana",
+    "definition": "The day after today.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "then",
+    "translation": "entonces / luego",
+    "definition": "At that time or next in sequence.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "later",
+    "translation": "más tarde",
+    "definition": "After the expected time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "soon",
+    "translation": "pronto",
+    "definition": "In a short time from now.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "already",
+    "translation": "ya",
+    "definition": "Before now or earlier than expected.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "yet",
+    "translation": "todavía / ya",
+    "definition": "Refers to something expected to happen.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "still",
+    "translation": "todavía / aún",
+    "definition": "Indicates continuity of an action.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "just",
+    "translation": "acaba de / justo",
+    "definition": "A very short time ago.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "quickly",
+    "translation": "rápidamente",
+    "definition": "At a fast speed.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "slowly",
+    "translation": "lentamente",
+    "definition": "At a low speed.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "carefully",
+    "translation": "cuidadosamente",
+    "definition": "With care and attention.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "really",
+    "translation": "realmente / muy",
+    "definition": "To emphasize degree or truth.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "very",
+    "translation": "muy",
+    "definition": "To emphasize degree.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "almost",
+    "translation": "casi",
+    "definition": "Not completely; nearly.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "maybe",
+    "translation": "quizás",
+    "definition": "Possibly; perhaps.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "perhaps",
+    "translation": "quizás",
+    "definition": "Possibly; maybe.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "together",
+    "translation": "juntos",
+    "definition": "With or near another person or people.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "apart",
+    "translation": "separados",
+    "definition": "Not together; at a distance.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "early",
+    "translation": "temprano",
+    "definition": "Before the usual time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "late",
+    "translation": "tarde",
+    "definition": "After the usual time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "again",
+    "translation": "otra vez",
+    "definition": "One more time.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "first",
+    "translation": "primero",
+    "definition": "Before all others in order.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "next",
+    "translation": "siguiente",
+    "definition": "Immediately after the present one.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "finally",
+    "translation": "finalmente",
+    "definition": "At the end after a series of actions.",
+    "level": "A1",
+    "category": "adverbios"
+  },
+  {
+    "term": "and",
+    "translation": "y",
+    "definition": "Used to connect words or phrases.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "but",
+    "translation": "pero",
+    "definition": "Used to contrast two ideas.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "or",
+    "translation": "o",
+    "definition": "Used to show a choice.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "because",
+    "translation": "porque",
+    "definition": "Shows cause or reason.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "so",
+    "translation": "así que / por eso",
+    "definition": "Shows result or consequence.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "when",
+    "translation": "cuando",
+    "definition": "Introduces the time something happens.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "while",
+    "translation": "mientras",
+    "definition": "Used for actions happening at the same time.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "before",
+    "translation": "antes de",
+    "definition": "Earlier in time.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "after",
+    "translation": "después de",
+    "definition": "Later in time.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "if",
+    "translation": "si",
+    "definition": "Introduces a condition or possibility.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "unless",
+    "translation": "a menos que",
+    "definition": "Except if; negative condition.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "although",
+    "translation": "aunque",
+    "definition": "Used to contrast two statements.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "however",
+    "translation": "sin embargo",
+    "definition": "Introduces a contrast between sentences.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "therefore",
+    "translation": "por lo tanto",
+    "definition": "Shows a logical result.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "as soon as",
+    "translation": "tan pronto como",
+    "definition": "Immediately after something happens.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "so that",
+    "translation": "para que",
+    "definition": "Expresses purpose or result.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "because of",
+    "translation": "debido a",
+    "definition": "Gives a reason followed by a noun.",
+    "level": "A1",
+    "category": "conectores"
+  },
+  {
+    "term": "some",
+    "translation": "algunos / algo de",
+    "definition": "Used in positive sentences for quantity.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "any",
+    "translation": "ninguno / algo / cualquier",
+    "definition": "Used in questions or negatives for quantity.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "a lot of",
+    "translation": "mucho / muchos",
+    "definition": "A large number or amount.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "lots of",
+    "translation": "mucho / muchos",
+    "definition": "Informal: a large number or amount.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "many",
+    "translation": "muchos (contables)",
+    "definition": "Used with countable nouns.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "much",
+    "translation": "mucho (no contable)",
+    "definition": "Used with uncountable nouns.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "few",
+    "translation": "pocos (contables)",
+    "definition": "A small number of things.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "a few",
+    "translation": "algunos (contables)",
+    "definition": "A small but positive number.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "little",
+    "translation": "poco (no contable)",
+    "definition": "A small amount of something.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "a little",
+    "translation": "un poco (no contable)",
+    "definition": "A small but positive amount.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "enough",
+    "translation": "suficiente",
+    "definition": "As much as necessary.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "plenty of",
+    "translation": "mucho / de sobra",
+    "definition": "More than enough of something.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "all",
+    "translation": "todo / todos",
+    "definition": "The whole amount or every one.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "none",
+    "translation": "ninguno",
+    "definition": "Not any.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "each",
+    "translation": "cada uno",
+    "definition": "Considered individually.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "every",
+    "translation": "cada",
+    "definition": "Considered as a whole group.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "both",
+    "translation": "ambos",
+    "definition": "The two together.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "either",
+    "translation": "cualquiera (de dos)",
+    "definition": "One or the other of two.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "neither",
+    "translation": "ninguno (de dos)",
+    "definition": "Not one nor the other of two.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "everybody",
+    "translation": "todos",
+    "definition": "All people.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "somebody",
+    "translation": "alguien",
+    "definition": "An unspecified person.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "anybody",
+    "translation": "alguien / cualquiera",
+    "definition": "A person, used in questions/negatives.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "nobody",
+    "translation": "nadie",
+    "definition": "No person.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "everything",
+    "translation": "todo",
+    "definition": "All things.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "anything",
+    "translation": "algo / nada (según)",
+    "definition": "Used in questions/negatives for things.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "nothing",
+    "translation": "nada",
+    "definition": "No thing.",
+    "level": "A1",
+    "category": "cuantificadores/pronombres"
+  },
+  {
+    "term": "red",
+    "translation": "rojo",
+    "definition": "The color of blood or a ripe strawberry.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "blue",
+    "translation": "azul",
+    "definition": "The color of the sky on a clear day.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "yellow",
+    "translation": "amarillo",
+    "definition": "The color of the sun or a lemon.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "green",
+    "translation": "verde",
+    "definition": "The color of grass and many plants.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "black",
+    "translation": "negro",
+    "definition": "The darkest color, like night.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "white",
+    "translation": "blanco",
+    "definition": "The color of snow or milk.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "orange",
+    "translation": "naranja",
+    "definition": "The color of the fruit orange.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "purple",
+    "translation": "morado",
+    "definition": "A color made from red and blue.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "pink",
+    "translation": "rosa",
+    "definition": "A light red color.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "brown",
+    "translation": "marrón",
+    "definition": "The color of wood or soil.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "gray",
+    "translation": "gris",
+    "definition": "A color between black and white.",
+    "level": "A1",
+    "category": "colores"
+  },
+  {
+    "term": "shirt",
+    "translation": "camisa",
+    "definition": "A piece of clothing worn on the upper body.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "t-shirt",
+    "translation": "camiseta",
+    "definition": "A light shirt with short sleeves.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "dress",
+    "translation": "vestido",
+    "definition": "A one-piece garment for women or girls.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "skirt",
+    "translation": "falda",
+    "definition": "A piece of clothing worn from the waist down.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "pants",
+    "translation": "pantalones",
+    "definition": "Clothing that covers each leg separately.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "shorts",
+    "translation": "pantalones cortos",
+    "definition": "Short pants.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "jeans",
+    "translation": "vaqueros",
+    "definition": "Pants made of denim.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "jacket",
+    "translation": "chaqueta",
+    "definition": "A light coat worn on the upper body.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "coat",
+    "translation": "abrigo",
+    "definition": "A warm piece of clothing worn outdoors.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "shoes",
+    "translation": "zapatos",
+    "definition": "Footwear worn to protect the feet.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "socks",
+    "translation": "calcetines",
+    "definition": "Clothing worn on the feet inside shoes.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "hat",
+    "translation": "sombrero / gorra",
+    "definition": "A covering for the head.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "scarf",
+    "translation": "bufanda",
+    "definition": "A long piece of cloth worn around the neck.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "gloves",
+    "translation": "guantes",
+    "definition": "Coverings for the hands.",
+    "level": "A1",
+    "category": "ropa"
+  },
+  {
+    "term": "apple",
+    "translation": "manzana",
+    "definition": "A round fruit with red, green, or yellow skin.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "banana",
+    "translation": "plátano / banana",
+    "definition": "A long yellow fruit.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "orange (fruit)",
+    "translation": "naranja",
+    "definition": "A round orange citrus fruit.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "grape",
+    "translation": "uva",
+    "definition": "A small round fruit that grows in bunches.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "strawberry",
+    "translation": "fresa",
+    "definition": "A small red fruit with seeds on the outside.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "watermelon",
+    "translation": "sandía",
+    "definition": "A large green fruit with red flesh.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "tomato",
+    "translation": "tomate",
+    "definition": "A red fruit used as a vegetable in salads and sauces.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "potato",
+    "translation": "patata",
+    "definition": "A round root vegetable.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "carrot",
+    "translation": "zanahoria",
+    "definition": "An orange root vegetable.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "onion",
+    "translation": "cebolla",
+    "definition": "A vegetable with a strong smell and flavor.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "bread",
+    "translation": "pan",
+    "definition": "A basic food made from flour and water.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "rice",
+    "translation": "arroz",
+    "definition": "Small white grains eaten cooked.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "egg",
+    "translation": "huevo",
+    "definition": "An oval food laid by birds, eaten as food.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "cheese",
+    "translation": "queso",
+    "definition": "A food made from milk.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "milk",
+    "translation": "leche",
+    "definition": "A white liquid produced by cows and used as food.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "water",
+    "translation": "agua",
+    "definition": "A clear liquid that people and animals drink.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "juice",
+    "translation": "zumo / jugo",
+    "definition": "A drink made from fruit or vegetables.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "tea",
+    "translation": "té",
+    "definition": "A hot drink made by infusing dried leaves.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "coffee",
+    "translation": "café",
+    "definition": "A hot drink made from roasted coffee beans.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "chicken",
+    "translation": "pollo",
+    "definition": "Meat from a chicken.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "fish",
+    "translation": "pescado",
+    "definition": "Meat from fish.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "meat",
+    "translation": "carne",
+    "definition": "Animal flesh eaten as food.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "soup",
+    "translation": "sopa",
+    "definition": "A liquid dish usually served hot.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "salad",
+    "translation": "ensalada",
+    "definition": "A cold dish of mixed vegetables or fruits.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "butter",
+    "translation": "mantequilla",
+    "definition": "A yellow dairy product made from cream.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "sugar",
+    "translation": "azúcar",
+    "definition": "A sweet substance used to sweeten food.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "salt",
+    "translation": "sal",
+    "definition": "A white substance used to season food.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "oil",
+    "translation": "aceite",
+    "definition": "A fatty liquid used in cooking.",
+    "level": "A1",
+    "category": "comida"
+  },
+  {
+    "term": "school",
+    "translation": "escuela / colegio",
+    "definition": "A place where students learn.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "university",
+    "translation": "universidad",
+    "definition": "A place for higher education.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "hospital",
+    "translation": "hospital",
+    "definition": "A place where sick people are treated.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "pharmacy",
+    "translation": "farmacia",
+    "definition": "A shop that sells medicines.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "bank",
+    "translation": "banco",
+    "definition": "A place where you keep and manage money.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "post office",
+    "translation": "oficina de correos",
+    "definition": "A place to send letters and packages.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "supermarket",
+    "translation": "supermercado",
+    "definition": "A large shop that sells food and household items.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "store / shop",
+    "translation": "tienda",
+    "definition": "A place where you buy things.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "restaurant",
+    "translation": "restaurante",
+    "definition": "A place where you can buy and eat meals.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "cafe",
+    "translation": "cafetería",
+    "definition": "A small restaurant serving coffee and snacks.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "park",
+    "translation": "parque",
+    "definition": "A public green area for rest and play.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "street",
+    "translation": "calle",
+    "definition": "A public road in a city or town.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "square",
+    "translation": "plaza",
+    "definition": "An open area in a town, often with buildings around it.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "library",
+    "translation": "biblioteca",
+    "definition": "A place where you can read or borrow books.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "museum",
+    "translation": "museo",
+    "definition": "A building where objects of art or history are shown.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "airport",
+    "translation": "aeropuerto",
+    "definition": "A place where airplanes take off and land.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "station",
+    "translation": "estación",
+    "definition": "A place where trains or buses stop.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "hotel",
+    "translation": "hotel",
+    "definition": "A place where people pay to stay for a short time.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "gym",
+    "translation": "gimnasio",
+    "definition": "A place to exercise.",
+    "level": "A1",
+    "category": "ciudad"
+  },
+  {
+    "term": "family",
+    "translation": "familia",
+    "definition": "A group of related people.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "mother",
+    "translation": "madre",
+    "definition": "A female parent.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "father",
+    "translation": "padre",
+    "definition": "A male parent.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "parents",
+    "translation": "padres",
+    "definition": "Mother and father.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "son",
+    "translation": "hijo",
+    "definition": "A male child.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "daughter",
+    "translation": "hija",
+    "definition": "A female child.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "brother",
+    "translation": "hermano",
+    "definition": "A male sibling.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "sister",
+    "translation": "hermana",
+    "definition": "A female sibling.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "grandmother",
+    "translation": "abuela",
+    "definition": "The mother of your parent.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "grandfather",
+    "translation": "abuelo",
+    "definition": "The father of your parent.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "grandparents",
+    "translation": "abuelos",
+    "definition": "Grandmother and grandfather.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "uncle",
+    "translation": "tío",
+    "definition": "The brother of your parent.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "aunt",
+    "translation": "tía",
+    "definition": "The sister of your parent.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "cousin",
+    "translation": "primo / prima",
+    "definition": "A child of your uncle or aunt.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "wife",
+    "translation": "esposa",
+    "definition": "A married woman.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "husband",
+    "translation": "esposo",
+    "definition": "A married man.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "baby",
+    "translation": "bebé",
+    "definition": "A very young child.",
+    "level": "A1",
+    "category": "familia"
+  },
+  {
+    "term": "car",
+    "translation": "coche",
+    "definition": "A road vehicle with four wheels.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "bus",
+    "translation": "autobús",
+    "definition": "A large road vehicle for many passengers.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "train",
+    "translation": "tren",
+    "definition": "A series of connected vehicles that run on rails.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "plane",
+    "translation": "avión",
+    "definition": "A flying vehicle with wings.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "boat",
+    "translation": "barco",
+    "definition": "A small vessel for traveling on water.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "ship",
+    "translation": "barco grande / navío",
+    "definition": "A large vessel for traveling on water.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "bicycle",
+    "translation": "bicicleta",
+    "definition": "A vehicle with two wheels powered by pedaling.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "motorcycle",
+    "translation": "motocicleta",
+    "definition": "A two-wheeled motor vehicle.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "taxi",
+    "translation": "taxi",
+    "definition": "A car that carries passengers for a fee.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "subway / metro",
+    "translation": "metro",
+    "definition": "An underground train system in a city.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "ticket",
+    "translation": "billete / boleto",
+    "definition": "A paper or card that lets you travel.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "station",
+    "translation": "estación",
+    "definition": "A place where trains or buses stop.",
+    "level": "A1",
+    "category": "transporte"
+  },
+  {
+    "term": "teacher",
+    "translation": "profesor/a",
+    "definition": "A person who teaches students.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "student",
+    "translation": "estudiante",
+    "definition": "A person who studies.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "doctor",
+    "translation": "médico/a",
+    "definition": "A person who treats sick people.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "nurse",
+    "translation": "enfermero/a",
+    "definition": "A person trained to care for the sick.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "police officer",
+    "translation": "policía",
+    "definition": "A person who enforces the law.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "firefighter",
+    "translation": "bombero/a",
+    "definition": "A person who fights fires.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "engineer",
+    "translation": "ingeniero/a",
+    "definition": "A person who designs or builds things.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "driver",
+    "translation": "conductor/a",
+    "definition": "A person who drives a vehicle.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "cook / chef",
+    "translation": "cocinero/a",
+    "definition": "A person who prepares food.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "waiter / waitress",
+    "translation": "camarero/a",
+    "definition": "A person who serves food in a restaurant.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "seller / cashier",
+    "translation": "vendedor/a / cajero/a",
+    "definition": "A person who sells or takes payment.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "farmer",
+    "translation": "granjero/a",
+    "definition": "A person who grows crops or raises animals.",
+    "level": "A1",
+    "category": "profesiones"
+  },
+  {
+    "term": "book",
+    "translation": "libro",
+    "definition": "A written work with pages.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "notebook",
+    "translation": "cuaderno",
+    "definition": "A book of blank pages for writing.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "pen",
+    "translation": "bolígrafo",
+    "definition": "A tool for writing with ink.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "pencil",
+    "translation": "lápiz",
+    "definition": "A tool for writing or drawing with graphite.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "eraser",
+    "translation": "goma de borrar",
+    "definition": "A thing used to remove pencil marks.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "ruler",
+    "translation": "regla",
+    "definition": "A tool used to measure length.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "bag",
+    "translation": "mochila / bolsa",
+    "definition": "A container used to carry things.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "desk",
+    "translation": "pupitre / escritorio",
+    "definition": "A table used for working or studying.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "chair",
+    "translation": "silla",
+    "definition": "A seat for one person.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "lesson",
+    "translation": "lección",
+    "definition": "A unit of teaching.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "classroom",
+    "translation": "aula",
+    "definition": "A room where a class is taught.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "homework",
+    "translation": "tarea",
+    "definition": "School work done at home.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "exam",
+    "translation": "examen",
+    "definition": "A test of knowledge or skill.",
+    "level": "A1",
+    "category": "escuela"
+  },
+  {
+    "term": "phone",
+    "translation": "teléfono",
+    "definition": "A device used to call or message people.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "computer",
+    "translation": "ordenador / computadora",
+    "definition": "An electronic device for work and play.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "laptop",
+    "translation": "portátil",
+    "definition": "A small computer you can carry.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "tablet",
+    "translation": "tableta",
+    "definition": "A small flat computer with a touch screen.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "keyboard",
+    "translation": "teclado",
+    "definition": "A set of keys for typing.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "mouse",
+    "translation": "ratón",
+    "definition": "A device used to control the cursor.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "screen",
+    "translation": "pantalla",
+    "definition": "The surface where images are shown.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "internet",
+    "translation": "internet",
+    "definition": "The global network for information and communication.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "download",
+    "translation": "descargar",
+    "definition": "To transfer data from the internet to your device.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "upload",
+    "translation": "subir",
+    "definition": "To send data from your device to the internet.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "login / sign in",
+    "translation": "iniciar sesión",
+    "definition": "To enter a system with a name and password.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "logout / sign out",
+    "translation": "cerrar sesión",
+    "definition": "To leave a system.",
+    "level": "A1",
+    "category": "tecnología"
+  },
+  {
+    "term": "be",
+    "translation": "ser / estar",
+    "definition": "To exist or to describe identity and state.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "have",
+    "translation": "tener",
+    "definition": "To own or possess.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "do",
+    "translation": "hacer",
+    "definition": "To perform an action.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "go",
+    "translation": "ir",
+    "definition": "To move from one place to another.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "come",
+    "translation": "venir",
+    "definition": "To move toward the speaker.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "make",
+    "translation": "hacer / fabricar",
+    "definition": "To create or produce.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "get",
+    "translation": "obtener / conseguir",
+    "definition": "To receive or become.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "give",
+    "translation": "dar",
+    "definition": "To hand something to someone.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "take",
+    "translation": "tomar / llevar",
+    "definition": "To get into one's hands or transport.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "say",
+    "translation": "decir",
+    "definition": "To speak words.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "tell",
+    "translation": "decir / contar",
+    "definition": "To communicate information or a story.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "see",
+    "translation": "ver",
+    "definition": "To notice with the eyes.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "look",
+    "translation": "mirar",
+    "definition": "To direct your eyes at something.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "watch",
+    "translation": "ver / mirar",
+    "definition": "To look at something for some time.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "know",
+    "translation": "saber / conocer",
+    "definition": "To have information or be familiar with.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "think",
+    "translation": "pensar",
+    "definition": "To have ideas or opinions.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "like",
+    "translation": "gustar",
+    "definition": "To enjoy or prefer.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "love",
+    "translation": "amar / encantar",
+    "definition": "To feel great liking or affection.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "want",
+    "translation": "querer / desear",
+    "definition": "To feel a need or desire.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "need",
+    "translation": "necesitar",
+    "definition": "To require something.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "work",
+    "translation": "trabajar",
+    "definition": "To do a job.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "study",
+    "translation": "estudiar",
+    "definition": "To learn about a subject.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "read",
+    "translation": "leer",
+    "definition": "To look at and understand written words.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "write",
+    "translation": "escribir",
+    "definition": "To form letters and words on paper or a screen.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "open",
+    "translation": "abrir",
+    "definition": "To move to allow access.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "close",
+    "translation": "cerrar",
+    "definition": "To move to block access.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "start",
+    "translation": "empezar",
+    "definition": "To begin.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "finish",
+    "translation": "terminar",
+    "definition": "To end.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "play",
+    "translation": "jugar / tocar",
+    "definition": "To take part in a game or make music.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "eat",
+    "translation": "comer",
+    "definition": "To put food into the mouth and swallow.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "drink",
+    "translation": "beber",
+    "definition": "To swallow a liquid.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "sleep",
+    "translation": "dormir",
+    "definition": "To rest with eyes closed.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "wake up",
+    "translation": "despertarse",
+    "definition": "To stop sleeping.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "stay",
+    "translation": "quedarse",
+    "definition": "To remain in one place.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "leave",
+    "translation": "salir / irse",
+    "definition": "To go away from a place.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "arrive",
+    "translation": "llegar",
+    "definition": "To reach a place.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "help",
+    "translation": "ayudar",
+    "definition": "To make it easier for someone to do something.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "try",
+    "translation": "intentar",
+    "definition": "To make an effort.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "learn",
+    "translation": "aprender",
+    "definition": "To gain knowledge or skills.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "teach",
+    "translation": "enseñar",
+    "definition": "To help someone learn.",
+    "level": "A1",
+    "category": "verbos"
+  },
+  {
+    "term": "dog",
+    "translation": "perro",
+    "definition": "A common animal kept as a pet.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "cat",
+    "translation": "gato",
+    "definition": "A small animal often kept as a pet.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "bird",
+    "translation": "pájaro",
+    "definition": "An animal with feathers that can usually fly.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "fish",
+    "translation": "pez",
+    "definition": "An animal that lives in water.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "cow",
+    "translation": "vaca",
+    "definition": "A large farm animal kept for milk or meat.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "horse",
+    "translation": "caballo",
+    "definition": "A large animal used for riding.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "sheep",
+    "translation": "oveja",
+    "definition": "A farm animal with thick wool.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "pig",
+    "translation": "cerdo",
+    "definition": "A farm animal with a flat nose.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "chicken",
+    "translation": "gallina / pollo",
+    "definition": "A bird raised for eggs or meat.",
+    "level": "A1",
+    "category": "animales"
+  },
+  {
+    "term": "sunny",
+    "translation": "soleado",
+    "definition": "With a lot of sunshine.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "rainy",
+    "translation": "lluvioso",
+    "definition": "With a lot of rain.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "cloudy",
+    "translation": "nublado",
+    "definition": "With many clouds.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "windy",
+    "translation": "ventoso",
+    "definition": "With a lot of wind.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "snowy",
+    "translation": "nevado",
+    "definition": "With falling snow.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "hot",
+    "translation": "caluroso / caliente",
+    "definition": "With high temperature.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "cold",
+    "translation": "frío",
+    "definition": "With low temperature.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "warm",
+    "translation": "templado",
+    "definition": "Comfortably or slightly hot.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "cool",
+    "translation": "fresco",
+    "definition": "Slightly cold.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "storm",
+    "translation": "tormenta",
+    "definition": "A period of strong winds and rain.",
+    "level": "A1",
+    "category": "tiempo"
+  },
+  {
+    "term": "in",
+    "translation": "en / dentro de",
+    "definition": "Used to show location inside a place or time.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "on",
+    "translation": "en / sobre",
+    "definition": "Used to show position on a surface or day/date.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "at",
+    "translation": "en / a",
+    "definition": "Used to show specific time or place.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "under",
+    "translation": "debajo de",
+    "definition": "In a lower position than something.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "over",
+    "translation": "sobre / por encima de",
+    "definition": "In a higher position than something.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "between",
+    "translation": "entre (dos)",
+    "definition": "In the space that separates two things.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "among",
+    "translation": "entre (varios)",
+    "definition": "Surrounded by; in the middle of many.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "behind",
+    "translation": "detrás de",
+    "definition": "At the back of something.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "in front of",
+    "translation": "en frente de",
+    "definition": "Before or facing something.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "next to",
+    "translation": "al lado de",
+    "definition": "Very close to; beside.",
+    "level": "A1",
+    "category": "preposiciones"
+  },
+  {
+    "term": "how are you?",
+    "translation": "¿cómo estás?",
+    "definition": "A common greeting asking about well-being.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "what's your name?",
+    "translation": "¿cómo te llamas?",
+    "definition": "A question asking for a person's name.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "see you later",
+    "translation": "hasta luego",
+    "definition": "A way to say goodbye.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "good morning",
+    "translation": "buenos días",
+    "definition": "A greeting used in the morning.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "good afternoon",
+    "translation": "buenas tardes",
+    "definition": "A greeting used in the afternoon.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "good night",
+    "translation": "buenas noches",
+    "definition": "A way to say goodbye at night.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "excuse me",
+    "translation": "disculpa / perdón",
+    "definition": "A polite way to get attention or apologize.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "thank you",
+    "translation": "gracias",
+    "definition": "A polite way to show gratitude.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "you're welcome",
+    "translation": "de nada",
+    "definition": "A polite reply to thanks.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "please",
+    "translation": "por favor",
+    "definition": "A polite word used in requests.",
+    "level": "A1",
+    "category": "expresiones"
+  },
+  {
+    "term": "I’m sorry",
+    "translation": "lo siento",
+    "definition": "A way to apologize.",
+    "level": "A1",
+    "category": "expresiones"
+  }
+]
