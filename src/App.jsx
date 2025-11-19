@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import dataJson from "./data/words.json";
 import motivationsJson from "./data/motivations.json";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { auth, googleProvider } from "./firebase";
+
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
 const ALL = "Todas";
@@ -113,17 +116,18 @@ const isFuzzyEqual = (userStr, goldStr) => {
 };
 
 // Acepta varias soluciones separadas por ; o |
+// Acepta varias soluciones separadas por ;, | o /
 function matches(user, gold) {
   if (!gold) return false;
 
   const answers = gold
-    .replace(/\|/g, ";")
-    .split(";")
+    .split(/[;|/]/)       // 👈 separa por ;   |   /
     .map((x) => x.trim())
     .filter(Boolean);
 
   return answers.some((ans) => isFuzzyEqual(user, ans));
 }
+
 
 export default function App() {
   const [level, setLevel] = useState("A1");
@@ -156,6 +160,40 @@ export default function App() {
 
   // --- 🔹 Flashcards ---
   const [showFlashAnswer, setShowFlashAnswer] = useState(false);
+
+
+
+    // === HANDLERS AUTH GOOGLE ===
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const gUser = result.user;
+
+      setUser({
+        name: gUser.displayName || "Usuario",
+        email: gUser.email || "",
+        photoURL: gUser.photoURL || null,
+        isGuest: false,
+      });
+
+      setScreen("home");
+    } catch (err) {
+      console.error("Error al hacer login con Google:", err);
+      alert("No se pudo iniciar sesión con Google.");
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+    } catch (err) {
+      console.error("Error al cerrar sesión:", err);
+    }
+    setUser(null);
+    setScreen("auth");
+  };
+
+
 
   // Carga externa de frases motivacionales con fallback por si el JSON está vacío
   const MOTIVATION_MESSAGES = useMemo(() => {
@@ -454,6 +492,52 @@ export default function App() {
       marginBottom: "10px",
     },
 
+    userBadge: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: 10,
+      marginBottom: 10,
+    },
+
+    avatar: {
+      width: 40,
+      height: 40,
+      borderRadius: "50%",
+      objectFit: "cover",
+      border: "2px solid #2563eb",
+    },
+
+    avatarFallback: {
+      width: 40,
+      height: 40,
+      borderRadius: "50%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "#e2e8f0",
+      border: "2px solid #2563eb",
+      fontSize: 20,
+    },
+
+    userInfo: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+    },
+
+    userName: {
+      fontSize: 14,
+      fontWeight: 600,
+      color: "#0f172a",
+    },
+
+    userTag: {
+      fontSize: 11,
+      color: "#64748b",
+    },
+
+
     streakNumberTop: {
       fontSize: "30px",
       fontWeight: "800",
@@ -607,27 +691,57 @@ export default function App() {
 
       <button
         style={{
-          padding: "12px 20px",
+          marginTop: 30,
+          padding: "12px 16px",
           borderRadius: 12,
           border: "1px solid #cbd5e1",
-          background: "#ffffff",
+          background: "#2563eb",
+          color: "white",
           cursor: "pointer",
           fontSize: 16,
-          marginTop: 20,
+          width: "260px",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+        onClick={handleGoogleLogin}
+      >
+        🔐 Entrar con Google
+      </button>
+
+      <button
+        style={{
+          marginTop: 15,
+          padding: "12px 16px",
+          borderRadius: 12,
+          border: "1px solid #cbd5e1",
+          background: "#0f0f0fff",
+          color: "#dfe1e6ff",
+          cursor: "pointer",
+          fontSize: 16,
+          width: "260px",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
         }}
         onClick={() => {
-          // Login FAKE → más adelante pondremos Google real
           setUser({
-            name: "Andrés",
-            email: "test@example.com",
+            name: "Invitado",
+            email: "",
+            photoURL: null,
+            isGuest: true,
           });
           setScreen("home");
         }}
       >
-        🚀 Entrar con Google (demo)
+        🚪 Entrar sin registrarse
       </button>
+
+
     </div>
   );
+
+ 
 
   const ScreenHome = () => (
     <div style={{ textAlign: "center", marginTop: 60 }}>
@@ -666,18 +780,18 @@ export default function App() {
             padding: "12px 16px",
             borderRadius: 12,
             border: "1px solid #cbd5e1",
-            background: "#ffffff",
+            background: "#0f0e0eff",
             cursor: "pointer",
             fontSize: 16,
           }}
           onClick={() => {
-            //setPreferredMode("flashcard");
             setMode("flashcard");
             setScreen("trainer");
           }}
         >
           🃏 Practicar con Flashcards
-        </button>
+      </button>
+
       </div>
 
       <button
@@ -690,10 +804,7 @@ export default function App() {
           color: "#64748b",
           textDecoration: "underline",
         }}
-        onClick={() => {
-          setUser(null);
-          setScreen("auth");
-        }}
+        onClick={handleLogout}
       >
         Cerrar sesión
       </button>
@@ -714,6 +825,32 @@ export default function App() {
         <>
           {/* HEADER */}
           <div style={styles.header}>
+
+          {/* 🔹 BADGE DE USUARIO (foto + estado) */}
+            {user && (
+              <div style={styles.userBadge}>
+                {user.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt={user.name}
+                    style={styles.avatar}
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <div style={styles.avatarFallback}>
+                    {user.isGuest ? "👤" : (user.name?.[0] ?? "?")}
+                  </div>
+                )}
+                <div style={styles.userInfo}>
+                  <div style={styles.userName}>{user.name}</div>
+                  <div style={styles.userTag}>
+                    {user.isGuest ? "Modo invitado" : "Conectado con Google"}
+                  </div>
+                </div>
+              </div>
+            )}
+
+
             {/* Racha ARRIBA DEL TODO */}
             <div style={styles.streakBoxTop}>
               <div style={{ fontSize: "13px", color: "#64748b" }}>Racha</div>
@@ -732,6 +869,7 @@ export default function App() {
               📚 Vocab Trainer
             </h3>
 
+            
             {/* CONTROLES: NIVEL + CATEGORÍA */}
             <div
               style={{
