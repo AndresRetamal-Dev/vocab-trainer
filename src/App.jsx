@@ -5,6 +5,10 @@ import motivationsJson from "./data/motivations.json";
 const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
 const ALL = "Todas";
 
+// =========================
+//  MATCHING "INTELIGENTE"
+// =========================
+
 // Normaliza: minúsculas, quita acentos, recorta espacios
 const normalize = (s) =>
   (s || "")
@@ -13,16 +17,112 @@ const normalize = (s) =>
     .replace(/\p{Diacritic}/gu, "")
     .trim();
 
-function matches(user, gold) {
-  const u = normalize(user);
-  const goldSet = new Set(
-    (gold || "")
-      .replace(/\|/g, ";")
-      .split(";")
-      .map((x) => normalize(x))
-      .filter(Boolean)
+// Artículos que queremos ignorar
+const ARTICLES = [
+  "el",
+  "la",
+  "los",
+  "las",
+  "un",
+  "una",
+  "unos",
+  "unas",
+  "the",
+  "a",
+  "an",
+];
+
+// Quitar artículos al inicio / dentro de la frase
+const stripArticles = (str) => {
+  const words = str.split(/\s+/).filter(Boolean);
+  const filtered = words.filter((w) => !ARTICLES.includes(w));
+  return filtered.join(" ");
+};
+
+// Intento simple de pasar a singular (solo último término)
+const singularizeLastWord = (str) => {
+  const words = str.split(" ").filter(Boolean);
+  if (!words.length) return str;
+
+  const lastIndex = words.length - 1;
+  let last = words[lastIndex];
+
+  if (last.length > 3 && last.endsWith("es")) {
+    last = last.slice(0, -2);
+  } else if (last.length > 2 && last.endsWith("s")) {
+    last = last.slice(0, -1);
+  }
+
+  words[lastIndex] = last;
+  return words.join(" ");
+};
+
+// Forma "base" de una respuesta: normalizada, sin artículos y en singular
+const toBaseForm = (s) => {
+  let x = normalize(s);
+  x = x.replace(/\s+/g, " ").trim();
+  if (!x) return "";
+  x = stripArticles(x);
+  x = singularizeLastWord(x);
+  return x;
+};
+
+// Distancia de Levenshtein (para errores pequeños)
+const levenshtein = (a, b) => {
+  const m = a.length;
+  const n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+
+  const dp = Array.from({ length: m + 1 }, () =>
+    new Array(n + 1).fill(0)
   );
-  return goldSet.has(u);
+
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      dp[i][j] = Math.min(
+        dp[i - 1][j] + 1,
+        dp[i][j - 1] + 1,
+        dp[i - 1][j - 1] + cost
+      );
+    }
+  }
+
+  return dp[m][n];
+};
+
+// Comparación "inteligente" entre dos respuestas
+const isFuzzyEqual = (userStr, goldStr) => {
+  const u = toBaseForm(userStr);
+  const g = toBaseForm(goldStr);
+
+  if (!u || !g) return false;
+  if (u === g) return true;
+
+  const dist = levenshtein(u, g);
+  const maxLen = Math.max(u.length, g.length);
+
+  // Permitir 1 error en palabras cortas, 2 en largas
+  const allowed = maxLen <= 4 ? 1 : 2;
+
+  return dist <= allowed;
+};
+
+// Acepta varias soluciones separadas por ; o |
+function matches(user, gold) {
+  if (!gold) return false;
+
+  const answers = gold
+    .replace(/\|/g, ";")
+    .split(";")
+    .map((x) => x.trim())
+    .filter(Boolean);
+
+  return answers.some((ans) => isFuzzyEqual(user, ans));
 }
 
 export default function App() {
@@ -43,13 +143,25 @@ export default function App() {
   // palabras “difíciles”
   const [hardWords, setHardWords] = useState({});
 
+  // --- 🔹 Navegación global ---
+  const [user, setUser] = useState(null); // null = no logeado
+  const [screen, setScreen] = useState("auth"); // "auth" | "home" | "trainer"
 
-  
+  // --- 🔹 Modos de práctica ---
+  const [mode, setMode] = useState("write"); // "write" | "flashcard"
+  //const [preferredMode, setPreferredMode] = useState("write");
 
+  // --- 🔹 Dark mode ---
+  const [darkMode, setDarkMode] = useState(false);
+
+  // --- 🔹 Flashcards ---
+  const [showFlashAnswer, setShowFlashAnswer] = useState(false);
 
   // Carga externa de frases motivacionales con fallback por si el JSON está vacío
   const MOTIVATION_MESSAGES = useMemo(() => {
-    const arr = Array.isArray(motivationsJson) ? motivationsJson.filter(Boolean) : [];
+    const arr = Array.isArray(motivationsJson)
+      ? motivationsJson.filter(Boolean)
+      : [];
     return arr.length
       ? arr
       : [
@@ -59,7 +171,7 @@ export default function App() {
           "🧠 Repetir = recordar. ¡Buen trabajo!",
           "🔥 No te rindas: cada intento suma.",
           "🏆 Pasito a pasito se llega lejos.",
-          "✨ Lo estás haciendo muy bien, ¡continúa!"
+          "✨ Lo estás haciendo muy bien, ¡continúa!",
         ];
   }, []);
 
@@ -90,12 +202,10 @@ export default function App() {
     }
   }, []);
 
-  // Guarda hardWords cuando cambien  🔥 (ESTE ES EL NUEVO)
+  // Guarda hardWords cuando cambien
   useEffect(() => {
     localStorage.setItem("hardWords:v1", JSON.stringify(hardWords));
   }, [hardWords]);
-
-
 
   // categorías únicas a partir del JSON (fallback a "general")
   const CATEGORIES = useMemo(() => {
@@ -147,13 +257,16 @@ export default function App() {
     setFeedback(null);
     setAttempt(0);
     setMotivation(null); // ocultar motivación al cambiar filtro
+    setShowFlashAnswer(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, category]);
 
   // Aviso cuando solo hay 1 ítem disponible en el filtro actual
   useEffect(() => {
     if (items.length === 1) {
-      console.warn("⚠️ Solo hay una palabra en este filtro. No se puede cambiar a otra.");
+      console.warn(
+        "⚠️ Solo hay una palabra en este filtro. No se puede cambiar a otra."
+      );
     }
   }, [items.length]);
 
@@ -164,6 +277,7 @@ export default function App() {
     setFeedback(null);
     setAttempt(0);
     setMotivation(null);
+    setShowFlashAnswer(false);
   };
 
   const updateLeitner = (term, wasCorrect) => {
@@ -171,7 +285,10 @@ export default function App() {
       const st = p[term] || { box: 0, seen: 0 };
       let box = st.box ?? 0;
       box = wasCorrect ? Math.min(4, box + 1) : Math.max(0, box - 1);
-      return { ...p, [term]: { box, seen: (st.seen ?? 0) + 1, ts: Date.now() } };
+      return {
+        ...p,
+        [term]: { box, seen: (st.seen ?? 0) + 1, ts: Date.now() },
+      };
     });
   };
 
@@ -179,57 +296,84 @@ export default function App() {
     MOTIVATION_MESSAGES[Math.floor(Math.random() * MOTIVATION_MESSAGES.length)];
 
   const handleCheck = () => {
-  if (!current) return;
-  const ok = matches(answer, current.translation);
+    if (!current) return;
+    const ok = matches(answer, current.translation);
 
-  // ✅ RESPUESTA CORRECTA
-  if (ok) {
-    setFeedback("ok");
-    updateLeitner(current.term, true);
+    // ✅ RESPUESTA CORRECTA
+    if (ok) {
+      setFeedback("ok");
+      updateLeitner(current.term, true);
 
-    // ⭐ SUMAR RACHA
-    setStreak((prev) => prev + 1);
+      // ⭐ SUMAR RACHA
+      setStreak((prev) => prev + 1);
 
-    // ⭐ SUMAR PALABRAS COMPLETADAS (aciertos)
-    setAnsweredCount((prev) => prev + 1);
+      // ⭐ SUMAR PALABRAS COMPLETADAS (aciertos)
+      setAnsweredCount((prev) => prev + 1);
 
-    setTimeout(nextCard, 700);
-    return;
-  }
+      setTimeout(nextCard, 700);
+      return;
+    }
 
-  // ❌ el resto de tu lógica de fallo se queda igual
-  const newWrong = wrongCount + 1;
-  setWrongCount(newWrong);
+    // ❌ RESPUESTA INCORRECTA (pero la racha solo se rompe en el 2º fallo)
+    const newWrong = wrongCount + 1;
+    setWrongCount(newWrong);
 
-  if (newWrong % 5 === 0) {
-    setMotivation(chooseRandomMotivation());
-  } else {
-    setMotivation(null);
-  }
+    if (newWrong % 5 === 0) {
+      setMotivation(chooseRandomMotivation());
+    } else {
+      setMotivation(null);
+    }
 
-  if (attempt === 0) {
-    setAttempt(1);
-    setFeedback("first_wrong");
-  } else {
-    setFeedback("second_wrong");
-    setStreak(0);
-    updateLeitner(current.term, false);
-    setHardWords((prev) => ({
-      ...prev,
-      [current.term]: (prev[current.term] ?? 0) + 1,
-    }));
-  }
-};
-
-
+    if (attempt === 0) {
+      setAttempt(1);
+      setFeedback("first_wrong");
+    } else {
+      setFeedback("second_wrong");
+      setStreak(0);
+      updateLeitner(current.term, false);
+      setHardWords((prev) => ({
+        ...prev,
+        [current.term]: (prev[current.term] ?? 0) + 1,
+      }));
+    }
+  };
 
   const revealAndNext = () => {
-  setAttempt(0);
-  setFeedback("");
-  setMotivation(null);
-  setAnswer("");
-  nextCard();
-};
+    setAttempt(0);
+    setFeedback("");
+    setMotivation(null);
+    setAnswer("");
+    nextCard();
+  };
+
+  // Para modo flashcards: marcar si la sabías o no
+  const handleFlashcardResult = (wasCorrect) => {
+    if (!current) return;
+
+    if (wasCorrect) {
+      updateLeitner(current.term, true);
+      setStreak((prev) => prev + 1);
+      setAnsweredCount((prev) => prev + 1);
+    } else {
+      updateLeitner(current.term, false);
+      setStreak(0);
+      setWrongCount((prev) => prev + 1);
+      setHardWords((prev) => ({
+        ...prev,
+        [current.term]: (prev[current.term] ?? 0) + 1,
+      }));
+    }
+
+    setShowFlashAnswer(false);
+    nextCard();
+  };
+
+  // === Tema claro / oscuro ===
+  const pageBg = darkMode ? "#020617" : "#f1f5f9";
+  const cardBg = darkMode ? "#020617" : "#ffffff";
+  const titleColor = darkMode ? "#e5e7eb" : "#000000";
+  const inputBg = darkMode ? "#020617" : "#2f3133";
+  const inputText = darkMode ? "#e5e7eb" : "#ffffff";
 
   // === Estilos ===
   const styles = {
@@ -239,7 +383,7 @@ export default function App() {
       left: 0,
       width: "100vw",
       height: "100vh",
-      background: "#f1f5f9",
+      background: pageBg,
       display: "flex",
       flexDirection: "column",
       justifyContent: "center",
@@ -252,80 +396,77 @@ export default function App() {
 
     container: {
       position: "relative",
-      background: "white",
+      background: cardBg,
       borderRadius: "16px",
-      boxShadow: "0 6px 20px rgba(0,0,0,0.08)",
+      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.08)",
       width: "min(92vw, 520px)",
       padding: "24px 20px",
       textAlign: "center",
     },
 
-      streakBox: {
-  position: "absolute",
-  right: "10px",
-  top: "10px",
-  background: "#ffffff",
-  padding: "8px 12px",
-  borderRadius: "12px",
-  boxShadow: "0 6px 15px rgba(0,0,0,0.15)",
-  textAlign: "center",
-  width: "70px",
-  border: "1px solid #e2e8f0",
-  zIndex: 10,
-},
-progressBarOuter: {
-  width: "100%",
-  height: 6,
-  background: "#e2e8f0",
-  borderRadius: 4,
-  margin: "8px 0 4px",
-},
+    streakBox: {
+      position: "absolute",
+      right: "10px",
+      top: "10px",
+      background: "#ffffff",
+      padding: "8px 12px",
+      borderRadius: "12px",
+      boxShadow: "0 6px 15px rgba(0, 0, 0, 0.15)",
+      textAlign: "center",
+      width: "70px",
+      border: "1px solid #e2e8f0",
+      zIndex: 10,
+    },
 
-progressBarInner: {
-  height: "100%",
-  background: "#2563eb",
-  borderRadius: 4,
-  transition: "width 0.25s ease-out",
-},
+    progressBarOuter: {
+      width: "100%",
+      height: 6,
+      background: "#e2e8f0",
+      borderRadius: 4,
+      margin: "8px 0 4px",
+    },
 
-headerTop: {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "16px",
-  marginBottom: "10px",
-  flexWrap: "wrap",
-},
+    progressBarInner: {
+      height: "100%",
+      background: "#2563eb",
+      borderRadius: 4,
+      transition: "width 0.25s ease-out",
+    },
 
-streakBoxTop: {
-  background: "#ffffff",
-  padding: "12px 18px",
-  borderRadius: "14px",
-  boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-  textAlign: "center",
-  border: "1px solid #e2e8f0",
-  minWidth: "80px",
-  margin: "0 auto",        // <--- CENTRADO HORIZONTALMENTE
-  marginBottom: "10px",    // espacio debajo del racha box
-},
+    headerTop: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      gap: "16px",
+      marginBottom: "10px",
+      flexWrap: "wrap",
+    },
 
+    streakBoxTop: {
+      background: "#ffffff",
+      padding: "12px 18px",
+      borderRadius: "14px",
+      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.15)",
+      textAlign: "center",
+      border: "1px solid #e2e8f0",
+      minWidth: "80px",
+      margin: "0 auto",
+      marginBottom: "10px",
+    },
 
-streakNumberTop: {
-  fontSize: "30px",
-  fontWeight: "800",
-  color: "#2563eb",
-  marginTop: "4px",
-},
+    streakNumberTop: {
+      fontSize: "30px",
+      fontWeight: "800",
+      color: "#2563eb",
+      marginTop: "4px",
+    },
 
-
-
-
-      streakNumber: {
-        fontSize: "26px",
-        fontWeight: "700",
-        color: "#2563eb",
-        marginTop: "4px",
-      },
+    streakNumber: {
+      fontSize: "26px",
+      fontWeight: "700",
+      color: "#2563eb",
+      marginTop: "4px",
+    },
 
     wordBig: {
       fontWeight: 800,
@@ -345,8 +486,8 @@ streakNumberTop: {
       margin: "0 auto 12px",
       display: "block",
       fontSize: "16px",
-      background: "#2f3133",
-      color: "white",
+      background: inputBg,
+      color: inputText,
     },
 
     btnPrimary: {
@@ -382,7 +523,7 @@ streakNumberTop: {
       borderRadius: "12px",
       padding: "10px 12px",
       maxWidth: "420px",
-      boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+      boxShadow: "0 8px 20px rgba(0, 0, 0, 0.08)",
       fontSize: "14px",
       lineHeight: 1.35,
     },
@@ -407,203 +548,514 @@ streakNumberTop: {
       borderLeft: "1px solid #fde68a",
       borderTop: "1px solid #fde68a",
     },
-  };
 
-
-// === UI ===
-return (
-  <div style={styles.page}>
-    
-    {/* HEADER */}
-<div style={styles.header}>
-
-  {/* Racha ARRIBA DEL TODO */}
-  <div style={styles.streakBoxTop}>
-    <div style={{ fontSize: "13px", color: "#64748b" }}>Racha</div>
-    <div style={styles.streakNumberTop}>{streak}</div>
-  </div>
-
-  {/* Título */}
-  <h3 style={{ margin: 10, marginTop: 4, color: "#000", textAlign: "center" }}>
-    📚 Vocab Trainer
-  </h3>
-
-  {/* CONTROLES: NIVEL + CATEGORÍA */}
-  <div
-    style={{
-      marginTop: 8,
+    modeRow: {
+      marginTop: 12,
       display: "flex",
-      gap: 12,
       justifyContent: "center",
       alignItems: "center",
+      gap: 12,
       flexWrap: "wrap",
-    }}
-  >
-    <div>
-      <label style={{ marginRight: 6, color: "#000" }}>Nivel:</label>
-      <select
-        style={styles.select}
-        value={level}
-        onChange={(e) => setLevel(e.target.value)}
+    },
+
+    modeToggle: {
+      display: "inline-flex",
+      background: "#e2e8f0",
+      borderRadius: 999,
+      padding: 2,
+    },
+
+    modeBtn: {
+      border: "none",
+      padding: "6px 12px",
+      borderRadius: 999,
+      background: "transparent",
+      cursor: "pointer",
+      fontSize: 12,
+      color: "#475569",
+    },
+
+    modeBtnActive: {
+      border: "none",
+      padding: "6px 12px",
+      borderRadius: 999,
+      background: "#2563eb",
+      cursor: "pointer",
+      fontSize: 12,
+      color: "white",
+    },
+
+    darkToggle: {
+      borderRadius: 999,
+      border: "1px solid #cbd5e1",
+      padding: "6px 10px",
+      fontSize: 12,
+      cursor: "pointer",
+      background: darkMode ? "#020617" : "#ffffff",
+      color: darkMode ? "#e5e7eb" : "#0f172a",
+    },
+  };
+
+  // ======================
+  //  PANTALLAS SECUNDARIAS
+  // ======================
+
+  const ScreenAuth = () => (
+    <div style={{ textAlign: "center", marginTop: 80 }}>
+      <h2 style={{ color: titleColor }}>🔐 Bienvenido a Vocab Trainer</h2>
+      <p style={{ color: "#64748b" }}>Accede para empezar a practicar</p>
+
+      <button
+        style={{
+          padding: "12px 20px",
+          borderRadius: 12,
+          border: "1px solid #cbd5e1",
+          background: "#ffffff",
+          cursor: "pointer",
+          fontSize: 16,
+          marginTop: 20,
+        }}
+        onClick={() => {
+          // Login FAKE → más adelante pondremos Google real
+          setUser({
+            name: "Andrés",
+            email: "test@example.com",
+          });
+          setScreen("home");
+        }}
       >
-        {LEVELS.map((lv) => (
-          <option key={lv} value={lv}>
-            {lv}
-          </option>
-        ))}
-      </select>
+        🚀 Entrar con Google (demo)
+      </button>
     </div>
+  );
 
-    <div>
-      <label style={{ marginRight: 6, color: "#000" }}>Categoría:</label>
-      <select
-        style={styles.select}
-        value={category}
-        onChange={(e) => setCategory(e.target.value)}
-      >
-        {CATEGORIES.map((c) => (
-          <option key={c} value={c}>
-            {c}
-          </option>
-        ))}
-      </select>
-    </div>
-  </div>
-
-</div>
-
-
-
-      {/* TARJETA */}
-<div style={styles.container}>
-  {items.length === 0 && (
-    <p>No hay palabras para el nivel/categoría seleccionados.</p>
-  )}
-
-
-
-  {items.length > 0 && current && (
-    <>
-      <div aria-live="polite">
-        <div
-          style={{ color: "#64748b", fontSize: 12, letterSpacing: 0.3 }}
-        >
-          Tradúceme esta
-        </div>
-
-        {/* BARRA DE PROGRESO */}
-        <div style={styles.progressBarOuter}>
-          <div
-            style={{
-              ...styles.progressBarInner,
-              width:
-                items.length > 0
-                  ? `${Math.min(
-                      (answeredCount / items.length) * 100,
-                      100
-                    )}%`
-                  : "0%",
-            }}
-          />
-        </div>
-
-        <div style={styles.wordBig}>{current.term}</div>
-      </div>
-
-      {/* Nubecita de MOTIVACIÓN (aparece cada 5 fallos) */}
-      {motivation && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div
-            style={{ ...styles.bubble, ...styles.bubbleMotivation }}
-            role="note"
-            aria-live="polite"
-          >
-            <div
-              style={{
-                ...styles.bubbleTip,
-                ...styles.bubbleMotivationTip,
-              }}
-            />
-            {motivation}
-          </div>
-        </div>
-      )}
-
-      {/* Nubecita con definición en el PRIMER FALLO */}
-      {feedback === "first_wrong" && (
-        <div style={{ display: "flex", justifyContent: "center" }}>
-          <div style={styles.bubble} role="note">
-            <div style={styles.bubbleTip} />
-            {current.definition || "Definition not available."}
-          </div>
-        </div>
-      )}
-
-      <input
-        style={styles.input}
-        placeholder="Tu traducción…"
-        value={answer}
-        onChange={(e) => setAnswer(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && handleCheck()}
-        autoFocus
-        inputMode="text"
-        autoCapitalize="off"
-        autoCorrect="off"
-      />
+  const ScreenHome = () => (
+    <div style={{ textAlign: "center", marginTop: 60 }}>
+      <h2 style={{ color: titleColor }}>👋 Hola, {user?.name}</h2>
+      <p style={{ color: "#64748b" }}>¿Qué quieres practicar hoy?</p>
 
       <div
         style={{
+          marginTop: 30,
           display: "flex",
-          justifyContent: "center",
-          gap: 8,
-          flexWrap: "wrap", // 🔹 para que en móvil no se rompa
+          flexDirection: "column",
+          gap: 20,
         }}
       >
-        <button style={styles.btnPrimary} onClick={handleCheck}>
-          Comprobar
-        </button>
         <button
-          style={styles.btnSecondary}
-          onClick={nextCard}
-          title="Saltar"
+          style={{
+            padding: "12px 16px",
+            borderRadius: 12,
+            border: "1px solid #cbd5e1",
+            background: "#2563eb",
+            color: "white",
+            cursor: "pointer",
+            fontSize: 16,
+          }}
+          onClick={() => {
+            //setPreferredMode("write");
+            setMode("write");
+            setScreen("trainer");
+          }}
         >
-          Saltar
+          ✍️ Practicar Escribiendo
+        </button>
+
+        <button
+          style={{
+            padding: "12px 16px",
+            borderRadius: 12,
+            border: "1px solid #cbd5e1",
+            background: "#ffffff",
+            cursor: "pointer",
+            fontSize: 16,
+          }}
+          onClick={() => {
+            //setPreferredMode("flashcard");
+            setMode("flashcard");
+            setScreen("trainer");
+          }}
+        >
+          🃏 Practicar con Flashcards
         </button>
       </div>
 
-      {feedback === "ok" && (
-        <p style={styles.feedbackOk}>✅ ¡Correcto!</p>
-      )}
+      <button
+        style={{
+          marginTop: 40,
+          fontSize: 14,
+          background: "transparent",
+          border: "none",
+          cursor: "pointer",
+          color: "#64748b",
+          textDecoration: "underline",
+        }}
+        onClick={() => {
+          setUser(null);
+          setScreen("auth");
+        }}
+      >
+        Cerrar sesión
+      </button>
+    </div>
+  );
 
-      {feedback === "second_wrong" && (
+  // === UI ===
+  return (
+    <div style={styles.page}>
+      {/* 🔹 PANTALLA LOGIN */}
+      {screen === "auth" && <ScreenAuth />}
+
+      {/* 🔹 PANTALLA HOME (selección de modo) */}
+      {screen === "home" && <ScreenHome />}
+
+      {/* 🔹 PANTALLA TRAINER (lo de siempre) */}
+      {screen === "trainer" && (
         <>
-          <p style={styles.feedbackBad}>❌ Incorrecto (2 intentos)</p>
-          <p style={styles.def}>
-            No te preocupes, te volverá a aparecer.
-            <br />
-            Significado: <em>{current.translation}</em>
-          </p>
-          <button
-            style={{ ...styles.btnSecondary, marginTop: 10 }}
-            onClick={revealAndNext}
-          >
-            Siguiente
-          </button>
+          {/* HEADER */}
+          <div style={styles.header}>
+            {/* Racha ARRIBA DEL TODO */}
+            <div style={styles.streakBoxTop}>
+              <div style={{ fontSize: "13px", color: "#64748b" }}>Racha</div>
+              <div style={styles.streakNumberTop}>{streak}</div>
+            </div>
+
+            {/* Título */}
+            <h3
+              style={{
+                margin: 10,
+                marginTop: 4,
+                color: titleColor,
+                textAlign: "center",
+              }}
+            >
+              📚 Vocab Trainer
+            </h3>
+
+            {/* CONTROLES: NIVEL + CATEGORÍA */}
+            <div
+              style={{
+                marginTop: 8,
+                display: "flex",
+                gap: 12,
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <div>
+                <label style={{ marginRight: 6, color: titleColor }}>
+                  Nivel:
+                </label>
+                <select
+                  style={styles.select}
+                  value={level}
+                  onChange={(e) => setLevel(e.target.value)}
+                >
+                  {LEVELS.map((lv) => (
+                    <option key={lv} value={lv}>
+                      {lv}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label style={{ marginRight: 6, color: titleColor }}>
+                  Categoría:
+                </label>
+                <select
+                  style={styles.select}
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  {CATEGORIES.map((c) => (
+                    <option key={c} value={c}>
+                      {c}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Toggle de modo + Dark mode */}
+            <div style={styles.modeRow}>
+              <div style={styles.modeToggle}>
+                <button
+                  style={
+                    mode === "write" ? styles.modeBtnActive : styles.modeBtn
+                  }
+                  onClick={() => {
+                    setMode("write");
+                    setShowFlashAnswer(false);
+                    setFeedback(null);
+                    setAttempt(0);
+                  }}
+                >
+                  ✍️ Escribir
+                </button>
+                <button
+                  style={
+                    mode === "flashcard"
+                      ? styles.modeBtnActive
+                      : styles.modeBtn
+                  }
+                  onClick={() => {
+                    setMode("flashcard");
+                    setShowFlashAnswer(false);
+                    setFeedback(null);
+                    setAttempt(0);
+                  }}
+                >
+                  🃏 Flashcards
+                </button>
+              </div>
+
+              <button
+                style={styles.darkToggle}
+                onClick={() => setDarkMode((d) => !d)}
+              >
+                {darkMode ? "🌙 Dark" : "☀️ Light"}
+              </button>
+            </div>
+          </div>
+
+          {/* TARJETA */}
+          <div style={styles.container}>
+            {items.length === 0 && (
+              <p>No hay palabras para el nivel/categoría seleccionados.</p>
+            )}
+
+            {items.length > 0 && current && (
+              <>
+                {/* MODO ESCRIBIR */}
+                {mode === "write" && (
+                  <>
+                    <div aria-live="polite">
+                      <div
+                        style={{
+                          color: "#64748b",
+                          fontSize: 12,
+                          letterSpacing: 0.3,
+                        }}
+                      >
+                        Tradúceme esta
+                      </div>
+
+                      {/* BARRA DE PROGRESO */}
+                      <div style={styles.progressBarOuter}>
+                        <div
+                          style={{
+                            ...styles.progressBarInner,
+                            width:
+                              items.length > 0
+                                ? `${Math.min(
+                                    (answeredCount / items.length) * 100,
+                                    100
+                                  )}%`
+                                : "0%",
+                          }}
+                        />
+                      </div>
+
+                      <div style={styles.wordBig}>{current.term}</div>
+                    </div>
+
+                    {/* Nubecita de MOTIVACIÓN (aparece cada 5 fallos) */}
+                    {motivation && (
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <div
+                          style={{
+                            ...styles.bubble,
+                            ...styles.bubbleMotivation,
+                          }}
+                          role="note"
+                          aria-live="polite"
+                        >
+                          <div
+                            style={{
+                              ...styles.bubbleTip,
+                              ...styles.bubbleMotivationTip,
+                            }}
+                          />
+                          {motivation}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Nubecita con definición en el PRIMER FALLO */}
+                    {feedback === "first_wrong" && (
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <div style={styles.bubble} role="note">
+                          <div style={styles.bubbleTip} />
+                          {current.definition ||
+                            "Definition not available."}
+                        </div>
+                      </div>
+                    )}
+
+                    <input
+                      style={styles.input}
+                      placeholder="Tu traducción…"
+                      value={answer}
+                      onChange={(e) => setAnswer(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleCheck()}
+                      autoFocus
+                      inputMode="text"
+                      autoCapitalize="off"
+                      autoCorrect="off"
+                    />
+
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        gap: 8,
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <button
+                        style={styles.btnPrimary}
+                        onClick={handleCheck}
+                      >
+                        Comprobar
+                      </button>
+                      <button
+                        style={styles.btnSecondary}
+                        onClick={nextCard}
+                        title="Saltar"
+                      >
+                        Saltar
+                      </button>
+                    </div>
+
+                    {feedback === "ok" && (
+                      <p style={styles.feedbackOk}>✅ ¡Correcto!</p>
+                    )}
+
+                    {feedback === "second_wrong" && (
+                      <>
+                        <p style={styles.feedbackBad}>
+                          ❌ Incorrecto (2 intentos)
+                        </p>
+                        <p style={styles.def}>
+                          No te preocupes, te volverá a aparecer.
+                          <br />
+                          Significado: <em>{current.translation}</em>
+                        </p>
+                        <button
+                          style={{
+                            ...styles.btnSecondary,
+                            marginTop: 10,
+                          }}
+                          onClick={revealAndNext}
+                        >
+                          Siguiente
+                        </button>
+                      </>
+                    )}
+                  </>
+                )}
+
+                {/* MODO FLASHCARDS */}
+                {mode === "flashcard" && (
+                  <>
+                    <div
+                      aria-live="polite"
+                      style={{ marginBottom: 16 }}
+                    >
+                      <div
+                        style={{
+                          color: "#64748b",
+                          fontSize: 12,
+                          letterSpacing: 0.3,
+                        }}
+                      >
+                        Tarjeta
+                      </div>
+                      <div style={styles.wordBig}>{current.term}</div>
+
+                      {showFlashAnswer && (
+                        <p
+                          style={{
+                            marginTop: 8,
+                            fontSize: 18,
+                            fontWeight: 500,
+                            color: "#0f172a",
+                          }}
+                        >
+                          {current.translation}
+                        </p>
+                      )}
+                    </div>
+
+                    {!showFlashAnswer ? (
+                      <button
+                        style={styles.btnPrimary}
+                        onClick={() => setShowFlashAnswer(true)}
+                      >
+                        Mostrar respuesta
+                      </button>
+                    ) : (
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          gap: 8,
+                          flexWrap: "wrap",
+                        }}
+                      >
+                        <button
+                          style={styles.btnPrimary}
+                          onClick={() =>
+                            handleFlashcardResult(true)
+                          }
+                        >
+                          ✅ La sabía
+                        </button>
+                        <button
+                          style={styles.btnSecondary}
+                          onClick={() =>
+                            handleFlashcardResult(false)
+                          }
+                        >
+                          ❌ No la sabía
+                        </button>
+                      </div>
+                    )}
+                  </>
+                )}
+
+                {/* Info común abajo */}
+                <p style={styles.small}>
+                  {/* Contador opcional para debug; puedes ocultarlo */}
+                  wrongs: {wrongCount}
+                </p>
+
+                <p
+                  style={{
+                    fontSize: 12,
+                    color: "#64748b",
+                    marginTop: 10,
+                  }}
+                >
+                  Palabras completadas: {answeredCount}
+                </p>
+              </>
+            )}
+          </div>
         </>
       )}
-
-      <p style={styles.small}>
-        {/* Contador opcional para debug; puedes ocultarlo */}
-        wrongs: {wrongCount}
-      </p>
-
-      <p style={{ fontSize: 12, color: "#64748b", marginTop: 10 }}>
-        Palabras completadas: {answeredCount}
-      </p>
-    </>
-  )}
-</div>
-
     </div>
   );
 }
