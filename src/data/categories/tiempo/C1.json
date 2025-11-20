@@ -1,0 +1,12 @@
+[
+  { "term": "barometric pressure", "translation": "presión barométrica", "definition": "Atmospheric pressure measured using a barometer.", "level": "C1", "category": "tiempo" },
+  { "term": "meteorological phenomenon", "translation": "fenómeno meteorológico", "definition": "A natural event related to weather.", "level": "C1", "category": "tiempo" },
+  { "term": "precipitation levels", "translation": "niveles de precipitación", "definition": "The amount of water falling as rain, snow, etc.", "level": "C1", "category": "tiempo" },
+  { "term": "seasonal variation", "translation": "variación estacional", "definition": "Changes in climate according to season.", "level": "C1", "category": "tiempo" },
+  { "term": "atmospheric conditions", "translation": "condiciones atmosféricas", "definition": "The state of the air around us.", "level": "C1", "category": "tiempo" },
+  { "term": "hydrometeorology", "translation": "hidrometeorología", "definition": "Study of weather involving water in the atmosphere.", "level": "C1", "category": "tiempo" },
+  { "term": "tropical cyclone", "translation": "ciclón tropical", "definition": "A rotating storm system with strong winds.", "level": "C1", "category": "tiempo" },
+  { "term": "extreme weather event", "translation": "evento meteorológico extremo", "definition": "Unusual, severe weather conditions.", "level": "C1", "category": "tiempo" },
+  { "term": "meteorological data", "translation": "datos meteorológicos", "definition": "Information collected to describe the weather.", "level": "C1", "category": "tiempo" },
+  { "term": "long-term climate trend", "translation": "tendencia climática a largo plazo", "definition": "Changes in climate observed over decades.", "level": "C1", "category": "tiempo" }
+]

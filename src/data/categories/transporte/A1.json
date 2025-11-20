@@ -1,0 +1,12 @@
+[
+  { "term": "car", "translation": "coche", "definition": "A road vehicle with four wheels.", "level": "A1", "category": "transporte" },
+  { "term": "bus", "translation": "autobús", "definition": "A large vehicle that carries many passengers.", "level": "A1", "category": "transporte" },
+  { "term": "train", "translation": "tren", "definition": "A vehicle that moves on rails.", "level": "A1", "category": "transporte" },
+  { "term": "bicycle", "translation": "bicicleta", "definition": "A two-wheeled vehicle powered by pedals.", "level": "A1", "category": "transporte" },
+  { "term": "motorcycle", "translation": "motocicleta", "definition": "A two-wheeled motor vehicle.", "level": "A1", "category": "transporte" },
+  { "term": "taxi", "translation": "taxi", "definition": "A car that takes people where they need to go for money.", "level": "A1", "category": "transporte" },
+  { "term": "plane", "translation": "avión", "definition": "An aircraft that flies in the sky.", "level": "A1", "category": "transporte" },
+  { "term": "boat", "translation": "barco", "definition": "A vehicle used to travel on water.", "level": "A1", "category": "transporte" },
+  { "term": "subway", "translation": "metro", "definition": "An underground train system.", "level": "A1", "category": "transporte" },
+  { "term": "tram", "translation": "tranvía", "definition": "A rail vehicle that runs through a city.", "level": "A1", "category": "transporte" }
+]

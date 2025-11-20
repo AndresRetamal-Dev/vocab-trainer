@@ -1,0 +1,89 @@
+[
+  { "term": "accordingly", "translation": "en consecuencia", "definition": "In a way that is appropriate to a particular situation.", "level": "B2", "category": "adverbios" },
+  { "term": "additionally", "translation": "además", "definition": "In addition; as well.", "level": "B2", "category": "adverbios" },
+  { "term": "alternatively", "translation": "alternativamente", "definition": "In another option or possibility.", "level": "B2", "category": "adverbios" },
+  { "term": "consequently", "translation": "consecuentemente", "definition": "As a result of something.", "level": "B2", "category": "adverbios" },
+  { "term": "therefore", "translation": "por lo tanto", "definition": "For that reason; as a result.", "level": "B2", "category": "adverbios" },
+  { "term": "nonetheless", "translation": "sin embargo", "definition": "In spite of what has been said; however.", "level": "B2", "category": "adverbios" },
+  { "term": "nevertheless", "translation": "no obstante", "definition": "Despite what has just been said.", "level": "B2", "category": "adverbios" },
+  { "term": "furthermore", "translation": "además", "definition": "Also; in addition.", "level": "B2", "category": "adverbios" },
+  { "term": "moreover", "translation": "además", "definition": "In addition to what was said.", "level": "B2", "category": "adverbios" },
+  { "term": "hence", "translation": "de ahí", "definition": "For this reason.", "level": "B2", "category": "adverbios" },
+
+  { "term": "primarily", "translation": "principalmente", "definition": "For the most part; mainly.", "level": "B2", "category": "adverbios" },
+  { "term": "notably", "translation": "notablemente", "definition": "Especially; in a way that is important.", "level": "B2", "category": "adverbios" },
+  { "term": "explicitly", "translation": "explícitamente", "definition": "In a clear and detailed manner.", "level": "B2", "category": "adverbios" },
+  { "term": "implicitly", "translation": "implícitamente", "definition": "In a way that is understood but not directly stated.", "level": "B2", "category": "adverbios" },
+  { "term": "precisely", "translation": "precisamente", "definition": "Exactly and accurately.", "level": "B2", "category": "adverbios" },
+  { "term": "relatively", "translation": "relativamente", "definition": "In comparison to something else.", "level": "B2", "category": "adverbios" },
+  { "term": "explicitly", "translation": "explícitamente", "definition": "In a very clear way.", "level": "B2", "category": "adverbios" },
+  { "term": "approximately", "translation": "aproximadamente", "definition": "Not exactly, but close.", "level": "B2", "category": "adverbios" },
+  { "term": "technically", "translation": "técnicamente", "definition": "According to precise facts or rules.", "level": "B2", "category": "adverbios" },
+  { "term": "notably", "translation": "notablemente", "definition": "In a way that is important or unusual.", "level": "B2", "category": "adverbios" },
+
+  { "term": "excessively", "translation": "excesivamente", "definition": "To an extreme or unnecessary degree.", "level": "B2", "category": "adverbios" },
+  { "term": "efficiently", "translation": "eficientemente", "definition": "In a productive and organized way.", "level": "B2", "category": "adverbios" },
+  { "term": "effectively", "translation": "efectivamente", "definition": "In a way that produces the intended result.", "level": "B2", "category": "adverbios" },
+  { "term": "significantly", "translation": "significativamente", "definition": "In an important or noticeable way.", "level": "B2", "category": "adverbios" },
+  { "term": "critically", "translation": "críticamente", "definition": "In a crucial or important way.", "level": "B2", "category": "adverbios" },
+  { "term": "drastically", "translation": "drásticamente", "definition": "In a severe or extreme way.", "level": "B2", "category": "adverbios" },
+  { "term": "fundamentally", "translation": "fundamentalmente", "definition": "In a basic and essential way.", "level": "B2", "category": "adverbios" },
+  { "term": "substantially", "translation": "sustancialmente", "definition": "By a large amount.", "level": "B2", "category": "adverbios" },
+  { "term": "exclusively", "translation": "exclusivamente", "definition": "Only; not including anything else.", "level": "B2", "category": "adverbios" },
+  { "term": "intensively", "translation": "intensivamente", "definition": "In a concentrated or thorough way.", "level": "B2", "category": "adverbios" },
+
+  { "term": "notwithstanding", "translation": "no obstante", "definition": "Despite the fact; although.", "level": "B2", "category": "adverbios" },
+  { "term": "alternately", "translation": "de manera alternada", "definition": "Taking turns; switching between states.", "level": "B2", "category": "adverbios" },
+  { "term": "collectively", "translation": "colectivamente", "definition": "As a group; together.", "level": "B2", "category": "adverbios" },
+  { "term": "jointly", "translation": "conjuntamente", "definition": "Together with someone else.", "level": "B2", "category": "adverbios" },
+  { "term": "mutually", "translation": "mutuamente", "definition": "Shared by two or more parties.", "level": "B2", "category": "adverbios" },
+
+  { "term": "unusually", "translation": "inusualmente", "definition": "In an uncommon or rare way.", "level": "B2", "category": "adverbios" },
+  { "term": "exceptionally", "translation": "excepcionalmente", "definition": "More than what is usual or average.", "level": "B2", "category": "adverbios" },
+  { "term": "comparatively", "translation": "comparativamente", "definition": "In comparison with something else.", "level": "B2", "category": "adverbios" },
+  { "term": "overwhelmingly", "translation": "abrumadoramente", "definition": "To a very great degree.", "level": "B2", "category": "adverbios" },
+
+  { "term": "traditionally", "translation": "tradicionalmente", "definition": "In a way that follows customs or tradition.", "level": "B2", "category": "adverbios" },
+  { "term": "structurally", "translation": "estructuralmente", "definition": "In relation to the structure of something.", "level": "B2", "category": "adverbios" },
+  { "term": "logically", "translation": "lógicamente", "definition": "In a reasonable or logical way.", "level": "B2", "category": "adverbios" },
+  { "term": "ideally", "translation": "idealmente", "definition": "In a perfect world; preferably.", "level": "B2", "category": "adverbios" },
+  { "term": "economically", "translation": "económicamente", "definition": "In a way related to money or resources.", "level": "B2", "category": "adverbios" },
+
+  { "term": "transparently", "translation": "transparentemente", "definition": "In an open and honest way.", "level": "B2", "category": "adverbios" },
+  { "term": "deliberately", "translation": "deliberadamente", "definition": "On purpose; intentionally.", "level": "B2", "category": "adverbios" },
+  { "term": "systematically", "translation": "sistemáticamente", "definition": "In a planned or organized manner.", "level": "B2", "category": "adverbios" },
+  { "term": "chronically", "translation": "crónicamente", "definition": "Continuing for a long time; constantly recurring.", "level": "B2", "category": "adverbios" },
+  { "term": "symbolically", "translation": "simbólicamente", "definition": "In a way that represents something else.", "level": "B2", "category": "adverbios" },
+
+  { "term": "understandably", "translation": "comprensiblemente", "definition": "In a way that is easy to understand.", "level": "B2", "category": "adverbios" },
+  { "term": "predictably", "translation": "predeciblemente", "definition": "In a way that can be predicted.", "level": "B2", "category": "adverbios" },
+  { "term": "indisputably", "translation": "indiscutiblemente", "definition": "In a way that cannot be argued against.", "level": "B2", "category": "adverbios" },
+  { "term": "coincidentally", "translation": "coincidentemente", "definition": "By chance; unexpectedly.", "level": "B2", "category": "adverbios" },
+
+  { "term": "downright", "translation": "totalmente", "definition": "Completely or extremely, often used negatively.", "level": "B2", "category": "adverbios" },
+  { "term": "utterly", "translation": "totalmente", "definition": "Completely; absolutely.", "level": "B2", "category": "adverbios" },
+  { "term": "distinctly", "translation": "claramente", "definition": "In a way that is easy to recognize.", "level": "B2", "category": "adverbios" },
+  { "term": "explicitly", "translation": "explícitamente", "definition": "Stated clearly and in detail.", "level": "B2", "category": "adverbios" },
+
+  { "term": "weirdly", "translation": "extrañamente", "definition": "In a strange or unusual way.", "level": "B2", "category": "adverbios" },
+  { "term": "oddly", "translation": "curiosamente", "definition": "In a strange or surprising way.", "level": "B2", "category": "adverbios" },
+  { "term": "ironically", "translation": "irónicamente", "definition": "In a way that suggests the opposite of what is expected.", "level": "B2", "category": "adverbios" },
+
+  { "term": "efficiently", "translation": "eficientemente", "definition": "With minimum waste of effort or resources.", "level": "B2", "category": "adverbios" },
+
+  { "term": "coherently", "translation": "coherentemente", "definition": "In a logical and consistent way.", "level": "B2", "category": "adverbios" },
+  { "term": "logically", "translation": "lógicamente", "definition": "In a clear and rational manner.", "level": "B2", "category": "adverbios" },
+
+  { "term": "undeniably", "translation": "innegablemente", "definition": "In a way that is true and cannot be denied.", "level": "B2", "category": "adverbios" },
+  { "term": "accurately", "translation": "con exactitud", "definition": "In a correct and precise way.", "level": "B2", "category": "adverbios" },
+  { "term": "consistently", "translation": "consistentemente", "definition": "Always behaving or happening in a similar way.", "level": "B2", "category": "adverbios" },
+  { "term": "securely", "translation": "de forma segura", "definition": "In a safe or protected way.", "level": "B2", "category": "adverbios" },
+
+  { "term": "selectively", "translation": "selectivamente", "definition": "In a way that carefully chooses only certain things.", "level": "B2", "category": "adverbios" },
+  { "term": "strategically", "translation": "estratégicamente", "definition": "In a planned way to achieve a goal.", "level": "B2", "category": "adverbios" },
+
+  { "term": "practically", "translation": "prácticamente", "definition": "Almost; nearly.", "level": "B2", "category": "adverbios" },
+  { "term": "essentially", "translation": "esencialmente", "definition": "Basically; fundamentally.", "level": "B2", "category": "adverbios" },
+
+  { "term": "notoriously", "translation": "notoriamente", "definition": "In a way that is famous for being bad.", "level": "B2", "category": "adverbios" }
+]

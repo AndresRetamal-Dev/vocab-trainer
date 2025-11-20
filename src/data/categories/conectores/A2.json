@@ -1,0 +1,10 @@
+[
+  { "term": "then", "translation": "luego", "definition": "Shows sequence.", "level": "A2", "category": "conectores" },
+  { "term": "after that", "translation": "después de eso", "definition": "Next in order.", "level": "A2", "category": "conectores" },
+  { "term": "before", "translation": "antes de", "definition": "Earlier in time.", "level": "A2", "category": "conectores" },
+  { "term": "also", "translation": "también", "definition": "Adds extra information.", "level": "A2", "category": "conectores" },
+  { "term": "however", "translation": "sin embargo", "definition": "Shows contrast politely.", "level": "A2", "category": "conectores" },
+  { "term": "although", "translation": "aunque", "definition": "Introduces a concession.", "level": "A2", "category": "conectores" },
+  { "term": "first", "translation": "primero", "definition": "Introduces the beginning of a sequence.", "level": "A2", "category": "conectores" },
+  { "term": "finally", "translation": "finalmente", "definition": "Indicates the last idea.", "level": "A2", "category": "conectores" }
+]

@@ -1,0 +1,14 @@
+[
+  { "term": "my", "translation": "mi", "definition": "Possessive adjective for the speaker.", "level": "A2", "category": "pronombres" },
+  { "term": "your", "translation": "tu / su", "definition": "Possessive adjective for the listener.", "level": "A2", "category": "pronombres" },
+  { "term": "his", "translation": "su (de él)", "definition": "Possessive adjective/pronoun.", "level": "A2", "category": "pronombres" },
+  { "term": "her", "translation": "su (de ella)", "definition": "Possessive adjective/pronoun.", "level": "A2", "category": "pronombres" },
+  { "term": "its", "translation": "su (de eso)", "definition": "Possessive adjective for objects/animals.", "level": "A2", "category": "pronombres" },
+  { "term": "our", "translation": "nuestro/a", "definition": "Possessive adjective for 'we'.", "level": "A2", "category": "pronombres" },
+  { "term": "their", "translation": "su (de ellos)", "definition": "Possessive adjective for 'they'.", "level": "A2", "category": "pronombres" },
+  { "term": "mine", "translation": "mío/a", "definition": "Possessive pronoun.", "level": "A2", "category": "pronombres" },
+  { "term": "yours", "translation": "tuyo/a", "definition": "Possessive pronoun.", "level": "A2", "category": "pronombres" },
+  { "term": "hers", "translation": "suyo/a (de ella)", "definition": "Possessive pronoun.", "level": "A2", "category": "pronombres" },
+  { "term": "ours", "translation": "nuestro/a", "definition": "Possessive pronoun.", "level": "A2", "category": "pronombres" },
+  { "term": "theirs", "translation": "suyo/a (de ellos)", "definition": "Possessive pronoun.", "level": "A2", "category": "pronombres" }
+]

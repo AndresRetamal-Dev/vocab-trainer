@@ -1,0 +1,12 @@
+[
+  { "term": "forehead", "translation": "frente", "definition": "The front upper part of the face.", "level": "B2", "category": "cuerpo" },
+  { "term": "jaw", "translation": "mandíbula", "definition": "The lower part of the face used for chewing.", "level": "B2", "category": "cuerpo" },
+  { "term": "cheek", "translation": "mejilla", "definition": "The soft part of the face below the eyes.", "level": "B2", "category": "cuerpo" },
+  { "term": "eyebrow", "translation": "ceja", "definition": "The hair above the eye.", "level": "B2", "category": "cuerpo" },
+  { "term": "eyelid", "translation": "párpado", "definition": "The skin that covers and protects the eye.", "level": "B2", "category": "cuerpo" },
+  { "term": "spine", "translation": "columna vertebral", "definition": "The backbone of the body.", "level": "B2", "category": "cuerpo" },
+  { "term": "rib", "translation": "costilla", "definition": "One of the curved bones forming the chest.", "level": "B2", "category": "cuerpo" },
+  { "term": "vein", "translation": "vena", "definition": "A blood vessel that returns blood to the heart.", "level": "B2", "category": "cuerpo" },
+  { "term": "artery", "translation": "arteria", "definition": "A blood vessel that carries blood from the heart.", "level": "B2", "category": "cuerpo" },
+  { "term": "organ", "translation": "órgano", "definition": "A part of the body with a specific function.", "level": "B2", "category": "cuerpo" }
+]

@@ -1,0 +1,12 @@
+[
+  { "term": "school", "translation": "escuela / colegio", "definition": "A place where students learn.", "level": "A1", "category": "ciudad" },
+  { "term": "park", "translation": "parque", "definition": "A public green area used for rest and play.", "level": "A1", "category": "ciudad" },
+  { "term": "street", "translation": "calle", "definition": "A public road in a city or town.", "level": "A1", "category": "ciudad" },
+  { "term": "supermarket", "translation": "supermercado", "definition": "A shop that sells food and household items.", "level": "A1", "category": "ciudad" },
+  { "term": "bank", "translation": "banco", "definition": "A place to store and manage money.", "level": "A1", "category": "ciudad" },
+  { "term": "restaurant", "translation": "restaurante", "definition": "A place to eat meals.", "level": "A1", "category": "ciudad" },
+  { "term": "cafe", "translation": "cafetería", "definition": "A small restaurant serving drinks and snacks.", "level": "A1", "category": "ciudad" },
+  { "term": "hospital", "translation": "hospital", "definition": "A place where sick or injured people are treated.", "level": "A1", "category": "ciudad" },
+  { "term": "pharmacy", "translation": "farmacia", "definition": "A shop that sells medicine.", "level": "A1", "category": "ciudad" },
+  { "term": "hotel", "translation": "hotel", "definition": "A place to stay temporarily.", "level": "A1", "category": "ciudad" }
+]

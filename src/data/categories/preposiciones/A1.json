@@ -1,0 +1,10 @@
+[
+  { "term": "in", "translation": "en / dentro de", "definition": "Shows location inside a place or time period.", "level": "A1", "category": "preposiciones" },
+  { "term": "on", "translation": "en / sobre", "definition": "Shows position on a surface or a specific day.", "level": "A1", "category": "preposiciones" },
+  { "term": "at", "translation": "en / a", "definition": "Shows a specific point in time or location.", "level": "A1", "category": "preposiciones" },
+  { "term": "under", "translation": "debajo de", "definition": "Indicates a lower position.", "level": "A1", "category": "preposiciones" },
+  { "term": "behind", "translation": "detrás de", "definition": "Shows something at the back of something else.", "level": "A1", "category": "preposiciones" },
+  { "term": "next to", "translation": "al lado de", "definition": "Indicates something very close to another.", "level": "A1", "category": "preposiciones" },
+  { "term": "between", "translation": "entre (dos)", "definition": "Shows something in the middle of two things.", "level": "A1", "category": "preposiciones" },
+  { "term": "in front of", "translation": "en frente de", "definition": "Indicates the area before something.", "level": "A1", "category": "preposiciones" }
+]

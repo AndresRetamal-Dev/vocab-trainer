@@ -1,0 +1,16 @@
+[
+    { "term": "shirt", "translation": "camisa", "definition": "A piece of clothing worn on the upper body.", "level": "A1", "category": "ropa" },
+    { "term": "t-shirt", "translation": "camiseta", "definition": "A casual shirt with short sleeves.", "level": "A1", "category": "ropa" },
+    { "term": "pants", "translation": "pantalones", "definition": "Clothing that covers each leg separately.", "level": "A1", "category": "ropa" },
+    { "term": "jeans", "translation": "vaqueros", "definition": "Pants made of denim.", "level": "A1", "category": "ropa" },
+    { "term": "dress", "translation": "vestido", "definition": "A one-piece garment for women.", "level": "A1", "category": "ropa" },
+    { "term": "skirt", "translation": "falda", "definition": "A garment worn from the waist down.", "level": "A1", "category": "ropa" },
+    { "term": "shorts", "translation": "pantalones cortos", "definition": "Short pants.", "level": "A1", "category": "ropa" },
+    { "term": "jacket", "translation": "chaqueta", "definition": "A light coat for the upper body.", "level": "A1", "category": "ropa" },
+    { "term": "coat", "translation": "abrigo", "definition": "A warm outer garment.", "level": "A1", "category": "ropa" },
+    { "term": "shoes", "translation": "zapatos", "definition": "Footwear for daily use.", "level": "A1", "category": "ropa" },
+    { "term": "socks", "translation": "calcetines", "definition": "Clothing worn on the feet.", "level": "A1", "category": "ropa" },
+    { "term": "hat", "translation": "sombrero / gorra", "definition": "A covering for the head.", "level": "A1", "category": "ropa" },
+    { "term": "scarf", "translation": "bufanda", "definition": "A long piece of cloth for the neck.", "level": "A1", "category": "ropa" },
+    { "term": "gloves", "translation": "guantes", "definition": "Coverings for the hands.", "level": "A1", "category": "ropa" }
+]

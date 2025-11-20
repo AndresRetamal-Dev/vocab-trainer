@@ -1,0 +1,13 @@
+[
+    { "term": "in-laws", "translation": "familia política", "definition": "Relatives of your spouse.", "level": "B1", "category": "familia" },
+    { "term": "father-in-law", "translation": "suegro", "definition": "Your spouse's father.", "level": "B1", "category": "familia" },
+    { "term": "mother-in-law", "translation": "suegra", "definition": "Your spouse's mother.", "level": "B1", "category": "familia" },
+    { "term": "son-in-law", "translation": "yerno", "definition": "Your child's husband.", "level": "B1", "category": "familia" },
+    { "term": "daughter-in-law", "translation": "nuera", "definition": "Your child's wife.", "level": "B1", "category": "familia" },
+    { "term": "brother-in-law", "translation": "cuñado", "definition": "Your spouse's brother or your sibling's husband.", "level": "B1", "category": "familia" },
+    { "term": "sister-in-law", "translation": "cuñada", "definition": "Your spouse's sister or your sibling's wife.", "level": "B1", "category": "familia" },
+    { "term": "single parent", "translation": "padre/madre soltero", "definition": "A parent raising a child alone.", "level": "B1", "category": "familia" },
+    { "term": "relative", "translation": "pariente", "definition": "A person connected by blood or marriage.", "level": "B1", "category": "familia" },
+    { "term": "ancestor", "translation": "ancestro", "definition": "A person from whom you descend.", "level": "B1", "category": "familia" },
+    { "term": "descendant", "translation": "descendiente", "definition": "A person who comes from a particular ancestor.", "level": "B1", "category": "familia" }
+]

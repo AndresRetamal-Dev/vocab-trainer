@@ -1,0 +1,11 @@
+[
+  { "term": "someone", "translation": "alguien", "definition": "Indefinite pronoun for a person.", "level": "B1", "category": "pronombres" },
+  { "term": "anyone", "translation": "cualquiera / alguien", "definition": "Indefinite pronoun often used in questions/negatives.", "level": "B1", "category": "pronombres" },
+  { "term": "no one", "translation": "nadie", "definition": "Indefinite pronoun meaning zero people.", "level": "B1", "category": "pronombres" },
+  { "term": "everyone", "translation": "todos", "definition": "Indefinite pronoun meaning all people.", "level": "B1", "category": "pronombres" },
+  { "term": "something", "translation": "algo", "definition": "Indefinite pronoun for things.", "level": "B1", "category": "pronombres" },
+  { "term": "anything", "translation": "algo / nada", "definition": "Indefinite pronoun depending on context.", "level": "B1", "category": "pronombres" },
+  { "term": "nothing", "translation": "nada", "definition": "Indefinite pronoun meaning zero things.", "level": "B1", "category": "pronombres" },
+  { "term": "everything", "translation": "todo", "definition": "Indefinite pronoun meaning all things.", "level": "B1", "category": "pronombres" },
+  { "term": "each other", "translation": "el uno al otro", "definition": "Reciprocal pronoun.", "level": "B1", "category": "pronombres" }
+]

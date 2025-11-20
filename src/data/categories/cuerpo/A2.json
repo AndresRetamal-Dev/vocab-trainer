@@ -1,0 +1,12 @@
+[
+  { "term": "shoulder", "translation": "hombro", "definition": "The joint that connects the arm to the body.", "level": "A2", "category": "cuerpo" },
+  { "term": "elbow", "translation": "codo", "definition": "The joint in the middle of the arm.", "level": "A2", "category": "cuerpo" },
+  { "term": "wrist", "translation": "muñeca", "definition": "The joint between hand and arm.", "level": "A2", "category": "cuerpo" },
+  { "term": "finger", "translation": "dedo", "definition": "One of the five parts on each hand.", "level": "A2", "category": "cuerpo" },
+  { "term": "thumb", "translation": "pulgar", "definition": "The short, thick first finger.", "level": "A2", "category": "cuerpo" },
+  { "term": "knee", "translation": "rodilla", "definition": "The joint in the middle of the leg.", "level": "A2", "category": "cuerpo" },
+  { "term": "ankle", "translation": "tobillo", "definition": "The joint between leg and foot.", "level": "A2", "category": "cuerpo" },
+  { "term": "toe", "translation": "dedo del pie", "definition": "One of the small parts on each foot.", "level": "A2", "category": "cuerpo" },
+  { "term": "back", "translation": "espalda", "definition": "The rear part of the body.", "level": "A2", "category": "cuerpo" },
+  { "term": "stomach", "translation": "estómago / barriga", "definition": "The front middle part of the body.", "level": "A2", "category": "cuerpo" }
+]

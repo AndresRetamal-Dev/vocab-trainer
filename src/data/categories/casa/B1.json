@@ -1,0 +1,779 @@
+[
+  {
+    "term": "radiator",
+    "translation": "radiador",
+    "definition": "A device used to heat a room by circulating warm water or air.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "thermostat",
+    "translation": "termostato",
+    "definition": "A device that controls the temperature inside a home.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "blinds",
+    "translation": "persianas",
+    "definition": "Window coverings made of slats that can block or filter light.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "shutters",
+    "translation": "contraventanas",
+    "definition": "Wooden or metal panels placed outside or inside windows to block light or protect the window.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "cupboard",
+    "translation": "armario / alacena",
+    "definition": "A storage unit with shelves, typically used in kitchens or bathrooms.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "countertop",
+    "translation": "encimera",
+    "definition": "A flat surface in a kitchen used for preparing food.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "pantry",
+    "translation": "despensa",
+    "definition": "A small room or cupboard used for storing food.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "laundry room",
+    "translation": "lavadero",
+    "definition": "A room where clothes are washed and dried.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "ironing board",
+    "translation": "tabla de planchar",
+    "definition": "A flat padded board on which clothes are ironed.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "iron",
+    "translation": "plancha",
+    "definition": "A device used to remove wrinkles from clothes.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "broom",
+    "translation": "escoba",
+    "definition": "A brush with a long handle used for sweeping floors.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "dustpan",
+    "translation": "recogedor",
+    "definition": "A flat container used with a broom to collect dirt.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "mop",
+    "translation": "fregona",
+    "definition": "A tool used to clean floors with water.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "bucket",
+    "translation": "cubo",
+    "definition": "A round container used to hold liquids.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "detergent",
+    "translation": "detergente",
+    "definition": "A cleaning substance used on surfaces or clothes.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "sponge",
+    "translation": "esponja",
+    "definition": "A soft absorbent material used for cleaning.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "scrubber",
+    "translation": "estropajo",
+    "definition": "A rough tool used for cleaning dishes or surfaces.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "cloth",
+    "translation": "trapo",
+    "definition": "A piece of fabric used for cleaning or wiping surfaces.",
+    "level": "B1",
+    "category": "casa"
+  },
+  
+
+  {
+    "term": "ceiling",
+    "translation": "techo (interior)",
+    "definition": "The upper interior surface of a room.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "wall",
+    "translation": "pared",
+    "definition": "A vertical structure that defines a room or building.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "floor",
+    "translation": "suelo",
+    "definition": "The lower surface of a room on which you walk.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "tiles",
+    "translation": "azulejos / baldosas",
+    "definition": "Flat pieces of ceramic or stone used to cover surfaces.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "carpet cleaner",
+    "translation": "limpia alfombras",
+    "definition": "A machine or liquid used for deep cleaning carpets.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "vacuum hose",
+    "translation": "manguera de aspiradora",
+    "definition": "A flexible tube used to direct the suction of a vacuum cleaner.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "microwave oven",
+    "translation": "horno microondas",
+    "definition": "A device that heats food using microwaves.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "freezer",
+    "translation": "congelador",
+    "definition": "A device that keeps food frozen.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "toaster",
+    "translation": "tostadora",
+    "definition": "A small appliance used to toast bread.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "blender",
+    "translation": "batidora",
+    "definition": "A device used to mix or purée food.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "food processor",
+    "translation": "procesador de alimentos",
+    "definition": "A kitchen appliance used for chopping, mixing or slicing food.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "linen",
+    "translation": "ropa de cama",
+    "definition": "Sheets, pillowcases and other fabric items for the bedroom.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "mattress",
+    "translation": "colchón",
+    "definition": "A cushioned pad used for sleeping.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "duvet",
+    "translation": "edredón",
+    "definition": "A warm quilt used on a bed.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "bedsheet",
+    "translation": "sábana",
+    "definition": "A large cloth covering a mattress.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "nightstand",
+    "translation": "mesita de noche",
+    "definition": "A small table placed beside a bed.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "closet",
+    "translation": "armario empotrado",
+    "definition": "A tall storage area built into a wall, used for storing clothes or items.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "hang",
+    "translation": "colgar",
+    "definition": "To attach something so it is suspended from above.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "store",
+    "translation": "almacenar",
+    "definition": "To keep things in a place for later use.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "fuse",
+    "translation": "fusible",
+    "definition": "A safety device that stops electricity when overloaded.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "circuit breaker",
+    "translation": "interruptor automático",
+    "definition": "A switch that stops the electrical flow when there is a problem.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "wiring",
+    "translation": "cableado",
+    "definition": "The electrical system of wires inside a building.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "light fixture",
+    "translation": "lámpara fija",
+    "definition": "A permanent installation that holds a light bulb.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "light bulb",
+    "translation": "bombilla",
+    "definition": "A glass device that produces light when electricity passes through it.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "outlet",
+    "translation": "enchufe",
+    "definition": "A point in a wall where electrical devices can be connected.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "drill",
+    "translation": "taladro",
+    "definition": "A tool used to make holes in walls or materials.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "screws",
+    "translation": "tornillos",
+    "definition": "Metal fasteners used to join materials together.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "nails",
+    "translation": "clavos",
+    "definition": "Small metal spikes used for building or hanging things.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "bolts",
+    "translation": "pernos",
+    "definition": "Metal fasteners used with nuts for strong connections.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "pliers",
+    "translation": "alicates",
+    "definition": "A tool used for gripping or bending objects.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "wrench",
+    "translation": "llave inglesa",
+    "definition": "A tool used to tighten or loosen nuts and bolts.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "measuring tape",
+    "translation": "cinta métrica",
+    "definition": "A tool used to measure length.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "level",
+    "translation": "nivel",
+    "definition": "A tool used to check if a surface is horizontal or vertical.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "sandpaper",
+    "translation": "papel de lija",
+    "definition": "A material used to smooth surfaces.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "paint roller",
+    "translation": "rodillo de pintura",
+    "definition": "A tool used to apply paint to large surfaces.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "paintbrush",
+    "translation": "brocha",
+    "definition": "A handheld tool used for painting smaller areas.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "plunger",
+    "translation": "desatascador",
+    "definition": "A tool used to clear blocked drains.",
+    "level": "B1",
+    "category": "casa"
+  },
+  {
+    "term": "drain",
+    "translation": "desagüe",
+    "definition": "A channel for carrying away water or waste.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "leak",
+    "translation": "fuga",
+    "definition": "An unintended hole allowing liquid or gas to escape.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "pipe",
+       "translation": "tubería",
+       "definition": "A cylindrical tube used to carry water or gas.",
+       "level": "B1",
+       "category": "casa"
+  },
+
+  {
+    "term": "insulation",
+    "translation": "aislamiento",
+    "definition": "Material used to prevent heat loss or noise.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "vent",
+    "translation": "rejilla de ventilación",
+    "definition": "A small opening that allows air to move in or out.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "ceiling fan",
+    "translation": "ventilador de techo",
+    "definition": "A fan attached to the ceiling used to circulate air.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "extension cord",
+    "translation": "cable alargador",
+    "definition": "A long cord that extends the reach of electrical devices.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "wireless doorbell",
+    "translation": "timbre inalámbrico",
+    "definition": "A doorbell that works without wires.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "smoke detector",
+    "translation": "detector de humo",
+    "definition": "A device that warns of smoke or fire.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "fire extinguisher",
+    "translation": "extintor",
+    "definition": "A device used to put out small fires.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "sprinkler",
+    "translation": "aspersor",
+    "definition": "A device that sprays water, often used in gardens.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "watering can",
+    "translation": "regadera",
+    "definition": "A container used to pour water on plants.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "hedge",
+    "translation": "seto",
+    "definition": "A row of shrubs forming a boundary or decoration.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "patio",
+    "translation": "patio",
+    "definition": "A paved outdoor area next to a house.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "driveway",
+    "translation": "entrada de coches",
+    "definition": "A short private road leading to a garage or house.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "garage door",
+    "translation": "puerta del garaje",
+    "definition": "A large door that opens to allow vehicles inside.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "storage box",
+    "translation": "caja de almacenamiento",
+    "definition": "A container used to organize and keep items.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "organizer",
+    "translation": "organizador",
+    "definition": "A tool or container used to keep things in order.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "ladder",
+    "translation": "escalera portátil",
+    "definition": "A climbing tool with steps used to reach high places.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "fence",
+    "translation": "valla",
+    "definition": "A structure that encloses an area, typically outdoors.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "gate",
+    "translation": "puerta exterior",
+    "definition": "A movable barrier used to close an opening in a fence.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "ceiling lamp",
+    "translation": "lámpara de techo",
+    "definition": "A light attached to the ceiling of a room.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "wall light",
+    "translation": "aplique",
+    "definition": "A lamp attached to the wall.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "spotlight",
+    "translation": "foco",
+    "definition": "A small light that shines on a specific area.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "extension tube",
+    "translation": "tubo extensible",
+    "definition": "A pipe or accessory used to reach difficult areas when cleaning or repairing.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "air filter",
+    "translation": "filtro de aire",
+    "definition": "A component that removes dust and particles from air systems.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "humidifier",
+    "translation": "humidificador",
+    "definition": "A device that adds moisture to the air.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "dehumidifier",
+    "translation": "deshumidificador",
+    "definition": "A device that removes moisture from the air.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "power strip",
+    "translation": "regleta",
+    "definition": "An electrical device that allows multiple appliances to be plugged in.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "fitting",
+    "translation": "accesorio / pieza",
+    "definition": "A small part used to connect or fix components.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "sealant",
+    "translation": "sellador",
+    "definition": "A substance used to block passages and prevent leaks.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "hinge",
+    "translation": "bisagra",
+    "definition": "A metal joint that allows doors or lids to open and close.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "door handle",
+    "translation": "manilla de puerta",
+    "definition": "A device used to open or close a door.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "frame",
+    "translation": "marco",
+    "definition": "The rigid structure surrounding a window, door or picture.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "windowpane",
+    "translation": "cristal de ventana",
+    "definition": "The glass part of a window.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "sill",
+    "translation": "alféizar",
+    "definition": "The horizontal piece at the bottom of a window.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "threshold",
+    "translation": "umbral",
+    "definition": "The strip of material at the bottom of a doorway.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "corridor",
+    "translation": "pasillo",
+    "definition": "A long passage in a building from which doors lead to rooms.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "landing",
+    "translation": "rellano",
+    "definition": "The flat area at the top or bottom of a staircase.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "banister",
+    "translation": "barandilla",
+    "definition": "A railing on a staircase.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+  {
+    "term": "attic",
+    "translation": "ático",
+    "definition": "A room or space at the top of a house under the roof.",
+    "level": "B1",
+    "category": "casa"
+  },
+
+
+  {
+    "term": "basement",
+    "translation": "sótano",
+    "definition": "A room below ground level in a house.",
+    "level": "B1",
+    "category": "casa"
+  }
+]

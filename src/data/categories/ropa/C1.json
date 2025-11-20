@@ -1,0 +1,12 @@
+[
+    { "term": "couture", "translation": "alta costura", "definition": "High-fashion custom clothing.", "level": "C1", "category": "ropa" },
+    { "term": "tailoring", "translation": "sastrería", "definition": "The craft of designing and altering clothing.", "level": "C1", "category": "ropa" },
+    { "term": "pattern", "translation": "patrón de costura", "definition": "A template used to cut fabric pieces.", "level": "C1", "category": "ropa" },
+    { "term": "hemline", "translation": "bajo de prenda", "definition": "The bottom edge of a dress or skirt.", "level": "C1", "category": "ropa" },
+    { "term": "silhouette", "translation": "silueta", "definition": "The outline or shape of a garment.", "level": "C1", "category": "ropa" },
+    { "term": "garment", "translation": "prenda", "definition": "A single item of clothing.", "level": "C1", "category": "ropa" },
+    { "term": "textile", "translation": "textil", "definition": "Cloth or woven fabric.", "level": "C1", "category": "ropa" },
+    { "term": "embroidery", "translation": "bordado", "definition": "Decorative stitching on fabric.", "level": "C1", "category": "ropa" },
+    { "term": "bespoke", "translation": "a medida", "definition": "Custom-made clothing.", "level": "C1", "category": "ropa" },
+    { "term": "fastening", "translation": "cierre", "definition": "Any mechanism used to close a garment.", "level": "C1", "category": "ropa" }
+]

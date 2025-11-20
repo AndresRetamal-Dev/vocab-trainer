@@ -1,0 +1,103 @@
+[
+  { "term": "dining room", "translation": "comedor", "definition": "A room used for eating meals.", "level": "A2", "category": "casa" },
+  { "term": "hallway", "translation": "pasillo", "definition": "A passage that connects rooms.", "level": "A2", "category": "casa" },
+  { "term": "storage room", "translation": "trastero", "definition": "A room used for storing items.", "level": "A2", "category": "casa" },
+  { "term": "pantry", "translation": "despensa", "definition": "A small room for storing food.", "level": "A2", "category": "casa" },
+  { "term": "utility room", "translation": "lavadero", "definition": "A room for laundry and cleaning equipment.", "level": "A2", "category": "casa" },
+  
+  { "term": "drawer", "translation": "cajón", "definition": "A sliding storage compartment.", "level": "A2", "category": "casa" },
+  { "term": "bottom drawer", "translation": "cajón inferior", "definition": "The lowest drawer.", "level": "A2", "category": "casa" },
+  { "term": "top drawer", "translation": "cajón superior", "definition": "The highest drawer.", "level": "A2", "category": "casa" },
+  { "term": "dresser", "translation": "cómoda", "definition": "A piece of furniture with drawers.", "level": "A2", "category": "casa" },
+  { "term": "nightstand", "translation": "mesita de noche", "definition": "A small table beside the bed.", "level": "A2", "category": "casa" },
+  { "term": "headboard", "translation": "cabecero", "definition": "The board at the head of a bed.", "level": "A2", "category": "casa" },
+  
+  { "term": "bookshelf", "translation": "estantería de libros", "definition": "A shelf where books are stored.", "level": "A2", "category": "casa" },
+  { "term": "frame", "translation": "marco", "definition": "A border around a picture or photo.", "level": "A2", "category": "casa" },
+  { "term": "photo frame", "translation": "marco de fotos", "definition": "A frame for photos.", "level": "A2", "category": "casa" },
+  { "term": "poster", "translation": "póster", "definition": "A large printed picture.", "level": "A2", "category": "casa" },
+  { "term": "painting", "translation": "cuadro", "definition": "A decorative picture painted by someone.", "level": "A2", "category": "casa" },
+  { "term": "vase", "translation": "jarrón", "definition": "A container for holding flowers.", "level": "A2", "category": "casa" },
+  { "term": "flower pot", "translation": "maceta", "definition": "A container for growing plants.", "level": "A2", "category": "casa" },
+  { "term": "indoor plant", "translation": "planta de interior", "definition": "A plant kept inside the house.", "level": "A2", "category": "casa" },
+
+  { "term": "washing machine", "translation": "lavadora", "definition": "A machine for washing clothes.", "level": "A2", "category": "casa" },
+  { "term": "dryer", "translation": "secadora", "definition": "A machine used to dry clothes.", "level": "A2", "category": "casa" },
+  { "term": "radiator", "translation": "radiador", "definition": "A device that heats a room.", "level": "A2", "category": "casa" },
+  { "term": "fan heater", "translation": "estufa eléctrica", "definition": "A heater that blows warm air.", "level": "A2", "category": "casa" },
+
+  { "term": "microwave", "translation": "microondas", "definition": "A machine for heating food.", "level": "A2", "category": "casa" },
+  { "term": "kettle", "translation": "hervidor", "definition": "A device used to boil water.", "level": "A2", "category": "casa" },
+  { "term": "blender", "translation": "batidora", "definition": "A machine for mixing food.", "level": "A2", "category": "casa" },
+  { "term": "toaster", "translation": "tostadora", "definition": "A machine that toasts bread.", "level": "A2", "category": "casa" },
+  { "term": "coffee maker", "translation": "cafetera", "definition": "A machine that brews coffee.", "level": "A2", "category": "casa" },
+  { "term": "juicer", "translation": "exprimidor", "definition": "A device that extracts juice.", "level": "A2", "category": "casa" },
+  { "term": "food processor", "translation": "procesador de alimentos", "definition": "A machine that chops or blends food.", "level": "A2", "category": "casa" },
+
+  { "term": "cutting board", "translation": "tabla de cortar", "definition": "A board used to cut food.", "level": "A2", "category": "casa" },
+  { "term": "colander", "translation": "colador", "definition": "A bowl with holes for draining food.", "level": "A2", "category": "casa" },
+  { "term": "peeler", "translation": "pelador", "definition": "A tool for removing fruit and vegetable skins.", "level": "A2", "category": "casa" },
+  { "term": "grater", "translation": "rallador", "definition": "A tool for shredding food.", "level": "A2", "category": "casa" },
+  { "term": "ladle", "translation": "cucharón", "definition": "A large spoon used for serving soup.", "level": "A2", "category": "casa" },
+  { "term": "tongs", "translation": "pinzas", "definition": "A tool used to hold food.", "level": "A2", "category": "casa" },
+  { "term": "oven glove", "translation": "guante de horno", "definition": "A padded glove for holding hot items.", "level": "A2", "category": "casa" },
+  { "term": "baking tray", "translation": "bandeja de horno", "definition": "A flat tray used for baking food.", "level": "A2", "category": "casa" },
+  { "term": "whisk", "translation": "batidor", "definition": "A tool for mixing ingredients quickly.", "level": "A2", "category": "casa" },
+
+  { "term": "cushion", "translation": "cojín", "definition": "A soft pillow for a sofa or chair.", "level": "A2", "category": "casa" },
+  { "term": "throw blanket", "translation": "manta pequeña", "definition": "A blanket used for decoration or warmth.", "level": "A2", "category": "casa" },
+  { "term": "curtain rod", "translation": "barra de cortina", "definition": "A rod that holds curtains.", "level": "A2", "category": "casa" },
+
+  { "term": "full-length mirror", "translation": "espejo de cuerpo entero", "definition": "A tall mirror for seeing your whole body.", "level": "A2", "category": "casa" },
+
+  { "term": "bathrobe", "translation": "albornoz", "definition": "A robe worn after bathing.", "level": "A2", "category": "casa" },
+  { "term": "toiletries", "translation": "artículos de aseo", "definition": "Personal care products.", "level": "A2", "category": "casa" },
+  { "term": "shaving cream", "translation": "crema de afeitar", "definition": "Cream used for shaving.", "level": "A2", "category": "casa" },
+  { "term": "razor", "translation": "cuchilla", "definition": "A tool used for shaving hair.", "level": "A2", "category": "casa" },
+
+  { "term": "laundry basket", "translation": "cesta de la ropa", "definition": "A basket used to collect dirty clothes.", "level": "A2", "category": "casa" },
+  { "term": "clothesline", "translation": "tendedero", "definition": "A rope for hanging clothes to dry.", "level": "A2", "category": "casa" },
+  { "term": "clothespin", "translation": "pinza de la ropa", "definition": "A clip used to hold clothes on a line.", "level": "A2", "category": "casa" },
+
+  { "term": "vacuum cleaner", "translation": "aspiradora", "definition": "A machine that sucks up dust.", "level": "A2", "category": "casa" },
+  { "term": "steam mop", "translation": "mopa de vapor", "definition": "A mop that cleans using steam.", "level": "A2", "category": "casa" },
+  { "term": "dust cloth", "translation": "trapo para el polvo", "definition": "A cloth used to remove dust.", "level": "A2", "category": "casa" },
+  { "term": "brush", "translation": "cepillo", "definition": "A tool with bristles used for cleaning.", "level": "A2", "category": "casa" },
+
+  { "term": "bin liner", "translation": "bolsa de basura", "definition": "A bag used inside a trash can.", "level": "A2", "category": "casa" },
+  { "term": "detergent", "translation": "detergente", "definition": "A cleaning product.", "level": "A2", "category": "casa" },
+  { "term": "fabric softener", "translation": "suavizante", "definition": "A product that softens clothes.", "level": "A2", "category": "casa" },
+
+  { "term": "hammer", "translation": "martillo", "definition": "A tool used for hitting nails.", "level": "A2", "category": "casa" },
+  { "term": "screwdriver", "translation": "destornillador", "definition": "A tool for turning screws.", "level": "A2", "category": "casa" },
+  { "term": "drill", "translation": "taladro", "definition": "A tool for making holes.", "level": "A2", "category": "casa" },
+  { "term": "pliers", "translation": "alicates", "definition": "A tool used for gripping.", "level": "A2", "category": "casa" },
+  { "term": "wrench", "translation": "llave inglesa", "definition": "A tool used to tighten or loosen nuts.", "level": "A2", "category": "casa" },
+  { "term": "nails", "translation": "clavos", "definition": "Metal pins used for building.", "level": "A2", "category": "casa" },
+  { "term": "screws", "translation": "tornillos", "definition": "Metal fasteners with threads.", "level": "A2", "category": "casa" },
+  { "term": "toolbox", "translation": "caja de herramientas", "definition": "A box that holds tools.", "level": "A2", "category": "casa" },
+  { "term": "tape measure", "translation": "cinta métrica", "definition": "A tool for measuring length.", "level": "A2", "category": "casa" },
+  { "term": "step ladder", "translation": "escalera", "definition": "A small ladder used indoors.", "level": "A2", "category": "casa" },
+
+  { "term": "paint", "translation": "pintura", "definition": "A colored liquid used for walls.", "level": "A2", "category": "casa" },
+  { "term": "paintbrush", "translation": "brocha", "definition": "A brush used for painting.", "level": "A2", "category": "casa" },
+  { "term": "roller", "translation": "rodillo", "definition": "A tool to paint large surfaces.", "level": "A2", "category": "casa" },
+  { "term": "bucket", "translation": "cubo", "definition": "A container for liquids.", "level": "A2", "category": "casa" },
+
+  { "term": "fuse", "translation": "fusible", "definition": "A safety device in electrical systems.", "level": "A2", "category": "casa" },
+  { "term": "plug", "translation": "enchufe", "definition": "A device used to connect to power.", "level": "A2", "category": "casa" },
+  { "term": "extension cord", "translation": "alargador", "definition": "A long cable that extends power reach.", "level": "A2", "category": "casa" },
+  { "term": "power strip", "translation": "regleta", "definition": "A strip with multiple plug sockets.", "level": "A2", "category": "casa" },
+
+  { "term": "router", "translation": "router", "definition": "A device that gives internet access.", "level": "A2", "category": "casa" },
+  { "term": "modem", "translation": "módem", "definition": "A device used for internet connection.", "level": "A2", "category": "casa" },
+  { "term": "cable", "translation": "cable", "definition": "A wire that carries electricity or data.", "level": "A2", "category": "casa" },
+
+  { "term": "smoke alarm", "translation": "alarma de humo", "definition": "A device that alerts to smoke.", "level": "A2", "category": "casa" },
+  { "term": "fire extinguisher", "translation": "extintor", "definition": "A device used to put out small fires.", "level": "A2", "category": "casa" },
+  { "term": "first-aid kit", "translation": "botiquín", "definition": "A box with medical supplies.", "level": "A2", "category": "casa" },
+
+  { "term": "fence", "translation": "valla", "definition": "A barrier around a yard or property.", "level": "A2", "category": "casa" },
+  { "term": "gate", "translation": "puerta de la valla", "definition": "A door in a fence.", "level": "A2", "category": "casa" },
+  { "term": "shed", "translation": "cobertizo", "definition": "A small outdoor building for tools.", "level": "A2", "category": "casa" }
+]

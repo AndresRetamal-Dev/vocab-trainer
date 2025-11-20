@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import dataJson from "./data/words.json";
 import motivationsJson from "./data/motivations.json";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
@@ -7,6 +6,41 @@ import { auth, googleProvider } from "./firebase";
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
 const ALL = "Todas";
+
+// 🔹 Cargamos TODOS los JSON de categorías/niveles
+//    Ruta relativa a ESTE archivo (ajusta si lo tienes en otra carpeta)
+const modules = import.meta.glob("./data/categories/*/*.json", { eager: true });
+
+/**
+ * modules tiene forma:
+ * {
+ *   "./data/categories/casa/A1.json": { default: [ ...palabras... ] },
+ *   "./data/categories/casa/A2.json": { default: [ ... ] },
+ *   "./data/categories/animales/A1.json": { default: [ ... ] },
+ *   ...
+ * }
+ *
+ * Vamos a convertir eso en un único array `dataJson`
+ * con objetos { term, translation, definition, level, category }
+ */
+const dataJson = Object.entries(modules).flatMap(([path, mod]) => {
+  // 1) Sacar categoría y nivel del path
+  //    ./data/categories/casa/A1.json  ->  category = "casa", level = "A1"
+  const match = path.match(/categories\/([^/]+)\/([^/]+)\.json$/);
+  const categoryFromPath = match?.[1] || "general";
+  const levelFromPath = match?.[2] || null;
+
+  // 2) El JSON en sí (Vite lo pone en .default)
+  const arr = mod.default || mod;
+
+  // 3) Devolvemos cada palabra asegurando que tenga category y level
+  return (arr || []).map((item) => ({
+    ...item,
+    category: item.category || categoryFromPath,
+    level: item.level || levelFromPath,
+  }));
+});
+
 
 // =========================
 //  MATCHING "INTELIGENTE"

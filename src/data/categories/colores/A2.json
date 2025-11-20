@@ -1,0 +1,12 @@
+[
+  { "term": "purple", "translation": "morado", "definition": "Color made by mixing red and blue.", "level": "A2", "category": "colores" },
+  { "term": "beige", "translation": "beis", "definition": "Light brownish-yellow color.", "level": "A2", "category": "colores" },
+  { "term": "turquoise", "translation": "turquesa", "definition": "Greenish-blue color, like tropical water.", "level": "A2", "category": "colores" },
+  { "term": "gold", "translation": "dorado", "definition": "Color of gold metal, shiny yellow.", "level": "A2", "category": "colores" },
+  { "term": "silver", "translation": "plateado", "definition": "Color of silver metal, shiny grayish.", "level": "A2", "category": "colores" },
+  { "term": "navy blue", "translation": "azul marino", "definition": "Very dark shade of blue.", "level": "A2", "category": "colores" },
+  { "term": "light blue", "translation": "celeste", "definition": "Soft, pale blue shade.", "level": "A2", "category": "colores" },
+  { "term": "lime green", "translation": "verde lima", "definition": "Bright yellow-green shade.", "level": "A2", "category": "colores" },
+  { "term": "burgundy", "translation": "burdeos", "definition": "Dark red wine-like shade.", "level": "A2", "category": "colores" },
+  { "term": "cream", "translation": "crema", "definition": "Soft pale yellowish-white.", "level": "A2", "category": "colores" }
+]

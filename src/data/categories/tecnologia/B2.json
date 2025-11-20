@@ -1,0 +1,12 @@
+[
+  { "term": "encryption", "translation": "encriptación", "definition": "A method of protecting data.", "level": "B2", "category": "tecnología" },
+  { "term": "algorithm", "translation": "algoritmo", "definition": "A set of rules used for calculations or decisions.", "level": "B2", "category": "tecnología" },
+  { "term": "interface", "translation": "interfaz", "definition": "The way a user interacts with a system.", "level": "B2", "category": "tecnología" },
+  { "term": "bug", "translation": "error / fallo", "definition": "A problem in software.", "level": "B2", "category": "tecnología" },
+  { "term": "bandwidth", "translation": "ancho de banda", "definition": "The amount of data that can be sent per second.", "level": "B2", "category": "tecnología" },
+  { "term": "server", "translation": "servidor", "definition": "A computer that provides data to other computers.", "level": "B2", "category": "tecnología" },
+  { "term": "database", "translation": "base de datos", "definition": "A structured collection of information.", "level": "B2", "category": "tecnología" },
+  { "term": "processor", "translation": "procesador", "definition": "The component that runs commands.", "level": "B2", "category": "tecnología" },
+  { "term": "virtual reality", "translation": "realidad virtual", "definition": "Computer-generated simulation of reality.", "level": "B2", "category": "tecnología" },
+  { "term": "malware", "translation": "software malicioso", "definition": "Software designed to damage systems.", "level": "B2", "category": "tecnología" }
+]

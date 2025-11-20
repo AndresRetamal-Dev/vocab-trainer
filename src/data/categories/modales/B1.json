@@ -1,0 +1,13 @@
+[
+    { "term": "can", "translation": "poder", "definition": "Ability and permission.", "level": "B1", "category": "verbos modales" },
+    { "term": "will", "translation": "futuro", "definition": "Future, offers, promises.", "level": "B1", "category": "verbos modales" },
+    { "term": "should", "translation": "debería", "definition": "Advice and expectation.", "level": "B1", "category": "verbos modales" },
+    { "term": "have to", "translation": "tener que", "definition": "Obligation.", "level": "B1", "category": "verbos modales" },
+    { "term": "need to", "translation": "necesitar", "definition": "Requirement.", "level": "B1", "category": "verbos modales" },
+    { "term": "could", "translation": "podría", "definition": "Suggestion and possibility.", "level": "B1", "category": "verbos modales" },
+    { "term": "may", "translation": "poder", "definition": "Possibility.", "level": "B1", "category": "verbos modales" },
+    { "term": "might", "translation": "podría", "definition": "Weak possibility.", "level": "B1", "category": "verbos modales" },
+    { "term": "be allowed to", "translation": "tener permitido", "definition": "Permission.", "level": "B1", "category": "verbos modales" },
+    { "term": "be supposed to", "translation": "se supone que", "definition": "Expectation or rule.", "level": "B1", "category": "verbos modales" },
+    { "term": "would", "translation": "haría", "definition": "Polite requests and habits.", "level": "B1", "category": "verbos modales" }
+  ]

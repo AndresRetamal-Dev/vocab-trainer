@@ -1,0 +1,11 @@
+ [
+    { "term": "orange", "translation": "naranja", "definition": "A citrus fruit.", "level": "A2", "category": "comida" },
+    { "term": "grapes", "translation": "uvas", "definition": "Small round fruit used to make wine.", "level": "A2", "category": "comida" },
+    { "term": "tomato", "translation": "tomate", "definition": "A red fruit used in salads and sauces.", "level": "A2", "category": "comida" },
+    { "term": "potato", "translation": "patata", "definition": "A starchy vegetable.", "level": "A2", "category": "comida" },
+    { "term": "carrot", "translation": "zanahoria", "definition": "An orange root vegetable.", "level": "A2", "category": "comida" },
+    { "term": "cheese", "translation": "queso", "definition": "A dairy product made from milk.", "level": "A2", "category": "comida" },
+    { "term": "juice", "translation": "zumo", "definition": "A drink made from fruit.", "level": "A2", "category": "comida" },
+    { "term": "pasta", "translation": "pasta", "definition": "Italian food made from wheat.", "level": "A2", "category": "comida" },
+    { "term": "burger", "translation": "hamburguesa", "definition": "A sandwich with meat inside.", "level": "A2", "category": "comida" }
+]

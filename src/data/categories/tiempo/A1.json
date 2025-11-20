@@ -1,0 +1,12 @@
+[
+  { "term": "sun", "translation": "sol", "definition": "The star that gives light and heat.", "level": "A1", "category": "tiempo" },
+  { "term": "rain", "translation": "lluvia", "definition": "Water that falls from clouds.", "level": "A1", "category": "tiempo" },
+  { "term": "snow", "translation": "nieve", "definition": "Frozen water falling as white flakes.", "level": "A1", "category": "tiempo" },
+  { "term": "cloud", "translation": "nube", "definition": "A mass of water vapor in the sky.", "level": "A1", "category": "tiempo" },
+  { "term": "wind", "translation": "viento", "definition": "Air moving in the atmosphere.", "level": "A1", "category": "tiempo" },
+  { "term": "hot", "translation": "calor / caliente", "definition": "Having a high temperature.", "level": "A1", "category": "tiempo" },
+  { "term": "cold", "translation": "frío", "definition": "Having a low temperature.", "level": "A1", "category": "tiempo" },
+  { "term": "weather", "translation": "clima / tiempo", "definition": "Conditions of the atmosphere.", "level": "A1", "category": "tiempo" },
+  { "term": "storm", "translation": "tormenta", "definition": "Severe weather with rain and wind.", "level": "A1", "category": "tiempo" },
+  { "term": "fog", "translation": "niebla", "definition": "Thick mist that makes it hard to see.", "level": "A1", "category": "tiempo" }
+]

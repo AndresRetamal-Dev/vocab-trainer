@@ -1,0 +1,12 @@
+[
+  { "term": "heatwave", "translation": "ola de calor", "definition": "A long period of very hot weather.", "level": "B1", "category": "tiempo" },
+  { "term": "downpour", "translation": "chaparrón", "definition": "A sudden heavy rain.", "level": "B1", "category": "tiempo" },
+  { "term": "forecast chart", "translation": "gráfico de pronóstico", "definition": "A visual representation of weather predictions.", "level": "B1", "category": "tiempo" },
+  { "term": "gust", "translation": "ráfaga", "definition": "A sudden strong burst of wind.", "level": "B1", "category": "tiempo" },
+  { "term": "rainfall", "translation": "precipitación", "definition": "The amount of rain that falls.", "level": "B1", "category": "tiempo" },
+  { "term": "temperature drop", "translation": "descenso de temperatura", "definition": "A reduction in temperature.", "level": "B1", "category": "tiempo" },
+  { "term": "overcast", "translation": "nublado", "definition": "Completely covered with clouds.", "level": "B1", "category": "tiempo" },
+  { "term": "shower", "translation": "chubasco", "definition": "A short period of rain.", "level": "B1", "category": "tiempo" },
+  { "term": "icy", "translation": "helado", "definition": "Covered in ice or very cold.", "level": "B1", "category": "tiempo" },
+  { "term": "mild", "translation": "templado", "definition": "Not too hot or too cold.", "level": "B1", "category": "tiempo" }
+]

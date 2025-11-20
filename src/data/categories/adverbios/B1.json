@@ -1,0 +1,70 @@
+[
+  { "term": "gradually", "translation": "gradualmente", "definition": "Slowly over a period of time.", "level": "B1", "category": "adverbios" },
+  { "term": "eventually", "translation": "finalmente", "definition": "In the end, after some time.", "level": "B1", "category": "adverbios" },
+  { "term": "seemingly", "translation": "aparentemente", "definition": "In a way that appears to be true.", "level": "B1", "category": "adverbios" },
+  { "term": "roughly", "translation": "aproximadamente", "definition": "About; not exactly.", "level": "B1", "category": "adverbios" },
+  { "term": "largely", "translation": "en gran parte", "definition": "Mostly; to a great extent.", "level": "B1", "category": "adverbios" },
+  { "term": "widely", "translation": "ampliamente", "definition": "To a great extent or in many places.", "level": "B1", "category": "adverbios" },
+  { "term": "virtually", "translation": "prácticamente", "definition": "Almost completely.", "level": "B1", "category": "adverbios" },
+
+  { "term": "naturally", "translation": "naturalmente", "definition": "As expected; in a natural way.", "level": "B1", "category": "adverbios" },
+  { "term": "typically", "translation": "típicamente", "definition": "In a way that is usual or expected.", "level": "B1", "category": "adverbios" },
+  { "term": "generously", "translation": "generosamente", "definition": "In a giving or kind way.", "level": "B1", "category": "adverbios" },
+  { "term": "politely", "translation": "educadamente", "definition": "In a respectful or well-mannered way.", "level": "B1", "category": "adverbios" },
+  { "term": "calmly", "translation": "calmadamente", "definition": "In a peaceful or quiet manner.", "level": "B1", "category": "adverbios" },
+  { "term": "angrily", "translation": "con rabia", "definition": "In a way that shows anger.", "level": "B1", "category": "adverbios" },
+  { "term": "sadly", "translation": "tristemente", "definition": "In a way that shows sadness.", "level": "B1", "category": "adverbios" },
+  { "term": "happily", "translation": "felizmente", "definition": "In a cheerful or joyful manner.", "level": "B1", "category": "adverbios" },
+
+  { "term": "completely", "translation": "completamente", "definition": "Totally; entirely.", "level": "B1", "category": "adverbios" },
+  { "term": "partially", "translation": "parcialmente", "definition": "To some extent, but not completely.", "level": "B1", "category": "adverbios" },
+  { "term": "deeply", "translation": "profundamente", "definition": "With strong feelings or to a great depth.", "level": "B1", "category": "adverbios" },
+  { "term": "barely", "translation": "apenas", "definition": "By a very small amount.", "level": "B1", "category": "adverbios" },
+  { "term": "strongly", "translation": "fuertemente", "definition": "With great force or intensity.", "level": "B1", "category": "adverbios" },
+  { "term": "slightly", "translation": "ligeramente", "definition": "By a small amount.", "level": "B1", "category": "adverbios" },
+  { "term": "firmly", "translation": "con firmeza", "definition": "In a strong and secure way.", "level": "B1", "category": "adverbios" },
+
+  { "term": "occasionally", "translation": "ocasionalmente", "definition": "Sometimes, but not often.", "level": "B1", "category": "adverbios" },
+  { "term": "frequently", "translation": "frecuentemente", "definition": "Often; regularly.", "level": "B1", "category": "adverbios" },
+  { "term": "constantly", "translation": "constantemente", "definition": "All the time; repeatedly.", "level": "B1", "category": "adverbios" },
+  { "term": "continually", "translation": "continuamente", "definition": "Repeatedly over a long period.", "level": "B1", "category": "adverbios" },
+  
+  { "term": "backwards", "translation": "hacia atrás", "definition": "In the direction behind you.", "level": "B1", "category": "adverbios" },
+  { "term": "forwards", "translation": "hacia adelante", "definition": "In front direction; ahead.", "level": "B1", "category": "adverbios" },
+  { "term": "nearby", "translation": "cerca", "definition": "Not far away.", "level": "B1", "category": "adverbios" },
+  { "term": "indoors", "translation": "adentro", "definition": "Inside a building.", "level": "B1", "category": "adverbios" },
+  { "term": "downwards", "translation": "hacia abajo", "definition": "Toward a lower place.", "level": "B1", "category": "adverbios" },
+
+  { "term": "ultimately", "translation": "en última instancia", "definition": "In the end; finally.", "level": "B1", "category": "adverbios" },
+  { "term": "initially", "translation": "inicialmente", "definition": "At the beginning.", "level": "B1", "category": "adverbios" },
+  { "term": "previously", "translation": "anteriormente", "definition": "At a time before something else.", "level": "B1", "category": "adverbios" },
+  { "term": "soon after", "translation": "poco después", "definition": "Not long after something happened.", "level": "B1", "category": "adverbios" },
+  { "term": "from now on", "translation": "de ahora en adelante", "definition": "Starting now and continuing in the future.", "level": "B1", "category": "adverbios" },
+
+  { "term": "undoubtedly", "translation": "indudablemente", "definition": "Without any doubt.", "level": "B1", "category": "adverbios" },
+  { "term": "honestly", "translation": "honestamente", "definition": "In a truthful or sincere way.", "level": "B1", "category": "adverbios" },
+  { "term": "clearly", "translation": "claramente", "definition": "In a way that is easy to see or understand.", "level": "B1", "category": "adverbios" },
+  { "term": "seriously", "translation": "seriamente", "definition": "In a serious manner.", "level": "B1", "category": "adverbios" },
+  { "term": "frankly", "translation": "francamente", "definition": "In an honest and direct way.", "level": "B1", "category": "adverbios" },
+  { "term": "literally", "translation": "literalmente", "definition": "According to the exact meaning of the words.", "level": "B1", "category": "adverbios" },
+
+  { "term": "incredibly", "translation": "increíblemente", "definition": "In an unbelievable or extremely big way.", "level": "B1", "category": "adverbios" },
+  { "term": "remarkably", "translation": "notablemente", "definition": "In a surprising or impressive way.", "level": "B1", "category": "adverbios" },
+  { "term": "significantly", "translation": "significativamente", "definition": "In a noticeable or important way.", "level": "B1", "category": "adverbios" },
+  { "term": "positively", "translation": "positivamente", "definition": "In a positive or beneficial way.", "level": "B1", "category": "adverbios" },
+
+  { "term": "simultaneously", "translation": "simultáneamente", "definition": "At the same time.", "level": "B1", "category": "adverbios" },
+  { "term": "independently", "translation": "independientemente", "definition": "Without help; on one's own.", "level": "B1", "category": "adverbios" },
+  { "term": "automatically", "translation": "automáticamente", "definition": "Happening by itself, without control.", "level": "B1", "category": "adverbios" },
+
+  { "term": "unexpectedly", "translation": "inesperadamente", "definition": "In a sudden or surprising manner.", "level": "B1", "category": "adverbios" },
+  { "term": "gradually", "translation": "gradualmente", "definition": "Slowly over time.", "level": "B1", "category": "adverbios" },
+
+  { "term": "once again", "translation": "una vez más", "definition": "Another time; again.", "level": "B1", "category": "adverbios" },
+  { "term": "all of a sudden", "translation": "de repente", "definition": "Very quickly and unexpectedly.", "level": "B1", "category": "adverbios" },
+  { "term": "by chance", "translation": "por casualidad", "definition": "Unexpectedly; accidentally.", "level": "B1", "category": "adverbios" },
+
+  { "term": "fortunately enough", "translation": "lo suficientemente afortunado", "definition": "Luckily, in a good way.", "level": "B1", "category": "adverbios" },
+  { "term": "more or less", "translation": "más o menos", "definition": "Approximately; roughly.", "level": "B1", "category": "adverbios" },
+  { "term": "in the meantime", "translation": "mientras tanto", "definition": "During the time between events.", "level": "B1", "category": "adverbios" }
+]

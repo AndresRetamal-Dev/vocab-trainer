@@ -1,0 +1,12 @@
+[
+    { "term": "neurologist", "translation": "neurólogo/a", "definition": "A doctor specializing in the nervous system.", "level": "C1", "category": "profesiones" },
+    { "term": "civil engineer", "translation": "ingeniero civil", "definition": "A specialist in infrastructure and construction projects.", "level": "C1", "category": "profesiones" },
+    { "term": "biochemist", "translation": "bioquímico/a", "definition": "A scientist studying chemical processes in living organisms.", "level": "C1", "category": "profesiones" },
+    { "term": "linguist", "translation": "lingüista", "definition": "A specialist who studies languages and their structure.", "level": "C1", "category": "profesiones" },
+    { "term": "anthropologist", "translation": "antropólogo/a", "definition": "A scientist who studies human cultures and societies.", "level": "C1", "category": "profesiones" },
+    { "term": "economist", "translation": "economista", "definition": "A specialist in economic theory and analysis.", "level": "C1", "category": "profesiones" },
+    { "term": "surgeon", "translation": "cirujano/a", "definition": "A doctor who performs surgeries.", "level": "C1", "category": "profesiones" },
+    { "term": "diplomat", "translation": "diplomático/a", "definition": "A representative who manages international relations.", "level": "C1", "category": "profesiones" },
+    { "term": "archaeologist", "translation": "arqueólogo/a", "definition": "A scientist who studies human history through remains.", "level": "C1", "category": "profesiones" },
+    { "term": "research scientist", "translation": "científico investigador", "definition": "A specialist dedicated to advanced scientific research.", "level": "C1", "category": "profesiones" }
+]

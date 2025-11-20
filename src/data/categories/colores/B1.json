@@ -1,0 +1,12 @@
+[
+  { "term": "teal", "translation": "verde azulado", "definition": "Deep blue-green color.", "level": "B1", "category": "colores" },
+  { "term": "magenta", "translation": "magenta", "definition": "Bright purplish-red color.", "level": "B1", "category": "colores" },
+  { "term": "ivory", "translation": "marfil", "definition": "Soft off-white color, similar to bone.", "level": "B1", "category": "colores" },
+  { "term": "charcoal", "translation": "gris carbón", "definition": "Very dark gray color.", "level": "B1", "category": "colores" },
+  { "term": "mustard", "translation": "mostaza", "definition": "Dark yellow-brown shade.", "level": "B1", "category": "colores" },
+  { "term": "coral", "translation": "coral", "definition": "Pinkish-orange shade inspired by sea coral.", "level": "B1", "category": "colores" },
+  { "term": "mint green", "translation": "verde menta", "definition": "Soft green shade reminiscent of mint leaves.", "level": "B1", "category": "colores" },
+  { "term": "peach", "translation": "melocotón", "definition": "Soft pinkish-orange color.", "level": "B1", "category": "colores" },
+  { "term": "chocolate brown", "translation": "marrón chocolate", "definition": "Deep rich brown, like chocolate.", "level": "B1", "category": "colores" },
+  { "term": "sky blue", "translation": "azul cielo", "definition": "Very light blue shade, like a clear sky.", "level": "B1", "category": "colores" }
+]

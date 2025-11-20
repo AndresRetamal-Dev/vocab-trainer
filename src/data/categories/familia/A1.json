@@ -1,0 +1,13 @@
+[
+    { "term": "mother", "translation": "madre", "definition": "A female parent.", "level": "A1", "category": "familia" },
+    { "term": "father", "translation": "padre", "definition": "A male parent.", "level": "A1", "category": "familia" },
+    { "term": "parents", "translation": "padres", "definition": "Mother and father.", "level": "A1", "category": "familia" },
+    { "term": "son", "translation": "hijo", "definition": "A male child.", "level": "A1", "category": "familia" },
+    { "term": "daughter", "translation": "hija", "definition": "A female child.", "level": "A1", "category": "familia" },
+    { "term": "brother", "translation": "hermano", "definition": "A male sibling.", "level": "A1", "category": "familia" },
+    { "term": "sister", "translation": "hermana", "definition": "A female sibling.", "level": "A1", "category": "familia" },
+    { "term": "grandmother", "translation": "abuela", "definition": "The mother of your parent.", "level": "A1", "category": "familia" },
+    { "term": "grandfather", "translation": "abuelo", "definition": "The father of your parent.", "level": "A1", "category": "familia" },
+    { "term": "grandparents", "translation": "abuelos", "definition": "Grandmother and grandfather.", "level": "A1", "category": "familia" },
+    { "term": "baby", "translation": "bebé", "definition": "A very young child.", "level": "A1", "category": "familia" }
+]

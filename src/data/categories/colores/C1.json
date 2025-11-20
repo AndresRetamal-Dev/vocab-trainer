@@ -1,0 +1,12 @@
+[
+  { "term": "iridescent", "translation": "iridiscente", "definition": "Color that changes when viewed from different angles.", "level": "C1", "category": "colores" },
+  { "term": "translucent white", "translation": "blanco translúcido", "definition": "White that lets light pass through slightly.", "level": "C1", "category": "colores" },
+  { "term": "pastel hues", "translation": "tonos pastel", "definition": "Soft, pale shades of various colors.", "level": "C1", "category": "colores" },
+  { "term": "monochrome", "translation": "monocromático", "definition": "A palette using only one color in different shades.", "level": "C1", "category": "colores" },
+  { "term": "saturated tones", "translation": "tonos saturados", "definition": "Intensely vivid and pure colors.", "level": "C1", "category": "colores" },
+  { "term": "desaturated tones", "translation": "tonos desaturados", "definition": "Colors with low intensity or purity.", "level": "C1", "category": "colores" },
+  { "term": "prismatic colors", "translation": "colores prismáticos", "definition": "Colors produced by light refraction.", "level": "C1", "category": "colores" },
+  { "term": "metallic sheen", "translation": "brillo metálico", "definition": "Surface color that reflects light like metal.", "level": "C1", "category": "colores" },
+  { "term": "earthy palette", "translation": "paleta terrosa", "definition": "Set of brown, green, and muted natural tones.", "level": "C1", "category": "colores" },
+  { "term": "celestial blue", "translation": "azul celestial", "definition": "A bright, radiant sky-like blue.", "level": "C1", "category": "colores" }
+]

@@ -1,0 +1,11 @@
+[
+  { "term": "in addition", "translation": "además", "definition": "Adds extra information formally.", "level": "B1", "category": "conectores" },
+  { "term": "on the other hand", "translation": "por otro lado", "definition": "Introduces contrast.", "level": "B1", "category": "conectores" },
+  { "term": "as a result", "translation": "como resultado", "definition": "Shows consequence.", "level": "B1", "category": "conectores" },
+  { "term": "for example", "translation": "por ejemplo", "definition": "Introduces an example.", "level": "B1", "category": "conectores" },
+  { "term": "for instance", "translation": "por ejemplo", "definition": "Another way to introduce examples.", "level": "B1", "category": "conectores" },
+  { "term": "in contrast", "translation": "en contraste", "definition": "Shows an opposite idea.", "level": "B1", "category": "conectores" },
+  { "term": "in general", "translation": "en general", "definition": "Summarizes information.", "level": "B1", "category": "conectores" },
+  { "term": "as well as", "translation": "así como", "definition": "Adds extra information.", "level": "B1", "category": "conectores" },
+  { "term": "therefore", "translation": "por lo tanto", "definition": "Shows logical conclusion.", "level": "B1", "category": "conectores" }
+]

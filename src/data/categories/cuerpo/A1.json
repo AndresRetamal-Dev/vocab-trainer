@@ -1,0 +1,13 @@
+[
+  { "term": "head", "translation": "cabeza", "definition": "The top part of the body.", "level": "A1", "category": "cuerpo" },
+  { "term": "hair", "translation": "pelo", "definition": "The strands growing on the head.", "level": "A1", "category": "cuerpo" },
+  { "term": "face", "translation": "cara", "definition": "The front part of the head.", "level": "A1", "category": "cuerpo" },
+  { "term": "eye", "translation": "ojo", "definition": "Organ used to see.", "level": "A1", "category": "cuerpo" },
+  { "term": "ear", "translation": "oreja", "definition": "Organ used to hear.", "level": "A1", "category": "cuerpo" },
+  { "term": "nose", "translation": "nariz", "definition": "Organ used to smell.", "level": "A1", "category": "cuerpo" },
+  { "term": "mouth", "translation": "boca", "definition": "Part used to eat and speak.", "level": "A1", "category": "cuerpo" },
+  { "term": "hand", "translation": "mano", "definition": "Part of the body used to grab things.", "level": "A1", "category": "cuerpo" },
+  { "term": "arm", "translation": "brazo", "definition": "Upper limb of the body.", "level": "A1", "category": "cuerpo" },
+  { "term": "leg", "translation": "pierna", "definition": "Limb used for walking.", "level": "A1", "category": "cuerpo" },
+  { "term": "foot", "translation": "pie", "definition": "Lower part of the leg used to stand.", "level": "A1", "category": "cuerpo" }
+]

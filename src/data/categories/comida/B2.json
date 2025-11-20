@@ -1,0 +1,11 @@
+[
+    { "term": "avocado", "translation": "aguacate", "definition": "A creamy green fruit.", "level": "B2", "category": "comida" },
+    { "term": "asparagus", "translation": "espárragos", "definition": "Long green vegetable stalks.", "level": "B2", "category": "comida" },
+    { "term": "blueberries", "translation": "arándanos", "definition": "Small dark blue berries.", "level": "B2", "category": "comida" },
+    { "term": "almonds", "translation": "almendras", "definition": "A type of nut.", "level": "B2", "category": "comida" },
+    { "term": "lobster", "translation": "langosta", "definition": "A large shellfish.", "level": "B2", "category": "comida" },
+    { "term": "mushrooms", "translation": "setas", "definition": "Edible fungi.", "level": "B2", "category": "comida" },
+    { "term": "couscous", "translation": "cuscús", "definition": "Tiny grains made from wheat.", "level": "B2", "category": "comida" },
+    { "term": "olive oil", "translation": "aceite de oliva", "definition": "Oil made from olives.", "level": "B2", "category": "comida" },
+    { "term": "cinnamon", "translation": "canela", "definition": "A spice with a sweet flavor.", "level": "B2", "category": "comida" }
+]

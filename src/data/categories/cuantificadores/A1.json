@@ -1,0 +1,8 @@
+[
+  { "term": "some", "translation": "algunos / algo de", "definition": "Used to indicate an unspecified positive quantity.", "level": "A1", "category": "cuantificadores" },
+  { "term": "any", "translation": "ninguno / algo / cualquier", "definition": "Used in questions and negatives to talk about quantity.", "level": "A1", "category": "cuantificadores" },
+  { "term": "a lot of", "translation": "mucho / muchos", "definition": "Indicates a large amount.", "level": "A1", "category": "cuantificadores" },
+  { "term": "lots of", "translation": "mucho / muchos", "definition": "Informal way to indicate a large amount.", "level": "A1", "category": "cuantificadores" },
+  { "term": "many", "translation": "muchos (contables)", "definition": "Used with countable nouns.", "level": "A1", "category": "cuantificadores" },
+  { "term": "much", "translation": "mucho (no contable)", "definition": "Used with uncountable nouns.", "level": "A1", "category": "cuantificadores" }
+]

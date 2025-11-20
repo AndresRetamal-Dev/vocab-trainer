@@ -1,0 +1,12 @@
+[
+  { "term": "chest", "translation": "pecho", "definition": "The front upper part of the body.", "level": "B1", "category": "cuerpo" },
+  { "term": "waist", "translation": "cintura", "definition": "The middle part of the body.", "level": "B1", "category": "cuerpo" },
+  { "term": "hip", "translation": "cadera", "definition": "The side part of the body below the waist.", "level": "B1", "category": "cuerpo" },
+  { "term": "skin", "translation": "piel", "definition": "The outer covering of the body.", "level": "B1", "category": "cuerpo" },
+  { "term": "muscle", "translation": "músculo", "definition": "Tissue that helps the body move.", "level": "B1", "category": "cuerpo" },
+  { "term": "bone", "translation": "hueso", "definition": "Hard structure that forms the skeleton.", "level": "B1", "category": "cuerpo" },
+  { "term": "heart", "translation": "corazón", "definition": "Organ that pumps blood.", "level": "B1", "category": "cuerpo" },
+  { "term": "lungs", "translation": "pulmones", "definition": "Organs used for breathing.", "level": "B1", "category": "cuerpo" },
+  { "term": "brain", "translation": "cerebro", "definition": "Organ that controls the body.", "level": "B1", "category": "cuerpo" },
+  { "term": "neck", "translation": "cuello", "definition": "Part between head and body.", "level": "B1", "category": "cuerpo" }
+]

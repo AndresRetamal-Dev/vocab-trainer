@@ -1,0 +1,12 @@
+[
+    { "term": "consultant", "translation": "consultor/a", "definition": "A specialist who gives expert advice.", "level": "B2", "category": "profesiones" },
+    { "term": "software developer", "translation": "desarrollador/a de software", "definition": "A person who creates computer programs.", "level": "B2", "category": "profesiones" },
+    { "term": "data analyst", "translation": "analista de datos", "definition": "A person who interprets data to support decisions.", "level": "B2", "category": "profesiones" },
+    { "term": "pharmacist", "translation": "farmacéutico/a", "definition": "A professional who prepares and dispenses medicine.", "level": "B2", "category": "profesiones" },
+    { "term": "veterinarian", "translation": "veterinario/a", "definition": "A doctor for animals.", "level": "B2", "category": "profesiones" },
+    { "term": "pilot", "translation": "piloto", "definition": "A person who flies aircraft.", "level": "B2", "category": "profesiones" },
+    { "term": "psychologist", "translation": "psicólogo/a", "definition": "A person who studies the mind and behavior.", "level": "B2", "category": "profesiones" },
+    { "term": "scientist", "translation": "científico/a", "definition": "A person who studies and researches scientific fields.", "level": "B2", "category": "profesiones" },
+    { "term": "investigator", "translation": "investigador/a", "definition": "A person who investigates cases or studies subjects deeply.", "level": "B2", "category": "profesiones" },
+    { "term": "translator", "translation": "traductor/a", "definition": "A person who translates written text.", "level": "B2", "category": "profesiones" }
+]

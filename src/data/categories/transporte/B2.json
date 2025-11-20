@@ -1,0 +1,12 @@
+[
+  { "term": "public transport", "translation": "transporte público", "definition": "Shared transportation available to everyone.", "level": "B2", "category": "transporte" },
+  { "term": "navigation system", "translation": "sistema de navegación", "definition": "Digital tools used to guide routes.", "level": "B2", "category": "transporte" },
+  { "term": "exhaust fumes", "translation": "gases de escape", "definition": "Polluted air from vehicle engines.", "level": "B2", "category": "transporte" },
+  { "term": "intersection", "translation": "intersección", "definition": "A point where multiple roads meet.", "level": "B2", "category": "transporte" },
+  { "term": "toll road", "translation": "carretera de peaje", "definition": "A road you must pay to use.", "level": "B2", "category": "transporte" },
+  { "term": "airline", "translation": "aerolínea", "definition": "A company that provides air travel.", "level": "B2", "category": "transporte" },
+  { "term": "departure gate", "translation": "puerta de embarque", "definition": "The place where passengers board a flight.", "level": "B2", "category": "transporte" },
+  { "term": "runway", "translation": "pista de aterrizaje", "definition": "A strip of ground where planes take off and land.", "level": "B2", "category": "transporte" },
+  { "term": "lifeboat", "translation": "bote salvavidas", "definition": "A small boat used in emergencies.", "level": "B2", "category": "transporte" },
+  { "term": "navigation chart", "translation": "carta de navegación", "definition": "A map used for sea or air navigation.", "level": "B2", "category": "transporte" }
+]

@@ -1,0 +1,12 @@
+[
+  { "term": "download", "translation": "descargar", "definition": "To transfer data from the internet to a device.", "level": "A2", "category": "tecnología" },
+  { "term": "upload", "translation": "subir", "definition": "To send data from a device to the internet.", "level": "A2", "category": "tecnología" },
+  { "term": "app", "translation": "aplicación", "definition": "A software program designed for a specific purpose.", "level": "A2", "category": "tecnología" },
+  { "term": "password", "translation": "contraseña", "definition": "A secret word used to access a system.", "level": "A2", "category": "tecnología" },
+  { "term": "login", "translation": "iniciar sesión", "definition": "To enter a system with a username and password.", "level": "A2", "category": "tecnología" },
+  { "term": "logout", "translation": "cerrar sesión", "definition": "To exit a digital system.", "level": "A2", "category": "tecnología" },
+  { "term": "Wi-Fi", "translation": "wifi", "definition": "Wireless internet connection.", "level": "A2", "category": "tecnología" },
+  { "term": "search engine", "translation": "buscador", "definition": "A tool used to find information online.", "level": "A2", "category": "tecnología" },
+  { "term": "settings", "translation": "ajustes", "definition": "Options used to configure a device.", "level": "A2", "category": "tecnología" },
+  { "term": "file", "translation": "archivo", "definition": "A digital document stored on a device.", "level": "A2", "category": "tecnología" }
+]

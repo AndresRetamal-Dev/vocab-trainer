@@ -1,0 +1,12 @@
+[
+  { "term": "can", "translation": "poder", "definition": "Ability and permission.", "level": "A2", "category": "verbos modales" },
+    { "term": "will", "translation": "futuro", "definition": "Future decisions and predictions.", "level": "A2", "category": "verbos modales" },
+    { "term": "should", "translation": "debería", "definition": "Basic advice.", "level": "A2", "category": "verbos modales" },
+    { "term": "have to", "translation": "tener que", "definition": "External obligation.", "level": "A2", "category": "verbos modales" },
+    { "term": "need to", "translation": "necesitar", "definition": "Necessity.", "level": "A2", "category": "verbos modales" },
+    { "term": "be able to", "translation": "ser capaz de", "definition": "Ability.", "level": "A2", "category": "verbos modales" },
+
+    { "term": "could", "translation": "podría / podía", "definition": "Polite requests and past ability.", "level": "A2", "category": "verbos modales" },
+    { "term": "may", "translation": "poder", "definition": "Polite permission.", "level": "A2", "category": "verbos modales" },
+    { "term": "be allowed to", "translation": "tener permitido", "definition": "Permission in rules.", "level": "A2", "category": "verbos modales" }
+  ]

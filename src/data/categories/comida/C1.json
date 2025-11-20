@@ -1,0 +1,11 @@
+[
+    { "term": "truffle", "translation": "trufa", "definition": "An expensive aromatic fungus.", "level": "C1", "category": "comida" },
+    { "term": "quinoa", "translation": "quinoa", "definition": "A high-protein grain.", "level": "C1", "category": "comida" },
+    { "term": "saffron", "translation": "azafrán", "definition": "A rare and expensive spice.", "level": "C1", "category": "comida" },
+    { "term": "foie gras", "translation": "foie gras", "definition": "Luxury food made from duck or goose liver.", "level": "C1", "category": "comida" },
+    { "term": "kimchi", "translation": "kimchi", "definition": "A Korean fermented vegetable dish.", "level": "C1", "category": "comida" },
+    { "term": "tempura", "translation": "tempura", "definition": "Japanese deep-fried food.", "level": "C1", "category": "comida" },
+    { "term": "gelatin", "translation": "gelatina", "definition": "A protein used to thicken foods.", "level": "C1", "category": "comida" },
+    { "term": "miso", "translation": "miso", "definition": "Japanese fermented soybean paste.", "level": "C1", "category": "comida" },
+    { "term": "prosciutto", "translation": "prosciutto", "definition": "Italian cured ham.", "level": "C1", "category": "comida" }
+]

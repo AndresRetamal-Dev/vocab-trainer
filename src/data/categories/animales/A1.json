@@ -1,0 +1,11 @@
+[
+    { "term": "dog", "translation": "perro", "definition": "A common domestic animal.", "level": "A1", "category": "animales" },
+    { "term": "cat", "translation": "gato", "definition": "A small domestic animal often kept as a pet.", "level": "A1", "category": "animales" },
+    { "term": "bird", "translation": "pájaro", "definition": "An animal with feathers that can usually fly.", "level": "A1", "category": "animales" },
+    { "term": "fish", "translation": "pez", "definition": "An animal that lives in water and breathes through gills.", "level": "A1", "category": "animales" },
+    { "term": "cow", "translation": "vaca", "definition": "A large farm animal used for milk or meat.", "level": "A1", "category": "animales" },
+    { "term": "horse", "translation": "caballo", "definition": "A large animal used for riding.", "level": "A1", "category": "animales" },
+    { "term": "sheep", "translation": "oveja", "definition": "A farm animal with thick wool.", "level": "A1", "category": "animales" },
+    { "term": "pig", "translation": "cerdo", "definition": "A farm animal with a flat nose.", "level": "A1", "category": "animales" },
+    { "term": "chicken", "translation": "gallina", "definition": "A bird raised for eggs and meat.", "level": "A1", "category": "animales" }
+]

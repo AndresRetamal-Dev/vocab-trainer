@@ -1,0 +1,78 @@
+[
+  { "term": "achieve", "translation": "lograr", "definition": "To successfully reach a goal.", "level": "B1", "category": "verbos" },
+  { "term": "afford", "translation": "permitirse", "definition": "To have enough money to buy or do something.", "level": "B1", "category": "verbos" },
+  { "term": "avoid", "translation": "evitar", "definition": "To keep away from something.", "level": "B1", "category": "verbos" },
+  { "term": "behave", "translation": "comportarse", "definition": "To act in a particular way.", "level": "B1", "category": "verbos" },
+  { "term": "complain", "translation": "quejarse", "definition": "To say you are not satisfied with something.", "level": "B1", "category": "verbos" },
+  { "term": "confirm", "translation": "confirmar", "definition": "To show that something is true or correct.", "level": "B1", "category": "verbos" },
+  { "term": "connect", "translation": "conectar", "definition": "To join or link things together.", "level": "B1", "category": "verbos" },
+  { "term": "consider", "translation": "considerar", "definition": "To think carefully about something.", "level": "B1", "category": "verbos" },
+  { "term": "contain", "translation": "contener", "definition": "To hold something inside.", "level": "B1", "category": "verbos" },
+  { "term": "deliver", "translation": "entregar", "definition": "To bring something to someone.", "level": "B1", "category": "verbos" },
+
+  { "term": "discover", "translation": "descubrir", "definition": "To find something for the first time.", "level": "B1", "category": "verbos" },
+  { "term": "doubt", "translation": "dudar", "definition": "To feel unsure about something.", "level": "B1", "category": "verbos" },
+  { "term": "encourage", "translation": "animar", "definition": "To support or give confidence to someone.", "level": "B1", "category": "verbos" },
+  { "term": "examine", "translation": "examinar", "definition": "To look at something carefully.", "level": "B1", "category": "verbos" },
+  { "term": "experience", "translation": "experimentar", "definition": "To go through an event or situation.", "level": "B1", "category": "verbos" },
+
+  { "term": "fail", "translation": "fallar", "definition": "To not succeed at something.", "level": "B1", "category": "verbos" },
+  { "term": "figure out", "translation": "resolver / averiguar", "definition": "To understand something after thinking.", "level": "B1", "category": "verbos" },
+  { "term": "fit", "translation": "quedar / encajar", "definition": "To be the right size or shape.", "level": "B1", "category": "verbos" },
+  { "term": "handle", "translation": "manejar", "definition": "To deal with a situation.", "level": "B1", "category": "verbos" },
+  { "term": "harm", "translation": "dañar", "definition": "To hurt or cause damage.", "level": "B1", "category": "verbos" },
+
+  { "term": "impress", "translation": "impresionar", "definition": "To make someone admire something.", "level": "B1", "category": "verbos" },
+  { "term": "improve", "translation": "mejorar", "definition": "To make something better.", "level": "B1", "category": "verbos" },
+  { "term": "include", "translation": "incluir", "definition": "To contain or add something.", "level": "B1", "category": "verbos" },
+  { "term": "increase", "translation": "incrementar", "definition": "To become larger or more.", "level": "B1", "category": "verbos" },
+  { "term": "influence", "translation": "influir", "definition": "To affect how someone acts or thinks.", "level": "B1", "category": "verbos" },
+
+  { "term": "interrupt", "translation": "interrumpir", "definition": "To stop something temporarily.", "level": "B1", "category": "verbos" },
+  { "term": "introduce", "translation": "presentar", "definition": "To bring something or someone into use.", "level": "B1", "category": "verbos" },
+  { "term": "involve", "translation": "involucrar", "definition": "To include someone or something as part of something.", "level": "B1", "category": "verbos" },
+  { "term": "maintain", "translation": "mantener", "definition": "To keep something in good condition.", "level": "B1", "category": "verbos" },
+  { "term": "manage", "translation": "gestionar", "definition": "To organize and be in charge of something.", "level": "B1", "category": "verbos" },
+
+  { "term": "mention", "translation": "mencionar", "definition": "To talk briefly about something.", "level": "B1", "category": "verbos" },
+  { "term": "mind", "translation": "importar", "definition": "To be bothered by something.", "level": "B1", "category": "verbos" },
+  { "term": "miss", "translation": "extrañar / perder", "definition": "To feel the absence of someone or something.", "level": "B1", "category": "verbos" },
+  { "term": "notice", "translation": "notar", "definition": "To become aware of something.", "level": "B1", "category": "verbos" },
+  { "term": "offer", "translation": "ofrecer", "definition": "To present something to someone.", "level": "B1", "category": "verbos" },
+
+  { "term": "prefer", "translation": "preferir", "definition": "To like something more than another option.", "level": "B1", "category": "verbos" },
+  { "term": "prevent", "translation": "prevenir", "definition": "To stop something from happening.", "level": "B1", "category": "verbos" },
+  { "term": "produce", "translation": "producir", "definition": "To create or manufacture something.", "level": "B1", "category": "verbos" },
+  { "term": "protect", "translation": "proteger", "definition": "To keep someone or something safe.", "level": "B1", "category": "verbos" },
+  { "term": "prove", "translation": "probar / demostrar", "definition": "To show something is true.", "level": "B1", "category": "verbos" },
+
+  { "term": "realize", "translation": "darse cuenta", "definition": "To understand something suddenly.", "level": "B1", "category": "verbos" },
+  { "term": "receive", "translation": "recibir", "definition": "To get something from someone.", "level": "B1", "category": "verbos" },
+  { "term": "recommend", "translation": "recomendar", "definition": "To suggest something is good.", "level": "B1", "category": "verbos" },
+  { "term": "refuse", "translation": "rechazar", "definition": "To say no to something.", "level": "B1", "category": "verbos" },
+  { "term": "regret", "translation": "arrepentirse", "definition": "To feel sorry about something.", "level": "B1", "category": "verbos" },
+
+  { "term": "remain", "translation": "permanecer", "definition": "To stay in a place.", "level": "B1", "category": "verbos" },
+  { "term": "remind", "translation": "recordar", "definition": "To make someone remember something.", "level": "B1", "category": "verbos" },
+  { "term": "repair", "translation": "reparar", "definition": "To fix something broken.", "level": "B1", "category": "verbos" },
+  { "term": "replace", "translation": "reemplazar", "definition": "To change something with another one.", "level": "B1", "category": "verbos" },
+  { "term": "require", "translation": "requerir", "definition": "To need something.", "level": "B1", "category": "verbos" },
+
+  { "term": "respond", "translation": "responder", "definition": "To reply or react.", "level": "B1", "category": "verbos" },
+  { "term": "result", "translation": "resultar", "definition": "To happen because of something else.", "level": "B1", "category": "verbos" },
+  { "term": "save", "translation": "guardar / salvar", "definition": "To keep something safe or use less of it.", "level": "B1", "category": "verbos" },
+  { "term": "select", "translation": "seleccionar", "definition": "To choose something carefully.", "level": "B1", "category": "verbos" },
+  { "term": "serve", "translation": "servir", "definition": "To give food or help someone.", "level": "B1", "category": "verbos" },
+
+  { "term": "shoot", "translation": "disparar / grabar", "definition": "To fire a weapon or to record video.", "level": "B1", "category": "verbos" },
+  { "term": "solve", "translation": "resolver", "definition": "To find an answer to a problem.", "level": "B1", "category": "verbos" },
+  { "term": "suggest", "translation": "sugerir", "definition": "To propose an idea.", "level": "B1", "category": "verbos" },
+  { "term": "support", "translation": "apoyar", "definition": "To help or encourage someone.", "level": "B1", "category": "verbos" },
+  { "term": "train", "translation": "entrenar", "definition": "To teach skills through practice.", "level": "B1", "category": "verbos" },
+
+  { "term": "upload", "translation": "subir", "definition": "To send data to the internet.", "level": "B1", "category": "verbos" },
+  { "term": "download", "translation": "descargar", "definition": "To get data from the internet.", "level": "B1", "category": "verbos" },
+  { "term": "update", "translation": "actualizar", "definition": "To bring something to a newer version.", "level": "B1", "category": "verbos" },
+  { "term": "avoid", "translation": "evitar", "definition": "To stay away from something.", "level": "B1", "category": "verbos" },
+  { "term": "wonder", "translation": "preguntarse", "definition": "To want to know something.", "level": "B1", "category": "verbos" }
+]

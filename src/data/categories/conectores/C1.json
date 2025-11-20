@@ -1,0 +1,12 @@
+[
+  { "term": "notwithstanding", "translation": "a pesar de", "definition": "Formal contrast connector.", "level": "C1", "category": "conectores" },
+  { "term": "in light of", "translation": "a la luz de", "definition": "Shows cause based on new information.", "level": "C1", "category": "conectores" },
+  { "term": "insofar as", "translation": "en la medida en que", "definition": "Limits a statement.", "level": "C1", "category": "conectores" },
+  { "term": "nonetheless", "translation": "sin embargo", "definition": "Formal equivalent to 'however'.", "level": "C1", "category": "conectores" },
+  { "term": "thereby", "translation": "de este modo", "definition": "Shows the result of an action.", "level": "C1", "category": "conectores" },
+  { "term": "hence", "translation": "por lo tanto", "definition": "Formal connector meaning consequence.", "level": "C1", "category": "conectores" },
+  { "term": "accordingly", "translation": "por consiguiente", "definition": "Used to show logical alignment.", "level": "C1", "category": "conectores" },
+  { "term": "not only... but also", "translation": "no solo... sino también", "definition": "Adds emphasis and structure.", "level": "C1", "category": "conectores" },
+  { "term": "in the event that", "translation": "en caso de que", "definition": "Formal conditional connector.", "level": "C1", "category": "conectores" },
+  { "term": "with regard to", "translation": "con respecto a", "definition": "Introduces a specific topic formally.", "level": "C1", "category": "conectores" }
+]

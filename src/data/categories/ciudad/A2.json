@@ -1,0 +1,12 @@
+[
+  { "term": "library", "translation": "biblioteca", "definition": "A place where you can read or borrow books.", "level": "A2", "category": "ciudad" },
+  { "term": "museum", "translation": "museo", "definition": "A place where art or history is shown.", "level": "A2", "category": "ciudad" },
+  { "term": "cinema", "translation": "cine", "definition": "A place where movies are shown.", "level": "A2", "category": "ciudad" },
+  { "term": "shopping mall", "translation": "centro comercial", "definition": "A large building with many stores.", "level": "A2", "category": "ciudad" },
+  { "term": "square", "translation": "plaza", "definition": "An open area in a town surrounded by buildings.", "level": "A2", "category": "ciudad" },
+  { "term": "bus stop", "translation": "parada de autobús", "definition": "A place where buses pick up passengers.", "level": "A2", "category": "ciudad" },
+  { "term": "train station", "translation": "estación de tren", "definition": "A place where trains arrive and depart.", "level": "A2", "category": "ciudad" },
+  { "term": "post office", "translation": "oficina de correos", "definition": "A place to send and receive mail.", "level": "A2", "category": "ciudad" },
+  { "term": "police station", "translation": "comisaría", "definition": "A place where police work.", "level": "A2", "category": "ciudad" },
+  { "term": "market", "translation": "mercado", "definition": "A place where fresh food and products are sold.", "level": "A2", "category": "ciudad" }
+]

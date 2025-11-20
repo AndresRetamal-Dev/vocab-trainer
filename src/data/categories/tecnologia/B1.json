@@ -1,0 +1,12 @@
+[
+  { "term": "hardware", "translation": "hardware", "definition": "The physical parts of a computer.", "level": "B1", "category": "tecnología" },
+  { "term": "software", "translation": "software", "definition": "Programs used by a computer.", "level": "B1", "category": "tecnología" },
+  { "term": "browser", "translation": "navegador", "definition": "A program used to access websites.", "level": "B1", "category": "tecnología" },
+  { "term": "update", "translation": "actualizar", "definition": "To install the newest version of something.", "level": "B1", "category": "tecnología" },
+  { "term": "backup", "translation": "copia de seguridad", "definition": "A saved copy of data to prevent loss.", "level": "B1", "category": "tecnología" },
+  { "term": "cloud storage", "translation": "almacenamiento en la nube", "definition": "Saving data online instead of on a device.", "level": "B1", "category": "tecnología" },
+  { "term": "virus", "translation": "virus", "definition": "Malicious software that harms computers.", "level": "B1", "category": "tecnología" },
+  { "term": "account", "translation": "cuenta", "definition": "A profile used to access a service.", "level": "B1", "category": "tecnología" },
+  { "term": "notification", "translation": "notificación", "definition": "A message alerting a user to something new.", "level": "B1", "category": "tecnología" },
+  { "term": "headphones", "translation": "auriculares", "definition": "A device used to listen to audio.", "level": "B1", "category": "tecnología" }
+]

@@ -1,0 +1,14 @@
+[
+    { "term": "cardigan", "translation": "cárdigan", "definition": "A knitted sweater that opens at the front.", "level": "B1", "category": "ropa" },
+    { "term": "vest", "translation": "chaleco", "definition": "A sleeveless upper-body garment.", "level": "B1", "category": "ropa" },
+    { "term": "leggings", "translation": "mallas", "definition": "Tight-fitting stretch pants.", "level": "B1", "category": "ropa" },
+    { "term": "heels", "translation": "tacones", "definition": "Shoes with high heels.", "level": "B1", "category": "ropa" },
+    { "term": "suit", "translation": "traje", "definition": "Formal matching jacket and pants.", "level": "B1", "category": "ropa" },
+    { "term": "tie", "translation": "corbata", "definition": "A long piece of cloth worn around the neck.", "level": "B1", "category": "ropa" },
+    { "term": "bow tie", "translation": "pajarita", "definition": "A bow-shaped neck tie.", "level": "B1", "category": "ropa" },
+    { "term": "overalls", "translation": "mono / peto", "definition": "A one-piece garment with straps.", "level": "B1", "category": "ropa" },
+    { "term": "tracksuit", "translation": "chándal", "definition": "A two-piece sporty outfit.", "level": "B1", "category": "ropa" },
+    { "term": "beanie", "translation": "gorro", "definition": "A warm knitted cap.", "level": "B1", "category": "ropa" },
+    { "term": "rain boots", "translation": "botas de lluvia", "definition": "Waterproof boots.", "level": "B1", "category": "ropa" },
+    { "term": "flip-flops", "translation": "chanclas", "definition": "Open sandals held by a toe strap.", "level": "B1", "category": "ropa" }
+]

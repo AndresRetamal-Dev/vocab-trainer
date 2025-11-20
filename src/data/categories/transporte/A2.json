@@ -1,0 +1,12 @@
+[
+  { "term": "ferry", "translation": "ferry", "definition": "A boat that transports people or vehicles.", "level": "A2", "category": "transporte" },
+  { "term": "van", "translation": "furgoneta", "definition": "A medium-sized vehicle for goods or people.", "level": "A2", "category": "transporte" },
+  { "term": "helicopter", "translation": "helicóptero", "definition": "An aircraft that flies using rotating blades.", "level": "A2", "category": "transporte" },
+  { "term": "scooter", "translation": "patinete / scooter", "definition": "A small two-wheeled vehicle, motorized or not.", "level": "A2", "category": "transporte" },
+  { "term": "parking lot", "translation": "aparcamiento", "definition": "A place where cars are parked.", "level": "A2", "category": "transporte" },
+  { "term": "traffic", "translation": "tráfico", "definition": "The movement of vehicles on roads.", "level": "A2", "category": "transporte" },
+  { "term": "seatbelt", "translation": "cinturón de seguridad", "definition": "A safety strap in a vehicle seat.", "level": "A2", "category": "transporte" },
+  { "term": "ticket", "translation": "billete", "definition": "A pass that allows you to travel on transport.", "level": "A2", "category": "transporte" },
+  { "term": "station", "translation": "estación", "definition": "A place where transport vehicles stop.", "level": "A2", "category": "transporte" },
+  { "term": "platform", "translation": "andén", "definition": "The area where passengers wait for a train.", "level": "A2", "category": "transporte" }
+]

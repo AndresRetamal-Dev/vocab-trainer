@@ -1,0 +1,8 @@
+[
+  { "term": "few", "translation": "pocos (contables)", "definition": "A small number of things.", "level": "A2", "category": "cuantificadores" },
+  { "term": "a few", "translation": "algunos (contables)", "definition": "A small but positive number.", "level": "A2", "category": "cuantificadores" },
+  { "term": "little", "translation": "poco (no contable)", "definition": "A small amount.", "level": "A2", "category": "cuantificadores" },
+  { "term": "a little", "translation": "un poco (no contable)", "definition": "A small but positive amount.", "level": "A2", "category": "cuantificadores" },
+  { "term": "enough", "translation": "suficiente", "definition": "As much as needed.", "level": "A2", "category": "cuantificadores" },
+  { "term": "plenty of", "translation": "mucho / de sobra", "definition": "More than enough.", "level": "A2", "category": "cuantificadores" }
+]

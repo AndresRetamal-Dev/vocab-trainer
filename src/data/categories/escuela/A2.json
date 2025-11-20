@@ -1,0 +1,12 @@
+[
+  { "term": "homework", "translation": "deberes", "definition": "Schoolwork assigned to be done at home.", "level": "A2", "category": "escuela" },
+  { "term": "notebook", "translation": "cuaderno", "definition": "A book used for writing notes.", "level": "A2", "category": "escuela" },
+  { "term": "ruler", "translation": "regla", "definition": "A tool used to measure length.", "level": "A2", "category": "escuela" },
+  { "term": "eraser", "translation": "goma de borrar", "definition": "A tool used to remove pencil marks.", "level": "A2", "category": "escuela" },
+  { "term": "test", "translation": "examen", "definition": "An assessment given to students.", "level": "A2", "category": "escuela" },
+  { "term": "subject", "translation": "asignatura", "definition": "A specific area of study.", "level": "A2", "category": "escuela" },
+  { "term": "break", "translation": "recreo", "definition": "Time when students rest between classes.", "level": "A2", "category": "escuela" },
+  { "term": "library", "translation": "biblioteca", "definition": "A place where books can be read or borrowed.", "level": "A2", "category": "escuela" },
+  { "term": "lesson", "translation": "lección / clase", "definition": "A period of teaching.", "level": "A2", "category": "escuela" },
+  { "term": "uniform", "translation": "uniforme", "definition": "A set of clothes students wear to school.", "level": "A2", "category": "escuela" }
+]

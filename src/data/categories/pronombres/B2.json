@@ -1,0 +1,9 @@
+[
+  { "term": "one", "translation": "uno", "definition": "General pronoun referring to people in general.", "level": "B2", "category": "pronombres" },
+  { "term": "ones", "translation": "unos / los", "definition": "Plural version of the general pronoun 'one'.", "level": "B2", "category": "pronombres" },
+  { "term": "whose", "translation": "cuyo/a", "definition": "Relative pronoun showing possession.", "level": "B2", "category": "pronombres" },
+  { "term": "whom", "translation": "a quien", "definition": "Formal object form of 'who'.", "level": "B2", "category": "pronombres" },
+  { "term": "whoever", "translation": "quienquiera", "definition": "Relative pronoun meaning any person who…", "level": "B2", "category": "pronombres" },
+  { "term": "whatever", "translation": "lo que sea", "definition": "Indefinite pronoun meaning anything.", "level": "B2", "category": "pronombres" },
+  { "term": "whichever", "translation": "cualquiera que", "definition": "Indefinite pronoun for choices.", "level": "B2", "category": "pronombres" }
+]

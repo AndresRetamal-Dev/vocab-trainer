@@ -1,0 +1,12 @@
+[
+  { "term": "school", "translation": "escuela / colegio", "definition": "A place where students learn.", "level": "A1", "category": "escuela" },
+  { "term": "teacher", "translation": "profesor/a", "definition": "A person who teaches students.", "level": "A1", "category": "escuela" },
+  { "term": "student", "translation": "estudiante", "definition": "A person who studies.", "level": "A1", "category": "escuela" },
+  { "term": "classroom", "translation": "aula", "definition": "A room where lessons take place.", "level": "A1", "category": "escuela" },
+  { "term": "desk", "translation": "pupitre / escritorio", "definition": "A table used for studying.", "level": "A1", "category": "escuela" },
+  { "term": "chair", "translation": "silla", "definition": "A seat for one person.", "level": "A1", "category": "escuela" },
+  { "term": "book", "translation": "libro", "definition": "A set of printed pages bound together.", "level": "A1", "category": "escuela" },
+  { "term": "pencil", "translation": "lápiz", "definition": "A writing instrument made of wood and graphite.", "level": "A1", "category": "escuela" },
+  { "term": "pen", "translation": "bolígrafo", "definition": "A writing instrument with ink.", "level": "A1", "category": "escuela" },
+  { "term": "bag", "translation": "mochila", "definition": "A container used to carry school materials.", "level": "A1", "category": "escuela" }
+]

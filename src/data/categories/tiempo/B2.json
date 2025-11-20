@@ -1,0 +1,12 @@
+[
+  { "term": "blizzard", "translation": "tormenta de nieve", "definition": "A severe snowstorm with strong winds.", "level": "B2", "category": "tiempo" },
+  { "term": "drought", "translation": "sequía", "definition": "A long period with little or no rain.", "level": "B2", "category": "tiempo" },
+  { "term": "monsoon", "translation": "monzón", "definition": "Seasonal heavy rains in some regions.", "level": "B2", "category": "tiempo" },
+  { "term": "hailstorm", "translation": "tormenta de granizo", "definition": "A storm with hail.", "level": "B2", "category": "tiempo" },
+  { "term": "tempest", "translation": "tempestad", "definition": "A violent storm.", "level": "B2", "category": "tiempo" },
+  { "term": "avalanche", "translation": "avalancha", "definition": "Snow falling rapidly down a mountain.", "level": "B2", "category": "tiempo" },
+  { "term": "thick fog", "translation": "niebla espesa", "definition": "Fog that makes visibility very low.", "level": "B2", "category": "tiempo" },
+  { "term": "flooding", "translation": "inundación", "definition": "Water overflowing onto normally dry land.", "level": "B2", "category": "tiempo" },
+  { "term": "wind chill", "translation": "sensación térmica", "definition": "How cold it feels with wind.", "level": "B2", "category": "tiempo" },
+  { "term": "climate zone", "translation": "zona climática", "definition": "A region with its own climate patterns.", "level": "B2", "category": "tiempo" }
+]

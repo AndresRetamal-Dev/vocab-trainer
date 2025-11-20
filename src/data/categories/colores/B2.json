@@ -1,0 +1,12 @@
+[
+  { "term": "amber", "translation": "ámbar", "definition": "Golden yellow color like tree resin.", "level": "B2", "category": "colores" },
+  { "term": "auburn", "translation": "castaño rojizo", "definition": "Reddish-brown color often used for hair.", "level": "B2", "category": "colores" },
+  { "term": "emerald", "translation": "esmeralda", "definition": "Bright deep green like the gemstone.", "level": "B2", "category": "colores" },
+  { "term": "sapphire", "translation": "zafiro", "definition": "Deep blue jewel-like color.", "level": "B2", "category": "colores" },
+  { "term": "lavender", "translation": "lavanda", "definition": "Pale purple shade with floral association.", "level": "B2", "category": "colores" },
+  { "term": "mahogany", "translation": "caoba", "definition": "Dark reddish-brown color.", "level": "B2", "category": "colores" },
+  { "term": "bronze", "translation": "bronce", "definition": "Brownish metallic tone.", "level": "B2", "category": "colores" },
+  { "term": "khaki", "translation": "caqui", "definition": "Dull brownish-yellow tone.", "level": "B2", "category": "colores" },
+  { "term": "slate gray", "translation": "gris pizarra", "definition": "Dark gray with a slight blue tone.", "level": "B2", "category": "colores" },
+  { "term": "rose gold", "translation": "oro rosa", "definition": "Metallic pinkish-gold shade.", "level": "B2", "category": "colores" }
+]

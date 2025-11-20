@@ -1,0 +1,74 @@
+[
+  { "term": "arrive", "translation": "llegar", "definition": "To reach a place.", "level": "A2", "category": "verbos" },
+  { "term": "leave", "translation": "marcharse / dejar", "definition": "To go away from a place.", "level": "A2", "category": "verbos" },
+  { "term": "return", "translation": "volver", "definition": "To come back to a place.", "level": "A2", "category": "verbos" },
+  { "term": "travel", "translation": "viajar", "definition": "To go from one place to another.", "level": "A2", "category": "verbos" },
+  { "term": "stay", "translation": "quedarse", "definition": "To remain in a place.", "level": "A2", "category": "verbos" },
+  { "term": "join", "translation": "unirse", "definition": "To become part of a group.", "level": "A2", "category": "verbos" },
+  { "term": "follow", "translation": "seguir", "definition": "To go after someone or something.", "level": "A2", "category": "verbos" },
+  { "term": "lead", "translation": "dirigir / guiar", "definition": "To show the way or be in charge.", "level": "A2", "category": "verbos" },
+  { "term": "carry", "translation": "llevar", "definition": "To hold something and take it to another place.", "level": "A2", "category": "verbos" },
+  { "term": "pick up", "translation": "recoger", "definition": "To lift something or someone.", "level": "A2", "category": "verbos" },
+
+  { "term": "drop", "translation": "soltar / dejar caer", "definition": "To let something fall.", "level": "A2", "category": "verbos" },
+  { "term": "hold", "translation": "sujetar", "definition": "To have something in your hands.", "level": "A2", "category": "verbos" },
+  { "term": "bring", "translation": "traer", "definition": "To take something with you to another place.", "level": "A2", "category": "verbos" },
+  { "term": "throw", "translation": "tirar / lanzar", "definition": "To make something fly through the air.", "level": "A2", "category": "verbos" },
+  { "term": "catch", "translation": "atrapar", "definition": "To take hold of something moving.", "level": "A2", "category": "verbos" },
+
+  { "term": "build", "translation": "construir", "definition": "To make something by putting parts together.", "level": "A2", "category": "verbos" },
+  { "term": "fix", "translation": "arreglar", "definition": "To repair something broken.", "level": "A2", "category": "verbos" },
+  { "term": "repair", "translation": "reparar", "definition": "To fix something damaged.", "level": "A2", "category": "verbos" },
+  { "term": "create", "translation": "crear", "definition": "To make something new.", "level": "A2", "category": "verbos" },
+  { "term": "design", "translation": "diseñar", "definition": "To plan or create the form of something.", "level": "A2", "category": "verbos" },
+
+  { "term": "try", "translation": "intentar", "definition": "To make an effort to do something.", "level": "A2", "category": "verbos" },
+  { "term": "decide", "translation": "decidir", "definition": "To choose something.", "level": "A2", "category": "verbos" },
+  { "term": "choose", "translation": "elegir", "definition": "To select from options.", "level": "A2", "category": "verbos" },
+  { "term": "plan", "translation": "planear", "definition": "To think about and organize something.", "level": "A2", "category": "verbos" },
+  { "term": "hope", "translation": "esperar", "definition": "To want something to happen.", "level": "A2", "category": "verbos" },
+
+  { "term": "prefer", "translation": "preferir", "definition": "To like something more than another.", "level": "A2", "category": "verbos" },
+  { "term": "imagine", "translation": "imaginar", "definition": "To picture something in your mind.", "level": "A2", "category": "verbos" },
+  { "term": "realize", "translation": "darse cuenta", "definition": "To suddenly understand something.", "level": "A2", "category": "verbos" },
+  { "term": "remember", "translation": "recordar", "definition": "To keep something in your memory.", "level": "A2", "category": "verbos" },
+  { "term": "forget", "translation": "olvidar", "definition": "To fail to remember something.", "level": "A2", "category": "verbos" },
+
+  { "term": "agree", "translation": "estar de acuerdo", "definition": "To have the same opinion.", "level": "A2", "category": "verbos" },
+  { "term": "disagree", "translation": "no estar de acuerdo", "definition": "To have a different opinion.", "level": "A2", "category": "verbos" },
+  { "term": "promise", "translation": "prometer", "definition": "To say you will definitely do something.", "level": "A2", "category": "verbos" },
+  { "term": "suggest", "translation": "sugerir", "definition": "To propose an idea or plan.", "level": "A2", "category": "verbos" },
+  { "term": "explain", "translation": "explicar", "definition": "To make something clear.", "level": "A2", "category": "verbos" },
+
+  { "term": "describe", "translation": "describir", "definition": "To say what something is like.", "level": "A2", "category": "verbos" },
+  { "term": "express", "translation": "expresar", "definition": "To communicate a feeling or idea.", "level": "A2", "category": "verbos" },
+  { "term": "discuss", "translation": "discutir", "definition": "To talk about something.", "level": "A2", "category": "verbos" },
+  { "term": "explain", "translation": "explicar", "definition": "To make something understood.", "level": "A2", "category": "verbos" },
+  { "term": "answer", "translation": "responder", "definition": "To reply to someone or something.", "level": "A2", "category": "verbos" },
+
+  { "term": "invite", "translation": "invitar", "definition": "To ask someone to join an event.", "level": "A2", "category": "verbos" },
+  { "term": "celebrate", "translation": "celebrar", "definition": "To do something enjoyable for a special day.", "level": "A2", "category": "verbos" },
+  { "term": "share", "translation": "compartir", "definition": "To give part of something to others.", "level": "A2", "category": "verbos" },
+  { "term": "introduce", "translation": "presentar", "definition": "To make someone known to another person.", "level": "A2", "category": "verbos" },
+  { "term": "visit", "translation": "visitar", "definition": "To go to see someone or something.", "level": "A2", "category": "verbos" },
+
+  { "term": "exercise", "translation": "hacer ejercicio", "definition": "To do physical activity for health.", "level": "A2", "category": "verbos" },
+  { "term": "stretch", "translation": "estirar", "definition": "To lengthen muscles or limbs.", "level": "A2", "category": "verbos" },
+  { "term": "rest", "translation": "descansar", "definition": "To relax and stop working.", "level": "A2", "category": "verbos" },
+
+  { "term": "borrow", "translation": "pedir prestado", "definition": "To take something temporarily.", "level": "A2", "category": "verbos" },
+  { "term": "lend", "translation": "prestar", "definition": "To give something temporarily.", "level": "A2", "category": "verbos" },
+  { "term": "own", "translation": "poseer", "definition": "To have something as your property.", "level": "A2", "category": "verbos" },
+
+  { "term": "improve", "translation": "mejorar", "definition": "To make something better.", "level": "A2", "category": "verbos" },
+  { "term": "increase", "translation": "aumentar", "definition": "To make something larger or more.", "level": "A2", "category": "verbos" },
+  { "term": "reduce", "translation": "reducir", "definition": "To make something smaller or less.", "level": "A2", "category": "verbos" },
+  { "term": "change", "translation": "cambiar", "definition": "To make something different.", "level": "A2", "category": "verbos" },
+  { "term": "develop", "translation": "desarrollar", "definition": "To grow or advance something.", "level": "A2", "category": "verbos" },
+
+  { "term": "test", "translation": "probar / examinar", "definition": "To check the quality or condition of something.", "level": "A2", "category": "verbos" },
+  { "term": "measure", "translation": "medir", "definition": "To find the size, amount, or degree of something.", "level": "A2", "category": "verbos" },
+  { "term": "compare", "translation": "comparar", "definition": "To examine similarities and differences.", "level": "A2", "category": "verbos" },
+  { "term": "prepare", "translation": "preparar", "definition": "To get something ready.", "level": "A2", "category": "verbos" },
+  { "term": "organize", "translation": "organizar", "definition": "To arrange things properly.", "level": "A2", "category": "verbos" }
+]

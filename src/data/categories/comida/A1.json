@@ -1,0 +1,11 @@
+[
+    { "term": "bread", "translation": "pan", "definition": "A basic food made from flour.", "level": "A1", "category": "comida" },
+    { "term": "water", "translation": "agua", "definition": "A clear liquid essential for life.", "level": "A1", "category": "comida" },
+    { "term": "milk", "translation": "leche", "definition": "A white liquid produced by cows.", "level": "A1", "category": "comida" },
+    { "term": "rice", "translation": "arroz", "definition": "A small white grain used as food.", "level": "A1", "category": "comida" },
+    { "term": "egg", "translation": "huevo", "definition": "A common food laid by chickens.", "level": "A1", "category": "comida" },
+    { "term": "apple", "translation": "manzana", "definition": "A round, sweet fruit.", "level": "A1", "category": "comida" },
+    { "term": "banana", "translation": "plátano", "definition": "A long yellow fruit.", "level": "A1", "category": "comida" },
+    { "term": "chicken", "translation": "pollo", "definition": "Meat from a chicken.", "level": "A1", "category": "comida" },
+    { "term": "fish", "translation": "pescado", "definition": "Meat from a fish.", "level": "A1", "category": "comida" }
+]

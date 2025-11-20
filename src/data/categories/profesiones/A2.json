@@ -1,0 +1,12 @@
+[
+    { "term": "cashier", "translation": "cajero/a", "definition": "A person who handles payments.", "level": "A2", "category": "profesiones" },
+    { "term": "farmer", "translation": "granjero/a", "definition": "A person who grows crops or raises animals.", "level": "A2", "category": "profesiones" },
+    { "term": "mechanic", "translation": "mecánico/a", "definition": "A person who repairs machines or vehicles.", "level": "A2", "category": "profesiones" },
+    { "term": "builder", "translation": "constructor/a", "definition": "A person who builds houses or buildings.", "level": "A2", "category": "profesiones" },
+    { "term": "hairdresser", "translation": "peluquero/a", "definition": "A person who cuts and styles hair.", "level": "A2", "category": "profesiones" },
+    { "term": "cleaner", "translation": "limpiador/a", "definition": "A person who cleans buildings or houses.", "level": "A2", "category": "profesiones" },
+    { "term": "security guard", "translation": "guardia de seguridad", "definition": "A person who protects property or people.", "level": "A2", "category": "profesiones" },
+    { "term": "receptionist", "translation": "recepcionista", "definition": "A person who greets visitors and answers calls.", "level": "A2", "category": "profesiones" },
+    { "term": "baker", "translation": "panadero/a", "definition": "A person who makes bread or pastries.", "level": "A2", "category": "profesiones" },
+    { "term": "postman", "translation": "cartero/a", "definition": "A person who delivers mail.", "level": "A2", "category": "profesiones" }
+]

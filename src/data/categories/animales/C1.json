@@ -1,0 +1,11 @@
+[
+    { "term": "platypus", "translation": "ornitorrinco", "definition": "A unique egg-laying mammal.", "level": "C1", "category": "animales" },
+    { "term": "wombat", "translation": "wombat", "definition": "A burrowing Australian marsupial.", "level": "C1", "category": "animales" },
+    { "term": "narwhal", "translation": "narval", "definition": "A whale with a long spiral tusk.", "level": "C1", "category": "animales" },
+    { "term": "pangolin", "translation": "pangolín", "definition": "A scaly mammal threatened by poaching.", "level": "C1", "category": "animales" },
+    { "term": "axolotl", "translation": "ajolote", "definition": "A salamander known for regeneration.", "level": "C1", "category": "animales" },
+    { "term": "wildebeest", "translation": "ñu", "definition": "A large African antelope.", "level": "C1", "category": "animales" },
+    { "term": "armadillo", "translation": "armadillo", "definition": "A mammal with a protective shell.", "level": "C1", "category": "animales" },
+    { "term": "macaw", "translation": "guacamayo", "definition": "A large colorful parrot.", "level": "C1", "category": "animales" },
+    { "term": "manta ray", "translation": "mantarraya", "definition": "A giant flat sea animal that glides through water.", "level": "C1", "category": "animales" }
+  ]

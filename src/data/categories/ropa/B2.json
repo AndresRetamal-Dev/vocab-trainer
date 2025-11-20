@@ -1,0 +1,13 @@
+[
+    { "term": "blazer", "translation": "americana", "definition": "A smart casual jacket.", "level": "B2", "category": "ropa" },
+    { "term": "parka", "translation": "parka", "definition": "A warm heavy coat, often with a hood.", "level": "B2", "category": "ropa" },
+    { "term": "trench coat", "translation": "gabardina", "definition": "A long coat with a belt.", "level": "B2", "category": "ropa" },
+    { "term": "windbreaker", "translation": "cortavientos", "definition": "A lightweight wind-resistant jacket.", "level": "B2", "category": "ropa" },
+    { "term": "turtleneck", "translation": "cuello alto", "definition": "A top with a high, folded collar.", "level": "B2", "category": "ropa" },
+    { "term": "fleece", "translation": "forro polar", "definition": "A warm synthetic fabric jacket.", "level": "B2", "category": "ropa" },
+    { "term": "lining", "translation": "forro", "definition": "The inner layer of a garment.", "level": "B2", "category": "ropa" },
+    { "term": "seam", "translation": "costura", "definition": "The line where two pieces of fabric are joined.", "level": "B2", "category": "ropa" },
+    { "term": "fabric", "translation": "tela", "definition": "Material used to make clothes.", "level": "B2", "category": "ropa" },
+    { "term": "zipper", "translation": "cremallera", "definition": "A fastening device with interlocking metal/plastic teeth.", "level": "B2", "category": "ropa" },
+    { "term": "lace", "translation": "encaje", "definition": "A delicate openwork fabric.", "level": "B2", "category": "ropa" }
+]

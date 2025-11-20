@@ -1,0 +1,14 @@
+[
+  { "term": "I", "translation": "yo", "definition": "First-person singular pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "you", "translation": "tú / usted", "definition": "Second-person singular pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "he", "translation": "él", "definition": "Third-person masculine singular pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "she", "translation": "ella", "definition": "Third-person feminine singular pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "it", "translation": "eso / ello", "definition": "Third-person neutral singular pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "we", "translation": "nosotros/as", "definition": "First-person plural pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "they", "translation": "ellos/as", "definition": "Third-person plural pronoun.", "level": "A1", "category": "pronombres" },
+  { "term": "me", "translation": "me / a mí", "definition": "Object form of 'I'.", "level": "A1", "category": "pronombres" },
+  { "term": "him", "translation": "lo / a él", "definition": "Object form of 'he'.", "level": "A1", "category": "pronombres" },
+  { "term": "her", "translation": "la / a ella", "definition": "Object form of 'she'.", "level": "A1", "category": "pronombres" },
+  { "term": "us", "translation": "nos / a nosotros", "definition": "Object form of 'we'.", "level": "A1", "category": "pronombres" },
+  { "term": "them", "translation": "los / las / a ellos", "definition": "Object form of 'they'.", "level": "A1", "category": "pronombres" }
+]

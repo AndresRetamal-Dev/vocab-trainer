@@ -1,0 +1,12 @@
+[
+    { "term": "engineer", "translation": "ingeniero/a", "definition": "A person who designs or builds things.", "level": "B1", "category": "profesiones" },
+    { "term": "architect", "translation": "arquitecto/a", "definition": "A professional who designs buildings.", "level": "B1", "category": "profesiones" },
+    { "term": "accountant", "translation": "contador/a", "definition": "A person who manages financial records.", "level": "B1", "category": "profesiones" },
+    { "term": "lawyer", "translation": "abogado/a", "definition": "A person who practices law.", "level": "B1", "category": "profesiones" },
+    { "term": "journalist", "translation": "periodista", "definition": "A person who writes or reports news.", "level": "B1", "category": "profesiones" },
+    { "term": "photographer", "translation": "fotógrafo/a", "definition": "A person who takes photos professionally.", "level": "B1", "category": "profesiones" },
+    { "term": "designer", "translation": "diseñador/a", "definition": "A person who creates visual or product designs.", "level": "B1", "category": "profesiones" },
+    { "term": "plumber", "translation": "fontanero/a", "definition": "A person who installs and fixes pipes.", "level": "B1", "category": "profesiones" },
+    { "term": "electrician", "translation": "electricista", "definition": "A person who works with electrical systems.", "level": "B1", "category": "profesiones" },
+    { "term": "chef", "translation": "chef", "definition": "A professional cook.", "level": "B1", "category": "profesiones" }
+]

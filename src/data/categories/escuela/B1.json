@@ -1,0 +1,12 @@
+[
+  { "term": "classmate", "translation": "compañero de clase", "definition": "A person you study with.", "level": "B1", "category": "escuela" },
+  { "term": "timetable", "translation": "horario", "definition": "A schedule of classes.", "level": "B1", "category": "escuela" },
+  { "term": "principal", "translation": "director/a", "definition": "The head of the school.", "level": "B1", "category": "escuela" },
+  { "term": "assignment", "translation": "tarea / trabajo", "definition": "A piece of work given to students.", "level": "B1", "category": "escuela" },
+  { "term": "grade", "translation": "nota / calificación", "definition": "A mark given for school performance.", "level": "B1", "category": "escuela" },
+  { "term": "science lab", "translation": "laboratorio de ciencias", "definition": "A room equipped for scientific experiments.", "level": "B1", "category": "escuela" },
+  { "term": "dictionary", "translation": "diccionario", "definition": "A book that lists words and meanings.", "level": "B1", "category": "escuela" },
+  { "term": "application form", "translation": "formulario de inscripción", "definition": "A document used to apply for school.", "level": "B1", "category": "escuela" },
+  { "term": "extracurricular activities", "translation": "actividades extracurriculares", "definition": "Activities outside regular classes.", "level": "B1", "category": "escuela" },
+  { "term": "semester", "translation": "semestre", "definition": "A period of academic study.", "level": "B1", "category": "escuela" }
+]

@@ -1,0 +1,12 @@
+[
+  { "term": "metropolitan area", "translation": "área metropolitana", "definition": "A large urban area including surrounding towns.", "level": "C1", "category": "ciudad" },
+  { "term": "urban sprawl", "translation": "expansión urbana", "definition": "The uncontrolled growth of a city.", "level": "C1", "category": "ciudad" },
+  { "term": "gentrification", "translation": "gentrificación", "definition": "The process of renovating a district so it becomes more expensive.", "level": "C1", "category": "ciudad" },
+  { "term": "infrastructure", "translation": "infraestructura", "definition": "The basic facilities of a city (roads, water, transport).", "level": "C1", "category": "ciudad" },
+  { "term": "municipality", "translation": "municipio", "definition": "A town or district with its own government.", "level": "C1", "category": "ciudad" },
+  { "term": "urban planning", "translation": "urbanismo", "definition": "Design and regulation of city growth.", "level": "C1", "category": "ciudad" },
+  { "term": "public amenities", "translation": "servicios públicos", "definition": "Facilities provided for community use.", "level": "C1", "category": "ciudad" },
+  { "term": "communal space", "translation": "espacio comunitario", "definition": "Areas shared by the community.", "level": "C1", "category": "ciudad" },
+  { "term": "heritage site", "translation": "sitio patrimonial", "definition": "A location preserved for its cultural value.", "level": "C1", "category": "ciudad" },
+  { "term": "redevelopment", "translation": "reurbanización", "definition": "The improvement or rebuilding of an urban area.", "level": "C1", "category": "ciudad" }
+]

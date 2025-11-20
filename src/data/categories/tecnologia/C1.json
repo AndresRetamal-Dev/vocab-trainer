@@ -1,0 +1,12 @@
+[
+  { "term": "machine learning", "translation": "aprendizaje automático", "definition": "A type of AI that learns from data.", "level": "C1", "category": "tecnología" },
+  { "term": "artificial intelligence", "translation": "inteligencia artificial", "definition": "Technology that simulates human reasoning.", "level": "C1", "category": "tecnología" },
+  { "term": "cybersecurity", "translation": "ciberseguridad", "definition": "Protection of systems from digital attacks.", "level": "C1", "category": "tecnología" },
+  { "term": "data breach", "translation": "filtración de datos", "definition": "Unauthorized release of private information.", "level": "C1", "category": "tecnología" },
+  { "term": "cloud computing", "translation": "computación en la nube", "definition": "Using remote servers to store and process data.", "level": "C1", "category": "tecnología" },
+  { "term": "quantum computing", "translation": "computación cuántica", "definition": "Advanced computing using quantum mechanics.", "level": "C1", "category": "tecnología" },
+  { "term": "blockchain", "translation": "cadena de bloques", "definition": "A secure digital record system.", "level": "C1", "category": "tecnología" },
+  { "term": "automation", "translation": "automatización", "definition": "Using machines to perform tasks automatically.", "level": "C1", "category": "tecnología" },
+  { "term": "predictive analytics", "translation": "analítica predictiva", "definition": "Using data to predict future behavior.", "level": "C1", "category": "tecnología" },
+  { "term": "big data", "translation": "datos masivos", "definition": "Extremely large data sets analyzed computationally.", "level": "C1", "category": "tecnología" }
+]

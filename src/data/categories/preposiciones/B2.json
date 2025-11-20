@@ -1,0 +1,12 @@
+[
+  { "term": "concerning", "translation": "con respecto a", "definition": "Indicates the topic of something.", "level": "B2", "category": "preposiciones" },
+  { "term": "regarding", "translation": "en relación a", "definition": "Shows what something refers to.", "level": "B2", "category": "preposiciones" },
+  { "term": "throughout", "translation": "a lo largo de / durante todo", "definition": "Happening in every part or during all of a period.", "level": "B2", "category": "preposiciones" },
+  { "term": "except for", "translation": "excepto por", "definition": "Excludes one specific part.", "level": "B2", "category": "preposiciones" },
+  { "term": "apart from", "translation": "aparte de", "definition": "Adds or excludes information.", "level": "B2", "category": "preposiciones" },
+  { "term": "as for", "translation": "en cuanto a", "definition": "Introduces a new topic or contrast.", "level": "B2", "category": "preposiciones" },
+  { "term": "prior to", "translation": "antes de", "definition": "Formal way to say 'before'.", "level": "B2", "category": "preposiciones" },
+  { "term": "aside from", "translation": "además de / aparte de", "definition": "Indicates addition or exception.", "level": "B2", "category": "preposiciones" },
+  { "term": "thanks to", "translation": "gracias a", "definition": "Indicates a cause with positive effect.", "level": "B2", "category": "preposiciones" },
+  { "term": "as opposed to", "translation": "en contraste con", "definition": "Shows direct contrast.", "level": "B2", "category": "preposiciones" }
+]

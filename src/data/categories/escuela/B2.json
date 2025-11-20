@@ -1,0 +1,12 @@
+[
+  { "term": "scholarship", "translation": "beca", "definition": "Financial support for students.", "level": "B2", "category": "escuela" },
+  { "term": "curriculum", "translation": "plan de estudios", "definition": "The subjects taught in a school.", "level": "B2", "category": "escuela" },
+  { "term": "evaluation", "translation": "evaluación", "definition": "Assessment of performance.", "level": "B2", "category": "escuela" },
+  { "term": "attendance", "translation": "asistencia", "definition": "Being present in class.", "level": "B2", "category": "escuela" },
+  { "term": "guidance counselor", "translation": "orientador escolar", "definition": "A person who helps students with academic plans.", "level": "B2", "category": "escuela" },
+  { "term": "syllabus", "translation": "programa", "definition": "An outline of topics to be covered in a course.", "level": "B2", "category": "escuela" },
+  { "term": "deadline", "translation": "fecha límite", "definition": "The latest time by which something must be completed.", "level": "B2", "category": "escuela" },
+  { "term": "presentation", "translation": "presentación", "definition": "A talk given to a class.", "level": "B2", "category": "escuela" },
+  { "term": "research project", "translation": "proyecto de investigación", "definition": "A study completed by a student or group.", "level": "B2", "category": "escuela" },
+  { "term": "tutorial", "translation": "tutoría", "definition": "A session in which a tutor helps students learn.", "level": "B2", "category": "escuela" }
+]

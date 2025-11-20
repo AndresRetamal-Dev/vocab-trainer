@@ -1,0 +1,11 @@
+[
+    { "term": "salmon", "translation": "salmón", "definition": "A pink type of fish.", "level": "B1", "category": "comida" },
+    { "term": "lettuce", "translation": "lechuga", "definition": "A leafy green vegetable.", "level": "B1", "category": "comida" },
+    { "term": "yogurt", "translation": "yogur", "definition": "A fermented dairy product.", "level": "B1", "category": "comida" },
+    { "term": "beef", "translation": "carne de res", "definition": "Meat from a cow.", "level": "B1", "category": "comida" },
+    { "term": "soup", "translation": "sopa", "definition": "A liquid food usually served warm.", "level": "B1", "category": "comida" },
+    { "term": "salad", "translation": "ensalada", "definition": "A cold dish made with vegetables.", "level": "B1", "category": "comida" },
+    { "term": "sausage", "translation": "salchicha", "definition": "Ground meat in a casing.", "level": "B1", "category": "comida" },
+    { "term": "honey", "translation": "miel", "definition": "A sweet substance made by bees.", "level": "B1", "category": "comida" },
+    { "term": "jam", "translation": "mermelada", "definition": "A sweet spread made from fruit.", "level": "B1", "category": "comida" }
+]

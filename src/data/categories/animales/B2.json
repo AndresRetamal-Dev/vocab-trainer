@@ -1,0 +1,11 @@
+[
+    { "term": "panther", "translation": "pantera", "definition": "A large and powerful wild cat.", "level": "B2", "category": "animales" },
+    { "term": "leopard", "translation": "leopardo", "definition": "A spotted wild cat.", "level": "B2", "category": "animales" },
+    { "term": "hyena", "translation": "hiena", "definition": "A scavenger animal known for its laugh-like call.", "level": "B2", "category": "animales" },
+    { "term": "falcon", "translation": "halcón", "definition": "A fast bird of prey.", "level": "B2", "category": "animales" },
+    { "term": "vulture", "translation": "buitre", "definition": "A large bird that feeds on carrion.", "level": "B2", "category": "animales" },
+    { "term": "jellyfish", "translation": "medusa", "definition": "A soft sea creature with tentacles.", "level": "B2", "category": "animales" },
+    { "term": "octopus", "translation": "pulpo", "definition": "A sea animal with eight arms.", "level": "B2", "category": "animales" },
+    { "term": "scorpion", "translation": "escorpión", "definition": "An arachnid with a venomous tail.", "level": "B2", "category": "animales" },
+    { "term": "chameleon", "translation": "camaleón", "definition": "A lizard that can change color.", "level": "B2", "category": "animales" }
+  ]

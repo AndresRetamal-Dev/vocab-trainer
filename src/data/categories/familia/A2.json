@@ -1,0 +1,14 @@
+[
+    { "term": "uncle", "translation": "tío", "definition": "The brother of your parent.", "level": "A2", "category": "familia" },
+    { "term": "aunt", "translation": "tía", "definition": "The sister of your parent.", "level": "A2", "category": "familia" },
+    { "term": "cousin", "translation": "primo/prima", "definition": "The child of your aunt or uncle.", "level": "A2", "category": "familia" },
+    { "term": "nephew", "translation": "sobrino", "definition": "A brother's or sister's son.", "level": "A2", "category": "familia" },
+    { "term": "niece", "translation": "sobrina", "definition": "A brother's or sister's daughter.", "level": "A2", "category": "familia" },
+    { "term": "husband", "translation": "esposo", "definition": "A married man.", "level": "A2", "category": "familia" },
+    { "term": "wife", "translation": "esposa", "definition": "A married woman.", "level": "A2", "category": "familia" },
+    { "term": "partner", "translation": "pareja", "definition": "A person you are in a relationship with.", "level": "A2", "category": "familia" },
+    { "term": "stepfather", "translation": "padrastro", "definition": "A man married to your mother, not your biological father.", "level": "A2", "category": "familia" },
+    { "term": "stepmother", "translation": "madrastra", "definition": "A woman married to your father, not your biological mother.", "level": "A2", "category": "familia" },
+    { "term": "stepsister", "translation": "hermanastra", "definition": "The daughter of your step-parent.", "level": "A2", "category": "familia" },
+    { "term": "stepbrother", "translation": "hermanastro", "definition": "The son of your step-parent.", "level": "A2", "category": "familia" }
+]

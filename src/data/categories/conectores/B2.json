@@ -1,0 +1,11 @@
+[
+  { "term": "nevertheless", "translation": "no obstante", "definition": "Shows a surprising contrast.", "level": "B2", "category": "conectores" },
+  { "term": "nonetheless", "translation": "aun así", "definition": "Similar to 'nevertheless'.", "level": "B2", "category": "conectores" },
+  { "term": "in comparison", "translation": "en comparación", "definition": "Shows similarities or differences.", "level": "B2", "category": "conectores" },
+  { "term": "consequently", "translation": "en consecuencia", "definition": "Shows a direct result.", "level": "B2", "category": "conectores" },
+  { "term": "moreover", "translation": "además", "definition": "Adds strong new information.", "level": "B2", "category": "conectores" },
+  { "term": "furthermore", "translation": "además / es más", "definition": "Strengthens an argument.", "level": "B2", "category": "conectores" },
+  { "term": "whereas", "translation": "mientras que", "definition": "Shows contrast between two facts.", "level": "B2", "category": "conectores" },
+  { "term": "provided that", "translation": "siempre que", "definition": "Indicates a strict condition.", "level": "B2", "category": "conectores" },
+  { "term": "in case", "translation": "en caso de que", "definition": "Shows precaution.", "level": "B2", "category": "conectores" }
+]

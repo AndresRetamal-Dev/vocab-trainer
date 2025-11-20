@@ -1,0 +1,12 @@
+[
+  { "term": "pedestrian zone", "translation": "zona peatonal", "definition": "An area where vehicles are not allowed.", "level": "B2", "category": "ciudad" },
+  { "term": "industrial area", "translation": "zona industrial", "definition": "Part of the city with factories and warehouses.", "level": "B2", "category": "ciudad" },
+  { "term": "residential area", "translation": "zona residencial", "definition": "Part of the city where people live.", "level": "B2", "category": "ciudad" },
+  { "term": "public transport", "translation": "transporte público", "definition": "Buses, trains, and other shared transport.", "level": "B2", "category": "ciudad" },
+  { "term": "commuter", "translation": "persona que viaja a diario", "definition": "Someone who travels regularly to work.", "level": "B2", "category": "ciudad" },
+  { "term": "traffic jam", "translation": "atasco", "definition": "Heavy congestion on the road.", "level": "B2", "category": "ciudad" },
+  { "term": "intersection", "translation": "intersección", "definition": "A point where streets cross.", "level": "B2", "category": "ciudad" },
+  { "term": "roundabout", "translation": "rotonda", "definition": "A circular junction for cars.", "level": "B2", "category": "ciudad" },
+  { "term": "town council", "translation": "ayuntamiento / consejo municipal", "definition": "Local administrative authority.", "level": "B2", "category": "ciudad" },
+  { "term": "cityscape", "translation": "paisaje urbano", "definition": "The visual appearance of a city.", "level": "B2", "category": "ciudad" }
+]

@@ -1,0 +1,12 @@
+[
+  { "term": "autonomous vehicle", "translation": "vehículo autónomo", "definition": "A vehicle capable of driving without human control.", "level": "C1", "category": "transporte" },
+  { "term": "air traffic control", "translation": "control del tráfico aéreo", "definition": "The system that manages aircraft movement.", "level": "C1", "category": "transporte" },
+  { "term": "transport infrastructure", "translation": "infraestructura de transporte", "definition": "The system of roads, airports, and rails.", "level": "C1", "category": "transporte" },
+  { "term": "logistics chain", "translation": "cadena logística", "definition": "The full process of transporting goods.", "level": "C1", "category": "transporte" },
+  { "term": "fuel efficiency", "translation": "eficiencia de combustible", "definition": "How well a vehicle uses fuel.", "level": "C1", "category": "transporte" },
+  { "term": "traffic congestion", "translation": "congestión del tráfico", "definition": "Heavy traffic causing delays.", "level": "C1", "category": "transporte" },
+  { "term": "sustainable mobility", "translation": "movilidad sostenible", "definition": "Transport solutions that reduce environmental impact.", "level": "C1", "category": "transporte" },
+  { "term": "aviation safety protocol", "translation": "protocolo de seguridad aérea", "definition": "Rules to ensure safe air travel.", "level": "C1", "category": "transporte" },
+  { "term": "freight transport", "translation": "transporte de mercancías", "definition": "Moving large quantities of goods.", "level": "C1", "category": "transporte" },
+  { "term": "intermodal transport", "translation": "transporte intermodal", "definition": "Using different transport methods in one route.", "level": "C1", "category": "transporte" }
+]

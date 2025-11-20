@@ -1,0 +1,8 @@
+[
+  { "term": "either", "translation": "cualquiera de los dos", "definition": "One of two options.", "level": "B2", "category": "cuantificadores" },
+  { "term": "neither", "translation": "ninguno de los dos", "definition": "Not one nor the other.", "level": "B2", "category": "cuantificadores" },
+  { "term": "all", "translation": "todo / todos", "definition": "The whole amount.", "level": "B2", "category": "cuantificadores" },
+  { "term": "none", "translation": "ninguno", "definition": "Not any of a group.", "level": "B2", "category": "cuantificadores" },
+  { "term": "each", "translation": "cada uno", "definition": "Refers individually to members of a group.", "level": "B2", "category": "cuantificadores" },
+  { "term": "every", "translation": "cada", "definition": "Refers to all members of a group collectively.", "level": "B2", "category": "cuantificadores" }
+]

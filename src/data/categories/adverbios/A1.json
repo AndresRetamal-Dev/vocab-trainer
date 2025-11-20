@@ -1,0 +1,45 @@
+[
+  { "term": "always", "translation": "siempre", "definition": "At all times or on every occasion.", "level": "A1", "category": "adverbios" },
+  { "term": "usually", "translation": "normalmente", "definition": "Most of the time.", "level": "A1", "category": "adverbios" },
+  { "term": "often", "translation": "a menudo", "definition": "Many times or frequently.", "level": "A1", "category": "adverbios" },
+  { "term": "sometimes", "translation": "a veces", "definition": "At certain times but not regularly.", "level": "A1", "category": "adverbios" },
+  { "term": "rarely", "translation": "rara vez", "definition": "Not happening very often.", "level": "A1", "category": "adverbios" },
+  { "term": "never", "translation": "nunca", "definition": "Not at any time.", "level": "A1", "category": "adverbios" },
+
+  { "term": "now", "translation": "ahora", "definition": "At the present moment.", "level": "A1", "category": "adverbios" },
+  { "term": "today", "translation": "hoy", "definition": "On this day.", "level": "A1", "category": "adverbios" },
+  { "term": "yesterday", "translation": "ayer", "definition": "The day before today.", "level": "A1", "category": "adverbios" },
+  { "term": "tomorrow", "translation": "mañana", "definition": "The day after today.", "level": "A1", "category": "adverbios" },
+
+  { "term": "then", "translation": "entonces", "definition": "At that time or next in sequence.", "level": "A1", "category": "adverbios" },
+  { "term": "later", "translation": "más tarde", "definition": "After the present time.", "level": "A1", "category": "adverbios" },
+  { "term": "soon", "translation": "pronto", "definition": "In a short time.", "level": "A1", "category": "adverbios" },
+
+  { "term": "already", "translation": "ya", "definition": "Before now or earlier than expected.", "level": "A1", "category": "adverbios" },
+  { "term": "yet", "translation": "todavía", "definition": "Until now (in negatives/questions).", "level": "A1", "category": "adverbios" },
+  { "term": "still", "translation": "todavía", "definition": "Continuing to happen.", "level": "A1", "category": "adverbios" },
+
+  { "term": "just", "translation": "acaba de", "definition": "A very short time ago.", "level": "A1", "category": "adverbios" },
+
+  { "term": "quickly", "translation": "rápidamente", "definition": "At a fast speed.", "level": "A1", "category": "adverbios" },
+  { "term": "slowly", "translation": "lentamente", "definition": "At a low speed.", "level": "A1", "category": "adverbios" },
+  { "term": "carefully", "translation": "cuidadosamente", "definition": "With attention or care.", "level": "A1", "category": "adverbios" },
+
+  { "term": "really", "translation": "realmente", "definition": "Used to emphasize something.", "level": "A1", "category": "adverbios" },
+  { "term": "very", "translation": "muy", "definition": "Used to strengthen an adjective or adverb.", "level": "A1", "category": "adverbios" },
+  { "term": "almost", "translation": "casi", "definition": "Nearly but not completely.", "level": "A1", "category": "adverbios" },
+
+  { "term": "maybe", "translation": "quizás", "definition": "Possibly, perhaps.", "level": "A1", "category": "adverbios" },
+  { "term": "perhaps", "translation": "quizás", "definition": "A word used to show uncertainty.", "level": "A1", "category": "adverbios" },
+
+  { "term": "together", "translation": "juntos", "definition": "With another person or people.", "level": "A1", "category": "adverbios" },
+  { "term": "apart", "translation": "separados", "definition": "Not together; at a distance.", "level": "A1", "category": "adverbios" },
+
+  { "term": "early", "translation": "temprano", "definition": "Before the usual time.", "level": "A1", "category": "adverbios" },
+  { "term": "late", "translation": "tarde", "definition": "After the usual time.", "level": "A1", "category": "adverbios" },
+
+  { "term": "again", "translation": "otra vez", "definition": "One more time.", "level": "A1", "category": "adverbios" },
+  { "term": "first", "translation": "primero", "definition": "Before everything else.", "level": "A1", "category": "adverbios" },
+  { "term": "next", "translation": "siguiente", "definition": "Immediately after.", "level": "A1", "category": "adverbios" },
+  { "term": "finally", "translation": "finalmente", "definition": "After a long time or sequence.", "level": "A1", "category": "adverbios" }
+]

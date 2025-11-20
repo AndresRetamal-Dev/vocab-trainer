@@ -1,0 +1,12 @@
+[
+  { "term": "highway", "translation": "autopista", "definition": "A major public road for fast traffic.", "level": "B1", "category": "transporte" },
+  { "term": "roundabout", "translation": "rotonda", "definition": "A circular road junction.", "level": "B1", "category": "transporte" },
+  { "term": "pedestrian crossing", "translation": "paso de peatones", "definition": "A marked area for people to cross the road.", "level": "B1", "category": "transporte" },
+  { "term": "speed limit", "translation": "límite de velocidad", "definition": "The maximum legal speed on a road.", "level": "B1", "category": "transporte" },
+  { "term": "traffic jam", "translation": "atasco", "definition": "A line of vehicles that cannot move.", "level": "B1", "category": "transporte" },
+  { "term": "commuter", "translation": "persona que viaja a trabajar", "definition": "Someone who travels regularly to work.", "level": "B1", "category": "transporte" },
+  { "term": "cargo", "translation": "carga", "definition": "Goods transported in a vehicle or ship.", "level": "B1", "category": "transporte" },
+  { "term": "helmet", "translation": "casco", "definition": "A head protection used when riding.", "level": "B1", "category": "transporte" },
+  { "term": "lane", "translation": "carril", "definition": "A part of the road for one line of vehicles.", "level": "B1", "category": "transporte" },
+  { "term": "engine", "translation": "motor", "definition": "The machine that powers a vehicle.", "level": "B1", "category": "transporte" }
+]

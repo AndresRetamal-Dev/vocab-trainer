@@ -1,0 +1,12 @@
+[
+  { "term": "city hall", "translation": "ayuntamiento", "definition": "The main government building in a city.", "level": "B1", "category": "ciudad" },
+  { "term": "suburbs", "translation": "suburbios", "definition": "Residential areas outside the city center.", "level": "B1", "category": "ciudad" },
+  { "term": "downtown", "translation": "centro de la ciudad", "definition": "The central part of a city.", "level": "B1", "category": "ciudad" },
+  { "term": "neighborhood", "translation": "vecindario", "definition": "A local area within a town or city.", "level": "B1", "category": "ciudad" },
+  { "term": "factory", "translation": "fábrica", "definition": "A building where products are manufactured.", "level": "B1", "category": "ciudad" },
+  { "term": "bridge", "translation": "puente", "definition": "A structure built to cross over water or roads.", "level": "B1", "category": "ciudad" },
+  { "term": "crosswalk", "translation": "paso de peatones", "definition": "A marked area for people to cross the street.", "level": "B1", "category": "ciudad" },
+  { "term": "parking lot", "translation": "aparcamiento", "definition": "A place to park cars.", "level": "B1", "category": "ciudad" },
+  { "term": "skyscraper", "translation": "rascacielos", "definition": "A very tall building.", "level": "B1", "category": "ciudad" },
+  { "term": "fire station", "translation": "estación de bomberos", "definition": "The building where firefighters work.", "level": "B1", "category": "ciudad" }
+]

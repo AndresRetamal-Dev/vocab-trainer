@@ -1,0 +1,12 @@
+[
+  { "term": "red", "translation": "rojo", "definition": "Basic primary color, often associated with love or danger.", "level": "A1", "category": "colores" },
+  { "term": "blue", "translation": "azul", "definition": "Primary color, the color of the sky or ocean.", "level": "A1", "category": "colores" },
+  { "term": "yellow", "translation": "amarillo", "definition": "Bright primary color associated with sunshine.", "level": "A1", "category": "colores" },
+  { "term": "green", "translation": "verde", "definition": "Color associated with nature and plants.", "level": "A1", "category": "colores" },
+  { "term": "black", "translation": "negro", "definition": "The darkest color, created by absence of light.", "level": "A1", "category": "colores" },
+  { "term": "white", "translation": "blanco", "definition": "The lightest color, created by all colors combined.", "level": "A1", "category": "colores" },
+  { "term": "brown", "translation": "marrón", "definition": "Earthy color often seen in wood and soil.", "level": "A1", "category": "colores" },
+  { "term": "orange", "translation": "naranja", "definition": "Color between red and yellow.", "level": "A1", "category": "colores" },
+  { "term": "pink", "translation": "rosa", "definition": "Light shade of red.", "level": "A1", "category": "colores" },
+  { "term": "gray", "translation": "gris", "definition": "Color between black and white.", "level": "A1", "category": "colores" }
+]

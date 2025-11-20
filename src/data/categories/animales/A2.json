@@ -1,0 +1,11 @@
+[
+    { "term": "duck", "translation": "pato", "definition": "A water bird with a flat beak.", "level": "A2", "category": "animales" },
+    { "term": "goat", "translation": "cabra", "definition": "A farm animal with horns.", "level": "A2", "category": "animales" },
+    { "term": "rabbit", "translation": "conejo", "definition": "A small animal with long ears.", "level": "A2", "category": "animales" },
+    { "term": "mouse", "translation": "ratón", "definition": "A small rodent.", "level": "A2", "category": "animales" },
+    { "term": "frog", "translation": "rana", "definition": "A small amphibian that jumps.", "level": "A2", "category": "animales" },
+    { "term": "turtle", "translation": "tortuga", "definition": "An animal with a hard shell.", "level": "A2", "category": "animales" },
+    { "term": "snake", "translation": "serpiente", "definition": "A long, legless reptile.", "level": "A2", "category": "animales" },
+    { "term": "bear", "translation": "oso", "definition": "A large wild animal with thick fur.", "level": "A2", "category": "animales" },
+    { "term": "lion", "translation": "león", "definition": "A large wild cat known as the king of the jungle.", "level": "A2", "category": "animales" }
+  ]

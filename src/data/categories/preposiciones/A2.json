@@ -1,0 +1,12 @@
+[
+  { "term": "over", "translation": "sobre / por encima de", "definition": "Indicates movement or position above something.", "level": "A2", "category": "preposiciones" },
+  { "term": "across", "translation": "a través de", "definition": "Shows movement from one side to the other.", "level": "A2", "category": "preposiciones" },
+  { "term": "through", "translation": "por / a través de", "definition": "Indicates movement inside something from one end to the other.", "level": "A2", "category": "preposiciones" },
+  { "term": "around", "translation": "alrededor de", "definition": "Shows movement surrounding something.", "level": "A2", "category": "preposiciones" },
+  { "term": "above", "translation": "por encima de", "definition": "Higher than something but not touching it.", "level": "A2", "category": "preposiciones" },
+  { "term": "below", "translation": "por debajo de", "definition": "Lower than something.", "level": "A2", "category": "preposiciones" },
+  { "term": "against", "translation": "contra", "definition": "In contact with or opposed to something.", "level": "A2", "category": "preposiciones" },
+  { "term": "towards", "translation": "hacia", "definition": "Movement in the direction of something.", "level": "A2", "category": "preposiciones" },
+  { "term": "into", "translation": "dentro de / hacia adentro", "definition": "Movement from outside to inside.", "level": "A2", "category": "preposiciones" },
+  { "term": "out of", "translation": "fuera de", "definition": "Movement from inside to outside.", "level": "A2", "category": "preposiciones" }
+]

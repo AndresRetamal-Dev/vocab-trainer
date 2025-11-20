@@ -1,0 +1,12 @@
+[
+  { "term": "ligament", "translation": "ligamento", "definition": "Tissue connecting bones at a joint.", "level": "C1", "category": "cuerpo" },
+  { "term": "tendon", "translation": "tendón", "definition": "Tissue connecting muscle to bone.", "level": "C1", "category": "cuerpo" },
+  { "term": "cartilage", "translation": "cartílago", "definition": "Flexible connective tissue.", "level": "C1", "category": "cuerpo" },
+  { "term": "diaphragm", "translation": "diafragma", "definition": "Muscle essential for breathing.", "level": "C1", "category": "cuerpo" },
+  { "term": "immune system", "translation": "sistema inmunológico", "definition": "The body's defense system.", "level": "C1", "category": "cuerpo" },
+  { "term": "nervous system", "translation": "sistema nervioso", "definition": "The network controlling the body.", "level": "C1", "category": "cuerpo" },
+  { "term": "digestive system", "translation": "sistema digestivo", "definition": "The system responsible for processing food.", "level": "C1", "category": "cuerpo" },
+  { "term": "respiratory system", "translation": "sistema respiratorio", "definition": "System involved in breathing.", "level": "C1", "category": "cuerpo" },
+  { "term": "circulatory system", "translation": "sistema circulatorio", "definition": "The system that moves blood through the body.", "level": "C1", "category": "cuerpo" },
+  { "term": "endocrine system", "translation": "sistema endocrino", "definition": "System that regulates hormones.", "level": "C1", "category": "cuerpo" }
+]

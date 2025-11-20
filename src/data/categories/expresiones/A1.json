@@ -1,0 +1,12 @@
+[
+  { "term": "hello", "translation": "hola", "definition": "A basic greeting.", "level": "A1", "category": "expresiones" },
+  { "term": "good morning", "translation": "buenos días", "definition": "A morning greeting.", "level": "A1", "category": "expresiones" },
+  { "term": "good night", "translation": "buenas noches", "definition": "Used before sleeping.", "level": "A1", "category": "expresiones" },
+  { "term": "thank you", "translation": "gracias", "definition": "Used to express gratitude.", "level": "A1", "category": "expresiones" },
+  { "term": "you're welcome", "translation": "de nada", "definition": "A polite reply to thanks.", "level": "A1", "category": "expresiones" },
+  { "term": "excuse me", "translation": "perdón / disculpe", "definition": "Used to get attention or apologize.", "level": "A1", "category": "expresiones" },
+  { "term": "see you later", "translation": "hasta luego", "definition": "Used to say goodbye.", "level": "A1", "category": "expresiones" },
+  { "term": "what's your name?", "translation": "¿cómo te llamas?", "definition": "Asking for someone's name.", "level": "A1", "category": "expresiones" },
+  { "term": "nice to meet you", "translation": "encantado de conocerte", "definition": "A polite expression when meeting someone.", "level": "A1", "category": "expresiones" },
+  { "term": "I don't understand", "translation": "no entiendo", "definition": "Used when something is unclear.", "level": "A1", "category": "expresiones" }
+]

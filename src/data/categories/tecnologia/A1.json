@@ -1,0 +1,12 @@
+[
+  { "term": "phone", "translation": "teléfono", "definition": "A device used to call or message people.", "level": "A1", "category": "tecnología" },
+  { "term": "computer", "translation": "ordenador / computadora", "definition": "An electronic device used for work or play.", "level": "A1", "category": "tecnología" },
+  { "term": "laptop", "translation": "portátil", "definition": "A small computer you can carry.", "level": "A1", "category": "tecnología" },
+  { "term": "tablet", "translation": "tableta", "definition": "A portable computer with a touch screen.", "level": "A1", "category": "tecnología" },
+  { "term": "keyboard", "translation": "teclado", "definition": "A device with keys used for typing.", "level": "A1", "category": "tecnología" },
+  { "term": "mouse", "translation": "ratón", "definition": "A device used to control the cursor.", "level": "A1", "category": "tecnología" },
+  { "term": "screen", "translation": "pantalla", "definition": "The surface where images are shown.", "level": "A1", "category": "tecnología" },
+  { "term": "internet", "translation": "internet", "definition": "The global network for communication.", "level": "A1", "category": "tecnología" },
+  { "term": "email", "translation": "correo electrónico", "definition": "A system for sending digital messages.", "level": "A1", "category": "tecnología" },
+  { "term": "charger", "translation": "cargador", "definition": "A device used to charge electronics.", "level": "A1", "category": "tecnología" }
+]

@@ -1,0 +1,11 @@
+[
+    { "term": "tiger", "translation": "tigre", "definition": "A large striped wild cat.", "level": "B1", "category": "animales" },
+    { "term": "wolf", "translation": "lobo", "definition": "A wild animal related to dogs.", "level": "B1", "category": "animales" },
+    { "term": "fox", "translation": "zorro", "definition": "A small wild animal with red fur.", "level": "B1", "category": "animales" },
+    { "term": "eagle", "translation": "águila", "definition": "A large bird of prey.", "level": "B1", "category": "animales" },
+    { "term": "shark", "translation": "tiburón", "definition": "A large predatory fish.", "level": "B1", "category": "animales" },
+    { "term": "dolphin", "translation": "delfín", "definition": "An intelligent sea mammal.", "level": "B1", "category": "animales" },
+    { "term": "whale", "translation": "ballena", "definition": "The largest sea mammal.", "level": "B1", "category": "animales" },
+    { "term": "owl", "translation": "búho", "definition": "A nocturnal bird with large eyes.", "level": "B1", "category": "animales" },
+    { "term": "crocodile", "translation": "cocodrilo", "definition": "A large reptile with a long mouth.", "level": "B1", "category": "animales" }
+  ]

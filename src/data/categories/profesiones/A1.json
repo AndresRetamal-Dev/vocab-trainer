@@ -1,0 +1,12 @@
+[
+    { "term": "teacher", "translation": "profesor/a", "definition": "A person who teaches students.", "level": "A1", "category": "profesiones" },
+    { "term": "student", "translation": "estudiante", "definition": "A person who studies.", "level": "A1", "category": "profesiones" },
+    { "term": "doctor", "translation": "médico/a", "definition": "A person who treats sick people.", "level": "A1", "category": "profesiones" },
+    { "term": "nurse", "translation": "enfermero/a", "definition": "A person trained to care for the sick.", "level": "A1", "category": "profesiones" },
+    { "term": "police officer", "translation": "policía", "definition": "A person who enforces the law.", "level": "A1", "category": "profesiones" },
+    { "term": "firefighter", "translation": "bombero/a", "definition": "A person who fights fires.", "level": "A1", "category": "profesiones" },
+    { "term": "driver", "translation": "conductor/a", "definition": "A person who drives a vehicle.", "level": "A1", "category": "profesiones" },
+    { "term": "cook", "translation": "cocinero/a", "definition": "A person who prepares food.", "level": "A1", "category": "profesiones" },
+    { "term": "waiter", "translation": "camarero/a", "definition": "A person who serves food in a restaurant.", "level": "A1", "category": "profesiones" },
+    { "term": "seller", "translation": "vendedor/a", "definition": "A person who sells products.", "level": "A1", "category": "profesiones" }
+]

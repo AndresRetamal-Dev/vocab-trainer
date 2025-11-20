@@ -1,0 +1,8 @@
+[
+  { "term": "can", "translation": "poder", "definition": "Expresses ability or permission.", "level": "A1", "category": "verbos modales" },
+  { "term": "will", "translation": "auxiliar de futuro", "definition": "Expresses future actions or decisions.", "level": "A1", "category": "verbos modales" },
+  { "term": "should", "translation": "debería", "definition": "Gives simple advice.", "level": "A1", "category": "verbos modales" },
+  { "term": "have to", "translation": "tener que", "definition": "Expresses simple obligation.", "level": "A1", "category": "verbos modales" },
+  { "term": "need to", "translation": "necesitar", "definition": "Expresses necessity.", "level": "A1", "category": "verbos modales" },
+  { "term": "be able to", "translation": "ser capaz de", "definition": "Ability, similar to 'can'.", "level": "A1", "category": "verbos modales" }
+]

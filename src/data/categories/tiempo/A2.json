@@ -1,0 +1,12 @@
+[
+  { "term": "thunder", "translation": "trueno", "definition": "The loud sound after lightning.", "level": "A2", "category": "tiempo" },
+  { "term": "lightning", "translation": "relámpago", "definition": "A flash of electricity in the sky.", "level": "A2", "category": "tiempo" },
+  { "term": "degrees", "translation": "grados", "definition": "Unit used to measure temperature.", "level": "A2", "category": "tiempo" },
+  { "term": "frost", "translation": "escarcha", "definition": "Thin ice that forms on surfaces in cold weather.", "level": "A2", "category": "tiempo" },
+  { "term": "breeze", "translation": "brisa", "definition": "A light wind.", "level": "A2", "category": "tiempo" },
+  { "term": "hail", "translation": "granizo", "definition": "Small balls of ice that fall like rain.", "level": "A2", "category": "tiempo" },
+  { "term": "drizzle", "translation": "llovizna", "definition": "Very light rain.", "level": "A2", "category": "tiempo" },
+  { "term": "humid", "translation": "húmedo", "definition": "When there is a lot of moisture in the air.", "level": "A2", "category": "tiempo" },
+  { "term": "dry", "translation": "seco", "definition": "With little or no moisture.", "level": "A2", "category": "tiempo" },
+  { "term": "forecast", "translation": "pronóstico", "definition": "A prediction of future weather.", "level": "A2", "category": "tiempo" }
+]

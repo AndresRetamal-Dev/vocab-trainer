@@ -1,0 +1,12 @@
+[
+  { "term": "academic performance", "translation": "rendimiento académico", "definition": "A measure of student achievement.", "level": "C1", "category": "escuela" },
+  { "term": "pedagogical approach", "translation": "enfoque pedagógico", "definition": "A method or strategy used in teaching.", "level": "C1", "category": "escuela" },
+  { "term": "educational framework", "translation": "marco educativo", "definition": "A structure guiding how education is delivered.", "level": "C1", "category": "escuela" },
+  { "term": "standardized testing", "translation": "exámenes estandarizados", "definition": "Tests given in the same way to all students.", "level": "C1", "category": "escuela" },
+  { "term": "learning outcomes", "translation": "resultados de aprendizaje", "definition": "What students are expected to learn.", "level": "C1", "category": "escuela" },
+  { "term": "distance learning", "translation": "aprendizaje a distancia", "definition": "Education delivered online or remotely.", "level": "C1", "category": "escuela" },
+  { "term": "educational policy", "translation": "política educativa", "definition": "Rules governing how education works.", "level": "C1", "category": "escuela" },
+  { "term": "enrollment rate", "translation": "tasa de matriculación", "definition": "The percentage of students entering school.", "level": "C1", "category": "escuela" },
+  { "term": "assessment criteria", "translation": "criterios de evaluación", "definition": "Standards used to judge student work.", "level": "C1", "category": "escuela" },
+  { "term": "academic integrity", "translation": "integridad académica", "definition": "Ethical behavior in academic work.", "level": "C1", "category": "escuela" }
+]
