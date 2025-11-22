@@ -193,7 +193,8 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   // --- 🔹 Flashcards ---
-  const [showFlashAnswer, setShowFlashAnswer] = useState(false);
+  const [flashOptions, setFlashOptions] = useState([]); // { text, correct }[]
+
 
 
 
@@ -329,7 +330,7 @@ export default function App() {
     setFeedback(null);
     setAttempt(0);
     setMotivation(null); // ocultar motivación al cambiar filtro
-    setShowFlashAnswer(false);
+    prepareFlashOptions(n);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, category]);
 
@@ -342,6 +343,35 @@ export default function App() {
     }
   }, [items.length]);
 
+  // Genera 3-4 opciones de respuesta para la tarjeta actual
+  const prepareFlashOptions = (targetWord) => {
+    if (!targetWord) {
+      setFlashOptions([]);
+      return;
+    }
+
+    // Sacamos palabras de la misma lista (mismo filtro nivel/categoría)
+    let pool = items.filter((w) => w.term !== targetWord.term);
+
+    // Barajamos
+    pool = [...pool].sort(() => Math.random() - 0.5);
+
+    // Hasta 3 distractores (si hay menos, se cogen las que haya)
+    const distractors = pool.slice(0, 3);
+
+    const rawOptions = [
+      { text: targetWord.translation, correct: true },
+      ...distractors.map((w) => ({
+        text: w.translation,
+        correct: false,
+      })),
+    ];
+
+    // Barajar para que la correcta no esté siempre en la misma posición
+    const shuffled = rawOptions.sort(() => Math.random() - 0.5);
+    setFlashOptions(shuffled);
+  };
+
   const nextCard = () => {
     const n = pickWeighted(current?.term || null);
     setCurrent(n);
@@ -349,7 +379,7 @@ export default function App() {
     setFeedback(null);
     setAttempt(0);
     setMotivation(null);
-    setShowFlashAnswer(false);
+    prepareFlashOptions(n);
   };
 
   const updateLeitner = (term, wasCorrect) => {
@@ -436,7 +466,6 @@ export default function App() {
       }));
     }
 
-    setShowFlashAnswer(false);
     nextCard();
   };
 
@@ -953,32 +982,27 @@ export default function App() {
             {/* Toggle de modo + Dark mode */}
             <div style={styles.modeRow}>
               <div style={styles.modeToggle}>
-                <button
-                  style={
-                    mode === "write" ? styles.modeBtnActive : styles.modeBtn
-                  }
-                  onClick={() => {
-                    setMode("write");
-                    setShowFlashAnswer(false);
-                    setFeedback(null);
-                    setAttempt(0);
-                  }}
-                >
-                  ✍️ Escribir
-                </button>
-                <button
-                  style={
-                    mode === "flashcard"
-                      ? styles.modeBtnActive
-                      : styles.modeBtn
-                  }
+              <button
+                style={mode === "write" ? styles.modeBtnActive : styles.modeBtn}
+                onClick={() => {
+                  setMode("write");
+                  setFeedback(null);
+                  setAttempt(0);
+                }}
+              >
+                ✍️ Escribir
+              </button>
+
+              <button
+                  style={mode === "flashcard" ? styles.modeBtnActive : styles.modeBtn}
                   onClick={() => {
                     setMode("flashcard");
-                    setShowFlashAnswer(false);
                     setFeedback(null);
                     setAttempt(0);
+                    // opcional pero recomendable: regenerar opciones al cambiar a flashcard
+                    prepareFlashOptions(current);
                   }}
-                >
+                  >
                   🃏 Flashcards
                 </button>
               </div>
@@ -1139,7 +1163,7 @@ export default function App() {
                   </>
                 )}
 
-                {/* MODO FLASHCARDS */}
+                {/* MODO FLASHCARDS – TEST MÚLTIPLE */}
                 {mode === "flashcard" && (
                   <>
                     <div
@@ -1153,60 +1177,36 @@ export default function App() {
                           letterSpacing: 0.3,
                         }}
                       >
-                        Tarjeta
+                        Elige la traducción correcta
                       </div>
                       <div style={styles.wordBig}>{current.term}</div>
-
-                      {showFlashAnswer && (
-                        <p
-                          style={{
-                            marginTop: 8,
-                            fontSize: 18,
-                            fontWeight: 500,
-                            color: "#0f172a",
-                          }}
-                        >
-                          {current.translation}
-                        </p>
-                      )}
                     </div>
 
-                    {!showFlashAnswer ? (
-                      <button
-                        style={styles.btnPrimary}
-                        onClick={() => setShowFlashAnswer(true)}
-                      >
-                        Mostrar respuesta
-                      </button>
-                    ) : (
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          gap: 8,
-                          flexWrap: "wrap",
-                        }}
-                      >
+                    <div
+                      style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        gap: 10,
+                        marginTop: 8,
+                      }}
+                    >
+                      {flashOptions.map((opt, idx) => (
                         <button
-                          style={styles.btnPrimary}
-                          onClick={() =>
-                            handleFlashcardResult(true)
-                          }
+                          key={idx}
+                          style={{
+                            ...styles.btnSecondary,
+                            minWidth: "140px",
+                          }}
+                          onClick={() => handleFlashcardResult(opt.correct)}
                         >
-                          ✅ La sabía
+                          {opt.text}
                         </button>
-                        <button
-                          style={styles.btnSecondary}
-                          onClick={() =>
-                            handleFlashcardResult(false)
-                          }
-                        >
-                          ❌ No la sabía
-                        </button>
-                      </div>
-                    )}
+                      ))}
+                    </div>
                   </>
                 )}
+
 
                 {/* Info común abajo */}
                 <p style={styles.small}>
