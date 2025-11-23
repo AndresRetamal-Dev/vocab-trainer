@@ -1,6 +1,7 @@
-// src/firebase.js
+// firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore"; // 👈 Firestore
 
 // 👇 Rellena estos datos con los de tu proyecto Firebase
 const firebaseConfig = {
@@ -17,3 +18,6 @@ const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
+
+// 👇 NUEVO: base de datos
+export const db = getFirestore(app);

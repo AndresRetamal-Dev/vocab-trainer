@@ -2,6 +2,9 @@ import { useEffect, useMemo, useState } from "react";
 import motivationsJson from "./data/motivations.json";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
+import { db } from "./firebase";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+
 
 
 const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
@@ -104,6 +107,11 @@ const toBaseForm = (s) => {
   return x;
 };
 
+// 👇 Palabra aprendida si alguna vez la has acertado
+//const isMastered = (term, progress) =>
+//  (progress[term]?.box ?? 0) > 0;
+
+
 // Distancia de Levenshtein (para errores pequeños)
 const levenshtein = (a, b) => {
   const m = a.length;
@@ -163,6 +171,7 @@ function matches(user, gold) {
 }
 
 
+
 export default function App() {
   const [level, setLevel] = useState("A1");
   const [category, setCategory] = useState(ALL);
@@ -197,29 +206,80 @@ export default function App() {
   const [flashStatus, setFlashStatus] = useState("idle"); // "idle" | "correct" | "wrong"
   const [flashSelected, setFlashSelected] = useState(null); // índice del botón pulsado
 
+  // mapa: { [sessionKey]: { [term]: true } }
+const [writeDone, setWriteDone] = useState({});
+const [flashDone, setFlashDone] = useState({});
 
+const sessionKey = `${level}_${category}`;
+
+
+// Stats de la sesión actual de flashcards
+const [flashStats, setFlashStats] = useState({
+  correct: 0,
+  wrong: 0,
+  uniqueCorrectTerms: {}, // { [term]: true }
+});
+
+
+// 🔹 Cargar datos del usuario desde Firestore
+const loadUserData = async (uid) => {
+  try {
+    const ref = doc(db, "users", uid);
+    const snap = await getDoc(ref);
+
+    if (snap.exists()) {
+      const data = snap.data();
+
+      // Solo si el documento tiene estos campos, los aplicamos
+      if (data.progress) setProgress(data.progress);
+      if (data.hardWords) setHardWords(data.hardWords);
+      if (typeof data.answeredCount === "number")
+        setAnsweredCount(data.answeredCount);
+      if (typeof data.streak === "number") setStreak(data.streak);
+      if (typeof data.wrongCount === "number") setWrongCount(data.wrongCount);
+    } else {
+      // Primera vez que entra: creamos el doc vacío-ish
+      await setDoc(ref, {
+        createdAt: Date.now(),
+        progress: {},
+        hardWords: {},
+        answeredCount: 0,
+        wrongCount: 0,
+        streak: 0,
+      });
+    }
+  } catch (err) {
+    console.error("Error al cargar datos de Firestore:", err);
+  }
+};
 
 
 
     // === HANDLERS AUTH GOOGLE ===
   const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const gUser = result.user;
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const gUser = result.user;
 
-      setUser({
-        name: gUser.displayName || "Usuario",
-        email: gUser.email || "",
-        photoURL: gUser.photoURL || null,
-        isGuest: false,
-      });
+    const userObj = {
+      uid: gUser.uid,
+      name: gUser.displayName || "Usuario",
+      email: gUser.email || "",
+      photoURL: gUser.photoURL || null,
+      isGuest: false,
+    };
 
-      setScreen("home");
-    } catch (err) {
-      console.error("Error al hacer login con Google:", err);
-      alert("No se pudo iniciar sesión con Google.");
-    }
-  };
+    setUser(userObj);
+    setScreen("home");
+
+    // 👇 Cargar sus datos desde Firestore
+    await loadUserData(gUser.uid);
+  } catch (err) {
+    console.error("Error al hacer login con Google:", err);
+    alert("No se pudo iniciar sesión con Google.");
+  }
+};
+
 
   const handleLogout = async () => {
     try {
@@ -260,6 +320,7 @@ export default function App() {
       return {};
     }
   });
+  
 
   // Guarda progreso Leitner
   useEffect(() => {
@@ -284,61 +345,120 @@ export default function App() {
   }, [hardWords]);
 
   // categorías únicas a partir del JSON (fallback a "general")
-  const CATEGORIES = useMemo(() => {
-    const set = new Set();
-    for (const w of dataJson) set.add((w.category || "general").trim());
-    return [ALL, ...Array.from(set).sort((a, b) => a.localeCompare(b, "es"))];
-  }, []);
+  // categorías únicas a partir del JSON (fallback a "general")
+const CATEGORIES = useMemo(() => {
+  const set = new Set();
+  for (const w of dataJson) set.add((w.category || "general").trim());
+  return [ALL, ...Array.from(set).sort((a, b) => a.localeCompare(b, "es"))];
+}, []);
 
-  // Filtra por nivel Y categoría y calcula pesos por Leitner inverso
-  const items = useMemo(() => {
-    const filtered = dataJson.filter((w) => {
-      const okLevel = level ? w.level === level : true;
-      const cat = (w.category || "general").trim();
-      const okCat = category === ALL ? true : cat === category;
-      return okLevel && okCat;
-    });
-    return filtered.map((w) => {
-      const st = progress[w.term] || { box: 0 };
-      const weight = Math.max(1, 5 - (st.box ?? 0)); // box 0 => 5, box 4 => 1
-      return { ...w, __weight: weight };
-    });
-  }, [level, category, progress]);
+// Filtra por nivel Y categoría y calcula pesos por Leitner inverso
+const items = useMemo(() => {
+  const filtered = dataJson.filter((w) => {
+    const okLevel = level ? w.level === level : true;
+    const cat = (w.category || "general").trim();
+    const okCat = category === ALL ? true : cat === category;
+    return okLevel && okCat;
+  });
+
+  return filtered.map((w) => {
+    const st = progress[w.term] || { box: 0 };
+    const weight = Math.max(1, 5 - (st.box ?? 0)); // box 0 => 5, box 4 => 1
+    return { ...w, __weight: weight };
+  });
+}, [level, category, progress]);
+
+
+// 🔹 Pools por modo: write y flashcard (independientes)
+const writePool = useMemo(() => {
+  const doneForSession = writeDone[sessionKey] || {};
+  return items.filter((w) => !doneForSession[w.term]);
+}, [items, writeDone, sessionKey]);
+
+const flashPool = useMemo(() => {
+  const doneForSession = flashDone[sessionKey] || {};
+  return items.filter((w) => !doneForSession[w.term]);
+}, [items, flashDone, sessionKey]);
+
+
+// 🔹 Todas las palabras del nivel actual
+const levelWords = useMemo(
+  () => dataJson.filter((w) => w.level === level),
+  [level]
+);
+
+// 🔹 Cuántas están aprendidas
+const masteredCount = useMemo(
+  () =>
+    levelWords.filter((w) => {
+      const st = progress[w.term];
+      return (st?.box ?? 0) > 0;
+    }).length,
+  [levelWords, progress]
+);
+
+const totalLevelWords = levelWords.length;
+const levelProgress = totalLevelWords > 0 ? (masteredCount / totalLevelWords) * 100 : 0;
+
+
+// 🔹 Stats derivadas para el modo flashcard
+const totalFlashWords = items.length;
+const uniqueCorrectFlash = Object.keys(flashStats.uniqueCorrectTerms).length;
+const remainingFlash = Math.max(totalFlashWords - uniqueCorrectFlash, 0);
+const answeredFlash = flashStats.correct + flashStats.wrong;
+const accuracyFlash =
+  answeredFlash > 0 ? (flashStats.correct / answeredFlash) * 100 : 0;
+
+
+
 
   // Selección ponderada evitando repetir la actual
-  const pickWeighted = (excludeTerm = null) => {
-    const pool =
-      excludeTerm && items.length > 1
-        ? items.filter((w) => w.term !== excludeTerm)
-        : items;
+// Selección ponderada desde un pool concreto
+    const pickFromPool = (pool, excludeTerm = null) => {
+      const basePool =
+        excludeTerm && pool.length > 1
+          ? pool.filter((w) => w.term !== excludeTerm)
+          : pool;
 
-    if (!pool.length) return null;
+      if (!basePool.length) return null;
 
-    const total = pool.reduce((s, w) => s + w.__weight, 0);
-    let r = Math.random() * total;
-    for (const w of pool) {
-      r -= w.__weight;
-      if (r <= 0) return w;
-    }
-    return pool[pool.length - 1];
-  };
+      const total = basePool.reduce((s, w) => s + w.__weight, 0);
+      let r = Math.random() * total;
+      for (const w of basePool) {
+        r -= w.__weight;
+        if (r <= 0) return w;
+      }
+      return basePool[basePool.length - 1];
+    };
+
 
   const [current, setCurrent] = useState(null);
 
   // Reset al cambiar nivel o categoría
+  // Reset al cambiar nivel o categoría
   useEffect(() => {
-    const n = pickWeighted();
-    setCurrent(n);
+    nextCard();
     setAnswer("");
     setFeedback(null);
     setAttempt(0);
     setMotivation(null);
-
     setFlashStatus("idle");
     setFlashSelected(null);
-    prepareFlashOptions(n);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, category]);
+
+
+// 🔹 Resetear stats de flashcards al cambiar nivel/categoría o modo
+useEffect(() => {
+  if (mode === "flashcard") {
+    setFlashStats({
+      correct: 0,
+      wrong: 0,
+      uniqueCorrectTerms: {},
+    });
+  }
+}, [level, category, mode]);
+
 
 
   // Aviso cuando solo hay 1 ítem disponible en el filtro actual
@@ -349,6 +469,34 @@ export default function App() {
       );
     }
   }, [items.length]);
+
+  // 🔹 Sincronizar progreso con Firestore cuando el usuario está logueado
+  useEffect(() => {
+    if (!user || user.isGuest || !user.uid) return;
+
+    const save = async () => {
+      try {
+        const ref = doc(db, "users", user.uid);
+        await setDoc(
+          ref,
+          {
+            progress,
+            hardWords,
+            answeredCount,
+            wrongCount,
+            streak,
+            updatedAt: Date.now(),
+          },
+          { merge: true } // 👈 no pisa otros campos
+        );
+      } catch (err) {
+        console.error("Error guardando progreso en Firestore:", err);
+      }
+    };
+
+  save();
+}, [user, progress, hardWords, answeredCount, wrongCount, streak]);
+
 
   // Genera 3-4 opciones de respuesta para la tarjeta actual
   const prepareFlashOptions = (targetWord) => {
@@ -377,7 +525,17 @@ export default function App() {
   };
 
   const nextCard = () => {
-    const n = pickWeighted(current?.term || null);
+    // Elegimos el pool según el modo actual
+    const pool = mode === "flashcard" ? flashPool : writePool;
+    const n = pickFromPool(pool, current?.term || null);
+
+    if (!n) {
+      // No quedan palabras en este modo / nivel / categoría
+      setCurrent(null);
+      setFlashOptions([]);
+      return;
+    }
+
     setCurrent(n);
     setAnswer("");
     setFeedback(null);
@@ -388,21 +546,24 @@ export default function App() {
     setFlashStatus("idle");
     setFlashSelected(null);
 
+    // Preparamos opciones para flashcard (aunque estés en write)
     prepareFlashOptions(n);
   };
 
 
+
   const updateLeitner = (term, wasCorrect) => {
-    setProgress((p) => {
-      const st = p[term] || { box: 0, seen: 0 };
-      let box = st.box ?? 0;
-      box = wasCorrect ? Math.min(4, box + 1) : Math.max(0, box - 1);
-      return {
-        ...p,
-        [term]: { box, seen: (st.seen ?? 0) + 1, ts: Date.now() },
-      };
-    });
-  };
+  setProgress((p) => {
+    const st = p[term] || { box: 0, seen: 0 };
+    let box = st.box ?? 0;
+    box = wasCorrect ? Math.min(4, box + 1) : Math.max(0, box - 1);
+    return {
+      ...p,
+      [term]: { box, seen: (st.seen ?? 0) + 1, ts: Date.now() },
+    };
+  });
+};
+  
 
   const chooseRandomMotivation = () =>
     MOTIVATION_MESSAGES[Math.floor(Math.random() * MOTIVATION_MESSAGES.length)];
@@ -421,6 +582,18 @@ export default function App() {
 
       // ⭐ SUMAR PALABRAS COMPLETADAS (aciertos)
       setAnsweredCount((prev) => prev + 1);
+
+      // 🔹 Marcar esta palabra como "hecha" en modo WRITE para este nivel/categoría
+      setWriteDone((prev) => {
+        const prevSession = prev[sessionKey] || {};
+        return {
+          ...prev,
+          [sessionKey]: {
+            ...prevSession,
+            [current.term]: true,
+          },
+        };
+    });
 
       setTimeout(nextCard, 1300);
       return;
@@ -460,31 +633,60 @@ export default function App() {
 
   // Para modo flashcards: marcar si la sabías o no
   const handleFlashcardResult = (wasCorrect, chosenIndex) => {
-    if (!current) return;
+  if (!current) return;
 
-    // marcamos qué botón se ha pulsado y qué tipo de animación toca
-    setFlashSelected(chosenIndex);
-    setFlashStatus(wasCorrect ? "correct" : "wrong");
+  // marcamos qué botón se ha pulsado y qué tipo de animación toca
+  setFlashSelected(chosenIndex);
+  setFlashStatus(wasCorrect ? "correct" : "wrong");
 
-    if (wasCorrect) {
-      updateLeitner(current.term, true);
-      setStreak((prev) => prev + 1);
-      setAnsweredCount((prev) => prev + 1);
-    } else {
-      updateLeitner(current.term, false);
-      setStreak(0);
-      setWrongCount((prev) => prev + 1);
-      setHardWords((prev) => ({
+  if (wasCorrect) {
+    updateLeitner(current.term, true);
+    setStreak((prev) => prev + 1);
+    setAnsweredCount((prev) => prev + 1);
+
+    // 🔹 Marcar esta palabra como "hecha" en modo FLASHCARD
+    setFlashDone((prev) => {
+      const prevSession = prev[sessionKey] || {};
+      return {
         ...prev,
-        [current.term]: (prev[current.term] ?? 0) + 1,
-      }));
-    }
+        [sessionKey]: {
+          ...prevSession,
+          [current.term]: true,
+        },
+      };
+    });
 
-    // pequeña pausa antes de pasar a la siguiente tarjeta
-    setTimeout(() => {
-      nextCard();
-    }, 700); // puedes subir/bajar este tiempo
-  };
+    // 🔹 Actualizar stats de flashcards
+    setFlashStats((prev) => ({
+      correct: prev.correct + 1,
+      wrong: prev.wrong,
+      uniqueCorrectTerms: {
+        ...prev.uniqueCorrectTerms,
+        [current.term]: true, // cuenta únicas acertadas
+      },
+    }));
+  } else {
+    updateLeitner(current.term, false);
+    setStreak(0);
+    setWrongCount((prev) => prev + 1);
+    setHardWords((prev) => ({
+      ...prev,
+      [current.term]: (prev[current.term] ?? 0) + 1,
+    }));
+
+    // 🔹 Actualizar stats de flashcards (solo suma fallo)
+    setFlashStats((prev) => ({
+      ...prev,
+      wrong: prev.wrong + 1,
+    }));
+  }
+
+  // pequeña pausa antes de pasar a la siguiente tarjeta
+  setTimeout(() => {
+    nextCard();
+  }, 700);
+};
+
 
 
   // === Tema claro / oscuro ===
@@ -547,7 +749,7 @@ export default function App() {
 
     progressBarInner: {
       height: "100%",
-      background: "#2563eb",
+      background: "#2bcf47ff",
       borderRadius: 4,
       transition: "width 0.25s ease-out",
     },
@@ -807,6 +1009,7 @@ export default function App() {
         }}
         onClick={() => {
           setUser({
+            uid: null,
             name: "Invitado",
             email: "",
             photoURL: null,
@@ -1076,16 +1279,15 @@ export default function App() {
                         <div
                           style={{
                             ...styles.progressBarInner,
-                            width:
-                              items.length > 0
-                                ? `${Math.min(
-                                    (answeredCount / items.length) * 100,
-                                    100
-                                  )}%`
-                                : "0%",
+                            width: `${Math.min(levelProgress, 100)}%`,
                           }}
                         />
                       </div>
+
+                      <p style={{ fontSize: 11, color: "#0b0b0cff", marginTop: 4 }}>
+                        Nivel {level}: {masteredCount} / {totalLevelWords} palabras aprendidas
+                      </p>
+
 
                       <div style={styles.wordBig}>{current.term}</div>
                     </div>
@@ -1194,15 +1396,70 @@ export default function App() {
                       </>
                     )}
                   </>
-                )}
+              )}
+
+              {/* 🔚 MENSAJE DE FIN DE MODO (WRITE / FLASHCARD) */}
+          {items.length > 0 && !current && (
+            <div style={{ textAlign: "center", padding: "20px 10px" }}>
+              {mode === "write" ? (
+                <>
+                  <p style={{ fontSize: 16, marginBottom: 8 }}>
+                    🎉 Ya has completado todas las palabras de este nivel en el modo escribir.
+                  </p>
+                  <p style={{ fontSize: 13, color: "#64748b" }}>
+                    Puedes cambiar de nivel, de categoría o reiniciar este nivel si quieres volver a practicar.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p style={{ fontSize: 16, marginBottom: 8 }}>
+                    ✅ Has completado todas las preguntas de test de este nivel.
+                  </p>
+                  <p style={{ fontSize: 13, color: "#64748b" }}>
+                    Para consolidar este nivel y pasar al siguiente, ahora completa las palabras en el modo ✍️ Escribir.
+                  </p>
+                </>
+              )}
+            </div>
+          )}
 
 
                 {/* MODO FLASHCARDS – TEST MÚLTIPLE */}
+{/* MODO FLASHCARDS – TEST MÚLTIPLE */}
 {mode === "flashcard" && (
   <>
+    {/* Texto aclaratorio del modo */}
+    <div style={{ marginTop: 4, marginBottom: 8 }}>
+      <p style={{ fontSize: 11, color: "#64748b" }}>
+        🃏 Modo test (no afecta al progreso oficial del nivel)
+      </p>
+    </div>
+
+    {/* Stats de la sesión de test */}
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        gap: 10,
+        fontSize: 11,
+        color: "#64748b",
+        marginBottom: 8,
+      }}
+    >
+      <span>Totales: {totalFlashWords}</span>
+      <span>Te quedan: {remainingFlash}</span>
+      <span style={{ color: "#16a34a" }}>✓ Aciertos: {flashStats.correct}</span>
+      <span style={{ color: "#dc2626" }}>✗ Fallos: {flashStats.wrong}</span>
+
+      <span>
+        🎯 Precisión: {answeredFlash > 0 ? accuracyFlash.toFixed(0) : 0}%
+      </span>
+    </div>
+
     <div
       aria-live="polite"
-      style={{ marginBottom: 16 }}
+      style={{ marginBottom: 16, marginTop: 8 }}
     >
       <div
         style={{
@@ -1216,6 +1473,7 @@ export default function App() {
       <div style={styles.wordBig}>{current.term}</div>
     </div>
 
+    {/* grid de opciones, igual que ya lo tenías */}
     <div
       style={{
         display: "grid",
@@ -1231,33 +1489,32 @@ export default function App() {
       {flashOptions.map((opt, idx) => {
         // 🎯 ESTILO BASE: pill SIEMPRE
         let btnStyle = {
-    borderRadius: 999,
-    border: "2px solid #00050aff",
-    background: "#ffffff",
-    color: "#334155",
-    cursor: flashStatus === "idle" ? "pointer" : "default",
+          borderRadius: 999,
+          border: "2px solid #00050aff",
+          background: "#ffffff",
+          color: "#334155",
+          cursor: flashStatus === "idle" ? "pointer" : "default",
 
-    width: "100%",
-    margin: "2px",
-    boxSizing: "border-box",
+          width: "100%",
+          margin: "2px",
+          boxSizing: "border-box",
 
-    // ⬇️ Tamaño fijo y texto centrado
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "8px 16px",
-    height: "52px",            // 🔥 todas las tarjetas misma altura
-    fontSize: 14,
-    textAlign: "center",
+          // Tamaño fijo y texto centrado
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "8px 16px",
+          height: "52px",
+          fontSize: 14,
+          textAlign: "center",
 
-    // Si la frase es muy larga, la recorta con "..."
-    whiteSpace: "nowrap",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
 
-    transition:
-      "transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease",
-  };
+          transition:
+            "transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease",
+        };
 
         if (flashStatus !== "idle") {
           const isSelected = flashSelected === idx;
@@ -1313,6 +1570,7 @@ export default function App() {
     </div>
   </>
 )}
+
 
 
 
