@@ -192,8 +192,11 @@ export default function App() {
   // --- 🔹 Dark mode ---
   const [darkMode, setDarkMode] = useState(false);
 
-  // --- 🔹 Flashcards ---
+  // --- 🔹 Flashcards (modo test múltiple) ---
   const [flashOptions, setFlashOptions] = useState([]); // { text, correct }[]
+  const [flashStatus, setFlashStatus] = useState("idle"); // "idle" | "correct" | "wrong"
+  const [flashSelected, setFlashSelected] = useState(null); // índice del botón pulsado
+
 
 
 
@@ -329,10 +332,14 @@ export default function App() {
     setAnswer("");
     setFeedback(null);
     setAttempt(0);
-    setMotivation(null); // ocultar motivación al cambiar filtro
+    setMotivation(null);
+
+    setFlashStatus("idle");
+    setFlashSelected(null);
     prepareFlashOptions(n);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, category]);
+
 
   // Aviso cuando solo hay 1 ítem disponible en el filtro actual
   useEffect(() => {
@@ -350,14 +357,10 @@ export default function App() {
       return;
     }
 
-    // Sacamos palabras de la misma lista (mismo filtro nivel/categoría)
     let pool = items.filter((w) => w.term !== targetWord.term);
-
-    // Barajamos
     pool = [...pool].sort(() => Math.random() - 0.5);
 
-    // Hasta 3 distractores (si hay menos, se cogen las que haya)
-    const distractors = pool.slice(0, 3);
+    const distractors = pool.slice(0, 5); // hasta 5 falsas
 
     const rawOptions = [
       { text: targetWord.translation, correct: true },
@@ -367,7 +370,8 @@ export default function App() {
       })),
     ];
 
-    // Barajar para que la correcta no esté siempre en la misma posición
+
+
     const shuffled = rawOptions.sort(() => Math.random() - 0.5);
     setFlashOptions(shuffled);
   };
@@ -379,8 +383,14 @@ export default function App() {
     setFeedback(null);
     setAttempt(0);
     setMotivation(null);
+
+    // 🔥 reset visual de las tarjetas
+    setFlashStatus("idle");
+    setFlashSelected(null);
+
     prepareFlashOptions(n);
   };
+
 
   const updateLeitner = (term, wasCorrect) => {
     setProgress((p) => {
@@ -412,7 +422,7 @@ export default function App() {
       // ⭐ SUMAR PALABRAS COMPLETADAS (aciertos)
       setAnsweredCount((prev) => prev + 1);
 
-      setTimeout(nextCard, 700);
+      setTimeout(nextCard, 1300);
       return;
     }
 
@@ -449,8 +459,12 @@ export default function App() {
   };
 
   // Para modo flashcards: marcar si la sabías o no
-  const handleFlashcardResult = (wasCorrect) => {
+  const handleFlashcardResult = (wasCorrect, chosenIndex) => {
     if (!current) return;
+
+    // marcamos qué botón se ha pulsado y qué tipo de animación toca
+    setFlashSelected(chosenIndex);
+    setFlashStatus(wasCorrect ? "correct" : "wrong");
 
     if (wasCorrect) {
       updateLeitner(current.term, true);
@@ -466,12 +480,16 @@ export default function App() {
       }));
     }
 
-    nextCard();
+    // pequeña pausa antes de pasar a la siguiente tarjeta
+    setTimeout(() => {
+      nextCard();
+    }, 700); // puedes subir/bajar este tiempo
   };
 
+
   // === Tema claro / oscuro ===
-  const pageBg = darkMode ? "#020617" : "#f1f5f9";
-  const cardBg = darkMode ? "#020617" : "#ffffff";
+  const pageBg = darkMode ? "#1c1e25f5" : "#f1f5f9";
+  const cardBg = "#ffffff";
   const titleColor = darkMode ? "#e5e7eb" : "#000000";
   const inputBg = darkMode ? "#020617" : "#2f3133";
   const inputText = darkMode ? "#e5e7eb" : "#ffffff";
@@ -980,8 +998,7 @@ export default function App() {
             </div>
 
             {/* Toggle de modo + Dark mode */}
-            <div style={styles.modeRow}>
-              <div style={styles.modeToggle}>
+            <div style={styles.modeToggle}>
               <button
                 style={mode === "write" ? styles.modeBtnActive : styles.modeBtn}
                 onClick={() => {
@@ -994,30 +1011,46 @@ export default function App() {
               </button>
 
               <button
-                  style={mode === "flashcard" ? styles.modeBtnActive : styles.modeBtn}
-                  onClick={() => {
-                    setMode("flashcard");
-                    setFeedback(null);
-                    setAttempt(0);
-                    // opcional pero recomendable: regenerar opciones al cambiar a flashcard
-                    prepareFlashOptions(current);
-                  }}
-                  >
-                  🃏 Flashcards
-                </button>
-              </div>
-
-              <button
-                style={styles.darkToggle}
-                onClick={() => setDarkMode((d) => !d)}
+                style={mode === "flashcard" ? styles.modeBtnActive : styles.modeBtn}
+                onClick={() => {
+                  setMode("flashcard");
+                  setFeedback(null);
+                  setAttempt(0);
+                  setFlashStatus("idle");
+                  setFlashSelected(null);
+                  prepareFlashOptions(current);
+                }}
               >
-                {darkMode ? "🌙 Dark" : "☀️ Light"}
+                🃏 Flashcards
               </button>
             </div>
+
+
+            <button
+              style={styles.darkToggle}
+              onClick={() => setDarkMode((d) => !d)}
+            >
+              {darkMode ? "🌙 Dark" : "☀️ Light"}
+            </button>
+
+
+
           </div>
 
           {/* TARJETA */}
-          <div style={styles.container}>
+          <div
+            style={styles.container}
+            className={
+              "flashcard-container " +
+              (mode === "flashcard" && flashStatus === "correct"
+                ? "flashcard-correct "
+                : "") +
+              (mode === "flashcard" && flashStatus === "wrong"
+                ? "flashcard-wrong "
+                : "")
+            }
+          >
+
             {items.length === 0 && (
               <p>No hay palabras para el nivel/categoría seleccionados.</p>
             )}
@@ -1163,49 +1196,128 @@ export default function App() {
                   </>
                 )}
 
-                {/* MODO FLASHCARDS – TEST MÚLTIPLE */}
-                {mode === "flashcard" && (
-                  <>
-                    <div
-                      aria-live="polite"
-                      style={{ marginBottom: 16 }}
-                    >
-                      <div
-                        style={{
-                          color: "#64748b",
-                          fontSize: 12,
-                          letterSpacing: 0.3,
-                        }}
-                      >
-                        Elige la traducción correcta
-                      </div>
-                      <div style={styles.wordBig}>{current.term}</div>
-                    </div>
 
-                    <div
-                      style={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        justifyContent: "center",
-                        gap: 10,
-                        marginTop: 8,
-                      }}
-                    >
-                      {flashOptions.map((opt, idx) => (
-                        <button
-                          key={idx}
-                          style={{
-                            ...styles.btnSecondary,
-                            minWidth: "140px",
-                          }}
-                          onClick={() => handleFlashcardResult(opt.correct)}
-                        >
-                          {opt.text}
-                        </button>
-                      ))}
-                    </div>
-                  </>
-                )}
+                {/* MODO FLASHCARDS – TEST MÚLTIPLE */}
+{mode === "flashcard" && (
+  <>
+    <div
+      aria-live="polite"
+      style={{ marginBottom: 16 }}
+    >
+      <div
+        style={{
+          color: "#64748b",
+          fontSize: 12,
+          letterSpacing: 0.3,
+        }}
+      >
+        Elige la traducción correcta
+      </div>
+      <div style={styles.wordBig}>{current.term}</div>
+    </div>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+        gap: 12,
+        marginTop: 8,
+        width: "100%",
+        maxWidth: 420,
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    >
+      {flashOptions.map((opt, idx) => {
+        // 🎯 ESTILO BASE: pill SIEMPRE
+        let btnStyle = {
+    borderRadius: 999,
+    border: "2px solid #00050aff",
+    background: "#ffffff",
+    color: "#334155",
+    cursor: flashStatus === "idle" ? "pointer" : "default",
+
+    width: "100%",
+    margin: "2px",
+    boxSizing: "border-box",
+
+    // ⬇️ Tamaño fijo y texto centrado
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "8px 16px",
+    height: "52px",            // 🔥 todas las tarjetas misma altura
+    fontSize: 14,
+    textAlign: "center",
+
+    // Si la frase es muy larga, la recorta con "..."
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+
+    transition:
+      "transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease",
+  };
+
+        if (flashStatus !== "idle") {
+          const isSelected = flashSelected === idx;
+
+          if (flashStatus === "correct" && isSelected) {
+            btnStyle = {
+              ...btnStyle,
+              background: "#bbf7d0",
+              color: "#166534",
+              borderColor: "#16a34a",
+              transform: "scale(1.03)",
+            };
+          }
+
+          if (flashStatus === "wrong") {
+            if (isSelected && !opt.correct) {
+              // elegida y mala
+              btnStyle = {
+                ...btnStyle,
+                background: "#fecaca",
+                color: "#7f1d1d",
+                borderColor: "#dc2626",
+                transform: "scale(0.97)",
+              };
+            }
+            if (opt.correct) {
+              // la correcta
+              btnStyle = {
+                ...btnStyle,
+                background: "#bbf7d0",
+                color: "#166534",
+                borderColor: "#16a34a",
+              };
+            }
+          }
+        }
+
+        return (
+          <div
+            key={idx}
+            role="button"
+            className="flash-option"
+            style={btnStyle}
+            onClick={() => {
+              if (flashStatus !== "idle") return; // ignorar clicks extra
+              handleFlashcardResult(opt.correct, idx);
+            }}
+          >
+            {opt.text}
+          </div>
+        );
+      })}
+    </div>
+  </>
+)}
+
+
+
+
+
 
 
                 {/* Info común abajo */}

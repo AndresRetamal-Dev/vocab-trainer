@@ -40,3 +40,46 @@
 .read-the-docs {
   color: #888;
 }
+
+.flashcard-container {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Escala suave cuando aciertas */
+.flashcard-correct {
+  animation: flashcard-scale 0.3s ease;
+}
+
+/* Sacudida cuando fallas */
+.flashcard-wrong {
+  animation: flashcard-shake 0.35s ease;
+}
+
+@keyframes flashcard-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes flashcard-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+
