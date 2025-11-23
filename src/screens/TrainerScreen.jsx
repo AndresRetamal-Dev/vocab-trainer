@@ -22,8 +22,10 @@ export default function TrainerScreen({
   totalLevelWords,
   motivation,
   feedback,
+  attempt,
   answer,
   setAnswer,
+
   handleCheck,
   nextCard,
   revealAndNext,
@@ -249,7 +251,14 @@ export default function TrainerScreen({
                     </>
                   )}
 
-                  <div style={styles.wordBig}>{current.term}</div>
+                  <div
+                    style={{
+                      ...styles.wordBig,
+                      color: attempt === 1 ? "#dc2626" : styles.wordBig.color,
+                    }}
+                  >
+                    {current.term}
+                  </div>
                 </div>
 
                 {/* Nubecita de MOTIVACIÓN */}
@@ -348,9 +357,10 @@ export default function TrainerScreen({
               <>
                 {/* Texto aclaratorio del modo */}
                 <div style={{ marginTop: 4, marginBottom: 8 }}>
-                  <p style={{ fontSize: 11, color: "#64748b" }}>
-                    🃏 Modo test (no afecta al progreso oficial del nivel)
-                  </p>
+                    <p style={{ fontSize: 11, color: "#64748b" }}>
+                    🃏 Modo test (también cuenta para tu progreso Leitner)
+                    </p>
+
                 </div>
 
                 {/* Stats de la sesión de test */}
@@ -393,7 +403,15 @@ export default function TrainerScreen({
                   >
                     Elige la traducción correcta
                   </div>
-                  <div style={styles.wordBig}>{current.term}</div>
+                                    <div
+                    style={{
+                      ...styles.wordBig,
+                      color: attempt === 1 ? "#dc2626" : styles.wordBig.color,
+                    }}
+                  >
+                    {current.term}
+                  </div>
+
                 </div>
 
                 {/* grid de opciones */}
