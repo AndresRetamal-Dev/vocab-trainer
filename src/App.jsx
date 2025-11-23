@@ -209,6 +209,8 @@ export default function App() {
   // mapa: { [sessionKey]: { [term]: true } }
 const [writeDone, setWriteDone] = useState({});
 const [flashDone, setFlashDone] = useState({});
+const [hardDone, setHardDone] = useState({});
+
 
 const sessionKey = `${level}_${category}`;
 
@@ -218,7 +220,11 @@ const [flashStats, setFlashStats] = useState({
   correct: 0,
   wrong: 0,
   uniqueCorrectTerms: {}, // { [term]: true }
+  failedTerms: {},        // { [term]: true }
 });
+
+// Si no es null, limita el pool de flashcards solo a esos términos
+const [flashRepeatTerms, setFlashRepeatTerms] = useState(null); // null | { [term]: true }
 
 
 // 🔹 Cargar datos del usuario desde Firestore
@@ -377,8 +383,23 @@ const writePool = useMemo(() => {
 
 const flashPool = useMemo(() => {
   const doneForSession = flashDone[sessionKey] || {};
-  return items.filter((w) => !doneForSession[w.term]);
-}, [items, flashDone, sessionKey]);
+  let base = items.filter((w) => !doneForSession[w.term]);
+
+  // Si estamos en modo "repetir solo falladas", filtramos el pool
+  if (flashRepeatTerms) {
+    base = base.filter((w) => flashRepeatTerms[w.term]);
+  }
+
+  return base;
+}, [items, flashDone, sessionKey, flashRepeatTerms]);
+
+
+const hardPool = useMemo(() => {
+  const doneForSession = hardDone[sessionKey] || {};
+  return items.filter(
+    (w) => hardWords[w.term] && !doneForSession[w.term]
+  );
+}, [items, hardWords, hardDone, sessionKey]);
 
 
 // 🔹 Todas las palabras del nivel actual
@@ -447,7 +468,18 @@ const accuracyFlash =
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, category]);
 
+  // 🔹 Cuando cambie el modo (write / flashcard / hard), elegimos una nueva tarjeta
+useEffect(() => {
+  // si no estamos en la pantalla de entrenamiento, no hace falta
+  if (screen !== "trainer") return;
 
+  nextCard();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [mode]);
+
+
+
+// 🔹 Resetear stats de flashcards al cambiar nivel/categoría o modo
 // 🔹 Resetear stats de flashcards al cambiar nivel/categoría o modo
 useEffect(() => {
   if (mode === "flashcard") {
@@ -455,9 +487,21 @@ useEffect(() => {
       correct: 0,
       wrong: 0,
       uniqueCorrectTerms: {},
+      failedTerms: {},
+    });
+    setFlashRepeatTerms(null);
+
+    // Opcional: limpiar sesión de done en este nivel/categoría
+    setFlashDone((prev) => {
+      const copy = { ...prev };
+      delete copy[sessionKey];
+      return copy;
     });
   }
-}, [level, category, mode]);
+}, [level, category, mode, sessionKey]);
+
+
+
 
 
 
@@ -524,31 +568,41 @@ useEffect(() => {
     setFlashOptions(shuffled);
   };
 
-  const nextCard = () => {
-    // Elegimos el pool según el modo actual
-    const pool = mode === "flashcard" ? flashPool : writePool;
-    const n = pickFromPool(pool, current?.term || null);
+  // modeOverride es opcional; si no lo pasas, usa el mode actual
+const nextCard = (modeOverride = null) => {
+  const effectiveMode = modeOverride ?? mode;
 
-    if (!n) {
-      // No quedan palabras en este modo / nivel / categoría
-      setCurrent(null);
-      setFlashOptions([]);
-      return;
-    }
+  let pool;
+  if (effectiveMode === "flashcard") {
+    pool = flashPool;
+  } else if (effectiveMode === "hard") {
+    pool = hardPool;
+  } else {
+    // "write" por defecto
+    pool = writePool;
+  }
 
-    setCurrent(n);
-    setAnswer("");
-    setFeedback(null);
-    setAttempt(0);
-    setMotivation(null);
+  const n = pickFromPool(pool, current?.term || null);
 
-    // 🔥 reset visual de las tarjetas
-    setFlashStatus("idle");
-    setFlashSelected(null);
+  if (!n) {
+    setCurrent(null);
+    setFlashOptions([]);
+    return;
+  }
 
-    // Preparamos opciones para flashcard (aunque estés en write)
-    prepareFlashOptions(n);
-  };
+  setCurrent(n);
+  setAnswer("");
+  setFeedback(null);
+  setAttempt(0);
+  setMotivation(null);
+
+  setFlashStatus("idle");
+  setFlashSelected(null);
+
+  prepareFlashOptions(n);
+};
+
+
 
 
 
@@ -574,30 +628,44 @@ useEffect(() => {
 
     // ✅ RESPUESTA CORRECTA
     if (ok) {
-      setFeedback("ok");
-      updateLeitner(current.term, true);
+  setFeedback("ok");
+  updateLeitner(current.term, true);
 
-      // ⭐ SUMAR RACHA
-      setStreak((prev) => prev + 1);
+  // ⭐ SUMAR RACHA
+  setStreak((prev) => prev + 1);
+  // ⭐ SUMAR PALABRAS COMPLETADAS (aciertos)
+  setAnsweredCount((prev) => prev + 1);
 
-      // ⭐ SUMAR PALABRAS COMPLETADAS (aciertos)
-      setAnsweredCount((prev) => prev + 1);
-
-      // 🔹 Marcar esta palabra como "hecha" en modo WRITE para este nivel/categoría
-      setWriteDone((prev) => {
-        const prevSession = prev[sessionKey] || {};
-        return {
-          ...prev,
-          [sessionKey]: {
-            ...prevSession,
-            [current.term]: true,
-          },
-        };
+  if (mode === "write") {
+    // marcar como hecha en modo escribir
+    setWriteDone((prev) => {
+      const prevSession = prev[sessionKey] || {};
+      return {
+        ...prev,
+        [sessionKey]: {
+          ...prevSession,
+          [current.term]: true,
+        },
+      };
     });
+  } else if (mode === "hard") {
+    // marcar como hecha en modo difíciles
+    setHardDone((prev) => {
+      const prevSession = prev[sessionKey] || {};
+      return {
+        ...prev,
+        [sessionKey]: {
+          ...prevSession,
+          [current.term]: true,
+        },
+      };
+    });
+  }
 
-      setTimeout(nextCard, 1300);
-      return;
-    }
+  setTimeout(nextCard, 1300);
+  return;
+}
+
 
     // ❌ RESPUESTA INCORRECTA (pero la racha solo se rompe en el 2º fallo)
     const newWrong = wrongCount + 1;
@@ -635,7 +703,6 @@ useEffect(() => {
   const handleFlashcardResult = (wasCorrect, chosenIndex) => {
   if (!current) return;
 
-  // marcamos qué botón se ha pulsado y qué tipo de animación toca
   setFlashSelected(chosenIndex);
   setFlashStatus(wasCorrect ? "correct" : "wrong");
 
@@ -644,7 +711,7 @@ useEffect(() => {
     setStreak((prev) => prev + 1);
     setAnsweredCount((prev) => prev + 1);
 
-    // 🔹 Marcar esta palabra como "hecha" en modo FLASHCARD
+    // Marcar como "hecha" en flashcards
     setFlashDone((prev) => {
       const prevSession = prev[sessionKey] || {};
       return {
@@ -656,14 +723,16 @@ useEffect(() => {
       };
     });
 
-    // 🔹 Actualizar stats de flashcards
     setFlashStats((prev) => ({
       correct: prev.correct + 1,
       wrong: prev.wrong,
       uniqueCorrectTerms: {
         ...prev.uniqueCorrectTerms,
-        [current.term]: true, // cuenta únicas acertadas
+        [current.term]: true,
       },
+      // no tocamos failedTerms aquí: nos interesa saber
+      // si alguna vez fue fallada en esta sesión
+      failedTerms: prev.failedTerms,
     }));
   } else {
     updateLeitner(current.term, false);
@@ -674,17 +743,73 @@ useEffect(() => {
       [current.term]: (prev[current.term] ?? 0) + 1,
     }));
 
-    // 🔹 Actualizar stats de flashcards (solo suma fallo)
     setFlashStats((prev) => ({
       ...prev,
       wrong: prev.wrong + 1,
+      failedTerms: {
+        ...prev.failedTerms,
+        [current.term]: true,
+      },
     }));
   }
 
-  // pequeña pausa antes de pasar a la siguiente tarjeta
   setTimeout(() => {
     nextCard();
   }, 700);
+};
+
+const handleRepeatAllFlash = () => {
+  // Reset stats y pool completo
+  setFlashStats({
+    correct: 0,
+    wrong: 0,
+    uniqueCorrectTerms: {},
+    failedTerms: {},
+  });
+  setFlashRepeatTerms(null);
+
+  // Limpiamos palabras marcadas como hechas en este nivel/categoría
+  setFlashDone((prev) => {
+    const copy = { ...prev };
+    delete copy[sessionKey];
+    return copy;
+  });
+
+  nextCard();
+};
+
+const handleRepeatFailedFlash = () => {
+  const failedTerms = Object.keys(flashStats.failedTerms || {});
+  if (!failedTerms.length) {
+    // Si no hubo falladas, es lo mismo que repetir todo
+    handleRepeatAllFlash();
+    return;
+  }
+
+  // Creamos mapa de términos que queremos practicar
+  const map = failedTerms.reduce((acc, term) => {
+    acc[term] = true;
+    return acc;
+  }, {});
+
+  setFlashRepeatTerms(map);
+
+  // Reset stats (pero mantenemos failedTerms para mostrar lista)
+  setFlashStats({
+    correct: 0,
+    wrong: 0,
+    uniqueCorrectTerms: {},
+    failedTerms: flashStats.failedTerms,
+  });
+
+  // Limpiamos "hechas" para que puedan volver a salir
+  setFlashDone((prev) => {
+    const copy = { ...prev };
+    delete copy[sessionKey];
+    return copy;
+  });
+
+  nextCard();
 };
 
 
@@ -1076,6 +1201,22 @@ useEffect(() => {
           🃏 Practicar con Flashcards
       </button>
 
+      {/* 👇 NUEVO botón perfil */}
+  <button
+    style={{
+      padding: "10px 14px",
+      borderRadius: 12,
+      border: "1px solid #cbd5e1",
+      background: "#ffffff",
+      color: "#0f172a",
+      cursor: "pointer",
+      fontSize: 14,
+    }}
+    onClick={() => setScreen("user")}
+  >
+    👤 Ver tu perfil y progreso
+  </button>
+
       </div>
 
       <button
@@ -1095,6 +1236,145 @@ useEffect(() => {
     </div>
   );
 
+  const ScreenUser = () => {
+  // calcular stats por nivel
+  const levelStats = LEVELS.map((lv) => {
+    const words = dataJson.filter((w) => w.level === lv);
+    const total = words.length;
+    const mastered = words.filter((w) => {
+      const st = progress[w.term];
+      return (st?.box ?? 0) > 0;
+    }).length;
+    const pct = total > 0 ? Math.round((mastered / total) * 100) : 0;
+    return { level: lv, total, mastered, pct };
+  });
+
+  return (
+    <div style={{ textAlign: "center", marginTop: 40, padding: "0 16px" }}>
+      <h2 style={{ color: titleColor, marginBottom: 4 }}>👤 Tu perfil</h2>
+      <p style={{ color: "#64748b", marginBottom: 20 }}>
+        Información básica de tu progreso.
+      </p>
+
+      {/* Datos de usuario */}
+      <div
+        style={{
+          margin: "0 auto 24px",
+          padding: "16px 20px",
+          maxWidth: 420,
+          borderRadius: 16,
+          background: "#ffffff",
+          boxShadow: "0 6px 16px rgba(15,23,42,0.12)",
+          textAlign: "left",
+          color: "#000000ff",
+        }}
+      >
+        <div style={{ fontSize: 14, marginBottom: 6 }}>
+          <strong>Nombre:</strong> {user?.name || "Invitado"}
+        </div>
+        {!user?.isGuest && (
+          <div style={{ fontSize: 14, marginBottom: 6 }}>
+            <strong>Email:</strong> {user?.email}
+          </div>
+        )}
+        <div style={{ fontSize: 14, marginBottom: 6 }}>
+          <strong>Modo:</strong>{" "}
+          {user?.isGuest ? "Invitado (no guarda en la nube)" : "Conectado con Google"}
+        </div>
+        <div style={{ fontSize: 14, marginBottom: 6 }}>
+          <strong>Palabras completadas (global):</strong> {answeredCount}
+        </div>
+        <div style={{ fontSize: 14 }}>
+          <strong>Racha actual:</strong> {streak}
+        </div>
+      </div>
+
+      {/* Progreso por nivel */}
+      <div
+        style={{
+          margin: "0 auto",
+          maxWidth: 420,
+          borderRadius: 16,
+          background: "#ffffff",
+          boxShadow: "0 6px 16px rgba(15,23,42,0.12)",
+          padding: "16px 20px",
+          textAlign: "left",
+          color: "#000000ff",
+        }}
+      >
+        <h3 style={{ fontSize: 15, marginBottom: 10, color: "#0f172a" }}>
+          📚 Progreso por nivel (modo escribir)
+        </h3>
+        <div style={{ fontSize: 13, color: "#000000ff", marginBottom: 8 }}>
+          El porcentaje se basa en cuántas palabras has dominado (Leitner box &gt; 0).
+        </div>
+
+        {levelStats.map((ls) => (
+          <div
+            key={ls.level}
+            style={{
+              padding: "6px 0",
+              borderBottom: "1px solid #e2e8f0",
+              fontSize: 13,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                marginBottom: 4,
+              }}
+            >
+              <span>
+                <strong>{ls.level}</strong> – {ls.mastered}/{ls.total} palabras
+              </span>
+              <span>{ls.pct}%</span>
+            </div>
+            <div style={styles.progressBarOuter}>
+              <div
+                style={{
+                  ...styles.progressBarInner,
+                  width: `${ls.pct}%`,
+                }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Botones abajo */}
+      <div
+        style={{
+          marginTop: 24,
+          display: "flex",
+          flexDirection: "column",
+          gap: 10,
+          alignItems: "center",
+        }}
+      >
+        <button
+          style={styles.btnSecondary}
+          onClick={() => setScreen("home")}
+        >
+          ⬅️ Volver al inicio
+        </button>
+
+        <button
+          style={{
+            ...styles.btnSecondary,
+            borderColor: "#dc2626",
+            color: "#dc2626",
+          }}
+          onClick={handleLogout}
+        >
+          🚪 Cerrar sesión
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
   // === UI ===
   return (
     <div style={styles.page}>
@@ -1103,6 +1383,8 @@ useEffect(() => {
 
       {/* 🔹 PANTALLA HOME (selección de modo) */}
       {screen === "home" && <ScreenHome />}
+
+      {screen === "user" && <ScreenUser />}
 
       {/* 🔹 PANTALLA TRAINER (lo de siempre) */}
       {screen === "trainer" && (
@@ -1202,31 +1484,49 @@ useEffect(() => {
 
             {/* Toggle de modo + Dark mode */}
             <div style={styles.modeToggle}>
-              <button
-                style={mode === "write" ? styles.modeBtnActive : styles.modeBtn}
-                onClick={() => {
-                  setMode("write");
-                  setFeedback(null);
-                  setAttempt(0);
-                }}
-              >
-                ✍️ Escribir
-              </button>
+  <button
+  style={mode === "write" ? styles.modeBtnActive : styles.modeBtn}
+  onClick={() => {
+    setMode("write");
+    setFeedback(null);
+    setAttempt(0);
+    setMotivation(null);
+    setFlashStatus("idle");
+    setFlashSelected(null);
+  }}
+>
+  ✍️ Escribir
+</button>
 
-              <button
-                style={mode === "flashcard" ? styles.modeBtnActive : styles.modeBtn}
-                onClick={() => {
-                  setMode("flashcard");
-                  setFeedback(null);
-                  setAttempt(0);
-                  setFlashStatus("idle");
-                  setFlashSelected(null);
-                  prepareFlashOptions(current);
-                }}
-              >
-                🃏 Flashcards
-              </button>
-            </div>
+<button
+  style={mode === "flashcard" ? styles.modeBtnActive : styles.modeBtn}
+  onClick={() => {
+    setMode("flashcard");
+    setFeedback(null);
+    setAttempt(0);
+    setFlashStatus("idle");
+    setFlashSelected(null);
+  }}
+>
+  🃏 Flashcards
+</button>
+
+<button
+  style={mode === "hard" ? styles.modeBtnActive : styles.modeBtn}
+  onClick={() => {
+    setMode("hard");
+    setFeedback(null);
+    setAttempt(0);
+    setMotivation(null);
+    setFlashStatus("idle");
+    setFlashSelected(null);
+  }}
+>
+  ⭐ Difíciles
+</button>
+
+</div>
+
 
 
             <button
@@ -1261,167 +1561,318 @@ useEffect(() => {
             {items.length > 0 && current && (
               <>
                 {/* MODO ESCRIBIR */}
-                {mode === "write" && (
-                  <>
-                    <div aria-live="polite">
-                      <div
-                        style={{
-                          color: "#64748b",
-                          fontSize: 12,
-                          letterSpacing: 0.3,
-                        }}
-                      >
-                        Tradúceme esta
-                      </div>
+                {/* MODO ESCRIBIR y MODO DIFÍCILES (misma UI) */}
+{(mode === "write" || mode === "hard") && current && (
+  <>
+    <div aria-live="polite">
+      <div
+        style={{
+          color: "#64748b",
+          fontSize: 12,
+          letterSpacing: 0.3,
+        }}
+      >
+        {mode === "write"
+          ? "Tradúceme esta"
+          : "Palabra difícil – escríbela correctamente"}
+      </div>
 
-                      {/* BARRA DE PROGRESO */}
-                      <div style={styles.progressBarOuter}>
-                        <div
-                          style={{
-                            ...styles.progressBarInner,
-                            width: `${Math.min(levelProgress, 100)}%`,
-                          }}
-                        />
-                      </div>
+      {/* Barra de progreso SOLO en modo write */}
+      {mode === "write" && (
+        <>
+          <div style={styles.progressBarOuter}>
+            <div
+              style={{
+                ...styles.progressBarInner,
+                width: `${Math.min(levelProgress, 100)}%`,
+              }}
+            />
+          </div>
 
-                      <p style={{ fontSize: 11, color: "#0b0b0cff", marginTop: 4 }}>
-                        Nivel {level}: {masteredCount} / {totalLevelWords} palabras aprendidas
-                      </p>
+          <p
+            style={{
+              fontSize: 11,
+              color: "#0b0b0cff",
+              marginTop: 4,
+            }}
+          >
+            Nivel {level}: {masteredCount} / {totalLevelWords} palabras
+            aprendidas
+          </p>
+        </>
+      )}
+
+      <div style={styles.wordBig}>{current.term}</div>
+    </div>
+
+    {/* Nubecita de MOTIVACIÓN */}
+    {motivation && (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div
+          style={{ ...styles.bubble, ...styles.bubbleMotivation }}
+          role="note"
+          aria-live="polite"
+        >
+          <div style={{ ...styles.bubbleTip, ...styles.bubbleMotivationTip }} />
+          {motivation}
+        </div>
+      </div>
+    )}
+
+    {/* Definición en PRIMER FALLO */}
+    {feedback === "first_wrong" && (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={styles.bubble} role="note">
+          <div style={styles.bubbleTip} />
+          {current.definition || "Definition not available."}
+        </div>
+      </div>
+    )}
+
+    {/* Input */}
+    <input
+      style={styles.input}
+      placeholder="Tu traducción…"
+      value={answer}
+      onChange={(e) => setAnswer(e.target.value)}
+      onKeyDown={(e) => e.key === "Enter" && handleCheck()}
+      autoFocus
+      inputMode="text"
+      autoCapitalize="off"
+      autoCorrect="off"
+    />
+
+    {/* Botones */}
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        gap: 8,
+        flexWrap: "wrap",
+      }}
+    >
+      <button style={styles.btnPrimary} onClick={handleCheck}>
+        Comprobar
+      </button>
+      <button style={styles.btnSecondary} onClick={nextCard} title="Saltar">
+        Saltar
+      </button>
+    </div>
+
+    {feedback === "ok" && (
+      <p style={styles.feedbackOk}>✅ ¡Correcto!</p>
+    )}
+
+    {feedback === "second_wrong" && (
+      <>
+        <p style={styles.feedbackBad}>❌ Incorrecto (2 intentos)</p>
+        <p style={styles.def}>
+          No te preocupes, te volverá a aparecer.
+          <br />
+          Significado: <em>{current.translation}</em>
+        </p>
+        <button
+          style={{ ...styles.btnSecondary, marginTop: 10 }}
+          onClick={revealAndNext}
+        >
+          Siguiente
+        </button>
+      </>
+    )}
+  </>
+)}
 
 
-                      <div style={styles.wordBig}>{current.term}</div>
-                    </div>
+{/* 🔚 MENSAJE DE FIN DE MODO (WRITE / FLASHCARD / HARD) */}
+{items.length > 0 && !current && (
+  <div style={{ textAlign: "center", padding: "20px 10px" }}>
+    
+    {/* WRITE */}
+    {mode === "write" && (
+      <>
+        <p style={{ fontSize: 16, marginBottom: 8 }}>
+          🎉 Ya has completado todas las palabras de este nivel en el modo escribir.
+        </p>
 
-                    {/* Nubecita de MOTIVACIÓN (aparece cada 5 fallos) */}
-                    {motivation && (
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div
-                          style={{
-                            ...styles.bubble,
-                            ...styles.bubbleMotivation,
-                          }}
-                          role="note"
-                          aria-live="polite"
-                        >
-                          <div
-                            style={{
-                              ...styles.bubbleTip,
-                              ...styles.bubbleMotivationTip,
-                            }}
-                          />
-                          {motivation}
-                        </div>
-                      </div>
-                    )}
+        {/* Resumen */}
+        <div
+          style={{
+            fontSize: 12,
+            color: "#64748b",
+            marginBottom: 10,
+            lineHeight: 1.4,
+          }}
+        >
+          <div>
+            Nivel {level}: {masteredCount} / {totalLevelWords} palabras
+            aprendidas (modo escribir).
+          </div>
+          <div>
+            Progreso del nivel:{" "}
+            {totalLevelWords > 0 ? Math.round(levelProgress) : 0}%
+          </div>
+        </div>
 
-                    {/* Nubecita con definición en el PRIMER FALLO */}
-                    {feedback === "first_wrong" && (
-                      <div
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                        }}
-                      >
-                        <div style={styles.bubble} role="note">
-                          <div style={styles.bubbleTip} />
-                          {current.definition ||
-                            "Definition not available."}
-                        </div>
-                      </div>
-                    )}
-
-                    <input
-                      style={styles.input}
-                      placeholder="Tu traducción…"
-                      value={answer}
-                      onChange={(e) => setAnswer(e.target.value)}
-                      onKeyDown={(e) => e.key === "Enter" && handleCheck()}
-                      autoFocus
-                      inputMode="text"
-                      autoCapitalize="off"
-                      autoCorrect="off"
-                    />
-
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        gap: 8,
-                        flexWrap: "wrap",
-                      }}
-                    >
-                      <button
-                        style={styles.btnPrimary}
-                        onClick={handleCheck}
-                      >
-                        Comprobar
-                      </button>
-                      <button
-                        style={styles.btnSecondary}
-                        onClick={nextCard}
-                        title="Saltar"
-                      >
-                        Saltar
-                      </button>
-                    </div>
-
-                    {feedback === "ok" && (
-                      <p style={styles.feedbackOk}>✅ ¡Correcto!</p>
-                    )}
-
-                    {feedback === "second_wrong" && (
-                      <>
-                        <p style={styles.feedbackBad}>
-                          ❌ Incorrecto (2 intentos)
-                        </p>
-                        <p style={styles.def}>
-                          No te preocupes, te volverá a aparecer.
-                          <br />
-                          Significado: <em>{current.translation}</em>
-                        </p>
-                        <button
-                          style={{
-                            ...styles.btnSecondary,
-                            marginTop: 10,
-                          }}
-                          onClick={revealAndNext}
-                        >
-                          Siguiente
-                        </button>
-                      </>
-                    )}
-                  </>
-              )}
-
-              {/* 🔚 MENSAJE DE FIN DE MODO (WRITE / FLASHCARD) */}
-          {items.length > 0 && !current && (
-            <div style={{ textAlign: "center", padding: "20px 10px" }}>
-              {mode === "write" ? (
-                <>
-                  <p style={{ fontSize: 16, marginBottom: 8 }}>
-                    🎉 Ya has completado todas las palabras de este nivel en el modo escribir.
-                  </p>
-                  <p style={{ fontSize: 13, color: "#64748b" }}>
-                    Puedes cambiar de nivel, de categoría o reiniciar este nivel si quieres volver a practicar.
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p style={{ fontSize: 16, marginBottom: 8 }}>
-                    ✅ Has completado todas las preguntas de test de este nivel.
-                  </p>
-                  <p style={{ fontSize: 13, color: "#64748b" }}>
-                    Para consolidar este nivel y pasar al siguiente, ahora completa las palabras en el modo ✍️ Escribir.
-                  </p>
-                </>
-              )}
+        {/* Datos del test */}
+        <div
+          style={{
+            fontSize: 12,
+            color: "#64748b",
+            marginBottom: 12,
+            lineHeight: 1.4,
+          }}
+        >
+          {flashStats.correct + flashStats.wrong > 0 ? (
+            <>
+              <div>Último test de este nivel:</div>
+              <div>
+                ✓ Aciertos:{" "}
+                <span style={{ color: "#16a34a" }}>
+                  {flashStats.correct}
+                </span>
+              </div>
+              <div>
+                ✗ Fallos:{" "}
+                <span style={{ color: "#dc2626" }}>
+                  {flashStats.wrong}
+                </span>
+              </div>
+              <div>
+                🎯 Precisión:{" "}
+                {answeredFlash > 0 ? accuracyFlash.toFixed(0) : 0}%
+              </div>
+            </>
+          ) : (
+            <div>
+              Aún no has hecho el test de este nivel. Puedes usar el modo 🃏
+              Flashcards para repasar.
             </div>
           )}
+        </div>
+
+        <p style={{ fontSize: 13, color: "#64748b" }}>
+          Puedes cambiar de nivel, de categoría o reiniciar este nivel si
+          quieres volver a practicar.
+        </p>
+      </>
+    )}
+
+    {/* FLASHCARD */}
+    {mode === "flashcard" && (
+      <>
+        <p style={{ fontSize: 16, marginBottom: 8 }}>
+          ✅ Has completado todas las preguntas de test de este nivel.
+        </p>
+        <p style={{ fontSize: 13, color: "#64748b", marginBottom: 10 }}>
+          Para consolidar este nivel y pasar al siguiente, ahora completa las
+          palabras en el modo ✍️ Escribir.
+        </p>
+
+        <div
+          style={{
+            fontSize: 12,
+            color: "#64748b",
+            marginBottom: 12,
+            lineHeight: 1.4,
+          }}
+        >
+          <div>Totales: {totalFlashWords}</div>
+          <div>
+            ✓ Aciertos:{" "}
+            <span style={{ color: "#16a34a" }}>{flashStats.correct}</span>
+          </div>
+          <div>
+            ✗ Fallos:{" "}
+            <span style={{ color: "#dc2626" }}>{flashStats.wrong}</span>
+          </div>
+          <div>
+            🎯 Precisión:{" "}
+            {answeredFlash > 0 ? accuracyFlash.toFixed(0) : 0}%
+          </div>
+        </div>
+
+        {Object.keys(flashStats.failedTerms || {}).length > 0 && (
+          <div style={{ marginBottom: 12 }}>
+            <p
+              style={{
+                fontSize: 12,
+                color: "#64748b",
+                marginBottom: 6,
+              }}
+            >
+              Palabras que te dieron problemas:
+            </p>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+                gap: 6,
+                fontSize: 12,
+              }}
+            >
+              {Object.keys(flashStats.failedTerms)
+                .slice(0, 12)
+                .map((term) => (
+                  <span
+                    key={term}
+                    style={{
+                      padding: "4px 8px",
+                      borderRadius: 999,
+                      border: "1px solid #e2e8f0",
+                      background: "#f9fafb",
+                    }}
+                  >
+                    {term}
+                  </span>
+                ))}
+            </div>
+          </div>
+        )}
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 10,
+            flexWrap: "wrap",
+            marginTop: 8,
+          }}
+        >
+          {Object.keys(flashStats.failedTerms || {}).length > 0 && (
+            <button
+              style={styles.btnPrimary}
+              onClick={handleRepeatFailedFlash}
+            >
+              🔁 Repetir solo las falladas
+            </button>
+          )}
+          <button
+            style={styles.btnSecondary}
+            onClick={handleRepeatAllFlash}
+          >
+            🔁 Repetir todo el test
+          </button>
+        </div>
+      </>
+    )}
+
+    {/* HARD */}
+    {mode === "hard" && (
+      <>
+        <p style={{ fontSize: 16, marginBottom: 8 }}>
+          ⭐ No hay más palabras difíciles en este nivel/categoría.
+        </p>
+        <p style={{ fontSize: 13, color: "#64748b" }}>
+          Ve al modo ✍️ Escribir o 🃏 Flashcards, o cambia de nivel/categoría.
+        </p>
+      </>
+    )}
+  </div>
+)}
+
+
+
 
 
                 {/* MODO FLASHCARDS – TEST MÚLTIPLE */}
