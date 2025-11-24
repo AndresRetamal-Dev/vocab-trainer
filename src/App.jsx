@@ -100,15 +100,19 @@ export default function App() {
     header: { textAlign: "center" },
     select: { padding: "6px 8px", borderRadius: "8px" },
 
-    container: {
-      position: "relative",
-      background: cardBg,
-      borderRadius: "16px",
-      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.08)",
-      width: "min(92vw, 520px)",
-      padding: "24px 20px",
-      textAlign: "center",
-    },
+      container: {
+        position: "relative",
+        background: cardBg,
+        borderRadius: "16px",
+        boxShadow: "0 6px 20px rgba(0, 0, 0, 0.08)",
+        width: "100%",          // take all available width
+        maxWidth: "520px",      // but never larger than 520px
+        padding: "24px 20px",
+        textAlign: "center",
+        boxSizing: "border-box",
+        margin: "0 auto",       // center inside trainer-root
+      },
+
 
     streakBox: {
       position: "absolute",
@@ -227,19 +231,21 @@ export default function App() {
       transition: "color 0.2s ease",
     },
 
-    input: {
-      width: "calc(100% - 24px)",
-      maxWidth: "460px",
-      padding: "12px",
-      borderRadius: "10px",
-      border: "1px solid #cbd5e1",
-      textAlign: "center",
-      margin: "0 auto 12px",
-      display: "block",
-      fontSize: "16px",
-      background: inputBg,
-      color: inputText,
-    },
+      input: {
+        width: "100%",
+        maxWidth: "460px",
+        padding: "12px",
+        borderRadius: "10px",
+        border: "1px solid #cbd5e1",
+        textAlign: "center",
+        margin: "0 auto 12px",
+        display: "block",
+        fontSize: "16px",
+        background: inputBg,
+        color: inputText,
+        boxSizing: "border-box",
+      },
+
 
     btnPrimary: {
       background: "#8831cfd7",    // naranja cálido
