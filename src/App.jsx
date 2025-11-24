@@ -83,20 +83,18 @@ export default function App() {
   const inputText = darkMode ? "#e5e7eb" : "#ffffff";
 
   // === Estilos compartidos ===
-  const styles = {
+    const styles = {
     page: {
-      position: "fixed",
-      top: 0,
-      left: 0,
+      minHeight: "100vh",
       width: "100vw",
-      height: "100vh",
       background: pageBg,
       display: "flex",
       flexDirection: "column",
-      justifyContent: "center",
       alignItems: "center",
-      gap: "20px",
+      padding: "24px 0 32px",
+      boxSizing: "border-box",
     },
+
 
     header: { textAlign: "center" },
     select: { padding: "6px 8px", borderRadius: "8px" },
@@ -243,14 +241,22 @@ export default function App() {
     },
 
     btnPrimary: {
-      background: "#2563eb",
+      background: "#8831cfd7",    // naranja cálido
       color: "white",
-      padding: "10px 16px",
-      borderRadius: "10px",
+      padding: "10px 18px",
+      borderRadius: "12px",
       border: "none",
       cursor: "pointer",
-      marginRight: "8px",
+      fontWeight: 600,
+      boxShadow: "0 2px 6px rgba(0,0,0,0.15)",
+      transition: "transform 0.15s ease, background 0.2s ease",
     },
+
+    btnPrimaryHover: {
+      background: "#be54c2ff",
+      transform: "scale(1.03)",
+    },
+
 
     btnSecondary: {
       background: "white",

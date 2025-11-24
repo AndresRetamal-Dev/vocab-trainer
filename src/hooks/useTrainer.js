@@ -252,6 +252,34 @@ export default function useTrainer(user) {
   }, [user]);
 
 
+    // Resetear estado cuando se entra como invitado o se hace logout
+  useEffect(() => {
+    if (!user || user.isGuest || !user.uid) {
+      // Cargar progreso local del invitado
+      try {
+        const localProgress = localStorage.getItem("progress:v1");
+        setProgress(localProgress ? JSON.parse(localProgress) : {});
+      } catch {
+        setProgress({});
+      }
+
+      try {
+        const localHard = localStorage.getItem("hardWords:v1");
+        setHardWords(localHard ? JSON.parse(localHard) : {});
+      } catch {
+        setHardWords({});
+      }
+
+      // Resetear contadores
+      setStreak(0);
+      setAnsweredCount(0);
+      setWrongCount(0);
+
+      return;
+    }
+  }, [user]);
+
+
   // Sincronizar progreso con Firestore
   useEffect(() => {
     if (!user || user.isGuest || !user.uid) return;
@@ -390,6 +418,18 @@ export default function useTrainer(user) {
     }
   }, [level, category, mode, sessionKey]);
 
+  // Resetear sesión de difíciles al cambiar nivel/categoría o cambiar a modo hard
+  useEffect(() => {
+    if (mode === "hard") {
+      setHardDone((prev) => {
+        const copy = { ...prev };
+        delete copy[sessionKey];
+        return copy;
+      });
+    }
+  }, [level, category, mode, sessionKey]);
+
+
   // Aviso 1 solo ítem
   useEffect(() => {
     if (items.length === 1) {
@@ -494,9 +534,10 @@ export default function useTrainer(user) {
     setFlashStatus(wasCorrect ? "correct" : "wrong");
 
     if (wasCorrect) {
-      updateLeitner(current.term, true);
-      setStreak((prev) => prev + 1);
-      setAnsweredCount((prev) => prev + 1);
+      // Flashcards no afectan al Leitner ni a la racha real
+      // updateLeitner(current.term, true);
+      // setStreak((prev) => prev + 1);
+      // setAnsweredCount((prev) => prev + 1);
 
       setFlashDone((prev) => {
         const prevSession = prev[sessionKey] || {};
@@ -519,9 +560,10 @@ export default function useTrainer(user) {
         failedTerms: prev.failedTerms,
       }));
     } else {
-      updateLeitner(current.term, false);
-      setStreak(0);
-      setWrongCount((prev) => prev + 1);
+      // Flashcards no afectan al Leitner ni a la racha real
+      // updateLeitner(current.term, false);
+      // setStreak(0);
+      // setWrongCount((prev) => prev + 1);
       setHardWords((prev) => ({
         ...prev,
         [current.term]: (prev[current.term] ?? 0) + 1,

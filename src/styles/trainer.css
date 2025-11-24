@@ -1,0 +1,364 @@
+/* === Layout general del trainer === */
+
+.trainer-root {
+  width: 100%;
+  max-width: 720px;
+  padding: 12px 16px 24px;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.trainer-header {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.trainer-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.trainer-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trainer-dark-toggle {
+  margin-left: auto;
+}
+
+.trainer-streak-pill {
+  margin: 10px auto 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 15px rgba(15, 23, 42, 0.08);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.trainer-streak-label {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.trainer-streak-value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+/* CONTROLES */
+
+.trainer-filters-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.trainer-modes-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.trainer-mode-btn {
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  background: #e2e8f0;
+  color: #475569;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trainer-mode-btn--active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* TARJETA PRINCIPAL */
+
+.trainer-card {
+  width: 100%;
+  max-width: 540px;
+  margin: 8px auto 0;
+}
+
+.trainer-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trainer-word {
+  display: block;
+  margin-top: 8px;
+}
+
+/* Botones de la parte inferior de la tarjeta */
+.trainer-buttons-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Footer de stats (wrongs, palabras completadas) */
+.trainer-footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* GRID flashcards */
+.trainer-flash-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === Animaciones === */
+
+.anim-correct-bounce {
+  animation: trainer-correct-bounce 0.35s ease-out;
+}
+
+@keyframes trainer-correct-bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.anim-shake {
+  animation: trainer-shake 0.25s ease-in-out;
+}
+
+@keyframes trainer-shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* === Responsive: móvil === */
+
+@media (max-width: 640px) {
+  .trainer-root {
+    max-width: 100%;
+    padding: 8px 10px 16px;
+  }
+
+  .trainer-header-top {
+    align-items: flex-start;
+  }
+
+  .trainer-filters-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trainer-modes-row {
+    justify-content: center;
+  }
+
+  .trainer-buttons-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .trainer-card {
+    max-width: 100%;
+  }
+}
+
+/* Selectores de nivel / categoría más atractivos */
+
+.selector-group {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.selector-box {
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.selector-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.selector-select {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+  padding: 2px 4px;
+}
+
+/* En móvil quedan en columna y se ven como “cards” */
+@media (max-width: 640px) {
+  .selector-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Footer de stats: vertical */
+
+.trainer-footer {
+  margin-top: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.trainer-stats-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.trainer-stat-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.trainer-stat-number {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Botón "Comprobar" con tensión cuando hay buena racha */
+
+.btn-check-tension {
+  position: relative;
+  animation: btn-check-pulse 1.3s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35);
+}
+
+.btn-check-tension:active {
+  transform: scale(0.96);
+}
+
+/* animación de pulso rojo alrededor del botón */
+@keyframes btn-check-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+
+/* -------------------------------------------------------------
+   NIVEL 1 — RACHA ≥ 5 — pulso suave
+-------------------------------------------------------------- */
+.btn-check-tension {
+  position: relative;
+  animation: pulse-soft 1.3s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.35); }
+  70%  { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* -------------------------------------------------------------
+   NIVEL 2 — RACHA ≥ 8 — pulso fuerte
+-------------------------------------------------------------- */
+.btn-check-tension-strong {
+  position: relative;
+  animation: pulse-strong 1s ease-in-out infinite;
+}
+
+@keyframes pulse-strong {
+  0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); }
+  70%  { box-shadow: 0 0 0 18px rgba(239, 68, 68, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* -------------------------------------------------------------
+   NIVEL 3 — RACHA ≥ 13 — pulso muy fuerte + vibración
+-------------------------------------------------------------- */
+.btn-check-tension-super {
+  position: relative;
+  animation: pulse-super 0.75s ease-in-out infinite,
+             tension-shake 0.25s ease-in-out infinite;
+}
+
+@keyframes pulse-super {
+  0%   { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+  70%  { box-shadow: 0 0 0 26px rgba(220, 38, 38, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+}
+
+@keyframes tension-shake {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-1.3px); }
+  40%  { transform: translateX(1.3px); }
+  60%  { transform: translateX(-1.3px); }
+  80%  { transform: translateX(1.3px); }
+  100% { transform: translateX(0); }
+}
