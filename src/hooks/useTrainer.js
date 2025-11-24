@@ -105,6 +105,8 @@ export default function useTrainer(user) {
     }
   });
 
+  
+
   // Guarda progreso Leitner
   useEffect(() => {
     localStorage.setItem("progress:v1", JSON.stringify(progress));

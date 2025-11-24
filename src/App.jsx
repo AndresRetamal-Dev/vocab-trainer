@@ -1,5 +1,10 @@
-import { useState } from "react";
-import { signInWithPopup, signOut } from "firebase/auth";
+// src/App.jsx
+import { useState, useEffect } from "react";
+import {
+  signInWithRedirect,
+  getRedirectResult,
+  signOut,
+} from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
 
 import AuthScreen from "./screens/AuthScreen";
@@ -19,25 +24,45 @@ export default function App() {
 
   // --- 🔹 Hook del trainer (toda la lógica de estudio está aquí) ---
   const trainer = useTrainer(user);
-  const { streak, answeredCount, levelStats } = trainer;
+  const { streak, answeredCount, levelStats, loadUserData } = trainer;
+
+  // === Procesar login por redirect (Google) al montar la app ===
+  useEffect(() => {
+    const checkGoogleRedirect = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        if (!result || !result.user) return;
+
+        const gUser = result.user;
+
+        const userObj = {
+          uid: gUser.uid,
+          name: gUser.displayName || "Usuario",
+          email: gUser.email || "",
+          photoURL: gUser.photoURL || null,
+          isGuest: false,
+        };
+
+        setUser(userObj);
+        setScreen("home");
+
+        if (loadUserData) {
+          await loadUserData(gUser.uid);
+        }
+      } catch (err) {
+        console.error("Error al procesar login con Google (redirect):", err);
+      }
+    };
+
+    checkGoogleRedirect();
+  }, [loadUserData]);
 
   // === HANDLERS AUTH GOOGLE ===
   const handleGoogleLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const gUser = result.user;
-
-      const userObj = {
-        uid: gUser.uid,
-        name: gUser.displayName || "Usuario",
-        email: gUser.email || "",
-        photoURL: gUser.photoURL || null,
-        isGuest: false,
-      };
-
-      setUser(userObj);
-      setScreen("home");
-      // 👇 Ya NO llamamos a loadUserData: lo hace useTrainer internamente
+      // En móvil y escritorio: mejor redirect que popup
+      await signInWithRedirect(auth, googleProvider);
+      // Al volver, se ejecutará getRedirectResult en el useEffect de arriba
     } catch (err) {
       console.error("Error al hacer login con Google:", err);
       alert("No se pudo iniciar sesión con Google.");
@@ -83,36 +108,34 @@ export default function App() {
   const inputText = darkMode ? "#e5e7eb" : "#ffffff";
 
   // === Estilos compartidos ===
-    const styles = {
+  const styles = {
     page: {
       minHeight: "100vh",
-      width: "100%",          // 👈 en vez de 100vw
+      width: "100%",
       background: pageBg,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       padding: "16px 0 24px",
       boxSizing: "border-box",
-      overflowX: "hidden",    // 👈 evita scroll lateral raro en móvil
+      overflowX: "hidden",
     },
-
 
     header: { textAlign: "center" },
     select: { padding: "6px 8px", borderRadius: "8px" },
 
-      container: {
-        position: "relative",
-        background: cardBg,
-        borderRadius: "16px",
-        boxShadow: "0 6px 20px rgba(0, 0, 0, 0.08)",
-        width: "100%",          // take all available width
-        maxWidth: "520px",      // but never larger than 520px
-        padding: "24px 20px",
-        textAlign: "center",
-        boxSizing: "border-box",
-        margin: "0 auto",       // center inside trainer-root
-      },
-
+    container: {
+      position: "relative",
+      background: cardBg,
+      borderRadius: "16px",
+      boxShadow: "0 6px 20px rgba(0, 0, 0, 0.08)",
+      width: "100%",
+      maxWidth: "520px",
+      padding: "24px 20px",
+      textAlign: "center",
+      boxSizing: "border-box",
+      margin: "0 auto",
+    },
 
     streakBox: {
       position: "absolute",
@@ -227,28 +250,27 @@ export default function App() {
       fontWeight: 800,
       fontSize: "30px",
       margin: "6px 0 12px",
-      color: "#0f172a", // El rojo por segundo intento se controla en TrainerScreen
+      color: "#0f172a",
       transition: "color 0.2s ease",
     },
 
-      input: {
-        width: "100%",
-        maxWidth: "460px",
-        padding: "12px",
-        borderRadius: "10px",
-        border: "1px solid #cbd5e1",
-        textAlign: "center",
-        margin: "0 auto 12px",
-        display: "block",
-        fontSize: "16px",
-        background: inputBg,
-        color: inputText,
-        boxSizing: "border-box",
-      },
-
+    input: {
+      width: "100%",
+      maxWidth: "460px",
+      padding: "12px",
+      borderRadius: "10px",
+      border: "1px solid #cbd5e1",
+      textAlign: "center",
+      margin: "0 auto 12px",
+      display: "block",
+      fontSize: "16px",
+      background: inputBg,
+      color: inputText,
+      boxSizing: "border-box",
+    },
 
     btnPrimary: {
-      background: "#8831cfd7",    // naranja cálido
+      background: "#8831cfd7",
       color: "white",
       padding: "10px 18px",
       borderRadius: "12px",
@@ -263,7 +285,6 @@ export default function App() {
       background: "#be54c2ff",
       transform: "scale(1.03)",
     },
-
 
     btnSecondary: {
       background: "white",
