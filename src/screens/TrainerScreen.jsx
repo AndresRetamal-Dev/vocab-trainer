@@ -27,7 +27,6 @@ export default function TrainerScreen({
   answer,
   setAnswer,
   handleCheck,
-  nextCard,
   revealAndNext,
   flashStatus,
   flashSelected,
@@ -340,12 +339,10 @@ export default function TrainerScreen({
                     autoCorrect="off"
                   />
 
-                  {/* Botones */}
+                  {/* Botón principal */}
                   <div className="trainer-buttons-row">
                     <button
                       style={styles.btnPrimary}
-                      onMouseEnter={(e) => Object.assign(e.target.style, styles.btnPrimaryHover)}
-                      onMouseLeave={(e) => Object.assign(e.target.style, styles.btnPrimary)}
                       className={
                         streak >= 13
                           ? "btn-check-tension-super"
@@ -358,13 +355,6 @@ export default function TrainerScreen({
                       onClick={handleCheck}
                     >
                       Comprobar
-                    </button>
-                    <button
-                      style={styles.btnSecondary}
-                      onClick={nextCard}
-                      title="Saltar"
-                    >
-                      Saltar
                     </button>
                   </div>
 
