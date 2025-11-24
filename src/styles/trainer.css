@@ -5,6 +5,7 @@
   max-width: 720px;
   padding: 8px 12px 24px;
   box-sizing: border-box;
+   margin: 0 auto;
 }
 
 /* HEADER */
@@ -182,7 +183,7 @@
 @media (max-width: 640px) {
   .trainer-root {
     max-width: 100%;
-    padding: 8px 10px 16px;
+    padding: 8px 10px 20px;
   }
 
   .trainer-header-top {
