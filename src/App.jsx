@@ -86,13 +86,14 @@ export default function App() {
     const styles = {
     page: {
       minHeight: "100vh",
-      width: "100vw",
+      width: "100%",          // 👈 en vez de 100vw
       background: pageBg,
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
-      padding: "24px 0 32px",
+      padding: "16px 0 24px",
       boxSizing: "border-box",
+      overflowX: "hidden",    // 👈 evita scroll lateral raro en móvil
     },
 
 
