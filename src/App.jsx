@@ -57,20 +57,34 @@ export default function App() {
 
   // === HANDLERS AUTH GOOGLE ===
   const handleGoogleLogin = async () => {
-    try {
-      // En escritorio y muchos móviles funcionará como popup;
-      // si en móvil hace redirect y recarga, onAuthStateChanged se encargará.
-      await signInWithPopup(auth, googleProvider);
-      // No hace falta setUser aquí: lo hará onAuthStateChanged también.
-    } catch (err) {
-      console.error("Error al hacer login con Google:", err);
-      alert(
-        `No se pudo iniciar sesión con Google.\n\n` +
-          `code: ${err.code || "sin código"}\n` +
-          `msg: ${err.message || "sin mensaje"}`
-      );
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
+    const gUser = result.user;
+
+    const userObj = {
+      uid: gUser.uid,
+      name: gUser.displayName || "Usuario",
+      email: gUser.email || "",
+      photoURL: gUser.photoURL || null,
+      isGuest: false,
+    };
+
+    setUser(userObj);
+    setScreen("home");
+
+    if (loadUserData) {
+      await loadUserData(gUser.uid);
     }
-  };
+  } catch (err) {
+    console.error("Error al hacer login con Google:", err);
+    alert(
+      `No se pudo iniciar sesión con Google.\n\n` +
+      `code: ${err.code || "sin código"}\n` +
+      `msg: ${err.message || "sin mensaje"}`
+    );
+  }
+};
+
 
   const handleLogout = async () => {
     try {
