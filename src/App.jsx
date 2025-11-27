@@ -1,6 +1,6 @@
 // src/App.jsx
-import { useState } from "react";
-import { signInWithPopup, signOut } from "firebase/auth";
+import { useState, useEffect } from "react";
+import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
 
 import AuthScreen from "./screens/AuthScreen";
@@ -22,26 +22,46 @@ export default function App() {
   const trainer = useTrainer(user);
   const { streak, answeredCount, levelStats, loadUserData } = trainer;
 
+  // === Escuchar cambios de autenticación (muy importante en móvil) ===
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
+      try {
+        if (firebaseUser) {
+          // Usuario logueado en Firebase (aunque la app se haya recargado)
+          const userObj = {
+            uid: firebaseUser.uid,
+            name: firebaseUser.displayName || "Usuario",
+            email: firebaseUser.email || "",
+            photoURL: firebaseUser.photoURL || null,
+            isGuest: false,
+          };
+
+          setUser(userObj);
+          setScreen("home");
+
+          if (loadUserData) {
+            await loadUserData(firebaseUser.uid);
+          }
+        } else {
+          // No hay usuario → volvemos a pantalla auth
+          setUser(null);
+          setScreen("auth");
+        }
+      } catch (err) {
+        console.error("Error en onAuthStateChanged:", err);
+      }
+    });
+
+    return () => unsub();
+  }, [loadUserData]);
+
   // === HANDLERS AUTH GOOGLE ===
   const handleGoogleLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, googleProvider);
-      const gUser = result.user;
-
-      const userObj = {
-        uid: gUser.uid,
-        name: gUser.displayName || "Usuario",
-        email: gUser.email || "",
-        photoURL: gUser.photoURL || null,
-        isGuest: false,
-      };
-
-      setUser(userObj);
-      setScreen("home");
-
-      if (loadUserData) {
-        await loadUserData(gUser.uid);
-      }
+      // En escritorio y muchos móviles funcionará como popup;
+      // si en móvil hace redirect y recarga, onAuthStateChanged se encargará.
+      await signInWithPopup(auth, googleProvider);
+      // No hace falta setUser aquí: lo hará onAuthStateChanged también.
     } catch (err) {
       console.error("Error al hacer login con Google:", err);
       alert(
@@ -58,8 +78,7 @@ export default function App() {
     } catch (err) {
       console.error("Error al cerrar sesión:", err);
     }
-    setUser(null);
-    setScreen("auth");
+    // onAuthStateChanged pondrá user=null y screen="auth"
   };
 
   const handleGuestLogin = () => {
