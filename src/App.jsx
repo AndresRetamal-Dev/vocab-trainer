@@ -1,11 +1,6 @@
 // src/App.jsx
-import { useState, useEffect } from "react";
-import {
-  signInWithRedirect,
-  getRedirectResult,
-  signOut,
-  signInWithPopup,
-} from "firebase/auth";
+import { useState } from "react";
+import { signInWithPopup, signOut } from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
 
 import AuthScreen from "./screens/AuthScreen";
@@ -27,73 +22,33 @@ export default function App() {
   const trainer = useTrainer(user);
   const { streak, answeredCount, levelStats, loadUserData } = trainer;
 
-  // === Procesar login por redirect (Google) al montar la app ===
-  useEffect(() => {
-    const checkGoogleRedirect = async () => {
-      try {
-        const result = await getRedirectResult(auth);
-        if (!result || !result.user) return;
-
-        const gUser = result.user;
-
-        const userObj = {
-          uid: gUser.uid,
-          name: gUser.displayName || "Usuario",
-          email: gUser.email || "",
-          photoURL: gUser.photoURL || null,
-          isGuest: false,
-        };
-
-        setUser(userObj);
-        setScreen("home");
-
-        if (loadUserData) {
-          await loadUserData(gUser.uid);
-        }
-      } catch (err) {
-        console.error("Error al procesar login con Google (redirect):", err);
-      }
-    };
-
-    checkGoogleRedirect();
-  }, [loadUserData]);
-
   // === HANDLERS AUTH GOOGLE ===
   const handleGoogleLogin = async () => {
     try {
-      // Intento principal: redirect (funciona mejor en móvil / in-app browsers)
-      await signInWithRedirect(auth, googleProvider);
-      // Al volver, se ejecutará getRedirectResult en el useEffect de arriba
-    } catch (err) {
-      console.error("Error en signInWithRedirect:", err);
+      const result = await signInWithPopup(auth, googleProvider);
+      const gUser = result.user;
 
-      // Si este entorno no soporta redirect, probamos con popup como fallback
-      if (err.code === "auth/operation-not-supported-in-this-environment") {
-        try {
-          const result = await signInWithPopup(auth, googleProvider);
-          const gUser = result.user;
+      const userObj = {
+        uid: gUser.uid,
+        name: gUser.displayName || "Usuario",
+        email: gUser.email || "",
+        photoURL: gUser.photoURL || null,
+        isGuest: false,
+      };
 
-          const userObj = {
-            uid: gUser.uid,
-            name: gUser.displayName || "Usuario",
-            email: gUser.email || "",
-            photoURL: gUser.photoURL || null,
-            isGuest: false,
-          };
+      setUser(userObj);
+      setScreen("home");
 
-          setUser(userObj);
-          setScreen("home");
-
-          if (loadUserData) {
-            await loadUserData(gUser.uid);
-          }
-        } catch (err2) {
-          console.error("Error en signInWithPopup:", err2);
-          alert("No se pudo iniciar sesión con Google.");
-        }
-      } else {
-        alert("No se pudo iniciar sesión con Google.");
+      if (loadUserData) {
+        await loadUserData(gUser.uid);
       }
+    } catch (err) {
+      console.error("Error al hacer login con Google:", err);
+      alert(
+        `No se pudo iniciar sesión con Google.\n\n` +
+          `code: ${err.code || "sin código"}\n` +
+          `msg: ${err.message || "sin mensaje"}`
+      );
     }
   };
 
@@ -458,7 +413,7 @@ export default function App() {
           styles={styles}
           darkMode={darkMode}
           setDarkMode={setDarkMode}
-          {...trainer}
+          {...trainer} // 👈 todo el estado y handlers del hook
         />
       )}
     </div>
