@@ -4,7 +4,6 @@ import {
   signInWithRedirect,
   signOut,
   onAuthStateChanged,  
-  getRedirectResult,
 } from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
 
@@ -38,17 +37,13 @@ useEffect(() => {
 
 
 // === Escuchar cambios de autenticación + leer resultado del redirect ===
+
+// Escuchar cambios de autenticación (funciona para redirect y recarga)
 useEffect(() => {
-  let unsub;
-
-  const initAuth = async () => {
+  const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
     try {
-      // 1️⃣ Primero: comprobar si venimos de un signInWithRedirect
-      const redirectResult = await getRedirectResult(auth);
-
-      if (redirectResult?.user) {
-        const firebaseUser = redirectResult.user;
-
+      if (firebaseUser) {
+        // Usuario logueado en Firebase (Google)
         const userObj = {
           uid: firebaseUser.uid,
           name: firebaseUser.displayName || "Usuario",
@@ -58,71 +53,39 @@ useEffect(() => {
         };
 
         setUser(userObj);
-        setMode("write");     // empezar en modo escribir
-        setScreen("trainer"); // ir directo al entrenador
+        setMode("write");      // empezar en modo escribir
+        setScreen("trainer");  // ir directo al entrenador
 
         if (loadUserData) {
           await loadUserData(firebaseUser.uid);
         }
+      } else {
+        // No hay usuario -> login
+        setUser(null);
+        setScreen("auth");
       }
     } catch (err) {
-      console.error("Error en getRedirectResult:", err);
+      console.error("Error en onAuthStateChanged:", err);
     }
+  });
 
-    // 2️⃣ Después: registrar el listener normal de cambios de auth
-    unsub = onAuthStateChanged(auth, async (firebaseUser) => {
-      try {
-        if (firebaseUser) {
-          const userObj = {
-            uid: firebaseUser.uid,
-            name: firebaseUser.displayName || "Usuario",
-            email: firebaseUser.email || "",
-            photoURL: firebaseUser.photoURL || null,
-            isGuest: false,
-          };
-
-          setUser(userObj);
-          setMode("write");
-          setScreen("trainer");
-
-          if (loadUserData) {
-            await loadUserData(firebaseUser.uid);
-          }
-        } else {
-          setUser(null);
-          setScreen("auth");
-        }
-      } catch (err) {
-        console.error("Error en onAuthStateChanged:", err);
-      }
-    });
-  };
-
-  initAuth();
-
-  return () => {
-    if (unsub) unsub();
-  };
+  return () => unsub();
 }, [loadUserData, setMode]);
+
 
 
 
   // === HANDLER LOGIN GOOGLE (solo redirect) ===
   const handleGoogleLogin = async () => {
     try {
-      // Modo recomendado para móvil: redirect
       await signInWithRedirect(auth, googleProvider);
-      // Cuando vuelva de Google y Firebase complete el login,
-      // onAuthStateChanged se encargará de actualizar user + screen.
+      // No hacemos nada más aquí: la navegación se hará en onAuthStateChanged
     } catch (err) {
-      console.error("Error al hacer login con Google (redirect):", err);
-      alert(
-        `No se pudo iniciar sesión con Google.\n\n` +
-          `code: ${err.code || "sin código"}\n` +
-          `msg: ${err.message || "sin mensaje"}`
-      );
+      console.error("Error al hacer login con Google:", err);
+      alert("No se pudo iniciar sesión con Google.");
     }
   };
+
 
   const handleLogout = async () => {
     try {
