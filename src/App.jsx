@@ -1,6 +1,10 @@
 // src/App.jsx
 import { useState, useEffect } from "react";
-import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import {
+  signInWithRedirect,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
 
 import AuthScreen from "./screens/AuthScreen";
@@ -22,12 +26,12 @@ export default function App() {
   const trainer = useTrainer(user);
   const { streak, answeredCount, levelStats, loadUserData } = trainer;
 
-  // === Escuchar cambios de autenticación (muy importante en móvil) ===
+  // === Escuchar cambios de autenticación (sirve para redirect y para recarga) ===
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
       try {
         if (firebaseUser) {
-          // Usuario logueado en Firebase (aunque la app se haya recargado)
+          // Usuario logueado en Firebase
           const userObj = {
             uid: firebaseUser.uid,
             name: firebaseUser.displayName || "Usuario",
@@ -43,7 +47,7 @@ export default function App() {
             await loadUserData(firebaseUser.uid);
           }
         } else {
-          // No hay usuario → volvemos a pantalla auth
+          // No hay usuario -> pantalla login
           setUser(null);
           setScreen("auth");
         }
@@ -55,36 +59,22 @@ export default function App() {
     return () => unsub();
   }, [loadUserData]);
 
-  // === HANDLERS AUTH GOOGLE ===
+  // === HANDLER LOGIN GOOGLE (solo redirect) ===
   const handleGoogleLogin = async () => {
-  try {
-    const result = await signInWithPopup(auth, googleProvider);
-    const gUser = result.user;
-
-    const userObj = {
-      uid: gUser.uid,
-      name: gUser.displayName || "Usuario",
-      email: gUser.email || "",
-      photoURL: gUser.photoURL || null,
-      isGuest: false,
-    };
-
-    setUser(userObj);
-    setScreen("home");
-
-    if (loadUserData) {
-      await loadUserData(gUser.uid);
+    try {
+      // Modo recomendado para móvil: redirect
+      await signInWithRedirect(auth, googleProvider);
+      // Cuando vuelva de Google y Firebase complete el login,
+      // onAuthStateChanged se encargará de actualizar user + screen.
+    } catch (err) {
+      console.error("Error al hacer login con Google (redirect):", err);
+      alert(
+        `No se pudo iniciar sesión con Google.\n\n` +
+          `code: ${err.code || "sin código"}\n` +
+          `msg: ${err.message || "sin mensaje"}`
+      );
     }
-  } catch (err) {
-    console.error("Error al hacer login con Google:", err);
-    alert(
-      `No se pudo iniciar sesión con Google.\n\n` +
-      `code: ${err.code || "sin código"}\n` +
-      `msg: ${err.message || "sin mensaje"}`
-    );
-  }
-};
-
+  };
 
   const handleLogout = async () => {
     try {
@@ -316,7 +306,6 @@ export default function App() {
     feedbackBad: { color: "#dc2626", fontWeight: 600, marginTop: "10px" },
     def: { color: "#475569", fontSize: "14px", marginTop: "6px" },
 
-    // Nubecitas
     bubble: {
       position: "relative",
       display: "inline-block",
