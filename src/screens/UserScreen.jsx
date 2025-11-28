@@ -42,7 +42,7 @@ export default function UserScreen({
           <strong>Modo:</strong>{" "}
           {user?.isGuest
             ? "Invitado (no guarda en la nube)"
-            : "Conectado con Google"}
+            : "Cuenta registrada (email/contraseña)"}
         </div>
         <div style={{ fontSize: 14, marginBottom: 6 }}>
           <strong>Palabras completadas (global):</strong> {answeredCount}

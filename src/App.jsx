@@ -1,11 +1,14 @@
 // src/App.jsx
 import { useState, useEffect } from "react";
 import {
-  signInWithRedirect,
+  // signInWithRedirect,   // 🔴 Desactivado (Google)
   signOut,
   onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
-import { auth, googleProvider } from "./firebase";
+import { auth /*, googleProvider*/ } from "./firebase";
 
 import AuthScreen from "./screens/AuthScreen";
 import HomeScreen from "./screens/HomeScreen";
@@ -33,7 +36,7 @@ export default function App() {
         console.log("onAuthStateChanged ⇒", firebaseUser?.uid || null);
 
         if (firebaseUser) {
-          // Usuario logueado en Firebase (Google)
+          // Usuario logueado en Firebase (email/password o lo que sea)
           const userObj = {
             uid: firebaseUser.uid,
             name: firebaseUser.displayName || "Usuario",
@@ -44,7 +47,7 @@ export default function App() {
 
           setUser(userObj);
           setMode("write");      // empezar en modo escribir
-          setScreen("trainer");  // ir directo al entrenador
+          setScreen("home");  // ir directo al entrenador
 
           if (loadUserData) {
             await loadUserData(firebaseUser.uid);
@@ -62,7 +65,8 @@ export default function App() {
     return () => unsub();
   }, [loadUserData, setMode]);
 
-  // === HANDLER LOGIN GOOGLE (redirect) ===
+  // === HANDLER LOGIN GOOGLE (redirect) — 🔴 DESACTIVADO ===
+  /*
   const handleGoogleLogin = async () => {
     try {
       await signInWithRedirect(auth, googleProvider);
@@ -73,6 +77,48 @@ export default function App() {
       alert("No se pudo iniciar sesión con Google.");
     }
   };
+  */
+
+  // === HANDLER LOGIN EMAIL/PASSWORD ===
+  const handleEmailLogin = async ({ email, password }) => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      // onAuthStateChanged se encarga del resto
+    } catch (err) {
+      console.error("Error al iniciar sesión:", err);
+      alert("No se pudo iniciar sesión. Revisa tus datos.");
+    }
+  };
+
+  // === HANDLER REGISTRO EMAIL/PASSWORD ===
+  const handleEmailRegister = async ({ email, password, firstName, lastName }) => {
+  try {
+    const cred = await createUserWithEmailAndPassword(auth, email, password);
+
+    const displayName = `${firstName} ${lastName}`.trim();
+    if (displayName) {
+      await updateProfile(cred.user, { displayName });
+    }
+
+    const userObj = {
+      uid: cred.user.uid,
+      name: displayName || cred.user.email || "Usuario",
+      email: cred.user.email || "",
+      photoURL: cred.user.photoURL || null,
+      isGuest: false,
+    };
+
+    setUser(userObj);
+    setMode("write");
+    setScreen("home");
+  } catch (err) {
+    console.error("Error al registrarse:", err.code, err.message, err);
+    alert(`Error al registrarse:\n${err.code}\n${err.message}`);
+  }
+};
+
+
+
 
   const handleLogout = async () => {
     try {
@@ -387,16 +433,18 @@ export default function App() {
   // === UI ===
   return (
     <div style={styles.page}>
-      {/* 🔹 PANTALLA LOGIN */}
+      {/* 🔹 PANTALLA LOGIN / REGISTRO */}
       {screen === "auth" && (
         <AuthScreen
           titleColor={titleColor}
-          onGoogleLogin={handleGoogleLogin}
+          // onGoogleLogin={handleGoogleLogin}  // 🔴 Desactivado
+          onEmailLogin={handleEmailLogin}
+          onEmailRegister={handleEmailRegister}
           onGuestLogin={handleGuestLogin}
         />
       )}
 
-      {/* 🔹 PANTALLA HOME (de momento solo si tú vas manualmente) */}
+      {/* 🔹 PANTALLA HOME */}
       {screen === "home" && (
         <HomeScreen
           titleColor={titleColor}
@@ -430,9 +478,12 @@ export default function App() {
           styles={styles}
           darkMode={darkMode}
           setDarkMode={setDarkMode}
+          onBackHome={() => setScreen("home")}
+          onLogout={handleLogout}
           {...trainer}
         />
       )}
+
     </div>
   );
 }

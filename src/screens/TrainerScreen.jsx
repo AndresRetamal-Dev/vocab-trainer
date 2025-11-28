@@ -46,6 +46,8 @@ export default function TrainerScreen({
   setMotivation,
   setFlashStatus,
   setFlashSelected,
+  onBackHome,
+  onLogout,
 }) {
   // Helpers para clases de animación
   const wordWriteClass =
@@ -75,9 +77,9 @@ export default function TrainerScreen({
         📚 Vocab Trainer
       </h2>
 
-      {/* HEADER */}
+            {/* HEADER */}
       <div className="trainer-header">
-        {/* Fila superior: usuario + tema */}
+        {/* Fila superior: usuario + botones + tema */}
         <div className="trainer-header-top">
           {/* 🔹 BADGE DE USUARIO */}
           {user && (
@@ -97,21 +99,50 @@ export default function TrainerScreen({
               <div style={styles.userInfo}>
                 <div style={styles.userName}>{user.name}</div>
                 <div style={styles.userTag}>
-                  {user.isGuest ? "Modo invitado" : "Conectado con Google"}
+                  {user.isGuest
+                    ? "Invitado (no guarda en la nube)"
+                    : "Cuenta registrada (email/contraseña)"}
                 </div>
               </div>
             </div>
           )}
 
-          {/* Botón tema oscuro arriba a la derecha */}
-          <button
-            style={styles.darkToggle}
-            className="trainer-dark-toggle"
-            onClick={() => setDarkMode((d) => !d)}
+          {/* Botones arriba a la derecha */}
+          <div
+            style={{
+              display: "flex",
+              gap: 8,
+              alignItems: "center",
+            }}
           >
-            {darkMode ? "🌙 Dark" : "☀️ Light"}
-          </button>
+            <button
+              style={styles.darkToggle}
+              className="trainer-dark-toggle"
+              onClick={() => setDarkMode((d) => !d)}
+            >
+              {darkMode ? "🌙 Dark" : "☀️ Light"}
+            </button>
+
+            <button
+              style={styles.btnSecondary}
+              onClick={onBackHome}
+            >
+              🏠 Inicio
+            </button>
+
+            <button
+              style={{
+                ...styles.btnSecondary,
+                borderColor: "#dc2626",
+                color: "#dc2626",
+              }}
+              onClick={onLogout}
+            >
+              🚪 Cerrar sesión
+            </button>
+          </div>
         </div>
+
 
         {/* CONTROLES: NIVEL + CATEGORÍA */}
         <div className="selector-group">
