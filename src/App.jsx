@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import {
   signInWithRedirect,
   signOut,
-  onAuthStateChanged,  
+  onAuthStateChanged,
 } from "firebase/auth";
 import { auth, googleProvider } from "./firebase";
 
@@ -26,66 +26,53 @@ export default function App() {
   const trainer = useTrainer(user);
   const { streak, answeredCount, levelStats, loadUserData, setMode } = trainer;
 
+  // === Escuchar cambios de autenticación (único listener) ===
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
+      try {
+        console.log("onAuthStateChanged ⇒", firebaseUser?.uid || null);
 
-  // Redirigir automáticamente al trainer cuando haya usuario logueado (no invitado)
-useEffect(() => {
-  if (user && !user.isGuest && (screen === "auth" || screen === "home")) {
-    setMode("write");
-    setScreen("trainer");
-  }
-}, [user, screen, setMode]);
+        if (firebaseUser) {
+          // Usuario logueado en Firebase (Google)
+          const userObj = {
+            uid: firebaseUser.uid,
+            name: firebaseUser.displayName || "Usuario",
+            email: firebaseUser.email || "",
+            photoURL: firebaseUser.photoURL || null,
+            isGuest: false,
+          };
 
+          setUser(userObj);
+          setMode("write");      // empezar en modo escribir
+          setScreen("trainer");  // ir directo al entrenador
 
-// === Escuchar cambios de autenticación + leer resultado del redirect ===
-
-// Escuchar cambios de autenticación (funciona para redirect y recarga)
-useEffect(() => {
-  const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
-    try {
-      if (firebaseUser) {
-        // Usuario logueado en Firebase (Google)
-        const userObj = {
-          uid: firebaseUser.uid,
-          name: firebaseUser.displayName || "Usuario",
-          email: firebaseUser.email || "",
-          photoURL: firebaseUser.photoURL || null,
-          isGuest: false,
-        };
-
-        setUser(userObj);
-        setMode("write");      // empezar en modo escribir
-        setScreen("trainer");  // ir directo al entrenador
-
-        if (loadUserData) {
-          await loadUserData(firebaseUser.uid);
+          if (loadUserData) {
+            await loadUserData(firebaseUser.uid);
+          }
+        } else {
+          // No hay usuario -> login
+          setUser(null);
+          setScreen("auth");
         }
-      } else {
-        // No hay usuario -> login
-        setUser(null);
-        setScreen("auth");
+      } catch (err) {
+        console.error("Error en onAuthStateChanged:", err);
       }
-    } catch (err) {
-      console.error("Error en onAuthStateChanged:", err);
-    }
-  });
+    });
 
-  return () => unsub();
-}, [loadUserData, setMode]);
+    return () => unsub();
+  }, [loadUserData, setMode]);
 
-
-
-
-  // === HANDLER LOGIN GOOGLE (solo redirect) ===
+  // === HANDLER LOGIN GOOGLE (redirect) ===
   const handleGoogleLogin = async () => {
     try {
       await signInWithRedirect(auth, googleProvider);
-      // No hacemos nada más aquí: la navegación se hará en onAuthStateChanged
+      // Después de esto, Firebase redirige a Google y de vuelta;
+      // onAuthStateChanged se encargará de todo lo demás.
     } catch (err) {
       console.error("Error al hacer login con Google:", err);
       alert("No se pudo iniciar sesión con Google.");
     }
   };
-
 
   const handleLogout = async () => {
     try {
@@ -97,23 +84,25 @@ useEffect(() => {
   };
 
   const handleGuestLogin = () => {
-    setUser({
+    const guest = {
       uid: null,
       name: "Invitado",
       email: "",
       photoURL: null,
       isGuest: true,
-    });
-    setScreen("home");
+    };
+    setUser(guest);
+    setMode("write");
+    setScreen("trainer");
   };
 
   const startWriteMode = () => {
-    trainer.setMode("write");
+    setMode("write");
     setScreen("trainer");
   };
 
   const startFlashMode = () => {
-    trainer.setMode("flashcard");
+    setMode("flashcard");
     setScreen("trainer");
   };
 
@@ -298,11 +287,6 @@ useEffect(() => {
       transition: "transform 0.15s ease, background 0.2s ease",
     },
 
-    btnPrimaryHover: {
-      background: "#be54c2ff",
-      transform: "scale(1.03)",
-    },
-
     btnSecondary: {
       background: "white",
       color: "#334155",
@@ -412,7 +396,7 @@ useEffect(() => {
         />
       )}
 
-      {/* 🔹 PANTALLA HOME (selección de modo) */}
+      {/* 🔹 PANTALLA HOME (de momento solo si tú vas manualmente) */}
       {screen === "home" && (
         <HomeScreen
           titleColor={titleColor}
@@ -446,7 +430,7 @@ useEffect(() => {
           styles={styles}
           darkMode={darkMode}
           setDarkMode={setDarkMode}
-          {...trainer} // 👈 todo el estado y handlers del hook
+          {...trainer}
         />
       )}
     </div>
