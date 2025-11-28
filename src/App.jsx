@@ -25,20 +25,45 @@ export default function App() {
 
   // --- 🔹 Hook del trainer (toda la lógica de estudio está aquí) ---
   const trainer = useTrainer(user);
-  const { streak, answeredCount, levelStats, loadUserData } = trainer;
+  const { streak, answeredCount, levelStats, loadUserData, setMode } = trainer;
 
-  // === Escuchar cambios de autenticación + leer resultado del redirect ===
-  useEffect(() => {
-    let unsub;
 
-    const initAuth = async () => {
+// === Escuchar cambios de autenticación + leer resultado del redirect ===
+useEffect(() => {
+  let unsub;
+
+  const initAuth = async () => {
+    try {
+      // 1️⃣ Primero: comprobar si venimos de un signInWithRedirect
+      const redirectResult = await getRedirectResult(auth);
+
+      if (redirectResult?.user) {
+        const firebaseUser = redirectResult.user;
+
+        const userObj = {
+          uid: firebaseUser.uid,
+          name: firebaseUser.displayName || "Usuario",
+          email: firebaseUser.email || "",
+          photoURL: firebaseUser.photoURL || null,
+          isGuest: false,
+        };
+
+        setUser(userObj);
+        setMode("write");     // empezar en modo escribir
+        setScreen("trainer"); // ir directo al entrenador
+
+        if (loadUserData) {
+          await loadUserData(firebaseUser.uid);
+        }
+      }
+    } catch (err) {
+      console.error("Error en getRedirectResult:", err);
+    }
+
+    // 2️⃣ Después: registrar el listener normal de cambios de auth
+    unsub = onAuthStateChanged(auth, async (firebaseUser) => {
       try {
-        // 1️⃣ Primero: comprobar si venimos de un signInWithRedirect
-        const redirectResult = await getRedirectResult(auth);
-
-        if (redirectResult?.user) {
-          const firebaseUser = redirectResult.user;
-
+        if (firebaseUser) {
           const userObj = {
             uid: firebaseUser.uid,
             name: firebaseUser.displayName || "Usuario",
@@ -48,50 +73,29 @@ export default function App() {
           };
 
           setUser(userObj);
-          setScreen("home");
+          setMode("write");
+          setScreen("trainer");
 
           if (loadUserData) {
             await loadUserData(firebaseUser.uid);
           }
+        } else {
+          setUser(null);
+          setScreen("auth");
         }
       } catch (err) {
-        console.error("Error en getRedirectResult:", err);
+        console.error("Error en onAuthStateChanged:", err);
       }
+    });
+  };
 
-      // 2️⃣ Después: registrar el listener normal de cambios de auth
-      unsub = onAuthStateChanged(auth, async (firebaseUser) => {
-        try {
-          if (firebaseUser) {
-            const userObj = {
-              uid: firebaseUser.uid,
-              name: firebaseUser.displayName || "Usuario",
-              email: firebaseUser.email || "",
-              photoURL: firebaseUser.photoURL || null,
-              isGuest: false,
-            };
+  initAuth();
 
-            setUser(userObj);
-            setScreen("home");
+  return () => {
+    if (unsub) unsub();
+  };
+}, [loadUserData, setMode]);
 
-            if (loadUserData) {
-              await loadUserData(firebaseUser.uid);
-            }
-          } else {
-            setUser(null);
-            setScreen("auth");
-          }
-        } catch (err) {
-          console.error("Error en onAuthStateChanged:", err);
-        }
-      });
-    };
-
-    initAuth();
-
-    return () => {
-      if (unsub) unsub();
-    };
-  }, [loadUserData]);
 
 
   // === HANDLER LOGIN GOOGLE (solo redirect) ===
