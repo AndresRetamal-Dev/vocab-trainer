@@ -28,6 +28,15 @@ export default function App() {
   const { streak, answeredCount, levelStats, loadUserData, setMode } = trainer;
 
 
+  // Redirigir automáticamente al trainer cuando haya usuario logueado (no invitado)
+useEffect(() => {
+  if (user && !user.isGuest && (screen === "auth" || screen === "home")) {
+    setMode("write");
+    setScreen("trainer");
+  }
+}, [user, screen, setMode]);
+
+
 // === Escuchar cambios de autenticación + leer resultado del redirect ===
 useEffect(() => {
   let unsub;
