@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../styles/trainer.css";
 
 export default function TrainerScreen({
@@ -49,7 +49,9 @@ export default function TrainerScreen({
   onBackHome,
   onLogout,
 }) {
-  // Helpers para clases de animación
+  const levelSelectRef = useRef(null);
+  const categorySelectRef = useRef(null);
+
   const wordWriteClass =
     feedback === "ok"
       ? "trainer-word anim-correct-bounce"
@@ -61,6 +63,28 @@ export default function TrainerScreen({
     flashStatus === "correct"
       ? "trainer-word anim-correct-bounce"
       : "trainer-word";
+
+  // función helper: abrir nativamente un <select>
+  const openNativeSelect = (selectEl) => {
+    if (!selectEl) return;
+
+    // Enfocamos primero
+    selectEl.focus();
+
+    try {
+      // Disparamos un mousedown real sobre el select
+      const event = new MouseEvent("mousedown", {
+        bubbles: true,
+        cancelable: true,
+        view: window,
+      });
+      selectEl.dispatchEvent(event);
+    } catch (e) {
+      // fallback: al menos, click normal
+      e.CATEGORIES
+      selectEl.click();
+    }
+  };
 
   return (
     <div className="trainer-root">
@@ -77,7 +101,7 @@ export default function TrainerScreen({
         📚 Vocab Trainer
       </h2>
 
-            {/* HEADER */}
+      {/* HEADER */}
       <div className="trainer-header">
         {/* Fila superior: usuario + botones + tema */}
         <div className="trainer-header-top">
@@ -123,10 +147,7 @@ export default function TrainerScreen({
               {darkMode ? "🌙 Dark" : "☀️ Light"}
             </button>
 
-            <button
-              style={styles.btnSecondary}
-              onClick={onBackHome}
-            >
+            <button style={styles.btnSecondary} onClick={onBackHome}>
               🏠 Inicio
             </button>
 
@@ -143,12 +164,20 @@ export default function TrainerScreen({
           </div>
         </div>
 
-
         {/* CONTROLES: NIVEL + CATEGORÍA */}
         <div className="selector-group">
-          <div className="selector-box">
+          {/* NIVEL */}
+          <div
+            className="selector-box"
+            onClick={(e) => {
+              // si el click ya es sobre el propio select, dejamos que actúe normal
+              if (e.target.tagName.toLowerCase() === "select") return;
+              openNativeSelect(levelSelectRef.current);
+            }}
+          >
             <span className="selector-label">🎯 Nivel:</span>
             <select
+              ref={levelSelectRef}
               className="selector-select"
               value={level}
               onChange={(e) => setLevel(e.target.value)}
@@ -161,9 +190,17 @@ export default function TrainerScreen({
             </select>
           </div>
 
-          <div className="selector-box">
+          {/* CATEGORÍA */}
+          <div
+            className="selector-box"
+            onClick={(e) => {
+              if (e.target.tagName.toLowerCase() === "select") return;
+              openNativeSelect(categorySelectRef.current);
+            }}
+          >
             <span className="selector-label">🗂️ Categoría:</span>
             <select
+              ref={categorySelectRef}
               className="selector-select"
               value={category}
               onChange={(e) => setCategory(e.target.value)}
@@ -176,7 +213,6 @@ export default function TrainerScreen({
             </select>
           </div>
         </div>
-
 
         {/* MODO: WRITE / FLASH / HARD */}
         <div className="trainer-modes-row">
@@ -260,7 +296,6 @@ export default function TrainerScreen({
               {(mode === "write" || mode === "hard") && (
                 <>
                   <div aria-live="polite" style={{ width: "100%" }}>
-
                     <p
                       style={{
                         fontSize: "20px",
@@ -274,7 +309,6 @@ export default function TrainerScreen({
                       🔥 Racha: {streak}
                     </p>
 
-                    {/* Barra de progreso SOLO en modo write */}
                     {mode === "write" && (
                       <>
                         <div style={styles.progressBarOuter}>
@@ -312,7 +346,6 @@ export default function TrainerScreen({
                     </div>
                   </div>
 
-                  {/* Nubecita de MOTIVACIÓN */}
                   {motivation && (
                     <div
                       style={{
@@ -340,7 +373,6 @@ export default function TrainerScreen({
                     </div>
                   )}
 
-                  {/* Definición en PRIMER FALLO */}
                   {feedback === "first_wrong" && (
                     <div
                       style={{
@@ -356,7 +388,6 @@ export default function TrainerScreen({
                     </div>
                   )}
 
-                  {/* Input */}
                   <input
                     style={styles.input}
                     className={feedback === "first_wrong" ? "anim-shake" : ""}
@@ -370,7 +401,6 @@ export default function TrainerScreen({
                     autoCorrect="off"
                   />
 
-                  {/* Botón principal */}
                   <div className="trainer-buttons-row">
                     <button
                       style={styles.btnPrimary}
@@ -388,7 +418,6 @@ export default function TrainerScreen({
                       Comprobar
                     </button>
                   </div>
-
 
                   {feedback === "ok" && (
                     <p style={styles.feedbackOk}>✅ ¡Correcto!</p>
@@ -418,14 +447,12 @@ export default function TrainerScreen({
               {/* MODO FLASHCARDS */}
               {mode === "flashcard" && (
                 <>
-                  {/* Texto aclaratorio del modo */}
                   <div style={{ marginTop: 4, marginBottom: 8 }}>
                     <p style={{ fontSize: 11, color: "#64748b" }}>
                       🃏 Modo test (no afecta al progreso oficial del nivel)
                     </p>
                   </div>
 
-                  {/* Stats de la sesión de test */}
                   <div
                     style={{
                       display: "flex",
@@ -445,7 +472,6 @@ export default function TrainerScreen({
                     <span style={{ color: "#dc2626" }}>
                       ✗ Fallos: {flashStats.wrong}
                     </span>
-
                     <span>
                       🎯 Precisión:{" "}
                       {answeredFlash > 0 ? accuracyFlash.toFixed(0) : 0}%
@@ -456,7 +482,6 @@ export default function TrainerScreen({
                     aria-live="polite"
                     style={{ marginBottom: 16, marginTop: 8, width: "100%" }}
                   >
-
                     <p
                       style={{
                         fontSize: "20px",
@@ -481,7 +506,6 @@ export default function TrainerScreen({
                     </div>
                   </div>
 
-                  {/* grid de opciones */}
                   <div className="trainer-flash-grid">
                     {flashOptions.map((opt, idx) => {
                       let btnStyle = {
@@ -566,9 +590,7 @@ export default function TrainerScreen({
                 <div className="trainer-stats-column">
                   <div className="trainer-stat-pill">
                     ❌ Fallos:{" "}
-                    <span className="trainer-stat-number">
-                      {wrongCount}
-                    </span>
+                    <span className="trainer-stat-number">{wrongCount}</span>
                   </div>
 
                   <div className="trainer-stat-pill">
@@ -582,7 +604,7 @@ export default function TrainerScreen({
             </>
           )}
 
-          {/* 🔚 MENSAJE DE FIN DE MODO */}
+          {/* 🔚 FIN DE MODO */}
           {items.length > 0 && !current && (
             <div
               style={{
@@ -591,7 +613,6 @@ export default function TrainerScreen({
                 width: "100%",
               }}
             >
-              {/* WRITE */}
               {mode === "write" && (
                 <>
                   <p style={{ fontSize: 16, marginBottom: 8 }}>
@@ -599,7 +620,6 @@ export default function TrainerScreen({
                     modo escribir.
                   </p>
 
-                  {/* Resumen */}
                   <div
                     style={{
                       fontSize: 12,
@@ -614,14 +634,10 @@ export default function TrainerScreen({
                     </div>
                     <div>
                       Progreso del nivel:{" "}
-                      {totalLevelWords > 0
-                        ? Math.round(levelProgress)
-                        : 0}
-                      %
+                      {totalLevelWords > 0 ? Math.round(levelProgress) : 0}%
                     </div>
                   </div>
 
-                  {/* Datos del test */}
                   <div
                     style={{
                       fontSize: 12,
@@ -668,7 +684,6 @@ export default function TrainerScreen({
                 </>
               )}
 
-              {/* FLASHCARD */}
               {mode === "flashcard" && (
                 <>
                   <p style={{ fontSize: 16, marginBottom: 8 }}>
@@ -764,8 +779,7 @@ export default function TrainerScreen({
                       marginTop: 8,
                     }}
                   >
-                    {Object.keys(flashStats.failedTerms || {}).length >
-                      0 && (
+                    {Object.keys(flashStats.failedTerms || {}).length > 0 && (
                       <button
                         style={styles.btnPrimary}
                         onClick={handleRepeatFailedFlash}
@@ -783,7 +797,6 @@ export default function TrainerScreen({
                 </>
               )}
 
-              {/* HARD */}
               {mode === "hard" && (
                 <>
                   <p style={{ fontSize: 16, marginBottom: 8 }}>
