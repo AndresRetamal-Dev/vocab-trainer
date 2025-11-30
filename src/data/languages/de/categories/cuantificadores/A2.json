@@ -1,0 +1,6 @@
+[
+  { "term": "mehrere", "translation": "varios/as", "definition": "Más de dos, pero no muchos.", "level": "A2", "category": "cuantificadores" },
+  { "term": "wenige", "translation": "pocos/as", "definition": "No muchos.", "level": "A2", "category": "cuantificadores" },
+  { "term": "genug", "translation": "suficiente", "definition": "Cantidad adecuada.", "level": "A2", "category": "cuantificadores" },
+  { "term": "einige", "translation": "algunos/as", "definition": "Una pequeña cantidad.", "level": "A2", "category": "cuantificadores" }
+]

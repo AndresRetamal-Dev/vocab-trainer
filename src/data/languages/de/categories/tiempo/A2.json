@@ -1,0 +1,10 @@
+[
+  { "term": "kühl", "translation": "fresco", "definition": "Un poco frío pero agradable.", "level": "A2", "category": "tiempo" },
+  { "term": "draußen", "translation": "fuera; al aire libre", "definition": "En el exterior de un edificio.", "level": "A2", "category": "tiempo" },
+  { "term": "trocken", "translation": "seco", "definition": "Sin lluvia o sin humedad.", "level": "A2", "category": "tiempo" },
+  { "term": "nass", "translation": "mojado", "definition": "Con agua encima.", "level": "A2", "category": "tiempo" },
+  { "term": "der Sturm", "translation": "la tormenta fuerte", "definition": "Viento muy fuerte, a veces con lluvia.", "level": "A2", "category": "tiempo" },
+  { "term": "der Nebel", "translation": "la niebla", "definition": "Nubes muy bajas que dificultan ver.", "level": "A2", "category": "tiempo" },
+  { "term": "neblig", "translation": "con niebla", "definition": "Con mucha niebla.", "level": "A2", "category": "tiempo" },
+  { "term": "das Gewitter", "translation": "la tormenta", "definition": "Lluvia con truenos y relámpagos.", "level": "A2", "category": "tiempo" }
+]

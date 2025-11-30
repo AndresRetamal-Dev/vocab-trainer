@@ -1,0 +1,11 @@
+[
+    { "term": "must have", "translation": "debe haber", "definition": "Strong deduction about the past.", "level": "C1", "category": "verbos modales" },
+    { "term": "might have", "translation": "podría haber", "definition": "Past possibility.", "level": "C1", "category": "verbos modales" },
+    { "term": "may have", "translation": "puede que haya", "definition": "Uncertain past possibility.", "level": "C1", "category": "verbos modales" },
+    { "term": "could have", "translation": "podría haber", "definition": "Past unrealized possibility.", "level": "C1", "category": "verbos modales" },
+    { "term": "should have", "translation": "debería haber", "definition": "Regret or past advice not followed.", "level": "C1", "category": "verbos modales" },
+    { "term": "would have", "translation": "habría", "definition": "Hypothetical past or conditional.", "level": "C1", "category": "verbos modales" },
+    { "term": "dare", "translation": "atreverse a", "definition": "Modal/semi-modal used in formal structures.", "level": "C1", "category": "verbos modales" },
+    { "term": "be bound to", "translation": "estar destinado a", "definition": "Strong prediction or certainty.", "level": "C1", "category": "verbos modales" },
+    { "term": "be meant to", "translation": "se supone que debe", "definition": "Strong expectation or rule.", "level": "C1", "category": "verbos modales" }
+  ]

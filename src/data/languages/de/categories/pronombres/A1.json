@@ -1,0 +1,15 @@
+[
+  { "term": "ich", "translation": "yo", "definition": "Pronombre para hablar de uno mismo.", "level": "A1", "category": "pronombres" },
+  { "term": "du", "translation": "tú", "definition": "Pronombre informal para una persona.", "level": "A1", "category": "pronombres" },
+  { "term": "er", "translation": "él", "definition": "Pronombre para un hombre o algo masculino.", "level": "A1", "category": "pronombres" },
+  { "term": "sie", "translation": "ella", "definition": "Pronombre para una mujer o algo femenino.", "level": "A1", "category": "pronombres" },
+  { "term": "wir", "translation": "nosotros; nosotras", "definition": "Grupo que incluye al hablante.", "level": "A1", "category": "pronombres" },
+  { "term": "ihr", "translation": "vosotros; vosotras", "definition": "Grupo de personas tratado de forma informal.", "level": "A1", "category": "pronombres" },
+  { "term": "Sie", "translation": "usted; ustedes", "definition": "Forma de cortesía para una o varias personas.", "level": "A1", "category": "pronombres" },
+  { "term": "mein", "translation": "mi (masc./neutro)", "definition": "Posesivo para algo que pertenece al hablante.", "level": "A1", "category": "pronombres" },
+  { "term": "meine", "translation": "mi (fem./plural)", "definition": "Forma femenina o plural de „mein“.", "level": "A1", "category": "pronombres" },
+  { "term": "dein", "translation": "tu (masc./neutro)", "definition": "Posesivo para algo de la persona „tú“.", "level": "A1", "category": "pronombres" },
+  { "term": "deine", "translation": "tu (fem./plural)", "definition": "Forma femenina o plural de „dein“.", "level": "A1", "category": "pronombres" },
+  { "term": "Ihr", "translation": "su (de usted, masc./neutro)", "definition": "Posesivo formal para la forma de cortesía.", "level": "A1", "category": "pronombres" },
+  { "term": "Ihre", "translation": "su (de usted, fem./plural)", "definition": "Forma femenina o plural de „Ihr“.", "level": "A1", "category": "pronombres" }
+]

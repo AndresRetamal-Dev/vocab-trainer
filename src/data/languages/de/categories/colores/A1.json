@@ -1,0 +1,12 @@
+[
+  { "term": "die Farbe", "translation": "el color", "definition": "Cualidad que hace que algo sea rojo, azul, etc.", "level": "A1", "category": "colores" },
+  { "term": "bunt", "translation": "de muchos colores", "definition": "Con varios colores diferentes.", "level": "A1", "category": "colores" },
+  { "term": "blau", "translation": "azul", "definition": "Color del cielo despejado.", "level": "A1", "category": "colores" },
+  { "term": "rot", "translation": "rojo", "definition": "Color de la sangre o muchas rosas.", "level": "A1", "category": "colores" },
+  { "term": "braun", "translation": "marrón", "definition": "Color de la madera o la tierra seca.", "level": "A1", "category": "colores" },
+  { "term": "grün", "translation": "verde", "definition": "Color de muchas plantas y hojas.", "level": "A1", "category": "colores" },
+  { "term": "weiß", "translation": "blanco", "definition": "Color de la nieve limpia.", "level": "A1", "category": "colores" },
+  { "term": "schwarz", "translation": "negro", "definition": "Color más oscuro, sin luz.", "level": "A1", "category": "colores" },
+  { "term": "gelb", "translation": "amarillo", "definition": "Color de muchos limones.", "level": "A1", "category": "colores" },
+  { "term": "grau", "translation": "gris", "definition": "Color entre blanco y negro.", "level": "A1", "category": "colores" }
+]

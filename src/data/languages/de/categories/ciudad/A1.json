@@ -1,0 +1,20 @@
+[
+  { "term": "die Stadt", "translation": "la ciudad", "definition": "Lugar grande donde vive mucha gente.", "level": "A1", "category": "ciudad" },
+  { "term": "das Stadtzentrum", "translation": "el centro de la ciudad", "definition": "Zona principal y más céntrica.", "level": "A1", "category": "ciudad" },
+  { "term": "die Stadtmitte", "translation": "el centro", "definition": "Otro nombre para el centro de la ciudad.", "level": "A1", "category": "ciudad" },
+  { "term": "der Supermarkt", "translation": "el supermercado", "definition": "Tienda grande para comprar comida y productos.", "level": "A1", "category": "ciudad" },
+  { "term": "der Bahnhof", "translation": "la estación de tren", "definition": "Lugar donde paran los trenes.", "level": "A1", "category": "ciudad" },
+  { "term": "die Haltestelle", "translation": "la parada", "definition": "Lugar donde paran autobuses o tranvías.", "level": "A1", "category": "ciudad" },
+  { "term": "die Apotheke", "translation": "la farmacia", "definition": "Tienda donde se venden medicamentos.", "level": "A1", "category": "ciudad" },
+  { "term": "die Bücherei", "translation": "la biblioteca", "definition": "Lugar donde se pueden tomar libros prestados.", "level": "A1", "category": "ciudad" },
+  { "term": "das Rathaus", "translation": "el ayuntamiento", "definition": "Edificio de la administración de la ciudad.", "level": "A1", "category": "ciudad" },
+  { "term": "die Bank", "translation": "el banco", "definition": "Institución donde se guarda y gestiona dinero.", "level": "A1", "category": "ciudad" },
+  { "term": "der Park", "translation": "el parque", "definition": "Zona verde pública para pasear o jugar.", "level": "A1", "category": "ciudad" },
+  { "term": "die Polizei", "translation": "la policía", "definition": "Institución que mantiene el orden y la seguridad.", "level": "A1", "category": "ciudad" },
+  { "term": "das Museum", "translation": "el museo", "definition": "Lugar donde se exponen objetos de arte o historia.", "level": "A1", "category": "ciudad" },
+  { "term": "der Friseur", "translation": "la peluquería (persona)", "definition": "Profesional que corta y arregla el pelo.", "level": "A1", "category": "ciudad" },
+  { "term": "das Krankenhaus", "translation": "el hospital", "definition": "Centro grande para tratar a personas enfermas.", "level": "A1", "category": "ciudad" },
+  { "term": "die Kirche", "translation": "la iglesia", "definition": "Edificio religioso cristiano.", "level": "A1", "category": "ciudad" },
+  { "term": "die Bäckerei", "translation": "la panadería", "definition": "Tienda donde se vende pan y bollería.", "level": "A1", "category": "ciudad" },
+  { "term": "der Spielplatz", "translation": "el parque infantil", "definition": "Zona con juegos para niños al aire libre.", "level": "A1", "category": "ciudad" }
+]

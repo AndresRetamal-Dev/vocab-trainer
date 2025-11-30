@@ -1,0 +1,11 @@
+[
+  { "term": "die Ernährung", "translation": "la alimentación", "definition": "Conjunto de hábitos al comer.", "level": "A2", "category": "comida" },
+  { "term": "sich ernähren", "translation": "alimentarse", "definition": "Comer de una determinada manera.", "level": "A2", "category": "comida" },
+  { "term": "das Gericht", "translation": "el plato", "definition": "Comida preparada específica.", "level": "A2", "category": "comida" },
+  { "term": "die Portion", "translation": "la porción", "definition": "Cantidad de comida para una persona.", "level": "A2", "category": "comida" },
+  { "term": "die Zutaten", "translation": "los ingredientes", "definition": "Elementos necesarios para cocinar algo.", "level": "A2", "category": "comida" },
+  { "term": "die Diät", "translation": "la dieta", "definition": "Plan de alimentación especial.", "level": "A2", "category": "comida" },
+  { "term": "das Fett", "translation": "la grasa", "definition": "Sustancia presente en alimentos.", "level": "A2", "category": "comida" },
+  { "term": "fettarm", "translation": "bajo en grasa", "definition": "Alimento con poca grasa.", "level": "A2", "category": "comida" },
+  { "term": "die Mahlzeit", "translation": "la comida (horario)", "definition": "Comida del día: desayuno, almuerzo, cena.", "level": "A2", "category": "comida" }
+]

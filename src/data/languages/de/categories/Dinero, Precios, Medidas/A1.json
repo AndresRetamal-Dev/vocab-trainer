@@ -1,0 +1,25 @@
+[
+  { "term": "der Euro", "translation": "el euro", "definition": "Moneda usada en muchos países europeos.", "level": "A1", "category": "dinero" },
+  { "term": "der Cent", "translation": "el céntimo", "definition": "1/100 de un euro.", "level": "A1", "category": "dinero" },
+  { "term": "der Preis", "translation": "el precio", "definition": "Cantidad que cuesta algo.", "level": "A1", "category": "dinero" },
+  { "term": "kosten", "translation": "costar", "definition": "Tener un precio.", "level": "A1", "category": "dinero" },
+  { "term": "die Rechnung", "translation": "la cuenta", "definition": "Documento que indica lo que hay que pagar.", "level": "A1", "category": "dinero" },
+  { "term": "bar", "translation": "en efectivo", "definition": "Pagar con dinero físico.", "level": "A1", "category": "dinero" },
+  { "term": "das Geld", "translation": "el dinero", "definition": "Medio de pago general.", "level": "A1", "category": "dinero" },
+
+  { "term": "das Kilo", "translation": "el kilo", "definition": "Unidad de peso.", "level": "A1", "category": "dinero" },
+  { "term": "der Liter", "translation": "el litro", "definition": "Unidad de volumen.", "level": "A1", "category": "dinero" },
+  { "term": "das Pfund", "translation": "medio kilo", "definition": "Unidad de 500 gramos.", "level": "A1", "category": "dinero" },
+  { "term": "das Gramm", "translation": "el gramo", "definition": "Unidad pequeña de peso.", "level": "A1", "category": "dinero" },
+
+  { "term": "die Tüte", "translation": "la bolsa", "definition": "Envase flexible para productos.", "level": "A1", "category": "dinero" },
+  { "term": "die Packung", "translation": "el paquete", "definition": "Caja o bolsa con contenido.", "level": "A1", "category": "dinero" },
+  { "term": "das Stück", "translation": "la pieza", "definition": "Unidad individual de algo.", "level": "A1", "category": "dinero" },
+  { "term": "die Flasche", "translation": "la botella", "definition": "Envase rígido para líquidos.", "level": "A1", "category": "dinero" },
+  { "term": "das Glas", "translation": "el tarro", "definition": "Envase de cristal con tapa.", "level": "A1", "category": "dinero" },
+
+  { "term": "die Kaution", "translation": "la fianza", "definition": "Dinero que se deposita como garantía.", "level": "A1", "category": "dinero" },
+  { "term": "die Miete", "translation": "el alquiler", "definition": "Pago mensual por una vivienda.", "level": "A1", "category": "dinero" },
+  { "term": "die Monatsmiete", "translation": "el alquiler mensual", "definition": "Pago por un mes de alquiler.", "level": "A1", "category": "dinero" },
+  { "term": "die Nebenkosten", "translation": "los gastos adicionales", "definition": "Costes extra como agua o calefacción.", "level": "A1", "category": "dinero" }
+]

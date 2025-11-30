@@ -1,0 +1,12 @@
+[
+  { "term": "Deutsch", "translation": "alemán", "definition": "Idioma oficial de Alemania.", "level": "A1", "category": "idiomas" },
+  { "term": "Türkisch", "translation": "turco", "definition": "Idioma hablado en Turquía.", "level": "A1", "category": "idiomas" },
+  { "term": "Englisch", "translation": "inglés", "definition": "Idioma internacional hablado en muchos países.", "level": "A1", "category": "idiomas" },
+  { "term": "Dari", "translation": "dari", "definition": "Variante del persa hablada en Afganistán.", "level": "A1", "category": "idiomas" },
+  { "term": "Polnisch", "translation": "polaco", "definition": "Idioma hablado en Polonia.", "level": "A1", "category": "idiomas" },
+  { "term": "Spanisch", "translation": "español", "definition": "Idioma hablado en España y Latinoamérica.", "level": "A1", "category": "idiomas" },
+  { "term": "Italienisch", "translation": "italiano", "definition": "Idioma hablado en Italia.", "level": "A1", "category": "idiomas" },
+  { "term": "Russisch", "translation": "ruso", "definition": "Idioma hablado principalmente en Rusia.", "level": "A1", "category": "idiomas" },
+  { "term": "Arabisch", "translation": "árabe", "definition": "Lengua usada en numerosos países árabes.", "level": "A1", "category": "idiomas" },
+  { "term": "Paschtu", "translation": "pastún", "definition": "Idioma hablado en Afganistán y Pakistán.", "level": "A1", "category": "idiomas" }
+]

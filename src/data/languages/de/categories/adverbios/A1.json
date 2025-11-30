@@ -1,0 +1,18 @@
+[
+  { "term": "auch", "translation": "también", "definition": "Añade algo similar a lo ya dicho.", "level": "A1", "category": "adverbios" },
+  { "term": "ein bisschen", "translation": "un poco", "definition": "Indica una pequeña cantidad o grado.", "level": "A1", "category": "adverbios" },
+  { "term": "gestern", "translation": "ayer", "definition": "El día antes de hoy.", "level": "A1", "category": "adverbios" },
+  { "term": "heute", "translation": "hoy", "definition": "El día actual.", "level": "A1", "category": "adverbios" },
+  { "term": "morgen", "translation": "mañana", "definition": "El día después de hoy.", "level": "A1", "category": "adverbios" },
+  { "term": "früh", "translation": "temprano", "definition": "En las primeras horas del día.", "level": "A1", "category": "adverbios" },
+  { "term": "spät", "translation": "tarde", "definition": "Más tarde de la hora normal.", "level": "A1", "category": "adverbios" },
+  { "term": "meistens", "translation": "la mayoría de las veces", "definition": "Ocurre en casi todas las ocasiones.", "level": "A1", "category": "adverbios" },
+  { "term": "immer", "translation": "siempre", "definition": "En todo momento, sin excepción.", "level": "A1", "category": "adverbios" },
+  { "term": "oft", "translation": "a menudo", "definition": "Con mucha frecuencia.", "level": "A1", "category": "adverbios" },
+  { "term": "manchmal", "translation": "a veces", "definition": "Ocurre en algunas ocasiones.", "level": "A1", "category": "adverbios" },
+  { "term": "selten", "translation": "raramente", "definition": "Pocas veces, no muy frecuente.", "level": "A1", "category": "adverbios" },
+  { "term": "nie", "translation": "nunca", "definition": "No ocurre en ningún momento.", "level": "A1", "category": "adverbios" },
+  { "term": "rechts", "translation": "a la derecha", "definition": "Dirección hacia el lado derecho.", "level": "A1", "category": "adverbios" },
+  { "term": "links", "translation": "a la izquierda", "definition": "Dirección hacia el lado izquierdo.", "level": "A1", "category": "adverbios" },
+  { "term": "geradeaus", "translation": "todo recto", "definition": "En línea recta, sin girar.", "level": "A1", "category": "adverbios" }
+]

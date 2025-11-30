@@ -1,0 +1,15 @@
+[
+  { "term": "krank", "translation": "enfermo", "definition": "No estar bien de salud.", "level": "A1", "category": "salud" },
+  { "term": "gesund", "translation": "saludable", "definition": "Estar bien físicamente.", "level": "A1", "category": "salud" },
+  { "term": "die Erkältung", "translation": "el resfriado", "definition": "Enfermedad leve con mocos y tos.", "level": "A1", "category": "salud" },
+  { "term": "die Grippe", "translation": "la gripe", "definition": "Enfermedad con fiebre y dolor.", "level": "A1", "category": "salud" },
+  { "term": "der Arzt", "translation": "el médico", "definition": "Profesional de la salud.", "level": "A1", "category": "salud" },
+  { "term": "die Ärztin", "translation": "la médica", "definition": "Profesional de la salud (mujer).", "level": "A1", "category": "salud" },
+  { "term": "die Praxis", "translation": "la consulta", "definition": "Lugar donde trabaja un médico.", "level": "A1", "category": "salud" },
+  { "term": "die Tablette", "translation": "la pastilla", "definition": "Medicamento sólido.", "level": "A1", "category": "salud" },
+  { "term": "das Medikament", "translation": "el medicamento", "definition": "Producto para tratar enfermedades.", "level": "A1", "category": "salud" },
+  { "term": "die Apotheke", "translation": "la farmacia", "definition": "Lugar donde venden medicamentos.", "level": "A1", "category": "salud" },
+  { "term": "der Notfall", "translation": "la emergencia", "definition": "Situación médica urgente.", "level": "A1", "category": "salud" },
+  { "term": "der Krankenwagen", "translation": "la ambulancia", "definition": "Vehículo para emergencias médicas.", "level": "A1", "category": "salud" },
+  { "term": "die Krankschreibung", "translation": "la baja médica", "definition": "Documento para no trabajar por enfermedad.", "level": "A1", "category": "salud" }
+]

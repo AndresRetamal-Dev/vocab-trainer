@@ -1,0 +1,13 @@
+[
+  { "term": "der Familienname", "translation": "el apellido", "definition": "Nombre de familia.", "level": "A1", "category": "documentos" },
+  { "term": "der Nachname", "translation": "el apellido", "definition": "Otro término para apellido.", "level": "A1", "category": "documentos" },
+  { "term": "der Vorname", "translation": "el nombre", "definition": "Nombre principal de una persona.", "level": "A1", "category": "documentos" },
+  { "term": "das Alter", "translation": "la edad", "definition": "Años que tiene una persona.", "level": "A1", "category": "documentos" },
+  { "term": "das Geburtsdatum", "translation": "la fecha de nacimiento", "definition": "Día en que nació una persona.", "level": "A1", "category": "documentos" },
+  { "term": "der Geburtsort", "translation": "el lugar de nacimiento", "definition": "Ciudad donde nació alguien.", "level": "A1", "category": "documentos" },
+  { "term": "die Adresse", "translation": "la dirección", "definition": "Lugar donde vive alguien.", "level": "A1", "category": "documentos" },
+  { "term": "die Telefonnummer", "translation": "el número de teléfono", "definition": "Número para llamadas telefónicas.", "level": "A1", "category": "documentos" },
+  { "term": "der Personalausweis", "translation": "el DNI", "definition": "Documento oficial de identidad.", "level": "A1", "category": "documentos" },
+  { "term": "die Krankenversicherung", "translation": "el seguro médico", "definition": "Seguro para gastos médicos.", "level": "A1", "category": "documentos" },
+  { "term": "die Versichertenkarte", "translation": "la tarjeta sanitaria", "definition": "Tarjeta para recibir atención médica.", "level": "A1", "category": "documentos" }
+]

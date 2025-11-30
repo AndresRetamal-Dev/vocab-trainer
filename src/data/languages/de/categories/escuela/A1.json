@@ -1,0 +1,14 @@
+[
+  { "term": "die Schule", "translation": "el colegio; la escuela", "definition": "Institución donde estudian los niños.", "level": "A1", "category": "escuela" },
+  { "term": "der Lehrer", "translation": "el profesor", "definition": "Hombre que enseña en la escuela o curso.", "level": "A1", "category": "escuela" },
+  { "term": "die Lehrerin", "translation": "la profesora", "definition": "Mujer que enseña en la escuela o curso.", "level": "A1", "category": "escuela" },
+  { "term": "der Stuhl", "translation": "la silla", "definition": "Asiento individual en el aula.", "level": "A1", "category": "escuela" },
+  { "term": "der Stift", "translation": "el lápiz; el bolígrafo", "definition": "Objeto para escribir o dibujar.", "level": "A1", "category": "escuela" },
+  { "term": "das Buch", "translation": "el libro", "definition": "Conjunto de páginas encuadernadas para leer.", "level": "A1", "category": "escuela" },
+  { "term": "die Übung", "translation": "el ejercicio", "definition": "Actividad para practicar lo aprendido.", "level": "A1", "category": "escuela" },
+  { "term": "der Satz", "translation": "la frase", "definition": "Conjunto de palabras con sentido completo.", "level": "A1", "category": "escuela" },
+  { "term": "die Hausaufgaben", "translation": "los deberes", "definition": "Tareas que se hacen en casa para la escuela.", "level": "A1", "category": "escuela" },
+  { "term": "die Stunde", "translation": "la hora (de clase)", "definition": "Unidad de 60 minutos; también sesión de clase.", "level": "A1", "category": "escuela" },
+  { "term": "die Pause", "translation": "el recreo; la pausa", "definition": "Descanso entre clases.", "level": "A1", "category": "escuela" },
+  { "term": "einen Deutschkurs machen", "translation": "hacer un curso de alemán", "definition": "Participar en un curso para aprender alemán.", "level": "A1", "category": "escuela" }
+]

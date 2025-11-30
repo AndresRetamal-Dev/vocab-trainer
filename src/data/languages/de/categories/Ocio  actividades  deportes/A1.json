@@ -1,0 +1,9 @@
+[
+  { "term": "Fußball spielen", "translation": "jugar al fútbol", "definition": "Actividad deportiva con balón.", "level": "A1", "category": "ocio" },
+  { "term": "Sport machen", "translation": "hacer deporte", "definition": "Practicar actividad física.", "level": "A1", "category": "ocio" },
+  { "term": "Gitarre spielen", "translation": "tocar la guitarra", "definition": "Tocar el instrumento musical.", "level": "A1", "category": "ocio" },
+  { "term": "spazieren gehen", "translation": "pasear", "definition": "Caminar por placer.", "level": "A1", "category": "ocio" },
+  { "term": "ein Picknick machen", "translation": "hacer un picnic", "definition": "Comer al aire libre.", "level": "A1", "category": "ocio" },
+  { "term": "einen Ausflug machen", "translation": "hacer una excursión", "definition": "Salir a un lugar especial.", "level": "A1", "category": "ocio" },
+  { "term": "fernsehen", "translation": "ver la tele", "definition": "Mirar programas en televisión.", "level": "A1", "category": "ocio" }
+]

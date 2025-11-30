@@ -1,0 +1,19 @@
+[
+  { "term": "der Hals", "translation": "el cuello; la garganta", "definition": "Parte del cuerpo entre la cabeza y el tronco.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Mund", "translation": "la boca", "definition": "Parte de la cara que sirve para hablar y comer.", "level": "A1", "category": "cuerpo" },
+  { "term": "die Nase", "translation": "la nariz", "definition": "Parte de la cara con la que se huele.", "level": "A1", "category": "cuerpo" },
+  { "term": "das Auge", "translation": "el ojo", "definition": "Órgano con el que se ve.", "level": "A1", "category": "cuerpo" },
+  { "term": "das Ohr", "translation": "la oreja; el oído", "definition": "Órgano con el que se oye.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Kopf", "translation": "la cabeza", "definition": "Parte superior del cuerpo con el cerebro.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Bauch", "translation": "la barriga", "definition": "Parte del cuerpo entre el pecho y las piernas.", "level": "A1", "category": "cuerpo" },
+  { "term": "das Bein", "translation": "la pierna", "definition": "Extremidad con la que se camina.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Fuß", "translation": "el pie", "definition": "Parte final de la pierna.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Arm", "translation": "el brazo", "definition": "Extremidad superior del cuerpo.", "level": "A1", "category": "cuerpo" },
+  { "term": "die Hand", "translation": "la mano", "definition": "Parte al final del brazo con dedos.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Zahn", "translation": "el diente", "definition": "Pieza dura en la boca para masticar.", "level": "A1", "category": "cuerpo" },
+  { "term": "das Haar", "translation": "el pelo", "definition": "Filamentos que crecen en la cabeza y el cuerpo.", "level": "A1", "category": "cuerpo" },
+  { "term": "das Gesicht", "translation": "la cara", "definition": "Parte frontal de la cabeza.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Rücken", "translation": "la espalda", "definition": "Parte posterior del tronco.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Finger", "translation": "el dedo", "definition": "Cada una de las partes alargadas de la mano.", "level": "A1", "category": "cuerpo" },
+  { "term": "der Körper", "translation": "el cuerpo", "definition": "Conjunto de todas las partes físicas de una persona.", "level": "A1", "category": "cuerpo" }
+]

@@ -1,0 +1,61 @@
+[
+  { "term": "der Tag", "translation": "el día", "definition": "Período de 24 horas.", "level": "A1", "category": "tiempo" },
+  { "term": "die Nacht", "translation": "la noche", "definition": "Parte del día cuando está oscuro.", "level": "A1", "category": "tiempo" },
+  { "term": "der Morgen", "translation": "la mañana", "definition": "Primera parte del día.", "level": "A1", "category": "tiempo" },
+  { "term": "der Vormittag", "translation": "la media mañana", "definition": "Parte del día entre la mañana y el mediodía.", "level": "A1", "category": "tiempo" },
+  { "term": "der Mittag", "translation": "el mediodía", "definition": "Momento alrededor de las 12.", "level": "A1", "category": "tiempo" },
+  { "term": "der Nachmittag", "translation": "la tarde", "definition": "Parte del día después del mediodía.", "level": "A1", "category": "tiempo" },
+  { "term": "der Abend", "translation": "la tarde-noche", "definition": "Parte final del día, antes de dormir.", "level": "A1", "category": "tiempo" },
+
+  { "term": "das Wochenende", "translation": "el fin de semana", "definition": "Sábado y domingo juntos.", "level": "A1", "category": "tiempo" },
+
+  { "term": "der Montag", "translation": "lunes", "definition": "Primer día laborable de la semana.", "level": "A1", "category": "tiempo" },
+  { "term": "der Dienstag", "translation": "martes", "definition": "Segundo día laborable de la semana.", "level": "A1", "category": "tiempo" },
+  { "term": "der Mittwoch", "translation": "miércoles", "definition": "Día central de la semana laboral.", "level": "A1", "category": "tiempo" },
+  { "term": "der Donnerstag", "translation": "jueves", "definition": "Cuarto día laborable de la semana.", "level": "A1", "category": "tiempo" },
+  { "term": "der Freitag", "translation": "viernes", "definition": "Último día laborable habitual.", "level": "A1", "category": "tiempo" },
+  { "term": "der Samstag", "translation": "sábado", "definition": "Primer día del fin de semana.", "level": "A1", "category": "tiempo" },
+  { "term": "der Sonntag", "translation": "domingo", "definition": "Segundo día del fin de semana.", "level": "A1", "category": "tiempo" },
+
+  { "term": "das Wetter", "translation": "el tiempo (clima)", "definition": "Situación de temperatura, sol, lluvia, etc.", "level": "A1", "category": "tiempo" },
+  { "term": "die Jahreszeit", "translation": "la estación del año", "definition": "Primavera, verano, otoño o invierno.", "level": "A1", "category": "tiempo" },
+
+  { "term": "sonnig", "translation": "soleado", "definition": "Con mucho sol en el cielo.", "level": "A1", "category": "tiempo" },
+  { "term": "bewölkt", "translation": "nublado", "definition": "Con muchas nubes.", "level": "A1", "category": "tiempo" },
+  { "term": "heiß", "translation": "caluroso", "definition": "Con temperatura muy alta.", "level": "A1", "category": "tiempo" },
+  { "term": "kalt", "translation": "frío", "definition": "Con temperatura baja.", "level": "A1", "category": "tiempo" },
+  { "term": "windig", "translation": "ventoso", "definition": "Con mucho viento.", "level": "A1", "category": "tiempo" },
+
+  { "term": "regnen", "translation": "llover", "definition": "Caer lluvia del cielo.", "level": "A1", "category": "tiempo" },
+  { "term": "schneien", "translation": "nevar", "definition": "Caer nieve del cielo.", "level": "A1", "category": "tiempo" },
+  { "term": "scheinen", "translation": "brillar (el sol)", "definition": "Cuando el sol da luz.", "level": "A1", "category": "tiempo" },
+
+  { "term": "die Sonne", "translation": "el sol", "definition": "Estrella que ilumina la Tierra.", "level": "A1", "category": "tiempo" },
+  { "term": "der Regen", "translation": "la lluvia", "definition": "Agua que cae del cielo.", "level": "A1", "category": "tiempo" },
+  { "term": "der Schnee", "translation": "la nieve", "definition": "Agua sólida blanca que cae del cielo.", "level": "A1", "category": "tiempo" },
+  { "term": "der Wind", "translation": "el viento", "definition": "Aire que se mueve con fuerza.", "level": "A1", "category": "tiempo" },
+  { "term": "die Wolke", "translation": "la nube", "definition": "Masa blanca o gris en el cielo.", "level": "A1", "category": "tiempo" },
+  { "term": "die Temperatur", "translation": "la temperatura", "definition": "Número que indica el calor o el frío.", "level": "A1", "category": "tiempo" },
+
+  { "term": "der Frühling", "translation": "la primavera", "definition": "Estación del año después del invierno.", "level": "A1", "category": "tiempo" },
+  { "term": "der Sommer", "translation": "el verano", "definition": "Estación más calurosa del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Herbst", "translation": "el otoño", "definition": "Estación en la que caen las hojas.", "level": "A1", "category": "tiempo" },
+  { "term": "der Winter", "translation": "el invierno", "definition": "Estación más fría del año.", "level": "A1", "category": "tiempo" },
+
+  { "term": "der Monat", "translation": "el mes", "definition": "Periodo de aproximadamente 30 días.", "level": "A1", "category": "tiempo" },
+  { "term": "der Januar", "translation": "enero", "definition": "Primer mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Februar", "translation": "febrero", "definition": "Segundo mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der März", "translation": "marzo", "definition": "Tercer mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der April", "translation": "abril", "definition": "Cuarto mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Mai", "translation": "mayo", "definition": "Quinto mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Juni", "translation": "junio", "definition": "Sexto mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Juli", "translation": "julio", "definition": "Séptimo mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der August", "translation": "agosto", "definition": "Octavo mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der September", "translation": "septiembre", "definition": "Noveno mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Oktober", "translation": "octubre", "definition": "Décimo mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der November", "translation": "noviembre", "definition": "Undécimo mes del año.", "level": "A1", "category": "tiempo" },
+  { "term": "der Dezember", "translation": "diciembre", "definition": "Duodécimo mes del año.", "level": "A1", "category": "tiempo" },
+
+  { "term": "das Datum", "translation": "la fecha", "definition": "Día, mes y año escritos juntos.", "level": "A1", "category": "tiempo" },
+  { "term": "das Geburtsdatum", "translation": "la fecha de nacimiento", "definition": "Día, mes y año en que nació una persona.", "level": "A1", "category": "tiempo" }
+]

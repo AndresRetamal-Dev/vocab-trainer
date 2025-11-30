@@ -1,0 +1,7 @@
+[
+  { "term": "and", "translation": "y", "definition": "Adds information.", "level": "A1", "category": "conectores" },
+  { "term": "but", "translation": "pero", "definition": "Shows contrast.", "level": "A1", "category": "conectores" },
+  { "term": "or", "translation": "o", "definition": "Offers a choice.", "level": "A1", "category": "conectores" },
+  { "term": "because", "translation": "porque", "definition": "Gives a reason.", "level": "A1", "category": "conectores" },
+  { "term": "so", "translation": "así que", "definition": "Shows a result.", "level": "A1", "category": "conectores" }
+]

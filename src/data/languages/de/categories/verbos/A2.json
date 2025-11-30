@@ -1,0 +1,12 @@
+[
+  { "term": "vereinbaren", "translation": "acordar", "definition": "Llegar a un acuerdo sobre algo.", "level": "A2", "category": "verbos" },
+  { "term": "erlauben", "translation": "permitir", "definition": "Dar permiso para algo.", "level": "A2", "category": "verbos" },
+  { "term": "verbieten", "translation": "prohibir", "definition": "No permitir algo.", "level": "A2", "category": "verbos" },
+  { "term": "beschreiben", "translation": "describir", "definition": "Explicar cómo es algo.", "level": "A2", "category": "verbos" },
+  { "term": "begründen", "translation": "justificar", "definition": "Dar una razón o explicación.", "level": "A2", "category": "verbos" },
+  { "term": "empfehlen", "translation": "recomendar", "definition": "Sugerir algo a alguien.", "level": "A2", "category": "verbos" },
+  { "term": "sich entspannen", "translation": "relajarse", "definition": "Descansar física o mentalmente.", "level": "A2", "category": "verbos" },
+  { "term": "sich erinnern", "translation": "recordar", "definition": "Tener algo en la memoria.", "level": "A2", "category": "verbos" },
+  { "term": "beenden", "translation": "terminar", "definition": "Poner fin a algo.", "level": "A2", "category": "verbos" },
+  { "term": "auswendig lernen", "translation": "memorizar", "definition": "Aprender algo de memoria.", "level": "A2", "category": "verbos" }
+]

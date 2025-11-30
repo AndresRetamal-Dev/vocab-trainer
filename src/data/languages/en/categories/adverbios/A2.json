@@ -1,0 +1,74 @@
+[
+  { "term": "hardly", "translation": "apenas", "definition": "Almost not; with difficulty.", "level": "A2", "category": "adverbios" },
+  { "term": "nearly", "translation": "casi", "definition": "Almost, but not quite.", "level": "A2", "category": "adverbios" },
+  { "term": "mostly", "translation": "mayormente", "definition": "For the most part.", "level": "A2", "category": "adverbios" },
+  { "term": "mainly", "translation": "principalmente", "definition": "More than anything else.", "level": "A2", "category": "adverbios" },
+  { "term": "especially", "translation": "especialmente", "definition": "More than usual; in particular.", "level": "A2", "category": "adverbios" },
+  { "term": "particularly", "translation": "particularmente", "definition": "More than normal; specifically.", "level": "A2", "category": "adverbios" },
+  { "term": "certainly", "translation": "ciertamente", "definition": "Surely; without any doubt.", "level": "A2", "category": "adverbios" },
+  { "term": "definitely", "translation": "definitivamente", "definition": "Without question; for sure.", "level": "A2", "category": "adverbios" },
+  { "term": "clearly", "translation": "claramente", "definition": "In an obvious or easy-to-see way.", "level": "A2", "category": "adverbios" },
+  { "term": "exactly", "translation": "exactamente", "definition": "In a precise or correct way.", "level": "A2", "category": "adverbios" },
+
+  { "term": "nearly", "translation": "casi", "definition": "Almost but not quite.", "level": "A2", "category": "adverbios" },
+  { "term": "barely", "translation": "apenas", "definition": "By the smallest amount.", "level": "A2", "category": "adverbios" },
+  { "term": "simply", "translation": "simplemente", "definition": "In a straightforward or basic way.", "level": "A2", "category": "adverbios" },
+  { "term": "seriously", "translation": "seriamente", "definition": "In a serious way.", "level": "A2", "category": "adverbios" },
+  { "term": "honestly", "translation": "honestamente", "definition": "In a truthful or sincere way.", "level": "A2", "category": "adverbios" },
+  { "term": "basically", "translation": "básicamente", "definition": "In the most important ways; essentially.", "level": "A2", "category": "adverbios" },
+  { "term": "generally", "translation": "generalmente", "definition": "Usually; in most cases.", "level": "A2", "category": "adverbios" },
+
+  { "term": "inside", "translation": "dentro", "definition": "In or into the inner part of something.", "level": "A2", "category": "adverbios" },
+  { "term": "outside", "translation": "afuera", "definition": "Not inside; in the open air.", "level": "A2", "category": "adverbios" },
+  { "term": "upstairs", "translation": "arriba", "definition": "On or to a higher floor.", "level": "A2", "category": "adverbios" },
+  { "term": "downstairs", "translation": "abajo", "definition": "On or to a lower floor.", "level": "A2", "category": "adverbios" },
+  { "term": "anywhere", "translation": "en cualquier lugar", "definition": "In, at, or to any place.", "level": "A2", "category": "adverbios" },
+  { "term": "somewhere", "translation": "en algún lugar", "definition": "In or to an unknown place.", "level": "A2", "category": "adverbios" },
+  { "term": "everywhere", "translation": "en todas partes", "definition": "In all places.", "level": "A2", "category": "adverbios" },
+
+  { "term": "afterwards", "translation": "después", "definition": "After a particular event.", "level": "A2", "category": "adverbios" },
+  { "term": "recently", "translation": "recientemente", "definition": "Not long ago.", "level": "A2", "category": "adverbios" },
+  { "term": "lately", "translation": "últimamente", "definition": "In the recent past.", "level": "A2", "category": "adverbios" },
+  { "term": "eventually", "translation": "finalmente", "definition": "After a long time or delay.", "level": "A2", "category": "adverbios" },
+  { "term": "immediately", "translation": "inmediatamente", "definition": "Right away; without delay.", "level": "A2", "category": "adverbios" },
+  { "term": "instantly", "translation": "al instante", "definition": "Right away; in a moment.", "level": "A2", "category": "adverbios" },
+  { "term": "recently", "translation": "recientemente", "definition": "Not long ago.", "level": "A2", "category": "adverbios" },
+
+  { "term": "absolutely", "translation": "absolutamente", "definition": "Completely; totally.", "level": "A2", "category": "adverbios" },
+  { "term": "totally", "translation": "totalmente", "definition": "Completely; in every way.", "level": "A2", "category": "adverbios" },
+  { "term": "fairly", "translation": "bastante", "definition": "More than a little; moderately.", "level": "A2", "category": "adverbios" },
+  { "term": "pretty", "translation": "bastante", "definition": "To a moderate degree.", "level": "A2", "category": "adverbios" },
+  { "term": "extremely", "translation": "extremadamente", "definition": "Very, to a high degree.", "level": "A2", "category": "adverbios" },
+  { "term": "highly", "translation": "altamente", "definition": "To a great degree.", "level": "A2", "category": "adverbios" },
+
+  { "term": "fortunately", "translation": "por suerte", "definition": "Luckily; happening in a good way.", "level": "A2", "category": "adverbios" },
+  { "term": "unfortunately", "translation": "desafortunadamente", "definition": "Sadly; happening in a bad way.", "level": "A2", "category": "adverbios" },
+  { "term": "surprisingly", "translation": "sorprendentemente", "definition": "In an unexpected way.", "level": "A2", "category": "adverbios" },
+  { "term": "interestingly", "translation": "curiosamente", "definition": "In a way that attracts attention.", "level": "A2", "category": "adverbios" },
+  { "term": "basically", "translation": "básicamente", "definition": "In simple terms; essentially.", "level": "A2", "category": "adverbios" },
+  { "term": "technically", "translation": "técnicamente", "definition": "Strictly speaking; according to the rules.", "level": "A2", "category": "adverbios" },
+
+  { "term": "otherwise", "translation": "de lo contrario", "definition": "If not; in another way.", "level": "A2", "category": "adverbios" },
+  { "term": "instead", "translation": "en lugar de", "definition": "In place of something else.", "level": "A2", "category": "adverbios" },
+
+  { "term": "possibly", "translation": "posiblemente", "definition": "Perhaps; maybe.", "level": "A2", "category": "adverbios" },
+  { "term": "probably", "translation": "probablemente", "definition": "Very likely; expected to happen.", "level": "A2", "category": "adverbios" },
+  { "term": "apparently", "translation": "aparentemente", "definition": "As far as one can see; seemingly.", "level": "A2", "category": "adverbios" },
+
+  { "term": "anymore", "translation": "ya no", "definition": "No longer; used in negatives.", "level": "A2", "category": "adverbios" },
+  { "term": "forever", "translation": "para siempre", "definition": "For all time.", "level": "A2", "category": "adverbios" },
+  { "term": "constantly", "translation": "constantemente", "definition": "Happening all the time.", "level": "A2", "category": "adverbios" },
+
+  { "term": "roughly", "translation": "aproximadamente", "definition": "Not exactly; about.", "level": "A2", "category": "adverbios" },
+  { "term": "neatly", "translation": "ordenadamente", "definition": "In a tidy or organized way.", "level": "A2", "category": "adverbios" },
+  { "term": "gently", "translation": "suavemente", "definition": "In a soft or careful way.", "level": "A2", "category": "adverbios" },
+  { "term": "loudly", "translation": "en voz alta", "definition": "With a lot of volume.", "level": "A2", "category": "adverbios" },
+  { "term": "quietly", "translation": "en silencio", "definition": "With little noise.", "level": "A2", "category": "adverbios" },
+
+  { "term": "basically", "translation": "básicamente", "definition": "In the simplest terms.", "level": "A2", "category": "adverbios" },
+  { "term": "fortunately", "translation": "afortunadamente", "definition": "Luckily.", "level": "A2", "category": "adverbios" },
+
+  { "term": "deep down", "translation": "en el fondo", "definition": "In a true but hidden way.", "level": "A2", "category": "adverbios" },
+  { "term": "right now", "translation": "ahora mismo", "definition": "At this exact moment.", "level": "A2", "category": "adverbios" },
+  { "term": "by then", "translation": "para entonces", "definition": "At that time in the future.", "level": "A2", "category": "adverbios" }
+]

@@ -22,12 +22,17 @@ export default function App() {
   const [user, setUser] = useState(null); // null = no logueado
   const [screen, setScreen] = useState("auth"); // "auth" | "home" | "user" | "trainer"
 
+  // 🔹 Idioma que está estudiando el usuario ("en" = inglés, "de" = alemán)
+  const [language, setLanguage] = useState("en");
+
   // --- 🔹 Dark mode ---
   const [darkMode, setDarkMode] = useState(false);
 
   // --- 🔹 Hook del trainer (toda la lógica de estudio está aquí) ---
-  const trainer = useTrainer(user);
+  const trainer = useTrainer(user, language);
   const { streak, answeredCount, levelStats, loadUserData, setMode } = trainer;
+
+  
 
   // === Escuchar cambios de autenticación (único listener) ===
   useEffect(() => {
@@ -449,6 +454,8 @@ export default function App() {
         <HomeScreen
           titleColor={titleColor}
           user={user}
+          language={language}                  // ⬅️ nuevo
+          onChangeLanguage={setLanguage}       // ⬅️ nuevo
           onPracticeWrite={startWriteMode}
           onPracticeFlash={startFlashMode}
           onOpenUser={() => setScreen("user")}
@@ -480,6 +487,7 @@ export default function App() {
           setDarkMode={setDarkMode}
           onBackHome={() => setScreen("home")}
           onLogout={handleLogout}
+          language={language}
           {...trainer}
         />
       )}

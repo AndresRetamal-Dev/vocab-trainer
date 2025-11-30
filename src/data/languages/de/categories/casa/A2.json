@@ -1,0 +1,22 @@
+[
+  { "term": "die Wohngemeinschaft", "translation": "el piso compartido", "definition": "Vivienda donde varias personas comparten gastos.", "level": "A2", "category": "casa" },
+  { "term": "die WG", "translation": "la WG (piso compartido)", "definition": "Abreviatura de Wohngemeinschaft.", "level": "A2", "category": "casa" },
+  { "term": "der Quadratmeter", "translation": "el metro cuadrado", "definition": "Unidad para medir el tamaño de una vivienda.", "level": "A2", "category": "casa" },
+  { "term": "vermieten", "translation": "alquilar (como propietario)", "definition": "Dar una vivienda a otra persona por dinero.", "level": "A2", "category": "casa" },
+  { "term": "die Wohnungsbesichtigung", "translation": "la visita al piso", "definition": "Visita para ver una vivienda antes de alquilarla.", "level": "A2", "category": "casa" },
+  { "term": "einziehen", "translation": "entrar a vivir", "definition": "Mudarse a una vivienda nueva.", "level": "A2", "category": "casa" },
+  { "term": "der Einzug", "translation": "la mudanza de entrada", "definition": "Momento en que alguien entra a vivir.", "level": "A2", "category": "casa" },
+  { "term": "umziehen", "translation": "mudarse", "definition": "Cambiar de vivienda.", "level": "A2", "category": "casa" },
+  { "term": "der Umzug", "translation": "la mudanza", "definition": "Acción de trasladar todas las cosas a otro piso.", "level": "A2", "category": "casa" },
+  { "term": "kündigen", "translation": "rescindir (el contrato)", "definition": "Terminar un contrato de alquiler.", "level": "A2", "category": "casa" },
+  { "term": "der Vertrag", "translation": "el contrato", "definition": "Documento legal de alquiler.", "level": "A2", "category": "casa" },
+  { "term": "der Nachbar", "translation": "el vecino", "definition": "Persona que vive al lado o en el mismo edificio.", "level": "A2", "category": "casa" },
+  { "term": "die Einweihungsparty", "translation": "la fiesta de inauguración", "definition": "Fiesta en un piso nuevo.", "level": "A2", "category": "casa" },
+  { "term": "der Schreibtisch", "translation": "el escritorio", "definition": "Mesa para estudiar o trabajar.", "level": "A2", "category": "casa" },
+  { "term": "die Wand", "translation": "la pared", "definition": "Superficie vertical interior de una habitación.", "level": "A2", "category": "casa" },
+  { "term": "der Boden", "translation": "el suelo", "definition": "Superficie sobre la que se camina en la vivienda.", "level": "A2", "category": "casa" },
+  { "term": "das Treppenhaus", "translation": "la escalera (zona común)", "definition": "Espacio con las escaleras del edificio.", "level": "A2", "category": "casa" },
+  { "term": "reinigen", "translation": "limpiar", "definition": "Poner algo limpio.", "level": "A2", "category": "casa" },
+  { "term": "die Mülltonne", "translation": "el contenedor de basura", "definition": "Recipiente grande donde se tira la basura.", "level": "A2", "category": "casa" },
+  { "term": "Müll trennen", "translation": "separar la basura", "definition": "Poner papel, plástico, etc. en cubos distintos.", "level": "A2", "category": "casa" }
+]

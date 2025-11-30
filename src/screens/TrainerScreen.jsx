@@ -103,7 +103,7 @@ export default function TrainerScreen({
 
       {/* HEADER */}
       <div className="trainer-header">
-        {/* Fila superior: usuario + botones + tema */}
+        {/* Fila superior: usuario + acciones */}
         <div className="trainer-header-top">
           {/* 🔹 BADGE DE USUARIO */}
           {user && (
@@ -131,14 +131,16 @@ export default function TrainerScreen({
             </div>
           )}
 
-          {/* Botones arriba a la derecha */}
+          {/* Columna derecha: tema + navegación */}
           <div
             style={{
               display: "flex",
-              gap: 8,
-              alignItems: "center",
+              flexDirection: "column",
+              alignItems: "flex-end",
+              gap: 6,
             }}
           >
+            {/* Tema arriba */}
             <button
               style={styles.darkToggle}
               className="trainer-dark-toggle"
@@ -147,20 +149,23 @@ export default function TrainerScreen({
               {darkMode ? "🌙 Dark" : "☀️ Light"}
             </button>
 
-            <button style={styles.btnSecondary} onClick={onBackHome}>
-              🏠 Inicio
-            </button>
+            {/* Inicio + Cerrar sesión debajo */}
+            <div style={{ display: "flex", gap: 8 }}>
+              <button style={styles.btnSecondary} onClick={onBackHome}>
+                🏠 Inicio
+              </button>
 
-            <button
-              style={{
-                ...styles.btnSecondary,
-                borderColor: "#dc2626",
-                color: "#dc2626",
-              }}
-              onClick={onLogout}
-            >
-              🚪 Cerrar sesión
-            </button>
+              <button
+                style={{
+                  ...styles.btnSecondary,
+                  borderColor: "#dc2626",
+                  color: "#dc2626",
+                }}
+                onClick={onLogout}
+              >
+                🚪 Cerrar sesión
+              </button>
+            </div>
           </div>
         </div>
 

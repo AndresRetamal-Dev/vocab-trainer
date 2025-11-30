@@ -1,0 +1,11 @@
+[
+  { "term": "der Computer", "translation": "el ordenador", "definition": "Dispositivo electrónico para trabajar o jugar.", "level": "A1", "category": "tecnologia" },
+  { "term": "die Maus", "translation": "el ratón", "definition": "Dispositivo pequeño para controlar el cursor.", "level": "A1", "category": "tecnologia" },
+  { "term": "die Tastatur", "translation": "el teclado", "definition": "Conjunto de teclas para escribir.", "level": "A1", "category": "tecnologia" },
+  { "term": "der Bildschirm", "translation": "la pantalla", "definition": "Superficie donde se muestra la imagen.", "level": "A1", "category": "tecnologia" },
+  { "term": "das Handy", "translation": "el móvil", "definition": "Teléfono portátil.", "level": "A1", "category": "tecnologia" },
+  { "term": "das Tablet", "translation": "la tableta", "definition": "Dispositivo plano con pantalla táctil.", "level": "A1", "category": "tecnologia" },
+  { "term": "der Laptop", "translation": "el portátil", "definition": "Ordenador que se puede transportar fácilmente.", "level": "A1", "category": "tecnologia" },
+  { "term": "die E-Mail", "translation": "el correo electrónico", "definition": "Mensaje que se envía por Internet.", "level": "A1", "category": "tecnologia" },
+  { "term": "das W-Lan", "translation": "el wifi", "definition": "Conexión inalámbrica a Internet.", "level": "A1", "category": "tecnologia" }
+]

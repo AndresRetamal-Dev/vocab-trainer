@@ -2,6 +2,8 @@
 export default function HomeScreen({
   titleColor,
   user,
+  language,         // ⬅️ nuevo
+  onChangeLanguage, // ⬅️ nuevo
   onPracticeWrite,
   onPracticeFlash,
   onOpenUser,
@@ -11,6 +13,66 @@ export default function HomeScreen({
     <div style={{ textAlign: "center", marginTop: 60 }}>
       <h2 style={{ color: titleColor }}>👋 Hola, {user?.name}</h2>
       <p style={{ color: "#64748b" }}>¿Qué quieres practicar hoy?</p>
+
+      {/* 🔹 Selector de idioma */}
+      <div
+        style={{
+          marginTop: 16,
+          marginBottom: 10,
+          display: "flex",
+          justifyContent: "center",
+          gap: 8,
+        }}
+      >
+        <button
+          type="button"
+          onClick={() => onChangeLanguage("en")}
+          style={{
+            padding: "8px 14px",
+            borderRadius: 999,
+            border:
+              language === "en" ? "2px solid #2563eb" : "1px solid #cbd5e1",
+            background: language === "en" ? "#dbeafe" : "#ffffff",
+            cursor: "pointer",
+            fontSize: 14,
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          <span>🇺🇸</span>
+          <span>Inglés</span>
+        </button>
+
+        <button
+          type="button"
+          onClick={() => onChangeLanguage("de")}
+          style={{
+            padding: "8px 14px",
+            borderRadius: 999,
+            border:
+              language === "de" ? "2px solid #2563eb" : "1px solid #cbd5e1",
+            background: language === "de" ? "#dbeafe" : "#ffffff",
+            cursor: "pointer",
+            fontSize: 14,
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+          }}
+        >
+          <span>🇩🇪</span>
+          <span>Alemán</span>
+        </button>
+      </div>
+
+      <div
+        style={{
+          marginTop: 30,
+          display: "flex",
+          flexDirection: "column",
+          gap: 20,
+        }}
+      ></div>
 
       <div
         style={{

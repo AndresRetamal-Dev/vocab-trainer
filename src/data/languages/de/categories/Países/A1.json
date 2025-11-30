@@ -1,0 +1,16 @@
+[
+  { "term": "Deutschland", "translation": "Alemania", "definition": "País de Europa Central.", "level": "A1", "category": "paises" },
+  { "term": "Türkei", "translation": "Turquía", "definition": "País situado entre Europa y Asia.", "level": "A1", "category": "paises" },
+  { "term": "Syrien", "translation": "Siria", "definition": "País de Oriente Próximo.", "level": "A1", "category": "paises" },
+  { "term": "Polen", "translation": "Polonia", "definition": "País de Europa del Este.", "level": "A1", "category": "paises" },
+  { "term": "Bulgarien", "translation": "Bulgaria", "definition": "País del sureste de Europa.", "level": "A1", "category": "paises" },
+  { "term": "Spanien", "translation": "España", "definition": "País del suroeste de Europa.", "level": "A1", "category": "paises" },
+  { "term": "Italien", "translation": "Italia", "definition": "País del sur de Europa.", "level": "A1", "category": "paises" },
+  { "term": "Griechenland", "translation": "Grecia", "definition": "País del sureste de Europa.", "level": "A1", "category": "paises" },
+  { "term": "Russland", "translation": "Rusia", "definition": "País que abarca Europa y Asia.", "level": "A1", "category": "paises" },
+  { "term": "Afghanistan", "translation": "Afganistán", "definition": "País de Asia Central.", "level": "A1", "category": "paises" },
+  { "term": "Irak", "translation": "Irak", "definition": "País de Oriente Próximo.", "level": "A1", "category": "paises" },
+  { "term": "Eritrea", "translation": "Eritrea", "definition": "País del noreste de África.", "level": "A1", "category": "paises" },
+  { "term": "Ukraine", "translation": "Ucrania", "definition": "País de Europa del Este.", "level": "A1", "category": "paises" },
+  { "term": "Iran", "translation": "Irán", "definition": "País del Oriente Próximo.", "level": "A1", "category": "paises" }
+]

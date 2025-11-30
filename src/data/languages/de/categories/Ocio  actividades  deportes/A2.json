@@ -1,0 +1,13 @@
+[
+  { "term": "die Veranstaltung", "translation": "el evento", "definition": "Actividad organizada para el público.", "level": "A2", "category": "ocio" },
+  { "term": "der Flohmarkt", "translation": "el mercadillo", "definition": "Mercado donde se venden cosas usadas.", "level": "A2", "category": "ocio" },
+  { "term": "das Programm", "translation": "el programa", "definition": "Lista de actividades o emisiones.", "level": "A2", "category": "ocio" },
+  { "term": "der Film", "translation": "la película", "definition": "Historia grabada en vídeo.", "level": "A2", "category": "ocio" },
+  { "term": "das Theater", "translation": "el teatro", "definition": "Espectáculo con actores en directo.", "level": "A2", "category": "ocio" },
+  { "term": "das Kino", "translation": "el cine", "definition": "Lugar donde se proyectan películas.", "level": "A2", "category": "ocio" },
+  { "term": "das Konzert", "translation": "el concierto", "definition": "Actuación musical en directo.", "level": "A2", "category": "ocio" },
+  { "term": "der Rundgang", "translation": "la visita guiada", "definition": "Recorrido organizado por un lugar.", "level": "A2", "category": "ocio" },
+  { "term": "Eintritt frei", "translation": "entrada gratuita", "definition": "No hay que pagar para entrar.", "level": "A2", "category": "ocio" },
+  { "term": "kostenlos", "translation": "gratuito", "definition": "Sin coste de dinero.", "level": "A2", "category": "ocio" },
+  { "term": "der Schauspieler", "translation": "el actor", "definition": "Persona que actúa en cine o teatro.", "level": "A2", "category": "ocio" }
+]

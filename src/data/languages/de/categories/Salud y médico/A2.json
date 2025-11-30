@@ -1,0 +1,19 @@
+[
+  { "term": "die Ernährung", "translation": "la alimentación", "definition": "Conjunto de lo que come una persona.", "level": "A2", "category": "salud" },
+  { "term": "sich ausgewogen ernähren", "translation": "alimentarse de forma equilibrada", "definition": "Comer sano y variado.", "level": "A2", "category": "salud" },
+  { "term": "die Bewegung", "translation": "el movimiento; la actividad física", "definition": "Hacer deporte o moverse.", "level": "A2", "category": "salud" },
+  { "term": "sich bewegen", "translation": "moverse", "definition": "No estar quieto; hacer actividad física.", "level": "A2", "category": "salud" },
+  { "term": "regelmäßig", "translation": "regularmente", "definition": "Con una frecuencia fija, por ejemplo cada día.", "level": "A2", "category": "salud" },
+  { "term": "das Öl", "translation": "el aceite", "definition": "Grasa líquida usada para cocinar.", "level": "A2", "category": "salud" },
+  { "term": "das Lebensmittel", "translation": "el alimento", "definition": "Producto que se puede comer o beber.", "level": "A2", "category": "salud" },
+  { "term": "meditieren", "translation": "meditar", "definition": "Ejercicio de concentración y calma.", "level": "A2", "category": "salud" },
+  { "term": "die Gliederschmerzen", "translation": "los dolores en las extremidades", "definition": "Dolor en brazos y piernas.", "level": "A2", "category": "salud" },
+  { "term": "die Nase läuft", "translation": "le gotea la nariz", "definition": "Tener mucho líquido en la nariz.", "level": "A2", "category": "salud" },
+  { "term": "niesen", "translation": "estornudar", "definition": "Expulsar aire de golpe por la nariz y la boca.", "level": "A2", "category": "salud" },
+  { "term": "messen", "translation": "medir", "definition": "Determinar la cantidad, por ejemplo la temperatura.", "level": "A2", "category": "salud" },
+  { "term": "Blut abnehmen", "translation": "sacar sangre", "definition": "Tomar sangre para análisis.", "level": "A2", "category": "salud" },
+  { "term": "abhören", "translation": "auscultar", "definition": "Escuchar el corazón o los pulmones con aparato médico.", "level": "A2", "category": "salud" },
+  { "term": "untersuchen", "translation": "examinar (médico)", "definition": "Revisar el cuerpo de un paciente.", "level": "A2", "category": "salud" },
+  { "term": "das Sinnesorgan", "translation": "el órgano sensorial", "definition": "Parte del cuerpo con la que se ve, oye, etc.", "level": "A2", "category": "salud" },
+  { "term": "behandeln", "translation": "tratar (médicamente)", "definition": "Dar terapia o medicación a un paciente.", "level": "A2", "category": "salud" }
+]

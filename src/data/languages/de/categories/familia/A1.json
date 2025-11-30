@@ -1,0 +1,21 @@
+[
+  { "term": "die Familie", "translation": "la familia", "definition": "Grupo de personas unidas por parentesco.", "level": "A1", "category": "familia" },
+  { "term": "das Kind", "translation": "el niño; la niña", "definition": "Persona joven, aún no adulta.", "level": "A1", "category": "familia" },
+  { "term": "der Mann", "translation": "el hombre; el marido", "definition": "Persona adulta masculina; también esposo.", "level": "A1", "category": "familia" },
+  { "term": "die Frau", "translation": "la mujer; la esposa", "definition": "Persona adulta femenina; también esposa.", "level": "A1", "category": "familia" },
+  { "term": "der Sohn", "translation": "el hijo", "definition": "Hijo varón de una persona.", "level": "A1", "category": "familia" },
+  { "term": "die Tochter", "translation": "la hija", "definition": "Hija mujer de una persona.", "level": "A1", "category": "familia" },
+  { "term": "die Eltern", "translation": "los padres", "definition": "Padre y madre de una persona.", "level": "A1", "category": "familia" },
+  { "term": "der Vater", "translation": "el padre", "definition": "Hombre con hijos.", "level": "A1", "category": "familia" },
+  { "term": "die Mutter", "translation": "la madre", "definition": "Mujer con hijos.", "level": "A1", "category": "familia" },
+  { "term": "die Schwester", "translation": "la hermana", "definition": "Hija de tus mismos padres (mujer).", "level": "A1", "category": "familia" },
+  { "term": "der Bruder", "translation": "el hermano", "definition": "Hijo de tus mismos padres (hombre).", "level": "A1", "category": "familia" },
+  { "term": "die Großmutter", "translation": "la abuela", "definition": "Madre de tu padre o de tu madre.", "level": "A1", "category": "familia" },
+  { "term": "die Oma", "translation": "la abuela (coloquial)", "definition": "Forma cariñosa para abuela.", "level": "A1", "category": "familia" },
+  { "term": "der Großvater", "translation": "el abuelo", "definition": "Padre de tu padre o de tu madre.", "level": "A1", "category": "familia" },
+  { "term": "der Opa", "translation": "el abuelo (coloquial)", "definition": "Forma cariñosa para abuelo.", "level": "A1", "category": "familia" },
+  { "term": "die Tante", "translation": "la tía", "definition": "Hermana de tu padre o madre, o esposa de tu tío.", "level": "A1", "category": "familia" },
+  { "term": "der Onkel", "translation": "el tío", "definition": "Hermano de tu padre o madre, o marido de tu tía.", "level": "A1", "category": "familia" },
+  { "term": "der Cousin", "translation": "el primo", "definition": "Hijo de tu tío o tía (masculino).", "level": "A1", "category": "familia" },
+  { "term": "die Cousine", "translation": "la prima", "definition": "Hija de tu tío o tía (femenino).", "level": "A1", "category": "familia" }
+]

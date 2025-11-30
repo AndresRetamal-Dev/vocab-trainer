@@ -1,0 +1,22 @@
+[
+  { "term": "das Kleid", "translation": "el vestido", "definition": "Prenda de una pieza que cubre el cuerpo.", "level": "A1", "category": "ropa" },
+  { "term": "die Hose", "translation": "el pantalón", "definition": "Prenda que cubre las piernas.", "level": "A1", "category": "ropa" },
+  { "term": "die Jacke", "translation": "la chaqueta", "definition": "Prenda que se lleva encima de la ropa.", "level": "A1", "category": "ropa" },
+  { "term": "der Rock", "translation": "la falda", "definition": "Prenda que cubre desde la cintura hacia abajo.", "level": "A1", "category": "ropa" },
+  { "term": "das T-Shirt", "translation": "la camiseta", "definition": "Prenda ligera de manga corta.", "level": "A1", "category": "ropa" },
+  { "term": "der Pullover", "translation": "el jersey", "definition": "Prenda de punto que se pone por la cabeza.", "level": "A1", "category": "ropa" },
+  { "term": "die Bluse", "translation": "la blusa", "definition": "Prenda ligera para la parte superior, normalmente para mujer.", "level": "A1", "category": "ropa" },
+  { "term": "das Hemd", "translation": "la camisa", "definition": "Prenda con botones en la parte delantera.", "level": "A1", "category": "ropa" },
+  { "term": "der Mantel", "translation": "el abrigo", "definition": "Prenda larga para el exterior, contra el frío.", "level": "A1", "category": "ropa" },
+  { "term": "der Schuh", "translation": "el zapato", "definition": "Prenda para cubrir el pie.", "level": "A1", "category": "ropa" },
+  { "term": "der Gürtel", "translation": "el cinturón", "definition": "Tira que se lleva en la cintura.", "level": "A1", "category": "ropa" },
+  { "term": "die Mütze", "translation": "el gorro", "definition": "Prenda para cubrir la cabeza.", "level": "A1", "category": "ropa" },
+  { "term": "der Schal", "translation": "la bufanda", "definition": "Prenda larga que se pone alrededor del cuello.", "level": "A1", "category": "ropa" },
+  { "term": "der Handschuh", "translation": "el guante", "definition": "Prenda para cubrir la mano.", "level": "A1", "category": "ropa" },
+  { "term": "die Socke", "translation": "el calcetín", "definition": "Prenda que cubre el pie bajo el zapato.", "level": "A1", "category": "ropa" },
+  { "term": "die Krawatte", "translation": "la corbata", "definition": "Tira de tela que se lleva al cuello.", "level": "A1", "category": "ropa" },
+  { "term": "der Stiefel", "translation": "la bota", "definition": "Calzado que cubre el pie y parte de la pierna.", "level": "A1", "category": "ropa" },
+  { "term": "das Kopftuch", "translation": "el pañuelo para la cabeza", "definition": "Tela que se lleva cubriendo el pelo.", "level": "A1", "category": "ropa" },
+  { "term": "die Badehose", "translation": "el bañador (hombre)", "definition": "Prenda para nadar, tipo pantalón.", "level": "A1", "category": "ropa" },
+  { "term": "der Badeanzug", "translation": "el bañador (mujer)", "definition": "Prenda de una pieza para nadar.", "level": "A1", "category": "ropa" }
+]

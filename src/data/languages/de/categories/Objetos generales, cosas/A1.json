@@ -1,0 +1,11 @@
+[
+  { "term": "die Tasche", "translation": "la bolsa; el bolso", "definition": "Objeto para llevar cosas.", "level": "A1", "category": "objetos" },
+  { "term": "die Brille", "translation": "las gafas", "definition": "Objeto para ver mejor.", "level": "A1", "category": "objetos" },
+  { "term": "der Schlüssel", "translation": "la llave", "definition": "Objeto para abrir una puerta.", "level": "A1", "category": "objetos" },
+  { "term": "das Handy", "translation": "el móvil", "definition": "Teléfono portátil.", "level": "A1", "category": "objetos" },
+  { "term": "das Wörterbuch", "translation": "el diccionario", "definition": "Libro que explica palabras.", "level": "A1", "category": "objetos" },
+  { "term": "die Tür", "translation": "la puerta", "definition": "Apertura para entrar o salir.", "level": "A1", "category": "objetos" },
+  { "term": "das Spielzeug", "translation": "el juguete", "definition": "Objeto para jugar.", "level": "A1", "category": "objetos" },
+  { "term": "der Kuli", "translation": "el bolígrafo", "definition": "Objeto para escribir.", "level": "A1", "category": "objetos" },
+  { "term": "die Lampe", "translation": "la lámpara", "definition": "Objeto que da luz.", "level": "A1", "category": "objetos" }
+]

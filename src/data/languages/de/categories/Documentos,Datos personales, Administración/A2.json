@@ -1,0 +1,14 @@
+[
+  { "term": "das Amt", "translation": "la oficina pública", "definition": "Institución oficial de la administración.", "level": "A2", "category": "documentos" },
+  { "term": "die Behörde", "translation": "la autoridad", "definition": "Organismo del Estado con funciones oficiales.", "level": "A2", "category": "documentos" },
+  { "term": "die Agentur für Arbeit", "translation": "la oficina de empleo", "definition": "Institución pública para buscar trabajo.", "level": "A2", "category": "documentos" },
+  { "term": "das Standesamt", "translation": "el registro civil", "definition": "Oficina para bodas, nacimientos, etc.", "level": "A2", "category": "documentos" },
+  { "term": "das Ausländeramt", "translation": "oficina de extranjería", "definition": "Institución para temas de visado y permiso de residencia.", "level": "A2", "category": "documentos" },
+  { "term": "der Antrag", "translation": "la solicitud oficial", "definition": "Petición escrita a una autoridad.", "level": "A2", "category": "documentos" },
+  { "term": "einen Antrag stellen", "translation": "presentar una solicitud", "definition": "Entregar un formulario oficial.", "level": "A2", "category": "documentos" },
+  { "term": "die Geburtsurkunde", "translation": "el certificado de nacimiento", "definition": "Documento que confirma el nacimiento.", "level": "A2", "category": "documentos" },
+  { "term": "die Heiratsurkunde", "translation": "el certificado de matrimonio", "definition": "Documento que confirma la boda.", "level": "A2", "category": "documentos" },
+  { "term": "die Meldebescheinigung", "translation": "el certificado de empadronamiento", "definition": "Documento que indica dónde vive alguien.", "level": "A2", "category": "documentos" },
+  { "term": "das Kindergeld", "translation": "la ayuda por hijos", "definition": "Dinero mensual del Estado para familias con hijos.", "level": "A2", "category": "documentos" },
+  { "term": "das Visum", "translation": "el visado", "definition": "Permiso para entrar o quedarse en un país.", "level": "A2", "category": "documentos" }
+]

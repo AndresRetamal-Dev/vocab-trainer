@@ -9,8 +9,11 @@ import { matches } from "../utils/matching";
 export const LEVELS = ["A1", "A2", "B1", "B2", "C1"];
 export const ALL = "Todas";
 
-// 🔹 Cargamos TODOS los JSON de categorías/niveles
-const modules = import.meta.glob("../data/categories/*/*.json", { eager: true });
+// 🔹 Cargamos TODOS los JSON: data/languages/<lang>/categories/<category>/<level>.json
+const modules = import.meta.glob(
+  "../data/languages/*/categories/*/*.json",
+  { eager: true }
+);
 
 /**
  * modules tiene forma:
@@ -25,9 +28,12 @@ const modules = import.meta.glob("../data/categories/*/*.json", { eager: true })
  * con objetos { term, translation, definition, level, category }
  */
 export const dataJson = Object.entries(modules).flatMap(([path, mod]) => {
-  const match = path.match(/categories\/([^/]+)\/([^/]+)\.json$/);
-  const categoryFromPath = match?.[1] || "general";
-  const levelFromPath = match?.[2] || null;
+  const match = path.match(
+    /languages\/([^/]+)\/categories\/([^/]+)\/([^/]+)\.json$/
+  );
+  const languageFromPath = match?.[1] || "en";
+  const categoryFromPath = match?.[2] || "general";
+  const levelFromPath = match?.[3] || null;
 
   const arr = mod.default || mod;
 
@@ -35,10 +41,12 @@ export const dataJson = Object.entries(modules).flatMap(([path, mod]) => {
     ...item,
     category: item.category || categoryFromPath,
     level: item.level || levelFromPath,
+    language: item.language || languageFromPath,
   }));
 });
 
-export default function useTrainer(user) {
+
+export default function useTrainer(user, language = "en") {
   // === ESTADO PRINCIPAL DEL ENTRENADOR ===
   const [level, setLevel] = useState("A1");
   const [category, setCategory] = useState(ALL);
@@ -52,10 +60,17 @@ export default function useTrainer(user) {
   const [answeredCount, setAnsweredCount] = useState(0);
 
   const [hardWords, setHardWords] = useState({});
-  const [mode, setMode] = useState("write"); // "write" | "flashcard" | "hard"
+    const [mode, setMode] = useState("write"); // "write" | "flashcard" | "hard"
+
+  // Cuando cambia el idioma, volvemos a A1 / Todas
+  useEffect(() => {
+    setLevel("A1");
+    setCategory(ALL);
+  }, [language]);
 
   // Flashcards (modo test)
   const [flashOptions, setFlashOptions] = useState([]);
+
   const [flashStatus, setFlashStatus] = useState("idle"); // "idle" | "correct" | "wrong"
   const [flashSelected, setFlashSelected] = useState(null);
 
@@ -64,7 +79,7 @@ export default function useTrainer(user) {
   const [flashDone, setFlashDone] = useState({});
   const [hardDone, setHardDone] = useState({});
 
-  const sessionKey = `${level}_${category}`;
+  const sessionKey = `${language}_${level}_${category}`;
 
   // Stats de la sesión actual de flashcards
   const [flashStats, setFlashStats] = useState({
@@ -129,28 +144,35 @@ export default function useTrainer(user) {
     localStorage.setItem("hardWords:v1", JSON.stringify(hardWords));
   }, [hardWords]);
 
-  // CATEGORIES
+  // CATEGORIES (solo del idioma actual)
   const CATEGORIES = useMemo(() => {
     const set = new Set();
-    for (const w of dataJson) set.add((w.category || "general").trim());
+    for (const w of dataJson) {
+      if (w.language !== language) continue;
+      set.add((w.category || "general").trim());
+    }
     return [ALL, ...Array.from(set).sort((a, b) => a.localeCompare(b, "es"))];
-  }, []);
+  }, [language]);
 
-  // Filtrado por nivel/categoría + peso Leitner
-  const items = useMemo(() => {
-    const filtered = dataJson.filter((w) => {
-      const okLevel = level ? w.level === level : true;
-      const cat = (w.category || "general").trim();
-      const okCat = category === ALL ? true : cat === category;
-      return okLevel && okCat;
-    });
+
+    // Filtrado por idioma + nivel/categoría + peso Leitner
+    const items = useMemo(() => {
+      const filtered = dataJson.filter((w) => {
+        const okLang = w.language === language;
+        const okLevel = level ? w.level === level : true;
+        const cat = (w.category || "general").trim();
+        const okCat = category === ALL ? true : cat === category;
+        return okLang && okLevel && okCat;
+      });
+
 
     return filtered.map((w) => {
       const st = progress[w.term] || { box: 0 };
       const weight = Math.max(1, 5 - (st.box ?? 0)); // box 0 => 5, box 4 => 1
       return { ...w, __weight: weight };
     });
-  }, [level, category, progress]);
+    }, [language, level, category, progress]);
+
 
   // Pools por modo
   const writePool = useMemo(() => {
@@ -172,11 +194,12 @@ export default function useTrainer(user) {
     return items.filter((w) => hardWords[w.term] && !doneForSession[w.term]);
   }, [items, hardWords, hardDone, sessionKey]);
 
-  // Todas las palabras del nivel actual
+    // Todas las palabras del nivel actual (solo idioma actual)
   const levelWords = useMemo(
-    () => dataJson.filter((w) => w.level === level),
-    [level]
+    () => dataJson.filter((w) => w.language === language && w.level === level),
+    [language, level]
   );
+
 
   // Cuántas están aprendidas
   const masteredCount = useMemo(
@@ -203,7 +226,9 @@ export default function useTrainer(user) {
   // Stats por nivel (para pantalla perfil)
   const levelStats = useMemo(() => {
     return LEVELS.map((lv) => {
-      const words = dataJson.filter((w) => w.level === lv);
+      const words = dataJson.filter(
+        (w) => w.language === language && w.level === lv
+      );
       const total = words.length;
       const mastered = words.filter((w) => {
         const st = progress[w.term];
@@ -212,7 +237,8 @@ export default function useTrainer(user) {
       const pct = total > 0 ? Math.round((mastered / total) * 100) : 0;
       return { level: lv, total, mastered, pct };
     });
-  }, [progress]);
+  }, [language, progress]);
+
 
   // Palabra actual
   const [current, setCurrent] = useState(null);

@@ -1,0 +1,14 @@
+[
+    { "term": "sweater", "translation": "suéter / jersey", "definition": "A warm knitted top.", "level": "A2", "category": "ropa" },
+    { "term": "hoodie", "translation": "sudadera con capucha", "definition": "A casual sweatshirt with a hood.", "level": "A2", "category": "ropa" },
+    { "term": "boots", "translation": "botas", "definition": "Shoes that cover the ankle or higher.", "level": "A2", "category": "ropa" },
+    { "term": "belt", "translation": "cinturón", "definition": "A band worn around the waist.", "level": "A2", "category": "ropa" },
+    { "term": "cap", "translation": "gorra", "definition": "A soft hat with a visor.", "level": "A2", "category": "ropa" },
+    { "term": "coat", "translation": "abrigo", "definition": "Warm outerwear.", "level": "A2", "category": "ropa" },
+    { "term": "sunglasses", "translation": "gafas de sol", "definition": "Glasses that protect from sunlight.", "level": "A2", "category": "ropa" },
+    { "term": "swimsuit", "translation": "traje de baño", "definition": "Clothing worn for swimming.", "level": "A2", "category": "ropa" },
+    { "term": "pajamas", "translation": "pijama", "definition": "Clothes worn for sleeping.", "level": "A2", "category": "ropa" },
+    { "term": "raincoat", "translation": "impermeable", "definition": "A coat worn in the rain.", "level": "A2", "category": "ropa" },
+    { "term": "uniform", "translation": "uniforme", "definition": "A special outfit worn for work or school.", "level": "A2", "category": "ropa" },
+    { "term": "blouse", "translation": "blusa", "definition": "A light top for women.", "level": "A2", "category": "ropa" }
+]

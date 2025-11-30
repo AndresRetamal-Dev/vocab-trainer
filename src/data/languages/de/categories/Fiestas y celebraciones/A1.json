@@ -1,0 +1,12 @@
+[
+  { "term": "der Geburtstag", "translation": "el cumpleaños", "definition": "Día en que nació una persona.", "level": "A1", "category": "fiestas" },
+  { "term": "die Hochzeit", "translation": "la boda", "definition": "Celebración de matrimonio.", "level": "A1", "category": "fiestas" },
+  { "term": "Weihnachten", "translation": "Navidad", "definition": "Fiesta cristiana del 25 de diciembre.", "level": "A1", "category": "fiestas" },
+  { "term": "Ostern", "translation": "Pascua", "definition": "Fiesta cristiana en primavera.", "level": "A1", "category": "fiestas" },
+  { "term": "Silvester", "translation": "Nochevieja", "definition": "Último día del año.", "level": "A1", "category": "fiestas" },
+  { "term": "der Feiertag", "translation": "el festivo", "definition": "Día no laborable por celebración.", "level": "A1", "category": "fiestas" },
+  { "term": "die Einladung", "translation": "la invitación", "definition": "Petición para asistir a un evento.", "level": "A1", "category": "fiestas" },
+  { "term": "feiern", "translation": "celebrar", "definition": "Hacer una fiesta o celebración.", "level": "A1", "category": "fiestas" },
+  { "term": "das Geschenk", "translation": "el regalo", "definition": "Objeto que se entrega a alguien.", "level": "A1", "category": "fiestas" },
+  { "term": "die Blume", "translation": "la flor", "definition": "Regalo o decoración típica.", "level": "A1", "category": "fiestas" }
+]

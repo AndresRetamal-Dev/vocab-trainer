@@ -1,0 +1,22 @@
+[
+  { "term": "kommen", "translation": "venir", "definition": "Moverse hacia el lugar de la persona que habla.", "level": "A1", "category": "verbos" },
+  { "term": "heißen", "translation": "llamarse", "definition": "Tener un nombre.", "level": "A1", "category": "verbos" },
+  { "term": "sprechen", "translation": "hablar", "definition": "Comunicarse con palabras.", "level": "A1", "category": "verbos" },
+  { "term": "haben", "translation": "tener", "definition": "Indicar posesión o relación.", "level": "A1", "category": "verbos" },
+  { "term": "sein", "translation": "ser; estar", "definition": "Describir identidad o estado.", "level": "A1", "category": "verbos" },
+  { "term": "wohnen", "translation": "vivir; residir", "definition": "Tener la vivienda en un lugar.", "level": "A1", "category": "verbos" },
+  { "term": "lesen", "translation": "leer", "definition": "Comprender un texto escrito.", "level": "A1", "category": "verbos" },
+  { "term": "schreiben", "translation": "escribir", "definition": "Producir texto con la mano o un teclado.", "level": "A1", "category": "verbos" },
+  { "term": "hören", "translation": "escuchar; oír", "definition": "Percibir sonidos con el oído.", "level": "A1", "category": "verbos" },
+  { "term": "lernen", "translation": "aprender; estudiar", "definition": "Adquirir conocimientos nuevos.", "level": "A1", "category": "verbos" },
+  { "term": "fragen", "translation": "preguntar", "definition": "Pedir información a alguien.", "level": "A1", "category": "verbos" },
+  { "term": "antworten", "translation": "responder", "definition": "Dar una respuesta a una pregunta.", "level": "A1", "category": "verbos" },
+  { "term": "brauchen", "translation": "necesitar", "definition": "Requerir algo.", "level": "A1", "category": "verbos" },
+  { "term": "kaufen", "translation": "comprar", "definition": "Obtener algo pagando dinero.", "level": "A1", "category": "verbos" },
+  { "term": "kochen", "translation": "cocinar", "definition": "Preparar comida con calor.", "level": "A1", "category": "verbos" },
+  { "term": "essen", "translation": "comer", "definition": "Tomar alimentos por la boca.", "level": "A1", "category": "verbos" },
+  { "term": "trinken", "translation": "beber", "definition": "Tomar líquidos.", "level": "A1", "category": "verbos" },
+  { "term": "kosten", "translation": "costar", "definition": "Tener un precio.", "level": "A1", "category": "verbos" },
+  { "term": "arbeiten", "translation": "trabajar", "definition": "Realizar una actividad laboral.", "level": "A1", "category": "verbos" },
+  { "term": "schlafen", "translation": "dormir", "definition": "Estar en estado de reposo profundo.", "level": "A1", "category": "verbos" }
+]

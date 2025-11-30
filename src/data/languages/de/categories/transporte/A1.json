@@ -1,0 +1,20 @@
+[
+  { "term": "der Parkplatz", "translation": "el aparcamiento", "definition": "Lugar donde se dejan los coches.", "level": "A1", "category": "transporte" },
+  { "term": "der Bus", "translation": "el autobús", "definition": "Vehículo grande para transporte público.", "level": "A1", "category": "transporte" },
+  { "term": "die Linie", "translation": "la línea (de bus, metro)", "definition": "Número o ruta de transporte público.", "level": "A1", "category": "transporte" },
+  { "term": "die U-Bahn", "translation": "el metro", "definition": "Tren subterráneo de la ciudad.", "level": "A1", "category": "transporte" },
+  { "term": "die Straßenbahn", "translation": "el tranvía", "definition": "Vehículo que circula sobre raíles en la calle.", "level": "A1", "category": "transporte" },
+  { "term": "das Fahrrad", "translation": "la bicicleta", "definition": "Vehículo de dos ruedas movido con pedales.", "level": "A1", "category": "transporte" },
+  { "term": "der Zug", "translation": "el tren", "definition": "Vehículo largo que circula sobre vías.", "level": "A1", "category": "transporte" },
+  { "term": "zu Fuß gehen", "translation": "ir a pie", "definition": "Desplazarse caminando.", "level": "A1", "category": "transporte" },
+  { "term": "das Verkehrsmittel", "translation": "el medio de transporte", "definition": "Cualquier forma de transporte.", "level": "A1", "category": "transporte" },
+  { "term": "fahren", "translation": "conducir; ir (en vehículo)", "definition": "Moverse con un medio de transporte.", "level": "A1", "category": "transporte" },
+  { "term": "ankommen", "translation": "llegar", "definition": "Alcanzar un destino.", "level": "A1", "category": "transporte" },
+  { "term": "das Taxi", "translation": "el taxi", "definition": "Coche con conductor que lleva pasajeros pagando.", "level": "A1", "category": "transporte" },
+  { "term": "die Fahrkarte", "translation": "el billete (de transporte)", "definition": "Documento para usar transporte público.", "level": "A1", "category": "transporte" },
+  { "term": "das Ticket", "translation": "el ticket; el billete", "definition": "Otra palabra para billete.", "level": "A1", "category": "transporte" },
+  { "term": "die Verspätung", "translation": "el retraso", "definition": "Llegada más tarde de la hora prevista.", "level": "A1", "category": "transporte" },
+  { "term": "aussteigen", "translation": "bajarse", "definition": "Salir de un vehículo.", "level": "A1", "category": "transporte" },
+  { "term": "einsteigen", "translation": "subirse", "definition": "Entrar en un vehículo.", "level": "A1", "category": "transporte" },
+  { "term": "umsteigen", "translation": "hacer trasbordo", "definition": "Cambiar de vehículo o línea.", "level": "A1", "category": "transporte" }
+]
